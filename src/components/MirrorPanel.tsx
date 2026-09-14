@@ -55,7 +55,7 @@ export default function MirrorPanel({
             marginBottom: 16,
           }}
         >
-          Mirror this Portfolio
+          Copy this portfolio
         </div>
 
         {/* Amount — mobile: big centered, desktop: input field */}
@@ -129,7 +129,7 @@ export default function MirrorPanel({
               marginBottom: 12,
             }}
           >
-            Paid in USDC
+            You pay in USDC
           </div>
         </div>
 
@@ -166,41 +166,51 @@ export default function MirrorPanel({
           ))}
         </div>
 
-        {/* Breakdown */}
+        {/* Breakdown — scrollable */}
         {parsed > 0 && (
-          <div style={{ marginBottom: 16 }}>
-            {breakdown.map((b) => (
-              <div
-                key={b.symbol}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "8px 0",
-                  borderBottom: "1px solid var(--border)",
-                }}
-              >
-                <TokenLogo
-                  symbol={b.asset_symbol}
-                  logoUrl={b.logo_url}
-                  size={24}
-                />
-                <span
-                  style={{ flex: 1, fontSize: 14, fontWeight: 500 }}
-                >
-                  {b.symbol}
-                </span>
-                <span
+          <div
+            style={{
+              marginBottom: 16,
+              maxHeight: 240,
+              overflowY: "auto",
+              scrollbarWidth: "thin",
+              scrollbarColor: "var(--border) transparent",
+            }}
+          >
+            {breakdown
+              .filter((b) => b.value >= 0.01)
+              .map((b) => (
+                <div
+                  key={b.symbol}
                   style={{
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: "var(--text)",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    padding: "8px 0",
+                    borderBottom: "1px solid var(--border)",
                   }}
                 >
-                  {formatUsd(b.value)}
-                </span>
-              </div>
-            ))}
+                  <TokenLogo
+                    symbol={b.asset_symbol}
+                    logoUrl={b.logo_url}
+                    size={24}
+                  />
+                  <span
+                    style={{ flex: 1, fontSize: 14, fontWeight: 500 }}
+                  >
+                    {b.symbol}
+                  </span>
+                  <span
+                    style={{
+                      fontSize: 14,
+                      fontWeight: 600,
+                      color: "var(--text)",
+                    }}
+                  >
+                    {formatUsd(b.value)}
+                  </span>
+                </div>
+              ))}
           </div>
         )}
 
@@ -225,7 +235,7 @@ export default function MirrorPanel({
             transition: "opacity 0.15s",
           }}
         >
-          {parsed > 0 ? `Mirror $${parsed.toLocaleString("en-US")}` : "Enter amount"}
+          {parsed > 0 ? `Buy the same mix` : "Enter an amount"}
         </button>
       </div>
 

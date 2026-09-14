@@ -37,7 +37,7 @@ export default function HeroCard({
             textTransform: "uppercase",
           }}
         >
-          Total xStock Holdings
+          All Portfolios
         </div>
         <CountUp
           end={totalValue}
@@ -71,7 +71,7 @@ export default function HeroCard({
               marginLeft: 6,
             }}
           >
-            24h
+            today
           </span>
         </div>
       </div>

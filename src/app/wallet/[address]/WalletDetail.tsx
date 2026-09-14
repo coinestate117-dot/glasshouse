@@ -65,34 +65,22 @@ export default function WalletDetail({
 
   return (
     <div className="wallet-detail-layout" style={{ padding: "16px 16px 0" }}>
-      {/* Left column: content */}
+      {/* Left column */}
       <div className="wallet-detail-main">
         {/* Hero */}
         <div
           style={{
             background: "linear-gradient(135deg, #9945FF 0%, #14F195 100%)",
             borderRadius: 8,
-            padding: "36px 20px 32px",
+            padding: "32px 20px 28px",
             marginBottom: 12,
           }}
         >
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              color: "rgba(255,255,255,0.6)",
-              marginBottom: 8,
-              letterSpacing: "0.06em",
-              textTransform: "uppercase",
-            }}
-          >
-            Portfolio Value
-          </div>
           <CountUp
             end={wallet.total_value_usd}
             formatter={formatUsdFull}
             style={{
-              fontSize: 44,
+              fontSize: 42,
               fontWeight: 700,
               lineHeight: 1,
               display: "block",
@@ -120,7 +108,7 @@ export default function WalletDetail({
                 marginLeft: 6,
               }}
             >
-              24h
+              today
             </span>
           </div>
         </div>
@@ -155,48 +143,12 @@ export default function WalletDetail({
           <ExternalLink size={12} style={{ flexShrink: 0 }} />
         </a>
 
-        {/* Allocation bar */}
+        {/* Allocation bar — no legend, positions list below is enough */}
         <div style={{ marginBottom: 20 }}>
           <AllocationBar segments={segments} height={8} />
-          <div
-            style={{
-              display: "flex",
-              flexWrap: "wrap",
-              gap: "6px 14px",
-              marginTop: 10,
-            }}
-          >
-            {positions.slice(0, 8).map((p) => (
-              <div
-                key={p.asset_symbol}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 5,
-                  fontSize: 12,
-                  color: "var(--text-secondary)",
-                }}
-              >
-                <TokenLogo
-                  symbol={p.asset_symbol}
-                  logoUrl={p.logo_url}
-                  size={16}
-                />
-                <span>{p.underlying_symbol}</span>
-                <span style={{ color: "var(--text)", fontWeight: 500 }}>
-                  {p.pct.toFixed(1)}%
-                </span>
-              </div>
-            ))}
-            {positions.length > 8 && (
-              <span style={{ fontSize: 12, color: "var(--text-secondary)" }}>
-                +{positions.length - 8} more
-              </span>
-            )}
-          </div>
         </div>
 
-        {/* Positions */}
+        {/* Positions — scrollable after 10 items */}
         <div
           style={{
             fontSize: 12,
@@ -207,9 +159,9 @@ export default function WalletDetail({
             letterSpacing: "0.04em",
           }}
         >
-          Positions ({positions.length})
+          Holdings ({positions.length})
         </div>
-        <div>
+        <div className="scrollable-list">
           {positions.map((p, i) => (
             <div
               key={p.asset_symbol}
@@ -257,7 +209,7 @@ export default function WalletDetail({
           ))}
         </div>
 
-        {/* Recent transactions */}
+        {/* Recent transactions — scrollable */}
         {recentTrades.length > 0 && (
           <div style={{ marginTop: 24 }}>
             <div
@@ -272,58 +224,60 @@ export default function WalletDetail({
             >
               Recent Activity
             </div>
-            {recentTrades.map((tx, i) => (
-              <a
-                key={tx.signature}
-                href={`https://solscan.io/tx/${tx.signature}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  padding: "10px 0",
-                  borderBottom: "1px solid var(--border)",
-                  opacity: 0,
-                  animation: `fadeSlideIn 0.3s ease-out ${Math.min(i, 12) * 30}ms forwards`,
-                }}
-              >
-                <span
-                  style={{
-                    fontSize: 13,
-                    fontFamily: "monospace",
-                    color: "var(--text)",
-                  }}
-                >
-                  {tx.signature.slice(0, 8)}…{tx.signature.slice(-4)}
-                  {tx.err && (
-                    <span
-                      style={{
-                        fontSize: 11,
-                        color: "var(--red)",
-                        fontWeight: 600,
-                        marginLeft: 6,
-                      }}
-                    >
-                      Failed
-                    </span>
-                  )}
-                </span>
-                <span
+            <div className="scrollable-list scrollable-list-short">
+              {recentTrades.map((tx, i) => (
+                <a
+                  key={tx.signature}
+                  href={`https://solscan.io/tx/${tx.signature}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   style={{
                     display: "flex",
+                    justifyContent: "space-between",
                     alignItems: "center",
-                    gap: 4,
-                    fontSize: 12,
-                    color: "var(--text-secondary)",
-                    whiteSpace: "nowrap",
+                    padding: "10px 0",
+                    borderBottom: "1px solid var(--border)",
+                    opacity: 0,
+                    animation: `fadeSlideIn 0.3s ease-out ${Math.min(i, 12) * 30}ms forwards`,
                   }}
                 >
-                  {timeAgo(tx.blockTime)}
-                  <ExternalLink size={11} />
-                </span>
-              </a>
-            ))}
+                  <span
+                    style={{
+                      fontSize: 13,
+                      fontFamily: "monospace",
+                      color: "var(--text)",
+                    }}
+                  >
+                    {tx.signature.slice(0, 8)}…{tx.signature.slice(-4)}
+                    {tx.err && (
+                      <span
+                        style={{
+                          fontSize: 11,
+                          color: "var(--red)",
+                          fontWeight: 600,
+                          marginLeft: 6,
+                        }}
+                      >
+                        Failed
+                      </span>
+                    )}
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 4,
+                      fontSize: 12,
+                      color: "var(--text-secondary)",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {timeAgo(tx.blockTime)}
+                    <ExternalLink size={11} />
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
         )}
 
@@ -355,6 +309,15 @@ export default function WalletDetail({
         }
         .mirror-mobile {
           display: block;
+        }
+        .scrollable-list {
+          max-height: 600px;
+          overflow-y: auto;
+          scrollbar-width: thin;
+          scrollbar-color: var(--border) transparent;
+        }
+        .scrollable-list-short {
+          max-height: 360px;
         }
         @media (min-width: 1024px) {
           .wallet-detail-layout {

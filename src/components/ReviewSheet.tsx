@@ -24,7 +24,6 @@ export default function ReviewSheet({
   breakdown,
   onClose,
 }: ReviewSheetProps) {
-  // Lock body scroll when sheet is open
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => {
@@ -32,8 +31,8 @@ export default function ReviewSheet({
     };
   }, []);
 
-  const estimatedFee = amount * 0.003; // ~0.3% estimated
-  const slippage = 0.5; // 0.5%
+  const estimatedFee = amount * 0.003;
+  const visible = breakdown.filter((b) => b.value >= 0.01);
 
   return (
     <div
@@ -53,7 +52,7 @@ export default function ReviewSheet({
           }}
         >
           <div style={{ fontSize: 17, fontWeight: 700 }}>
-            Review Transaction
+            Review your order
           </div>
           <button
             onClick={onClose}
@@ -69,7 +68,7 @@ export default function ReviewSheet({
           </button>
         </div>
 
-        {/* Orders */}
+        {/* What you're buying */}
         <div
           style={{
             fontSize: 11,
@@ -80,49 +79,55 @@ export default function ReviewSheet({
             marginBottom: 8,
           }}
         >
-          Orders ({breakdown.filter((b) => b.value >= 0.01).length})
+          You{"\u2019"}re buying ({visible.length} stocks)
         </div>
 
-        <div style={{ marginBottom: 20 }}>
-          {breakdown
-            .filter((b) => b.value >= 0.01)
-            .map((b) => (
-              <div
-                key={b.symbol}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 10,
-                  padding: "10px 0",
-                  borderBottom: "1px solid var(--border)",
-                }}
-              >
-                <TokenLogo
-                  symbol={b.asset_symbol}
-                  logoUrl={b.logo_url}
-                  size={28}
-                />
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: 14, fontWeight: 600 }}>
-                    Buy {b.symbol}
-                  </div>
-                  <div
-                    style={{ fontSize: 12, color: "var(--text-secondary)" }}
-                  >
-                    {b.pct.toFixed(1)}% of portfolio
-                  </div>
+        <div
+          style={{
+            marginBottom: 20,
+            maxHeight: 300,
+            overflowY: "auto",
+            scrollbarWidth: "thin",
+            scrollbarColor: "var(--border) transparent",
+          }}
+        >
+          {visible.map((b) => (
+            <div
+              key={b.symbol}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 10,
+                padding: "10px 0",
+                borderBottom: "1px solid var(--border)",
+              }}
+            >
+              <TokenLogo
+                symbol={b.asset_symbol}
+                logoUrl={b.logo_url}
+                size={28}
+              />
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 14, fontWeight: 600 }}>
+                  {b.symbol}
                 </div>
                 <div
-                  style={{
-                    fontSize: 15,
-                    fontWeight: 700,
-                    textAlign: "right",
-                  }}
+                  style={{ fontSize: 12, color: "var(--text-secondary)" }}
                 >
-                  {formatUsd(b.value)}
+                  {b.pct.toFixed(1)}%
                 </div>
               </div>
-            ))}
+              <div
+                style={{
+                  fontSize: 15,
+                  fontWeight: 700,
+                  textAlign: "right",
+                }}
+              >
+                {formatUsd(b.value)}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Summary */}
@@ -145,7 +150,7 @@ export default function ReviewSheet({
           >
             <span>Total</span>
             <span style={{ color: "var(--text)", fontWeight: 600 }}>
-              {formatUsd(amount)} USDC
+              {formatUsd(amount)}
             </span>
           </div>
           <div
@@ -154,22 +159,10 @@ export default function ReviewSheet({
               justifyContent: "space-between",
               fontSize: 13,
               color: "var(--text-secondary)",
-              marginBottom: 8,
             }}
           >
             <span>Est. fee</span>
             <span>~{formatUsd(estimatedFee)}</span>
-          </div>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              fontSize: 13,
-              color: "var(--text-secondary)",
-            }}
-          >
-            <span>Max slippage</span>
-            <span>{slippage}%</span>
           </div>
         </div>
 
@@ -190,7 +183,7 @@ export default function ReviewSheet({
             marginBottom: 10,
           }}
         >
-          Connect Wallet to Confirm
+          Connect wallet to buy
         </button>
         <button
           onClick={onClose}
