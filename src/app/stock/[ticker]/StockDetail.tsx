@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import TokenLogo from "@/components/TokenLogo";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
+import BuyPanel from "@/components/BuyPanel";
 import { formatUsd, formatUsdFull, formatPct, shortenAddress } from "@/lib/format";
 import type { WalletType } from "@/types";
 
@@ -52,7 +53,9 @@ export default function StockDetail({
   const isPositive = change24hPct >= 0;
 
   return (
-    <div style={{ padding: "16px 16px 0" }}>
+    <div className="stock-layout" style={{ padding: "16px 16px 0" }}>
+      {/* Left column */}
+      <div className="stock-main">
       {/* Hero */}
       <div
         style={{
@@ -253,11 +256,57 @@ export default function StockDetail({
         ))}
       </div>
 
+        {/* BuyPanel — mobile only */}
+        <div className="buy-mobile" style={{ marginTop: 24 }}>
+          <BuyPanel
+            ticker={ticker}
+            assetSymbol={assetSymbol}
+            mintAddress={mintAddress}
+            priceUsd={priceUsd}
+            logoUrl={logoUrl}
+          />
+        </div>
+      </div>
+
+      {/* Right column: sticky buy panel — desktop only */}
+      <div className="stock-sidebar">
+        <div style={{ position: "sticky", top: 80 }}>
+          <BuyPanel
+            ticker={ticker}
+            assetSymbol={assetSymbol}
+            mintAddress={mintAddress}
+            priceUsd={priceUsd}
+            logoUrl={logoUrl}
+          />
+        </div>
+      </div>
+
       <style jsx>{`
+        .stock-layout {
+          display: block;
+        }
+        .stock-sidebar {
+          display: none;
+        }
+        .buy-mobile {
+          display: block;
+        }
         .charts-grid {
           grid-template-columns: 1fr;
         }
         @media (min-width: 1024px) {
+          .stock-layout {
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 24px;
+            align-items: start;
+          }
+          .stock-sidebar {
+            display: block;
+          }
+          .buy-mobile {
+            display: none;
+          }
           .charts-grid {
             grid-template-columns: 1fr 1fr;
           }

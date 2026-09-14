@@ -38,6 +38,8 @@ interface Order {
   status: OrderStatus;
   signature?: string;
   error?: string;
+  route?: string;
+  impact?: string;
 }
 
 interface ReviewSheetProps {
@@ -57,6 +59,7 @@ export default function ReviewSheet({
   const { connection } = useConnection();
   const [phase, setPhase] = useState<Phase>("review");
   const [orders, setOrders] = useState<Order[]>([]);
+  const [routes, setRoutes] = useState<Map<string, { route: string; impact: string }>>(new Map());
 
   // Lock body scroll
   useEffect(() => {
@@ -65,6 +68,35 @@ export default function ReviewSheet({
       document.body.style.overflow = "";
     };
   }, []);
+
+  // Prefetch routes for review display
+  useEffect(() => {
+    const visible = breakdown.filter((b) => usdToLamports(b.value) >= MIN_ORDER_AMOUNT);
+    if (visible.length === 0) return;
+
+    Promise.all(
+      visible.map(async (b) => {
+        try {
+          const q = await getQuote({
+            inputMint: USDC_MINT,
+            outputMint: b.mint_address,
+            amount: usdToLamports(b.value),
+          });
+          const label = q.routePlan?.[0]?.swapInfo?.label ?? "Jupiter";
+          const pct = parseFloat(q.priceImpactPct ?? "0");
+          return [b.mint_address, { route: label, impact: pct < 0.01 ? "<0.01%" : `${pct.toFixed(2)}%` }] as const;
+        } catch {
+          return null;
+        }
+      })
+    ).then((results) => {
+      const map = new Map<string, { route: string; impact: string }>();
+      for (const r of results) {
+        if (r) map.set(r[0], r[1]);
+      }
+      setRoutes(map);
+    });
+  }, [breakdown]);
 
   // Build orders from breakdown
   const buildOrders = useCallback((): Order[] => {
@@ -125,6 +157,12 @@ export default function ReviewSheet({
           outputMint: order.mint_address,
           amount: usdToLamports(order.usdcAmount),
         });
+
+        // Capture route info
+        const routeLabel = quote.routePlan?.[0]?.swapInfo?.label ?? "Jupiter";
+        const impactPct = parseFloat(quote.priceImpactPct ?? "0");
+        const impactStr = impactPct < 0.01 ? "<0.01%" : `${impactPct.toFixed(2)}%`;
+        updateOrder(i, { route: routeLabel, impact: impactStr });
 
         // Step 2: Build swap transaction
         const swap = await buildSwap(quote, taker);
@@ -211,6 +249,11 @@ export default function ReviewSheet({
                     </div>
                     <div className="text-secondary" style={{ fontSize: 12 }}>
                       {b.pct.toFixed(1)}%
+                      {routes.get(b.mint_address) && (
+                        <span style={{ marginLeft: 6, opacity: 0.7 }}>
+                          via {routes.get(b.mint_address)!.route} · {routes.get(b.mint_address)!.impact} impact
+                        </span>
+                      )}
                     </div>
                   </div>
                   <div style={{ fontSize: 15, fontWeight: 700 }}>
@@ -287,6 +330,11 @@ export default function ReviewSheet({
                     </div>
                     <div className="text-secondary" style={{ fontSize: 12 }}>
                       {formatUsd(o.usdcAmount)}
+                      {o.route && (
+                        <span style={{ marginLeft: 6, opacity: 0.7 }}>
+                          via {o.route} · {o.impact} impact
+                        </span>
+                      )}
                     </div>
                   </div>
                   <StatusBadge status={o.status} signature={o.signature} />
