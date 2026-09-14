@@ -7,6 +7,29 @@ export const metadata: Metadata = {
   title: "Glasshouse",
   description:
     "Every stock portfolio on Solana is public. Glasshouse ranks them.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
+  openGraph: {
+    title: "Glasshouse",
+    description:
+      "Every stock portfolio on Solana is public. Glasshouse ranks them.",
+    images: [{ url: "/og.png", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Glasshouse",
+    description:
+      "Every stock portfolio on Solana is public. Glasshouse ranks them.",
+    images: ["/og.png"],
+  },
 };
 
 export const viewport: Viewport = {
