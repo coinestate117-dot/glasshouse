@@ -123,7 +123,7 @@ export default function WalletDetail({
           </div>
         </div>
 
-        {/* Badge + address */}
+        {/* Badge + concentration */}
         <div
           style={{
             display: "flex",
@@ -133,6 +133,19 @@ export default function WalletDetail({
           }}
         >
           <WalletTypeBadge type={wallet.wallet_type} />
+          <span
+            style={{
+              fontSize: 12,
+              fontWeight: 500,
+              color: "var(--text-secondary)",
+              background: "var(--card)",
+              border: "1px solid var(--border)",
+              borderRadius: 4,
+              padding: "2px 8px",
+            }}
+          >
+            Top 3 = {positions.slice(0, 3).reduce((s, p) => s + p.pct, 0).toFixed(0)}%
+          </span>
         </div>
         <a
           href={`https://solscan.io/account/${wallet.address}`}

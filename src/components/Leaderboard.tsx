@@ -87,6 +87,7 @@ export default function Leaderboard({
         <span>Type</span>
         <span>Allocation</span>
         <span style={{ textAlign: "center" }}>Pos.</span>
+        <span style={{ textAlign: "center" }}>Top 3</span>
         <span style={{ textAlign: "right" }}>Value</span>
         <span style={{ textAlign: "right" }}>24h</span>
       </div>
@@ -127,7 +128,7 @@ export default function Leaderboard({
         @media (min-width: 1024px) {
           .table-header {
             display: grid;
-            grid-template-columns: 36px 180px 100px 1fr 56px 120px 72px;
+            grid-template-columns: 36px 180px 100px 1fr 56px 64px 120px 72px;
             gap: 16px;
             padding: 6px 0;
             border-bottom: 1px solid var(--border);

@@ -36,6 +36,7 @@ export default function WalletRow({
   index,
 }: WalletRowProps) {
   const sorted = [...positions].sort((a, b) => b.pct - a.pct);
+  const top3Pct = sorted.slice(0, 3).reduce((s, p) => s + p.pct, 0);
   const top6 = sorted.slice(0, 6);
   const otherPct = sorted.slice(6).reduce((s, p) => s + p.pct, 0);
   const segments = [
@@ -148,7 +149,7 @@ export default function WalletRow({
         className="wallet-row-desktop"
         style={{
           display: "none",
-          gridTemplateColumns: "36px 180px 100px 1fr 56px 120px 72px",
+          gridTemplateColumns: "36px 180px 100px 1fr 56px 64px 120px 72px",
           alignItems: "center",
           gap: 16,
           padding: "10px 0",
@@ -200,6 +201,15 @@ export default function WalletRow({
           }}
         >
           {positionCount}
+        </span>
+        <span
+          style={{
+            fontSize: 13,
+            color: "var(--text-secondary)",
+            textAlign: "center",
+          }}
+        >
+          {top3Pct.toFixed(0)}%
         </span>
         <span style={{ fontSize: 15, fontWeight: 700, textAlign: "right" }}>
           {formatUsd(totalValue)}
