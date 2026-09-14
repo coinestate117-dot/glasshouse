@@ -1,14 +1,13 @@
 "use client";
 
 import { useEffect, useState, useCallback } from "react";
-import { useWallet } from "@solana/wallet-adapter-react";
+import { useWallet, useConnection } from "@solana/wallet-adapter-react";
 import TokenLogo from "./TokenLogo";
 import { formatUsd } from "@/lib/format";
 import {
-  createOrder,
-  executeOrder,
+  getQuote,
+  buildSwap,
   deserializeTx,
-  serializeTx,
   friendlyError,
   usdToLamports,
   USDC_MINT,
@@ -27,7 +26,7 @@ export interface BreakdownItem {
   pct: number;
 }
 
-type OrderStatus = "waiting" | "signing" | "confirmed" | "failed" | "skipped";
+type OrderStatus = "waiting" | "signing" | "sending" | "confirmed" | "failed" | "skipped";
 type Phase = "review" | "executing" | "done";
 
 interface Order {
@@ -55,6 +54,7 @@ export default function ReviewSheet({
   onClose,
 }: ReviewSheetProps) {
   const { publicKey, signTransaction } = useWallet();
+  const { connection } = useConnection();
   const [phase, setPhase] = useState<Phase>("review");
   const [orders, setOrders] = useState<Order[]>([]);
 
@@ -66,41 +66,44 @@ export default function ReviewSheet({
     };
   }, []);
 
-  // Build orders from breakdown, filtering tiny amounts
+  // Build orders from breakdown
   const buildOrders = useCallback((): Order[] => {
-    const visible = breakdown.filter(
-      (b) => usdToLamports(b.value) >= MIN_ORDER_AMOUNT
-    );
-    const skipped = breakdown.filter(
-      (b) => b.value >= 0.01 && usdToLamports(b.value) < MIN_ORDER_AMOUNT
-    );
+    const result: Order[] = [];
 
-    const result: Order[] = visible.map((b) => ({
-      symbol: b.symbol,
-      asset_symbol: b.asset_symbol,
-      logo_url: b.logo_url,
-      mint_address: b.mint_address,
-      usdcAmount: b.value,
-      status: "waiting" as const,
-    }));
-
-    // Add skipped items so user sees them
-    for (const b of skipped) {
-      result.push({
-        symbol: b.symbol,
-        asset_symbol: b.asset_symbol,
-        logo_url: b.logo_url,
-        mint_address: b.mint_address,
-        usdcAmount: b.value,
-        status: "skipped" as const,
-        error: "Amount too small",
-      });
+    for (const b of breakdown) {
+      const lamports = usdToLamports(b.value);
+      if (lamports < MIN_ORDER_AMOUNT && b.value >= 0.01) {
+        result.push({
+          symbol: b.symbol,
+          asset_symbol: b.asset_symbol,
+          logo_url: b.logo_url,
+          mint_address: b.mint_address,
+          usdcAmount: b.value,
+          status: "skipped",
+          error: "Amount too small",
+        });
+      } else if (lamports >= MIN_ORDER_AMOUNT) {
+        result.push({
+          symbol: b.symbol,
+          asset_symbol: b.asset_symbol,
+          logo_url: b.logo_url,
+          mint_address: b.mint_address,
+          usdcAmount: b.value,
+          status: "waiting",
+        });
+      }
     }
 
     return result;
   }, [breakdown]);
 
-  // Execute orders sequentially
+  const updateOrder = (index: number, patch: Partial<Order>) => {
+    setOrders((prev) =>
+      prev.map((o, i) => (i === index ? { ...o, ...patch } : o))
+    );
+  };
+
+  // Execute: quote → swap → sign → send, one per position
   const execute = useCallback(async () => {
     if (!publicKey || !signTransaction) return;
 
@@ -114,62 +117,44 @@ export default function ReviewSheet({
       const order = orderList[i];
       if (order.status === "skipped") continue;
 
-      // Update status → signing
-      setOrders((prev) =>
-        prev.map((o, idx) => (idx === i ? { ...o, status: "signing" } : o))
-      );
-
       try {
-        // 1. Create order
-        const jupOrder = await createOrder({
+        // Step 1: Get quote
+        updateOrder(i, { status: "waiting" });
+        const quote = await getQuote({
           inputMint: USDC_MINT,
           outputMint: order.mint_address,
           amount: usdToLamports(order.usdcAmount),
-          taker,
         });
 
-        // 2. Deserialize and sign
-        const tx = deserializeTx(jupOrder.transaction);
+        // Step 2: Build swap transaction
+        const swap = await buildSwap(quote, taker);
+
+        // Step 3: Deserialize and sign
+        updateOrder(i, { status: "signing" });
+        const tx = deserializeTx(swap.swapTransaction);
         const signed = await signTransaction(tx);
-        const signedBase64 = serializeTx(signed);
 
-        // 3. Execute
-        const result = await executeOrder(signedBase64, jupOrder.requestId);
-
-        if (result.status === "Success") {
-          setOrders((prev) =>
-            prev.map((o, idx) =>
-              idx === i
-                ? { ...o, status: "confirmed", signature: result.signature }
-                : o
-            )
-          );
-        } else {
-          setOrders((prev) =>
-            prev.map((o, idx) =>
-              idx === i
-                ? {
-                    ...o,
-                    status: "failed",
-                    error: friendlyError(result.error || "Swap failed"),
-                  }
-                : o
-            )
-          );
-        }
-      } catch (err) {
-        setOrders((prev) =>
-          prev.map((o, idx) =>
-            idx === i
-              ? { ...o, status: "failed", error: friendlyError(err) }
-              : o
-          )
+        // Step 4: Send to network
+        updateOrder(i, { status: "sending" });
+        const signature = await connection.sendRawTransaction(
+          signed.serialize(),
+          { skipPreflight: true, maxRetries: 2 }
         );
+
+        // Step 5: Confirm
+        await connection.confirmTransaction(
+          { signature, lastValidBlockHeight: swap.lastValidBlockHeight, blockhash: tx.message.recentBlockhash },
+          "confirmed"
+        );
+
+        updateOrder(i, { status: "confirmed", signature });
+      } catch (err) {
+        updateOrder(i, { status: "failed", error: friendlyError(err) });
       }
     }
 
     setPhase("done");
-  }, [publicKey, signTransaction, buildOrders]);
+  }, [publicKey, signTransaction, connection, buildOrders]);
 
   const estimatedFee = amount * 0.003;
   const visibleBreakdown = breakdown.filter((b) => b.value >= 0.01);
@@ -177,7 +162,6 @@ export default function ReviewSheet({
     (b) => b.value >= 0.01 && usdToLamports(b.value) < MIN_ORDER_AMOUNT
   );
 
-  // Done summary
   const confirmed = orders.filter((o) => o.status === "confirmed");
   const failed = orders.filter((o) => o.status === "failed");
   const totalSpent = confirmed.reduce((s, o) => s + o.usdcAmount, 0);
@@ -268,7 +252,7 @@ export default function ReviewSheet({
           </>
         )}
 
-        {/* ─── EXECUTING PHASE ─── */}
+        {/* ─── EXECUTING / DONE PHASE ─── */}
         {(phase === "executing" || phase === "done") && (
           <>
             <div className="sheet-header">
@@ -310,18 +294,13 @@ export default function ReviewSheet({
               ))}
             </div>
 
-            {/* Error details */}
             {failed.length > 0 && phase === "done" && (
               <div style={{ marginBottom: 16 }}>
                 {failed.map((o) => (
                   <div
                     key={o.symbol}
                     className="text-secondary"
-                    style={{
-                      fontSize: 12,
-                      padding: "4px 0",
-                      color: "var(--red)",
-                    }}
+                    style={{ fontSize: 12, padding: "4px 0", color: "var(--red)" }}
                   >
                     {o.symbol}: {o.error}
                   </div>
@@ -329,14 +308,14 @@ export default function ReviewSheet({
               </div>
             )}
 
-            {/* Done summary */}
             {phase === "done" && (
               <>
                 <div className="summary-box">
                   <div className="summary-row">
                     <span>Completed</span>
                     <span style={{ color: "var(--text)", fontWeight: 600 }}>
-                      {confirmed.length} of {orders.filter((o) => o.status !== "skipped").length}
+                      {confirmed.length} of{" "}
+                      {orders.filter((o) => o.status !== "skipped").length}
                     </span>
                   </div>
                   {confirmed.length > 0 && (
@@ -526,6 +505,7 @@ function StatusBadge({
     fontSize: 12,
     fontWeight: 600,
     transition: "color 0.2s ease, opacity 0.2s ease",
+    whiteSpace: "nowrap",
   };
 
   if (status === "waiting") {
@@ -544,16 +524,15 @@ function StatusBadge({
     );
   }
 
-  if (status === "confirmed") {
-    const inner = (
-      <span style={{ ...base, color: "var(--green)" }}>
-        <span className="check-pop">
-          <Check size={14} strokeWidth={3} />
-        </span>
-        Done
+  if (status === "sending") {
+    return (
+      <span style={{ ...base, color: "var(--green)" }} className="pulse-subtle">
+        Confirming
       </span>
     );
+  }
 
+  if (status === "confirmed") {
     if (signature) {
       return (
         <a
@@ -572,8 +551,14 @@ function StatusBadge({
         </a>
       );
     }
-
-    return inner;
+    return (
+      <span style={{ ...base, color: "var(--green)" }}>
+        <span className="check-pop">
+          <Check size={14} strokeWidth={3} />
+        </span>
+        Done
+      </span>
+    );
   }
 
   if (status === "skipped") {
@@ -584,10 +569,7 @@ function StatusBadge({
     );
   }
 
-  // failed
   return (
-    <span style={{ ...base, color: "var(--red)" }}>
-      Failed
-    </span>
+    <span style={{ ...base, color: "var(--red)" }}>Failed</span>
   );
 }
