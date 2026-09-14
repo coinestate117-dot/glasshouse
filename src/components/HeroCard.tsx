@@ -76,6 +76,18 @@ export default function HeroCard({
         </div>
       </div>
 
+      <div
+        style={{
+          fontSize: 13,
+          color: "var(--text-secondary)",
+          lineHeight: 1.5,
+          marginBottom: 12,
+        }}
+      >
+        Every stock portfolio on Solana is public. These are the wallets
+        that hold them.
+      </div>
+
       {/* Stat cards */}
       <div
         style={{

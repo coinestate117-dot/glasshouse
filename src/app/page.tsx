@@ -2,7 +2,8 @@ import { getWallets } from "@/lib/data";
 import Leaderboard from "@/components/Leaderboard";
 
 export default function HomePage() {
-  const wallets = getWallets();
+  const allWallets = getWallets();
+  const wallets = allWallets.filter((w) => w.total_value_usd >= 10_000);
 
   const totalValue = wallets.reduce((s, w) => s + w.total_value_usd, 0);
   const totalChange24h =

@@ -17,7 +17,7 @@ export default function CountUp({
   className,
   style,
 }: CountUpProps) {
-  const [display, setDisplay] = useState(formatter(0));
+  const [display, setDisplay] = useState(formatter(end));
   const hasAnimated = useRef(false);
   const ref = useRef<HTMLSpanElement>(null);
 
