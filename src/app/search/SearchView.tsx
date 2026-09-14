@@ -23,18 +23,23 @@ interface WalletData {
   positions: Position[];
 }
 
-interface TickerResult {
-  address: string;
-  wallet_type: WalletType;
-  total_value_usd: number;
-  position: Position;
+interface StockInfo {
+  symbol: string;
+  asset_symbol: string;
+  logo_url: string | null;
+  totalValue: number;
+  holders: number;
 }
 
-export default function SearchView({ wallets }: { wallets: WalletData[] }) {
+interface SearchViewProps {
+  wallets: WalletData[];
+  topStocks: StockInfo[];
+}
+
+export default function SearchView({ wallets, topStocks }: SearchViewProps) {
   const [query, setQuery] = useState("");
   const trimmed = query.trim();
 
-  // All unique tickers for matching
   const allTickers = useMemo(() => {
     const set = new Set<string>();
     for (const w of wallets) {
@@ -43,12 +48,10 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
     return set;
   }, [wallets]);
 
-  // Determine search mode
   const isAddress = trimmed.length >= 32;
   const tickerMatch = useMemo(() => {
     if (!trimmed || isAddress) return null;
     const upper = trimmed.toUpperCase();
-    // Exact match first, then prefix
     if (allTickers.has(upper)) return upper;
     for (const t of allTickers) {
       if (t.startsWith(upper)) return t;
@@ -56,26 +59,7 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
     return null;
   }, [trimmed, isAddress, allTickers]);
 
-  // Ticker search results: wallets holding this ticker, sorted by position size
-  const tickerResults = useMemo((): TickerResult[] => {
-    if (!tickerMatch) return [];
-    const results: TickerResult[] = [];
-    for (const w of wallets) {
-      const pos = w.positions.find(
-        (p) => p.underlying_symbol === tickerMatch
-      );
-      if (pos) {
-        results.push({
-          address: w.address,
-          wallet_type: w.wallet_type,
-          total_value_usd: w.total_value_usd,
-          position: pos,
-        });
-      }
-    }
-    results.sort((a, b) => b.position.value_usd - a.position.value_usd);
-    return results;
-  }, [tickerMatch, wallets]);
+  const showDefault = !trimmed;
 
   // Top 5 wallets
   const topWallets = useMemo(
@@ -85,9 +69,6 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
         .slice(0, 5),
     [wallets]
   );
-
-  const showTickerResults = tickerMatch && tickerResults.length > 0;
-  const showTopWallets = !trimmed;
 
   return (
     <div style={{ padding: "24px 16px" }}>
@@ -104,15 +85,19 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
           marginBottom: 20,
         }}
       >
-        <Search size={16} style={{ color: "var(--text-secondary)", flexShrink: 0 }} />
+        <Search
+          size={16}
+          style={{ color: "var(--text-secondary)", flexShrink: 0 }}
+        />
         <input
           type="text"
           placeholder="Search by ticker (NVDA) or wallet address…"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onKeyDown={(e) => {
-            if (e.key === "Enter" && isAddress) {
-              window.location.href = `/wallet/${trimmed}`;
+            if (e.key === "Enter") {
+              if (isAddress) window.location.href = `/wallet/${trimmed}`;
+              else if (tickerMatch) window.location.href = `/stock/${tickerMatch}`;
             }
           }}
           style={{
@@ -128,7 +113,7 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
         />
       </div>
 
-      {/* Address match → direct link */}
+      {/* Address → wallet link */}
       {isAddress && (
         <Link
           href={`/wallet/${trimmed}`}
@@ -150,67 +135,34 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
         </Link>
       )}
 
-      {/* Ticker results: who holds X? */}
-      {showTickerResults && (
-        <div>
-          <div style={{ fontSize: 13, color: "var(--text-secondary)", marginBottom: 12 }}>
-            {tickerResults.length} wallet{tickerResults.length !== 1 ? "s" : ""} holding{" "}
-            <span style={{ color: "var(--text)", fontWeight: 600 }}>
-              {tickerMatch}
-            </span>
-          </div>
-          {tickerResults.map((r, i) => (
-            <Link
-              key={r.address}
-              href={`/wallet/${r.address}`}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 12,
-                padding: "12px 0",
-                borderBottom: "1px solid var(--border)",
-                opacity: 0,
-                animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${Math.min(i, 15) * 30}ms forwards`,
-              }}
-            >
-              <TokenLogo
-                symbol={r.position.asset_symbol}
-                logoUrl={r.position.logo_url}
-                size={36}
-              />
-              <div style={{ flex: 1, minWidth: 0 }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 6,
-                    marginBottom: 2,
-                  }}
-                >
-                  <span style={{ fontSize: 14, fontWeight: 600 }}>
-                    {shortenAddress(r.address)}
-                  </span>
-                  <WalletTypeBadge type={r.wallet_type} />
-                </div>
-                <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
-                  {r.position.pct.toFixed(1)}% of portfolio
-                </div>
-              </div>
-              <div style={{ textAlign: "right", flexShrink: 0 }}>
-                <div style={{ fontSize: 15, fontWeight: 700 }}>
-                  {formatUsd(r.position.value_usd)}
-                </div>
-                <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
-                  in {tickerMatch}
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+      {/* Ticker → stock page link */}
+      {tickerMatch && (
+        <Link
+          href={`/stock/${tickerMatch}`}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 12,
+            padding: "14px 16px",
+            background: "var(--card)",
+            border: "1px solid var(--border)",
+            borderRadius: "var(--radius)",
+            fontSize: 14,
+            fontWeight: 600,
+            marginBottom: 20,
+          }}
+        >
+          <TokenLogo
+            symbol={topStocks.find((s) => s.symbol === tickerMatch)?.asset_symbol ?? tickerMatch}
+            logoUrl={topStocks.find((s) => s.symbol === tickerMatch)?.logo_url ?? null}
+            size={28}
+          />
+          View {tickerMatch} holders →
+        </Link>
       )}
 
-      {/* No results for ticker */}
-      {trimmed && !isAddress && !showTickerResults && (
+      {/* No match */}
+      {trimmed && !isAddress && !tickerMatch && (
         <div
           style={{
             padding: "32px 0",
@@ -219,13 +171,14 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
             fontSize: 14,
           }}
         >
-          No wallets found holding &ldquo;{trimmed.toUpperCase()}&rdquo;
+          No results for &ldquo;{trimmed.toUpperCase()}&rdquo;
         </div>
       )}
 
-      {/* Default: top wallets */}
-      {showTopWallets && (
-        <div>
+      {/* Default view: top wallets + top stocks */}
+      {showDefault && (
+        <>
+          {/* Top wallets */}
           <div
             style={{
               fontSize: 12,
@@ -239,7 +192,7 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
             Top wallets
           </div>
           {topWallets.map((w, i) => {
-            const top = w.positions.sort(
+            const top = [...w.positions].sort(
               (a, b) => b.value_usd - a.value_usd
             )[0];
             return (
@@ -282,23 +235,67 @@ export default function SearchView({ wallets }: { wallets: WalletData[] }) {
                     </span>
                     <WalletTypeBadge type={w.wallet_type} />
                   </div>
-                  <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
-                    {w.positions.length} stocks · top: {top?.underlying_symbol}
+                  <div
+                    style={{ fontSize: 12, color: "var(--text-secondary)" }}
+                  >
+                    {w.positions.length} stocks · top:{" "}
+                    {top?.underlying_symbol}
                   </div>
                 </div>
-                <div
-                  style={{
-                    fontSize: 15,
-                    fontWeight: 700,
-                    flexShrink: 0,
-                  }}
-                >
+                <div style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}>
                   {formatUsd(w.total_value_usd)}
                 </div>
               </Link>
             );
           })}
-        </div>
+
+          {/* Top stocks */}
+          <div
+            style={{
+              fontSize: 12,
+              fontWeight: 500,
+              color: "var(--text-secondary)",
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
+              marginTop: 24,
+              marginBottom: 10,
+            }}
+          >
+            Top stocks
+          </div>
+          {topStocks.map((s, i) => (
+            <Link
+              key={s.symbol}
+              href={`/stock/${s.symbol}`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: "12px 0",
+                borderBottom: "1px solid var(--border)",
+                opacity: 0,
+                animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${i * 30}ms forwards`,
+              }}
+            >
+              <TokenLogo
+                symbol={s.asset_symbol}
+                logoUrl={s.logo_url}
+                size={32}
+              />
+              <div style={{ flex: 1 }}>
+                <div style={{ fontSize: 14, fontWeight: 600 }}>
+                  {s.symbol}
+                </div>
+                <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
+                  {s.holders} holder{s.holders !== 1 ? "s" : ""}
+                </div>
+              </div>
+              <div style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}>
+                {formatUsd(s.totalValue)}
+              </div>
+            </Link>
+          ))}
+        </>
       )}
     </div>
   );

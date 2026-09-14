@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import CountUp from "@/components/CountUp";
 import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
@@ -171,8 +172,9 @@ export default function WalletDetail({
         </div>
         <div className="scrollable-list">
           {positions.map((p, i) => (
-            <div
+            <Link
               key={p.asset_symbol}
+              href={`/stock/${p.underlying_symbol}`}
               style={{
                 display: "flex",
                 alignItems: "center",
@@ -213,7 +215,7 @@ export default function WalletDetail({
                   {p.pct.toFixed(1)}%
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
 
