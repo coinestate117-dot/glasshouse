@@ -1,55 +1,21 @@
-"use client";
-
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { getWallets } from "@/lib/data";
+import SearchView from "./SearchView";
 
 export default function SearchPage() {
-  const [query, setQuery] = useState("");
-  const router = useRouter();
+  const wallets = getWallets();
 
-  function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    const trimmed = query.trim();
-    if (trimmed.length >= 32) {
-      router.push(`/wallet/${trimmed}`);
-    }
-  }
+  const data = wallets.map((w) => ({
+    address: w.address,
+    total_value_usd: w.total_value_usd,
+    wallet_type: w.wallet_type,
+    positions: w.positions.map((p) => ({
+      underlying_symbol: p.underlying_symbol,
+      asset_symbol: p.asset_symbol,
+      value_usd: p.value_usd,
+      logo_url: p.logo_url,
+      pct: p.pct,
+    })),
+  }));
 
-  return (
-    <div style={{ padding: "24px 16px" }}>
-      <div style={{ fontSize: 20, fontWeight: 700, marginBottom: 16 }}>
-        Search Wallet
-      </div>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Paste a Solana wallet address..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          style={{
-            width: "100%",
-            background: "var(--card)",
-            border: "1px solid var(--border)",
-            borderRadius: "var(--radius)",
-            padding: "14px 16px",
-            color: "var(--text)",
-            fontSize: 15,
-            fontFamily: "inherit",
-            outline: "none",
-          }}
-        />
-      </form>
-      <p
-        style={{
-          fontSize: 13,
-          color: "var(--text-secondary)",
-          marginTop: 12,
-          lineHeight: 1.5,
-        }}
-      >
-        Enter a Solana wallet address to see its xStock portfolio.
-        Only wallets holding xStocks are tracked.
-      </p>
-    </div>
-  );
+  return <SearchView wallets={data} />;
 }
