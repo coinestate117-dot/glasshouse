@@ -36,11 +36,18 @@ export default function WalletRow({
   index,
 }: WalletRowProps) {
   const sorted = [...positions].sort((a, b) => b.pct - a.pct);
-  const segments = sorted.map((p) => ({
-    symbol: p.asset_symbol,
-    pct: p.pct,
-    color: colorForSymbol(p.asset_symbol),
-  }));
+  const top6 = sorted.slice(0, 6);
+  const otherPct = sorted.slice(6).reduce((s, p) => s + p.pct, 0);
+  const segments = [
+    ...top6.map((p) => ({
+      symbol: p.asset_symbol,
+      pct: p.pct,
+      color: colorForSymbol(p.asset_symbol),
+    })),
+    ...(otherPct > 0
+      ? [{ symbol: "Other", pct: otherPct, color: "var(--border)" }]
+      : []),
+  ];
   const topPositions = sorted.slice(0, 3);
 
   const delay = Math.min(index, 12) * 30;

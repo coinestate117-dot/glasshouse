@@ -19,7 +19,10 @@ export default function ConnectButton() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const installed = wallets.filter((w) => w.readyState === "Installed");
+  const SOLANA_WALLETS = ["Phantom", "Solflare"];
+  const installed = wallets.filter(
+    (w) => w.readyState === "Installed" && SOLANA_WALLETS.includes(w.adapter.name)
+  );
 
   const handleConnect = async (name: string) => {
     const w = wallets.find((w) => w.adapter.name === name);

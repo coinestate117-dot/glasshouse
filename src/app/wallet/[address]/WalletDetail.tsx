@@ -50,11 +50,18 @@ export default function WalletDetail({
   positions,
   recentTrades,
 }: WalletDetailProps) {
-  const segments = positions.map((p) => ({
-    symbol: p.underlying_symbol,
-    pct: p.pct,
-    color: colorForSymbol(p.asset_symbol),
-  }));
+  const topN = positions.slice(0, 6);
+  const otherPct = positions.slice(6).reduce((s, p) => s + p.pct, 0);
+  const segments = [
+    ...topN.map((p) => ({
+      symbol: p.underlying_symbol,
+      pct: p.pct,
+      color: colorForSymbol(p.asset_symbol),
+    })),
+    ...(otherPct > 0
+      ? [{ symbol: "Other", pct: otherPct, color: "var(--border)" }]
+      : []),
+  ];
 
   const mirrorPositions = positions.map((p) => ({
     asset_symbol: p.asset_symbol,

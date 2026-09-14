@@ -62,7 +62,10 @@ export default function MirrorPanel({
     }
 
     // Not connected — try to connect
-    const installed = wallets.filter((w) => w.readyState === "Installed");
+    const SOLANA_WALLETS = ["Phantom", "Solflare"];
+    const installed = wallets.filter(
+      (w) => w.readyState === "Installed" && SOLANA_WALLETS.includes(w.adapter.name)
+    );
     if (installed.length === 0) {
       setNoWallet(true);
       return;
