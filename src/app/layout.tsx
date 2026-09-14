@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import WalletProvider from "@/components/WalletProvider";
 import TabBar from "@/components/TabBar";
 import DesktopNav from "@/components/DesktopNav";
 
@@ -46,16 +47,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <DesktopNav />
-        <main
-          style={{
-            maxWidth: "var(--max-width)",
-            margin: "0 auto",
-          }}
-        >
-          {children}
-        </main>
-        <TabBar />
+        <WalletProvider>
+          <DesktopNav />
+          <main
+            style={{
+              maxWidth: "var(--max-width)",
+              margin: "0 auto",
+            }}
+          >
+            {children}
+          </main>
+          <TabBar />
+        </WalletProvider>
       </body>
     </html>
   );

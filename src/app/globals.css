@@ -17,6 +17,7 @@
   --radius: 6px;
   --gradient: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
   --max-width: 600px;
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 html {
@@ -67,7 +68,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-/* List item stagger animation */
+/* ─── Shared animations ─── */
+
 @keyframes fadeSlideIn {
   from {
     opacity: 0;
@@ -79,18 +81,40 @@ input[type="number"] {
   }
 }
 
-/* Sheet animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 @keyframes slideUp {
   from { transform: translateY(100%); }
   to { transform: translateY(0); }
 }
+
 @keyframes scaleIn {
   from { opacity: 0; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
+}
+
+/* Execution states */
+.pulse-subtle {
+  animation: pulseSubtle 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseSubtle {
+  from { opacity: 0.5; }
+  to { opacity: 1; }
+}
+
+.check-pop {
+  display: inline-flex;
+  animation: checkPop 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+@keyframes checkPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 /* Desktop: wider container, hide mobile tab bar */
@@ -112,5 +136,13 @@ input[type="number"] {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+  /* Keep subtle opacity fades */
+  .pulse-subtle {
+    animation: none;
+    opacity: 0.7;
+  }
+  .check-pop {
+    animation: none;
   }
 }

@@ -59,6 +59,7 @@ export default function WalletDetail({
   const mirrorPositions = positions.map((p) => ({
     asset_symbol: p.asset_symbol,
     underlying_symbol: p.underlying_symbol,
+    mint_address: p.mint_address,
     pct: p.pct,
     logo_url: p.logo_url,
   }));

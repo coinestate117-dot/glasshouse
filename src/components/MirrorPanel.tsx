@@ -1,13 +1,16 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useWallet } from "@solana/wallet-adapter-react";
 import TokenLogo from "./TokenLogo";
 import ReviewSheet from "./ReviewSheet";
+import type { BreakdownItem } from "./ReviewSheet";
 import { formatUsd } from "@/lib/format";
 
 interface Position {
   asset_symbol: string;
   underlying_symbol: string;
+  mint_address: string;
   pct: number;
   logo_url: string | null;
 }
@@ -23,20 +26,58 @@ export default function MirrorPanel({
   walletAddress,
   positions,
 }: MirrorPanelProps) {
+  const { wallets, select, connected, connecting } = useWallet();
   const [amount, setAmount] = useState("");
   const [showReview, setShowReview] = useState(false);
+  const [noWallet, setNoWallet] = useState(false);
+  const [pendingReview, setPendingReview] = useState(false);
   const parsed = parseFloat(amount) || 0;
 
-  const breakdown = positions
+  // Auto-open review after wallet connects
+  useEffect(() => {
+    if (pendingReview && connected) {
+      setPendingReview(false);
+      setShowReview(true);
+    }
+  }, [pendingReview, connected]);
+
+  const breakdown: BreakdownItem[] = positions
     .filter((p) => p.pct > 0)
     .sort((a, b) => b.pct - a.pct)
     .map((p) => ({
       symbol: p.underlying_symbol,
       asset_symbol: p.asset_symbol,
       logo_url: p.logo_url,
+      mint_address: p.mint_address,
       value: (parsed * p.pct) / 100,
       pct: p.pct,
     }));
+
+  const handleBuy = async () => {
+    if (parsed <= 0) return;
+
+    if (connected) {
+      setShowReview(true);
+      return;
+    }
+
+    // Not connected — try to connect
+    const installed = wallets.filter((w) => w.readyState === "Installed");
+    if (installed.length === 0) {
+      setNoWallet(true);
+      return;
+    }
+
+    const adapter = installed[0].adapter;
+    select(adapter.name);
+    setPendingReview(true);
+
+    try {
+      await adapter.connect();
+    } catch {
+      setPendingReview(false);
+    }
+  };
 
   return (
     <>
@@ -48,13 +89,7 @@ export default function MirrorPanel({
           border: "1px solid var(--border)",
         }}
       >
-        <div
-          style={{
-            fontSize: 15,
-            fontWeight: 700,
-            marginBottom: 16,
-          }}
-        >
+        <div style={{ fontSize: 15, fontWeight: 700, marginBottom: 16 }}>
           Copy this portfolio
         </div>
 
@@ -134,13 +169,7 @@ export default function MirrorPanel({
         </div>
 
         {/* Quick-select chips */}
-        <div
-          style={{
-            display: "flex",
-            gap: 8,
-            marginBottom: 20,
-          }}
-        >
+        <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
           {QUICK_AMOUNTS.map((v) => (
             <button
               key={v}
@@ -154,11 +183,13 @@ export default function MirrorPanel({
                 }`,
                 background:
                   parsed === v ? "rgba(20,241,149,0.08)" : "var(--bg)",
-                color: parsed === v ? "var(--green)" : "var(--text-secondary)",
+                color:
+                  parsed === v ? "var(--green)" : "var(--text-secondary)",
                 fontSize: 13,
                 fontWeight: 600,
                 fontFamily: "inherit",
                 cursor: "pointer",
+                transition: "border-color 0.15s ease, background 0.15s ease",
               }}
             >
               ${v}
@@ -179,7 +210,7 @@ export default function MirrorPanel({
           >
             {breakdown
               .filter((b) => b.value >= 0.01)
-              .map((b) => (
+              .map((b, i) => (
                 <div
                   key={b.symbol}
                   style={{
@@ -188,6 +219,8 @@ export default function MirrorPanel({
                     gap: 10,
                     padding: "8px 0",
                     borderBottom: "1px solid var(--border)",
+                    opacity: 0,
+                    animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${i * 40}ms forwards`,
                   }}
                 >
                   <TokenLogo
@@ -195,9 +228,7 @@ export default function MirrorPanel({
                     logoUrl={b.logo_url}
                     size={24}
                   />
-                  <span
-                    style={{ flex: 1, fontSize: 14, fontWeight: 500 }}
-                  >
+                  <span style={{ flex: 1, fontSize: 14, fontWeight: 500 }}>
                     {b.symbol}
                   </span>
                   <span
@@ -214,32 +245,46 @@ export default function MirrorPanel({
           </div>
         )}
 
+        {/* No wallet warning */}
+        {noWallet && (
+          <div
+            style={{
+              fontSize: 13,
+              color: "var(--red)",
+              textAlign: "center",
+              marginBottom: 12,
+            }}
+          >
+            No wallet found. Install Phantom or Solflare.
+          </div>
+        )}
+
         {/* CTA button */}
         <button
-          disabled={parsed <= 0}
-          onClick={() => parsed > 0 && setShowReview(true)}
+          disabled={parsed <= 0 || connecting}
+          onClick={handleBuy}
           style={{
             width: "100%",
             padding: "14px 0",
             borderRadius: "var(--radius)",
             border: "none",
-            background:
-              parsed > 0
-                ? "var(--green)"
-                : "var(--border)",
+            background: parsed > 0 ? "var(--green)" : "var(--border)",
             color: parsed > 0 ? "#000" : "var(--text-secondary)",
             fontSize: 16,
             fontWeight: 700,
             fontFamily: "inherit",
             cursor: parsed > 0 ? "pointer" : "not-allowed",
-            transition: "opacity 0.15s",
+            transition: "opacity 0.15s ease",
           }}
         >
-          {parsed > 0 ? `Buy the same mix` : "Enter an amount"}
+          {connecting
+            ? "Connecting…"
+            : parsed > 0
+              ? "Buy the same mix"
+              : "Enter an amount"}
         </button>
       </div>
 
-      {/* Review sheet */}
       {showReview && (
         <ReviewSheet
           amount={parsed}

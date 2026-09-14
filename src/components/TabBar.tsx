@@ -2,12 +2,11 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Trophy, Search, Copy } from "lucide-react";
+import { Trophy, Search } from "lucide-react";
 
 const tabs = [
   { label: "Leaderboard", path: "/", Icon: Trophy },
   { label: "Search", path: "/search", Icon: Search },
-  { label: "Mirror", path: "/mirror", Icon: Copy },
 ] as const;
 
 export default function TabBar() {

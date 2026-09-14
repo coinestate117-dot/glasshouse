@@ -2,11 +2,11 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import ConnectButton from "./ConnectButton";
 
 const links = [
   { label: "Leaderboard", path: "/" },
   { label: "Search", path: "/search" },
-  { label: "Mirror", path: "/mirror" },
 ];
 
 export default function DesktopNav() {
@@ -18,23 +18,26 @@ export default function DesktopNav() {
         <Link href="/" className="desktop-nav-logo">
           Glasshouse
         </Link>
-        <div className="desktop-nav-links">
-          {links.map((link) => {
-            const active =
-              link.path === "/"
-                ? pathname === "/"
-                : pathname.startsWith(link.path);
-            return (
-              <Link
-                key={link.path}
-                href={link.path}
-                className="desktop-nav-link"
-                data-active={active || undefined}
-              >
-                {link.label}
-              </Link>
-            );
-          })}
+        <div style={{ display: "flex", alignItems: "center", gap: 32 }}>
+          <div className="desktop-nav-links">
+            {links.map((link) => {
+              const active =
+                link.path === "/"
+                  ? pathname === "/"
+                  : pathname.startsWith(link.path);
+              return (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className="desktop-nav-link"
+                  data-active={active || undefined}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
+          </div>
+          <ConnectButton />
         </div>
       </div>
       <style jsx>{`
@@ -69,7 +72,7 @@ export default function DesktopNav() {
             font-size: 14px;
             font-weight: 500;
             color: var(--text-secondary);
-            transition: color 0.15s;
+            transition: color 0.15s ease;
           }
           .desktop-nav-link:hover {
             color: var(--text);
