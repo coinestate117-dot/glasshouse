@@ -1,8 +1,8 @@
 import { PublicKey } from "@solana/web3.js";
 import { connection, rpc } from "./helius";
 import { supabase } from "./supabase";
-import { SYSTEM_PROGRAM, BLOCKLIST, MIN_PORTFOLIO_VALUE_USD } from "./constants";
-import type { GhAsset } from "@/types";
+import { SYSTEM_PROGRAM, BLOCKLIST, TOKEN_2022_PROGRAM } from "./constants";
+import type { GhAsset, WalletType } from "@/types";
 
 interface LargestAccountValue {
   address: string;
@@ -16,6 +16,7 @@ interface AccountInfoResult {
   value: {
     owner: string;
     executable: boolean;
+    lamports: number;
     data: {
       parsed?: {
         info?: {
@@ -32,14 +33,50 @@ interface AccountInfoResult {
   } | null;
 }
 
-// A3 — Discover wallets holding xStocks
+interface TokenAccountsResult {
+  value: {
+    account: {
+      data: {
+        parsed: {
+          type: string;
+          info: {
+            mint: string;
+            tokenAmount: { uiAmount: number };
+          };
+        };
+      };
+    };
+  }[];
+}
+
+// Derive wallet type label from on-chain data
+export function deriveWalletType(
+  xstockCount: number,
+  xstockRatio: number
+): WalletType {
+  // Market Maker: over 40 xStock positions
+  if (xstockCount > 40) return "Market Maker";
+  // Whale: xStocks under 30% of Token-2022 holdings
+  if (xstockRatio < 0.3) return "Whale";
+  // Investor: 2-20 positions, xStocks >= 60% of holdings
+  if (xstockCount >= 2 && xstockCount <= 20 && xstockRatio >= 0.6)
+    return "Investor";
+  // Investor: 21-40 positions with >= 60% ratio (serious but not MM)
+  if (xstockCount > 20 && xstockCount <= 40 && xstockRatio >= 0.6)
+    return "Investor";
+  // Holder: 1 position
+  if (xstockCount === 1) return "Holder";
+  // Remaining: low ratio with multiple positions = Whale
+  if (xstockRatio < 0.6) return "Whale";
+  // Fallback
+  return "Holder";
+}
+
+// A3 — Discover wallets holding xStocks, classify them
 export async function discoverWallets(
   assets: GhAsset[]
 ): Promise<{ candidates: number; filtered: number }> {
-  // Map: wallet address → Set of mints they hold
   const walletMints = new Map<string, Set<string>>();
-  // Map: wallet address → mint → uiAmount
-  const walletHoldings = new Map<string, Map<string, number>>();
 
   console.log(`[A3] Scanning ${assets.length} mints for holders...`);
 
@@ -53,60 +90,60 @@ export async function discoverWallets(
     for (const result of results) {
       if (result.status !== "fulfilled") continue;
       for (const holder of result.value) {
-        // Track which mints this wallet holds
         const mints = walletMints.get(holder.wallet) ?? new Set();
         mints.add(holder.mint);
         walletMints.set(holder.wallet, mints);
-
-        // Track amounts
-        const holdings =
-          walletHoldings.get(holder.wallet) ?? new Map<string, number>();
-        holdings.set(holder.mint, holder.uiAmount);
-        walletHoldings.set(holder.wallet, holdings);
       }
     }
 
-    // Progress log every 25 mints
     if ((i + 5) % 25 === 0 || i + 5 >= assets.length) {
       console.log(
-        `[A3] Scanned ${Math.min(i + 5, assets.length)}/${assets.length} mints, ${walletMints.size} unique wallets so far`
+        `[A3] Scanned ${Math.min(i + 5, assets.length)}/${assets.length} mints, ${walletMints.size} unique wallets`
       );
     }
   }
 
   const candidates = walletMints.size;
 
-  // Filter: remove blocklisted wallets
+  // Remove only blocklisted addresses (truly non-human)
   for (const addr of BLOCKLIST) {
     walletMints.delete(addr);
-    walletHoldings.delete(addr);
   }
 
-  // Identify additional treasury addresses: if a wallet is the #1 holder
-  // on 10+ different tokens, it's almost certainly an issuer treasury
-  const treasuryCandidates = new Set<string>();
-  for (const [wallet, mints] of walletMints) {
-    if (mints.size >= 10) {
-      treasuryCandidates.add(wallet);
+  // Classify each wallet: get Token-2022 breakdown + SOL balance + activity
+  const addresses = [...walletMints.keys()];
+  console.log(`[A3] Classifying ${addresses.length} wallets...`);
+
+  const walletRows: {
+    address: string;
+    wallet_type: WalletType;
+    xstock_count: number;
+    xstock_ratio: number;
+    sol_balance: number;
+    recent_tx_count: number;
+    position_count: number;
+  }[] = [];
+
+  for (let i = 0; i < addresses.length; i += 3) {
+    const batch = addresses.slice(i, i + 3);
+    const classResults = await Promise.allSettled(
+      batch.map((addr) => classifyWallet(addr))
+    );
+
+    for (const r of classResults) {
+      if (r.status === "fulfilled" && r.value) {
+        walletRows.push(r.value);
+      }
     }
   }
-  for (const addr of treasuryCandidates) {
-    walletMints.delete(addr);
-    walletHoldings.delete(addr);
-    console.log(
-      `[A3] Auto-blocked likely treasury: ${addr.slice(0, 8)}... (holds ${treasuryCandidates.size >= 10 ? "10+" : ""} tokens)`
-    );
-  }
 
-  // Upsert surviving wallets to DB
-  const wallets = [...walletMints.keys()];
-  if (wallets.length > 0) {
+  // Upsert to DB
+  if (walletRows.length > 0) {
     const { error } = await supabase.from("gh_wallets").upsert(
-      wallets.map((address) => ({
-        address,
+      walletRows.map((w) => ({
+        ...w,
         total_value_usd: 0,
         change_24h_pct: 0,
-        position_count: walletMints.get(address)?.size ?? 0,
         last_synced: new Date().toISOString(),
       })),
       { onConflict: "address" }
@@ -114,12 +151,89 @@ export async function discoverWallets(
     if (error) throw new Error(`Upsert wallets: ${error.message}`);
   }
 
-  const filtered = wallets.length;
+  // Log type distribution
+  const typeCounts: Record<string, number> = {};
+  for (const w of walletRows) {
+    typeCounts[w.wallet_type] = (typeCounts[w.wallet_type] ?? 0) + 1;
+  }
+  console.log(`[A3] Classification:`, typeCounts);
   console.log(
-    `[A3] Candidates: ${candidates}, after filter: ${filtered} (removed ${candidates - filtered})`
+    `[A3] Candidates: ${candidates}, kept: ${walletRows.length} (removed ${candidates - walletRows.length} blocklisted)`
   );
 
-  return { candidates, filtered };
+  return { candidates, filtered: walletRows.length };
+}
+
+// Classify a single wallet by its Token-2022 holdings and activity
+async function classifyWallet(address: string): Promise<{
+  address: string;
+  wallet_type: WalletType;
+  xstock_count: number;
+  xstock_ratio: number;
+  sol_balance: number;
+  recent_tx_count: number;
+  position_count: number;
+} | null> {
+  try {
+    // SOL balance
+    const info = await rpc<AccountInfoResult>("getAccountInfo", [
+      address,
+      { encoding: "jsonParsed" },
+    ]);
+    if (!info.value || info.value.owner !== SYSTEM_PROGRAM) return null;
+    const solBalance = (info.value.lamports || 0) / 1e9;
+
+    // Token-2022 accounts
+    const t22 = await rpc<TokenAccountsResult>(
+      "getTokenAccountsByOwner",
+      [
+        address,
+        { programId: TOKEN_2022_PROGRAM },
+        { encoding: "jsonParsed" },
+      ]
+    );
+
+    let xstockCount = 0;
+    let totalT22 = 0;
+    for (const a of t22.value || []) {
+      const pi = a.account.data.parsed.info;
+      const amt = pi.tokenAmount.uiAmount || 0;
+      if (amt <= 0) continue;
+      totalT22++;
+      if (pi.mint.startsWith("Xs")) xstockCount++;
+    }
+
+    const xstockRatio = totalT22 > 0 ? xstockCount / totalT22 : 0;
+
+    // Recent activity (last 30 days)
+    const thirtyDaysAgo = Math.floor(Date.now() / 1000) - 30 * 86400;
+    let recentTxCount = 0;
+    try {
+      const sigs = await rpc<{ signature: string; blockTime: number }[]>(
+        "getSignaturesForAddress",
+        [address, { limit: 20 }]
+      );
+      for (const s of sigs) {
+        if (s.blockTime > thirtyDaysAgo) recentTxCount++;
+      }
+    } catch {
+      // non-critical
+    }
+
+    const walletType = deriveWalletType(xstockCount, xstockRatio);
+
+    return {
+      address,
+      wallet_type: walletType,
+      xstock_count: xstockCount,
+      xstock_ratio: Math.round(xstockRatio * 100) / 100,
+      sol_balance: Math.round(solBalance * 100) / 100,
+      recent_tx_count: recentTxCount,
+      position_count: xstockCount,
+    };
+  } catch {
+    return null;
+  }
 }
 
 // Scan a single mint for its largest holders and resolve their wallet owners
@@ -136,7 +250,6 @@ async function scanMintHolders(
 
     const nonZero = result.value.filter((a) => a.uiAmount > 0);
 
-    // Resolve owners for non-zero accounts
     for (const account of nonZero) {
       try {
         const info = await rpc<AccountInfoResult>("getAccountInfo", [
@@ -147,7 +260,6 @@ async function scanMintHolders(
         if (!info.value?.data?.parsed?.info?.owner) continue;
         const ownerWallet = info.value.data.parsed.info.owner;
 
-        // Verify this is a real wallet (owned by System Program)
         const ownerInfo = await rpc<AccountInfoResult>("getAccountInfo", [
           ownerWallet,
           { encoding: "jsonParsed" },
@@ -161,11 +273,11 @@ async function scanMintHolders(
           });
         }
       } catch {
-        // Skip accounts we can't resolve
+        // Skip unresolvable accounts
       }
     }
   } catch {
-    // Skip mints that fail (some may not exist on-chain yet)
+    // Skip mints that fail
   }
 
   return holders;

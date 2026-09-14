@@ -39,13 +39,23 @@ export async function POST() {
     await computeWalletValues();
     log.push(`A5 done: ${priced} prices, wallet values computed`);
 
-    // Top 10 wallets
+    // Top 10 wallets + type distribution
     const { data: topWallets } = await supabase
       .from("gh_wallets")
-      .select("address, total_value_usd")
-      .gt("total_value_usd", 0)
+      .select("address, total_value_usd, wallet_type")
+      .gte("total_value_usd", 100)
       .order("total_value_usd", { ascending: false })
       .limit(10);
+
+    const { data: allVisible } = await supabase
+      .from("gh_wallets")
+      .select("wallet_type")
+      .gte("total_value_usd", 100);
+
+    const walletsByType: Record<string, number> = {};
+    for (const w of allVisible ?? []) {
+      walletsByType[w.wallet_type] = (walletsByType[w.wallet_type] ?? 0) + 1;
+    }
 
     const result: SyncResult = {
       assets: assets.length,
@@ -58,7 +68,9 @@ export async function POST() {
         topWallets?.map((w) => ({
           address: w.address,
           value: w.total_value_usd,
+          type: w.wallet_type,
         })) ?? [],
+      walletsByType,
     };
 
     const elapsed = ((Date.now() - start) / 1000).toFixed(1);

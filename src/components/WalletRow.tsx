@@ -2,7 +2,9 @@
 
 import Link from "next/link";
 import AllocationBar, { colorForSymbol } from "./AllocationBar";
+import WalletTypeBadge from "./WalletTypeBadge";
 import { formatUsd, formatPct, shortenAddress } from "@/lib/format";
+import type { WalletType } from "@/types";
 
 interface Position {
   asset_symbol: string;
@@ -14,6 +16,7 @@ interface WalletRowProps {
   address: string;
   totalValue: number;
   change24h: number;
+  walletType: WalletType;
   positions: Position[];
   index: number;
 }
@@ -23,6 +26,7 @@ export default function WalletRow({
   address,
   totalValue,
   change24h,
+  walletType,
   positions,
   index,
 }: WalletRowProps) {
@@ -63,17 +67,20 @@ export default function WalletRow({
           {rank}
         </span>
 
-        {/* Address + bar */}
+        {/* Address + badge + bar */}
         <div style={{ minWidth: 0 }}>
           <div
             style={{
-              fontSize: 14,
-              fontWeight: 500,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
               marginBottom: 6,
-              color: "var(--text)",
             }}
           >
-            {shortenAddress(address)}
+            <span style={{ fontSize: 14, fontWeight: 500, color: "var(--text)" }}>
+              {shortenAddress(address)}
+            </span>
+            <WalletTypeBadge type={walletType} />
           </div>
           <AllocationBar segments={segments} height={4} />
         </div>

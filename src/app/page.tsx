@@ -12,8 +12,8 @@ async function getLeaderboardData() {
   // Wallets sorted by value
   const { data: wallets } = await supabase
     .from("gh_wallets")
-    .select("address, total_value_usd, change_24h_pct, position_count")
-    .gt("total_value_usd", 0)
+    .select("address, total_value_usd, change_24h_pct, position_count, wallet_type")
+    .gte("total_value_usd", 100)
     .order("total_value_usd", { ascending: false })
     .limit(50);
 

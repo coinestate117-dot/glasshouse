@@ -2,8 +2,10 @@
 
 import CountUp from "@/components/CountUp";
 import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
+import WalletTypeBadge from "@/components/WalletTypeBadge";
 import MirrorDialog from "@/components/MirrorDialog";
 import { formatUsdFull, formatUsd, formatPct } from "@/lib/format";
+import type { WalletType } from "@/types";
 
 interface Position {
   asset_symbol: string;
@@ -21,6 +23,7 @@ interface WalletDetailProps {
     total_value_usd: number;
     change_24h_pct: number;
     position_count: number;
+    wallet_type: WalletType;
   };
   positions: Position[];
 }
@@ -79,7 +82,10 @@ export default function WalletDetail({
         </div>
       </div>
 
-      {/* Wallet address */}
+      {/* Wallet address + type badge */}
+      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+        <WalletTypeBadge type={wallet.wallet_type} />
+      </div>
       <a
         href={`https://solscan.io/account/${wallet.address}`}
         target="_blank"

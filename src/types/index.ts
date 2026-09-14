@@ -33,11 +33,18 @@ export interface GhAsset {
   activation_timestamp: number;
 }
 
+export type WalletType = "Market Maker" | "Whale" | "Investor" | "Holder";
+
 export interface GhWallet {
   address: string;
   total_value_usd: number;
   change_24h_pct: number;
   position_count: number;
+  wallet_type: WalletType;
+  xstock_count: number;
+  xstock_ratio: number;
+  sol_balance: number;
+  recent_tx_count: number;
   last_synced: string;
 }
 
@@ -75,5 +82,6 @@ export interface SyncResult {
   filteredWallets: number;
   positions: number;
   prices: number;
-  topWallets: { address: string; value: number }[];
+  topWallets: { address: string; value: number; type: WalletType }[];
+  walletsByType: Record<string, number>;
 }
