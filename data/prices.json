@@ -1,0 +1,6018 @@
+[
+  {
+    "mint_address": "XsKWyokwxJfb5aVBfDJYGte4wk2NPMNFo6SivouPeSy",
+    "symbol": "CVSx",
+    "underlying_symbol": "CVS",
+    "price_usd": 94.66,
+    "prev_close_usd": 95.38,
+    "updated_at": "2026-09-14T11:45:19.206+00:00"
+  },
+  {
+    "mint_address": "XsoVbMATH8hMemisZZvGCc9YEkve3Yiirr2VtinKTuw",
+    "symbol": "CPNGx",
+    "underlying_symbol": "CPNG",
+    "price_usd": 15.12,
+    "prev_close_usd": 14.76,
+    "updated_at": "2026-09-14T11:45:24.656+00:00"
+  },
+  {
+    "mint_address": "XsuW1yxtbifjEYojFLmoavTWBT7hsuUXXeReAWK9X91",
+    "symbol": "DASHx",
+    "underlying_symbol": "DASH",
+    "price_usd": 201.95,
+    "prev_close_usd": 197.245,
+    "updated_at": "2026-09-14T11:45:25.33+00:00"
+  },
+  {
+    "mint_address": "XsATdqpeobhFEM71r5MgZe4E5BcHuWk6jSnYnHLYTwS",
+    "symbol": "CSLx",
+    "underlying_symbol": "CSL",
+    "price_usd": 335.24,
+    "prev_close_usd": 337.53,
+    "updated_at": "2026-09-14T11:45:25.495+00:00"
+  },
+  {
+    "mint_address": "XsKbuY5Wyzz7Zzz6uxi69hHdxhrE53d746Sb1jBZyD1",
+    "symbol": "GPNx",
+    "underlying_symbol": "GPN",
+    "price_usd": 88.29,
+    "prev_close_usd": 87.02,
+    "updated_at": "2026-09-14T11:45:26.27+00:00"
+  },
+  {
+    "mint_address": "XsccgtwEgwSxTh553v8iVLxNUrbHJfdnaJUjxgZfr48",
+    "symbol": "FCNCAx",
+    "underlying_symbol": "FCNCA",
+    "price_usd": 2173,
+    "prev_close_usd": 2128.94,
+    "updated_at": "2026-09-14T11:45:26.367+00:00"
+  },
+  {
+    "mint_address": "Xsva3qbt1TDUgQPnU3vVDasaPoUHXPU9FjYXzEUYY8G",
+    "symbol": "ITTx",
+    "underlying_symbol": "ITT",
+    "price_usd": 204.14,
+    "prev_close_usd": 198.26,
+    "updated_at": "2026-09-14T11:45:27.158+00:00"
+  },
+  {
+    "mint_address": "XscSc1zjbVizEnhCzzehJ9fzztm3WRKdn9pjmriKDuN",
+    "symbol": "ABNBx",
+    "underlying_symbol": "ABNB",
+    "price_usd": 170.19,
+    "prev_close_usd": 169.63,
+    "updated_at": "2026-09-14T11:45:31.976+00:00"
+  },
+  {
+    "mint_address": "Xs12gqhuCeC9gpUdN6uDJQfpyKNf9Y4uK2TKY6c7NrZ",
+    "symbol": "MDBx",
+    "underlying_symbol": "MDB",
+    "price_usd": 362.21,
+    "prev_close_usd": 358.38,
+    "updated_at": "2026-09-14T11:45:32.955+00:00"
+  },
+  {
+    "mint_address": "XsLdXScusw7mCSATbp7bWKfyBR1RVWEEayKgRcmJ8dZ",
+    "symbol": "BAMx",
+    "underlying_symbol": "BAM",
+    "price_usd": 47.26,
+    "prev_close_usd": 47.72,
+    "updated_at": "2026-09-14T11:45:32.952+00:00"
+  },
+  {
+    "mint_address": "Xs3BuKwwLLSgKCKPBeSN5Wje5gP8McsHrt6pnqWzjhs",
+    "symbol": "SBACx",
+    "underlying_symbol": "SBAC",
+    "price_usd": 185.47,
+    "prev_close_usd": 186.74,
+    "updated_at": "2026-09-14T11:45:33.851+00:00"
+  },
+  {
+    "mint_address": "XspuRH5i611hbZjGtYsiaLmhnGya23UU4jnwADWr9yV",
+    "symbol": "VEEVx",
+    "underlying_symbol": "VEEV",
+    "price_usd": 262.4,
+    "prev_close_usd": 260.8,
+    "updated_at": "2026-09-14T11:45:34.755+00:00"
+  },
+  {
+    "mint_address": "XsjWGbe4McmJXNRd6hQYsS8dEsPKTfT38fxSebugRbn",
+    "symbol": "TXTx",
+    "underlying_symbol": "TXT",
+    "price_usd": 81,
+    "prev_close_usd": 79.89,
+    "updated_at": "2026-09-14T11:45:34.759+00:00"
+  },
+  {
+    "mint_address": "XsDa7zkFPXdu1wz29JLEV2XtWvrLdb16s4yH1LcKQ5r",
+    "symbol": "WDAYx",
+    "underlying_symbol": "WDAY",
+    "price_usd": 185.7,
+    "prev_close_usd": 186.05,
+    "updated_at": "2026-09-14T11:45:34.757+00:00"
+  },
+  {
+    "mint_address": "XsnqNkeDhvaK8C5B3Z4D1ciCupVAgkw1AdS3U2uEn26",
+    "symbol": "UPSx",
+    "underlying_symbol": "UPS",
+    "price_usd": 100.28,
+    "prev_close_usd": 99.22,
+    "updated_at": "2026-09-14T11:45:34.774+00:00"
+  },
+  {
+    "mint_address": "XsRPgsEQ3dFR84DhMv18jtob5D77FivAsTTsv1jCYmv",
+    "symbol": "ZTSx",
+    "underlying_symbol": "ZTS",
+    "price_usd": 72.97,
+    "prev_close_usd": 73.31,
+    "updated_at": "2026-09-14T11:45:35.585+00:00"
+  },
+  {
+    "mint_address": "XscE4GUcsYhcyZu5ATiGUMmhxYa1D5fwbpJw4K6K4dp",
+    "symbol": "TONXx",
+    "underlying_symbol": "TONX",
+    "price_usd": 3.04,
+    "prev_close_usd": 3.08,
+    "updated_at": "2026-09-14T11:46:02.024+00:00"
+  },
+  {
+    "mint_address": "Xsst4VThLi3nvYTsNCVwJi1z23LfXrdyKmhArkrSn1n",
+    "symbol": "CORx",
+    "underlying_symbol": "COR",
+    "price_usd": 321.57,
+    "prev_close_usd": 323.32,
+    "updated_at": "2026-09-14T11:46:47.101+00:00"
+  },
+  {
+    "mint_address": "XsYq2q3UxkwdHmhxJf5wbuXfDWuy5mYP5xsDBVEDK8Q",
+    "symbol": "HALx",
+    "underlying_symbol": "HAL",
+    "price_usd": 35.84,
+    "prev_close_usd": 37.13,
+    "updated_at": "2026-09-14T11:46:49.222+00:00"
+  },
+  {
+    "mint_address": "XsRNiTxDeRvxTEMTV5BC98N7cTZXxjNdLnudR8YeB2b",
+    "symbol": "OXYx",
+    "underlying_symbol": "OXY",
+    "price_usd": 61.46,
+    "prev_close_usd": 61.3,
+    "updated_at": "2026-09-14T11:46:50.972+00:00"
+  },
+  {
+    "mint_address": "XsGmxpiwpg9oBuRoyczLkXs7j82v9Rb4BTHwTkvXnNA",
+    "symbol": "WATx",
+    "underlying_symbol": "WAT",
+    "price_usd": 408.34,
+    "prev_close_usd": 404.81,
+    "updated_at": "2026-09-14T11:46:52.686+00:00"
+  },
+  {
+    "mint_address": "XssZsJPrzg7n9Sc1stfPcB4vygcVeMfz5uZK2gPwNdv",
+    "symbol": "ETRx",
+    "underlying_symbol": "ETR",
+    "price_usd": 105.33,
+    "prev_close_usd": 107.17,
+    "updated_at": "2026-09-14T11:46:54.448+00:00"
+  },
+  {
+    "mint_address": "XsfBx5h3LBhypgy7goD4i8nAfLU8ZZ5QBSQUtASRVox",
+    "symbol": "EOGx",
+    "underlying_symbol": "EOG",
+    "price_usd": 147.36,
+    "prev_close_usd": 147.01,
+    "updated_at": "2026-09-14T11:46:54.457+00:00"
+  },
+  {
+    "mint_address": "XsSuZjygy7yrbyZJNzBj78ysrKDFMv11HrPPwBUE2Dn",
+    "symbol": "GWWx",
+    "underlying_symbol": "GWW",
+    "price_usd": 1280,
+    "prev_close_usd": 1278.83,
+    "updated_at": "2026-09-14T11:46:55.299+00:00"
+  },
+  {
+    "mint_address": "XsuFbhEyBaWikFEfA3QM92rr9VVYm79Lip4cC5rnSp5",
+    "symbol": "HBANx",
+    "underlying_symbol": "HBAN",
+    "price_usd": 16.86,
+    "prev_close_usd": 16.63,
+    "updated_at": "2026-09-14T11:46:55.297+00:00"
+  },
+  {
+    "mint_address": "XsTzZxvfNdVESw8oEn7cNPnfQ4SGk7ncBSezfU6dxa7",
+    "symbol": "ONx",
+    "underlying_symbol": "ON",
+    "price_usd": 76.14,
+    "prev_close_usd": 70.98,
+    "updated_at": "2026-09-14T11:46:56.213+00:00"
+  },
+  {
+    "mint_address": "XsuEQKUzuiMTMwFTm6MHBeTvknFU585gwu9u4CNKjQD",
+    "symbol": "ODFLx",
+    "underlying_symbol": "ODFL",
+    "price_usd": 179.79,
+    "prev_close_usd": 181.96,
+    "updated_at": "2026-09-14T11:46:57.065+00:00"
+  },
+  {
+    "mint_address": "Xs2zWfkYjSCCW4fdC1L36rz77YzTcQtji7ewjWPvuWW",
+    "symbol": "TPRx",
+    "underlying_symbol": "TPR",
+    "price_usd": 118.49,
+    "prev_close_usd": 113.71,
+    "updated_at": "2026-09-14T11:46:57.831+00:00"
+  },
+  {
+    "mint_address": "Xsxd1sqLaPsmmmYTZHr2GnNufXXiH5rZcahP99TyeDr",
+    "symbol": "TRVx",
+    "underlying_symbol": "TRV",
+    "price_usd": 375.2,
+    "prev_close_usd": 366.85,
+    "updated_at": "2026-09-14T11:46:57.835+00:00"
+  },
+  {
+    "mint_address": "XsbicvsCUHE9ja8gTsjzruDxQTKeyij94i3phx3NuNf",
+    "symbol": "SREx",
+    "underlying_symbol": "SRE",
+    "price_usd": 83.34,
+    "prev_close_usd": 85.01,
+    "updated_at": "2026-09-14T11:46:57.871+00:00"
+  },
+  {
+    "mint_address": "XsNor8pbicnexAYvgvq3p8EXwyRj9UzjYu92ZnrJLqC",
+    "symbol": "YUMx",
+    "underlying_symbol": "YUM",
+    "price_usd": 140.87,
+    "prev_close_usd": 145.16,
+    "updated_at": "2026-09-14T11:46:58.638+00:00"
+  },
+  {
+    "mint_address": "XsKq6Ac27X857u18jH8MrWQ3bEA5ZfUSGriawpyu8xw",
+    "symbol": "UALx",
+    "underlying_symbol": "UAL",
+    "price_usd": 109.82,
+    "prev_close_usd": 107.12,
+    "updated_at": "2026-09-14T11:46:58.641+00:00"
+  },
+  {
+    "mint_address": "Xsr6MgLKmoEmN4aL78MQ2q98R8wJnZ3FaCZUMwkNbNU",
+    "symbol": "XELx",
+    "underlying_symbol": "XEL",
+    "price_usd": 75.5,
+    "prev_close_usd": 76.19,
+    "updated_at": "2026-09-14T11:46:58.833+00:00"
+  },
+  {
+    "mint_address": "XsPPAW5wuUa1ALN1NstEkUAajbwycXTRxtWoLfFriy4",
+    "symbol": "ECLx",
+    "underlying_symbol": "ECL",
+    "price_usd": 276.18,
+    "prev_close_usd": 272.21,
+    "updated_at": "2026-09-14T11:47:00.457+00:00"
+  },
+  {
+    "mint_address": "XsEmsxmtT12GBiqtvTxoNaipTBNEdUs6oq7pwHFHTb7",
+    "symbol": "FDXx",
+    "underlying_symbol": "FDX",
+    "price_usd": 311.99,
+    "prev_close_usd": 309.19,
+    "updated_at": "2026-09-14T11:47:01.261+00:00"
+  },
+  {
+    "mint_address": "XsG6o69zE7mQCeFf6utyMx9Q89cJjGV4vTwi3wFHrkN",
+    "symbol": "ICEx",
+    "underlying_symbol": "ICE",
+    "price_usd": 157.4,
+    "prev_close_usd": 156.5,
+    "updated_at": "2026-09-14T11:47:02.314+00:00"
+  },
+  {
+    "mint_address": "XsZCRtj2wRfksr19c4Bf4L2WBB5EYPmr1nBQS1yXApD",
+    "symbol": "ORLYx",
+    "underlying_symbol": "ORLY",
+    "price_usd": 85.82,
+    "prev_close_usd": 86.08,
+    "updated_at": "2026-09-14T11:47:03.16+00:00"
+  },
+  {
+    "mint_address": "XsYvZVxiNdjuHQQzdCmf4TMSTBgvarV2gLi2akooV8V",
+    "symbol": "PSXx",
+    "underlying_symbol": "PSX",
+    "price_usd": 259.47,
+    "prev_close_usd": 260.78,
+    "updated_at": "2026-09-14T11:47:03.881+00:00"
+  },
+  {
+    "mint_address": "XsnXCL5FtHLHH1jW5Nknd5BjuazxnnkCAGR6fWPwPJL",
+    "symbol": "PLDx",
+    "underlying_symbol": "PLD",
+    "price_usd": 135.75,
+    "prev_close_usd": 135.66,
+    "updated_at": "2026-09-14T11:47:09.316+00:00"
+  },
+  {
+    "mint_address": "Xsi8P9r7ZWDBBnBj9JTfnKWqyKNV19X2CQPWQsGdjnS",
+    "symbol": "BOTx",
+    "underlying_symbol": "BOT",
+    "price_usd": 26.85,
+    "prev_close_usd": 27.14,
+    "updated_at": "2026-09-14T11:47:11.752+00:00"
+  },
+  {
+    "mint_address": "XsGAnis8BY5TLxEGdPY1LeeqY1DHPcUkkBQWRyQaJya",
+    "symbol": "ENHAx",
+    "underlying_symbol": "ENHA",
+    "price_usd": 1.56,
+    "prev_close_usd": 1.62,
+    "updated_at": "2026-09-14T11:47:12.601+00:00"
+  },
+  {
+    "mint_address": "XsZdwvwEAn7KH8bCCo8AkxJmSm4MbaRxcDeh9Gt2VTF",
+    "symbol": "FLQMx",
+    "underlying_symbol": "FLQM",
+    "price_usd": 59.55,
+    "prev_close_usd": 59.34,
+    "updated_at": "2026-09-14T11:47:13.356+00:00"
+  },
+  {
+    "mint_address": "XsbZDdYJKxEBQASz4KBj23NRgymXw2NK6mbNQ6PYhC7",
+    "symbol": "FEZx",
+    "underlying_symbol": "FEZ",
+    "price_usd": 69.7,
+    "prev_close_usd": 69.71,
+    "updated_at": "2026-09-14T11:47:13.514+00:00"
+  },
+  {
+    "mint_address": "XsCAXu7xTaZMG9b9KJhNWYapuvNjxPuE4SysZq8uvMq",
+    "symbol": "JPSTx",
+    "underlying_symbol": "JPST",
+    "price_usd": 50.36,
+    "prev_close_usd": 50.4,
+    "updated_at": "2026-09-14T11:47:14.27+00:00"
+  },
+  {
+    "mint_address": "XsdZDkoMdUb6iKDAKKappuM7C1Q2HmTqC8jNujbfmCu",
+    "symbol": "SOXLx",
+    "underlying_symbol": "SOXL",
+    "price_usd": 121.82,
+    "prev_close_usd": 125.87,
+    "updated_at": "2026-09-14T11:47:16.275+00:00"
+  },
+  {
+    "mint_address": "XsBNz5UKYqcALjS5Xnm7HesMapyKLxkmfWPGHBek36x",
+    "symbol": "USPXx",
+    "underlying_symbol": "USPX",
+    "price_usd": 66.873,
+    "prev_close_usd": 66.681,
+    "updated_at": "2026-09-14T11:47:17.182+00:00"
+  },
+  {
+    "mint_address": "Xssu2cDLdZXZYrq17frTVrb3meumRCAzEf7pXyxoWVN",
+    "symbol": "CEGx",
+    "underlying_symbol": "CEG",
+    "price_usd": 284.75,
+    "prev_close_usd": 293.905,
+    "updated_at": "2026-09-14T11:47:19.091+00:00"
+  },
+  {
+    "mint_address": "XsLUiVEwYeoneKpgR1C2Q4DBUZhX4xDktSCfQqq8zmn",
+    "symbol": "VRTx",
+    "underlying_symbol": "VRT",
+    "price_usd": 257.06,
+    "prev_close_usd": 262.89,
+    "updated_at": "2026-09-14T11:47:24.231+00:00"
+  },
+  {
+    "mint_address": "XsrBCwaH8c46xiqXBChzobgufRKxQxAWUWbndgBNzFn",
+    "symbol": "BMNRx",
+    "underlying_symbol": "BMNR",
+    "price_usd": 25.03,
+    "prev_close_usd": 24.21,
+    "updated_at": "2026-09-14T11:47:25.185+00:00"
+  },
+  {
+    "mint_address": "XsguBZPkM9BDmxspmWe29EmrYZBv21ENcC27Pqh7grB",
+    "symbol": "MARAx",
+    "underlying_symbol": "MARA",
+    "price_usd": 11.98,
+    "prev_close_usd": 11.92,
+    "updated_at": "2026-09-14T11:47:28.006+00:00"
+  },
+  {
+    "mint_address": "XsJb1p4Ks6VFggq68JyMz7S3kdRfkqh4wA6EMyxi4DD",
+    "symbol": "OKLOx",
+    "underlying_symbol": "OKLO",
+    "price_usd": 36.22,
+    "prev_close_usd": 42.57,
+    "updated_at": "2026-09-14T11:47:28.858+00:00"
+  },
+  {
+    "mint_address": "XshWQWYVp5ff8CrAEsGmLVKD47nBWi3Ygn5v8wXK27G",
+    "symbol": "PYPLx",
+    "underlying_symbol": "PYPL",
+    "price_usd": 53.72,
+    "prev_close_usd": 52.17,
+    "updated_at": "2026-09-14T11:47:29.776+00:00"
+  },
+  {
+    "mint_address": "XsEoih2x6nZuUjFwzGoba6MFmtzCkzW2c4YAm6baQbq",
+    "symbol": "SBETx",
+    "underlying_symbol": "SBET",
+    "price_usd": 8.88,
+    "prev_close_usd": 8.54,
+    "updated_at": "2026-09-14T11:47:30.623+00:00"
+  },
+  {
+    "mint_address": "Xs4uNhvBDAcp2mz3g9XR5q3vzLgmF1ANWxJgWk2d5u3",
+    "symbol": "WENx",
+    "underlying_symbol": "WEN",
+    "price_usd": 7.63,
+    "prev_close_usd": 7.54,
+    "updated_at": "2026-09-14T11:47:31.495+00:00"
+  },
+  {
+    "mint_address": "XsHtf5RpxsQ7jeJ9ivNewouZKJHbPxhPoEy6yYvULr7",
+    "symbol": "ABTx",
+    "underlying_symbol": "ABT",
+    "price_usd": 101.95,
+    "prev_close_usd": 105.23,
+    "updated_at": "2026-09-14T11:47:32.394+00:00"
+  },
+  {
+    "mint_address": "XsMAqkcKsUewDrzVkait4e5u4y8REgtyS7jWgCpLV2C",
+    "symbol": "JPMx",
+    "underlying_symbol": "JPM",
+    "price_usd": 356.23,
+    "prev_close_usd": 354.71,
+    "updated_at": "2026-09-14T11:47:34.301+00:00"
+  },
+  {
+    "mint_address": "XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX",
+    "symbol": "MSFTx",
+    "underlying_symbol": "MSFT",
+    "price_usd": 495.63,
+    "prev_close_usd": 491.65,
+    "updated_at": "2026-09-14T11:47:36.11+00:00"
+  },
+  {
+    "mint_address": "XsfAzPzYrYjd4Dpa9BU3cusBsvWfVB9gBcyGC87S57n",
+    "symbol": "NVOx",
+    "underlying_symbol": "NVO",
+    "price_usd": 43.07,
+    "prev_close_usd": 44.56,
+    "updated_at": "2026-09-14T11:47:37.104+00:00"
+  },
+  {
+    "mint_address": "XsQZdaWUAGC4R3fgD2N1fupKvJfJq6YM51ccnsLUWFA",
+    "symbol": "AMATx",
+    "underlying_symbol": "AMAT",
+    "price_usd": 456.49,
+    "prev_close_usd": 468.85,
+    "updated_at": "2026-09-14T11:47:42.348+00:00"
+  },
+  {
+    "mint_address": "Xs3hGRD2NSyUUC1fjK5gKe8hXQgLoqxjR5WtYL1NBbg",
+    "symbol": "MDLZx",
+    "underlying_symbol": "MDLZ",
+    "price_usd": 62.44,
+    "prev_close_usd": 62.42,
+    "updated_at": "2026-09-14T11:45:32.897+00:00"
+  },
+  {
+    "mint_address": "XsGYpMvKbVt6ViHqRd7cF3s746dAMFBQWcC49hB9VVP",
+    "symbol": "NKEx",
+    "underlying_symbol": "NKE",
+    "price_usd": 36.8,
+    "prev_close_usd": 37.35,
+    "updated_at": "2026-09-14T11:45:33.756+00:00"
+  },
+  {
+    "mint_address": "Xs9hw3a4acJr629NUzDbEC376rv3AhfmwvXm9BNnD9G",
+    "symbol": "BROx",
+    "underlying_symbol": "BRO",
+    "price_usd": 66.19,
+    "prev_close_usd": 66.53,
+    "updated_at": "2026-09-14T11:45:35.523+00:00"
+  },
+  {
+    "mint_address": "Xs1xSyecLzT2u188qGFs1JTBXeE9RmBX1pc11o5X6U2",
+    "symbol": "WWDx",
+    "underlying_symbol": "WWD",
+    "price_usd": 337.26,
+    "prev_close_usd": 337.66,
+    "updated_at": "2026-09-14T11:45:35.52+00:00"
+  },
+  {
+    "mint_address": "XsTNaRrDQtFJi56TAQbmk6tHzWQvihWGoafKSJzbJdY",
+    "symbol": "DRIx",
+    "underlying_symbol": "DRI",
+    "price_usd": 209.89,
+    "prev_close_usd": 209.42,
+    "updated_at": "2026-09-14T11:45:36.326+00:00"
+  },
+  {
+    "mint_address": "XsZsYW1U5exCzHqwsxwjTDABR2SW9MzKccXSkAgx47N",
+    "symbol": "ESSx",
+    "underlying_symbol": "ESS",
+    "price_usd": 272.91,
+    "prev_close_usd": 274.37,
+    "updated_at": "2026-09-14T11:45:36.368+00:00"
+  },
+  {
+    "mint_address": "XspZSVf3tmPqV7QXqNzCjmvv11nnAtQ4n4YwPxykt3U",
+    "symbol": "FFIVx",
+    "underlying_symbol": "FFIV",
+    "price_usd": 411.71,
+    "prev_close_usd": 404.63,
+    "updated_at": "2026-09-14T11:45:37.107+00:00"
+  },
+  {
+    "mint_address": "XszMPpjvc5nyynUGktkn7JkqkfFYxunE29Rxi4Vo8C5",
+    "symbol": "KHCx",
+    "underlying_symbol": "KHC",
+    "price_usd": 24.6,
+    "prev_close_usd": 24.61,
+    "updated_at": "2026-09-14T11:45:38.968+00:00"
+  },
+  {
+    "mint_address": "XsViHjyRbiSBskjizb1gszGTmZqtAH8TuqwJ7sB5AcP",
+    "symbol": "MRNAx",
+    "underlying_symbol": "MRNA",
+    "price_usd": 143.97,
+    "prev_close_usd": 135.61,
+    "updated_at": "2026-09-14T11:45:38.965+00:00"
+  },
+  {
+    "mint_address": "XsJXYLby91CWhGhTXds9oxjoc8EdsLy2iuxmq55U1Y3",
+    "symbol": "CTVAx",
+    "underlying_symbol": "CTVA",
+    "price_usd": 83.9,
+    "prev_close_usd": 84.75,
+    "updated_at": "2026-09-14T11:46:04.951+00:00"
+  },
+  {
+    "mint_address": "XsUytoK53kCKfXC61Dn3ZM8sjyVBUpScF111pfMG69U",
+    "symbol": "PEGx",
+    "underlying_symbol": "PEG",
+    "price_usd": 72.39,
+    "prev_close_usd": 72.6,
+    "updated_at": "2026-09-14T11:46:06.549+00:00"
+  },
+  {
+    "mint_address": "XspDMNC416uCcUbngqyAwzk1phuRYdmm6AMsWo3EHd4",
+    "symbol": "OKEx",
+    "underlying_symbol": "OKE",
+    "price_usd": 96.62,
+    "prev_close_usd": 95.82,
+    "updated_at": "2026-09-14T11:46:06.548+00:00"
+  },
+  {
+    "mint_address": "XsUXFEjcDYrp7NuzHtC88JLyirmnLpA8nde1e8eRxEn",
+    "symbol": "SPGx",
+    "underlying_symbol": "SPG",
+    "price_usd": 204.83,
+    "prev_close_usd": 204.53,
+    "updated_at": "2026-09-14T11:46:07.458+00:00"
+  },
+  {
+    "mint_address": "XsSFgHPgZgYNSuz1ttNHNp8zUBBMZGngFcMMfKPK6JQ",
+    "symbol": "GMx",
+    "underlying_symbol": "GM",
+    "price_usd": 85.62,
+    "prev_close_usd": 83.76,
+    "updated_at": "2026-09-14T11:46:08.31+00:00"
+  },
+  {
+    "mint_address": "Xs6Udev3M1atxRjjXCjAg24BdjYuLs6Qj7eTh7XjEjW",
+    "symbol": "CMSx",
+    "underlying_symbol": "CMS",
+    "price_usd": 67.15,
+    "prev_close_usd": 68.17,
+    "updated_at": "2026-09-14T11:46:32.73+00:00"
+  },
+  {
+    "mint_address": "XsPtqd1RVDcZzSmeVwY253J4EHVUqMSrR9FcFmjZjqq",
+    "symbol": "CPAYx",
+    "underlying_symbol": "CPAY",
+    "price_usd": 408.22,
+    "prev_close_usd": 406.09,
+    "updated_at": "2026-09-14T11:46:33.672+00:00"
+  },
+  {
+    "mint_address": "XsPWGRNQF1Thif9qaadTNtF8xfHTb8sjvw1NC46hkED",
+    "symbol": "DLTRx",
+    "underlying_symbol": "DLTR",
+    "price_usd": 118.17,
+    "prev_close_usd": 118.39,
+    "updated_at": "2026-09-14T11:46:33.679+00:00"
+  },
+  {
+    "mint_address": "Xs3dfAaDSQMVrDcEVbxypK4UeXhCbDBK2AgAWCHwqmq",
+    "symbol": "EFXx",
+    "underlying_symbol": "EFX",
+    "price_usd": 169,
+    "prev_close_usd": 168.09,
+    "updated_at": "2026-09-14T11:46:33.682+00:00"
+  },
+  {
+    "mint_address": "XsDum7DWP825ChLAhSN5NYBpoCUsHJJdRKTPseA9VxR",
+    "symbol": "FWONKx",
+    "underlying_symbol": "FWONK",
+    "price_usd": 95.59,
+    "prev_close_usd": 96.8,
+    "updated_at": "2026-09-14T11:46:34.53+00:00"
+  },
+  {
+    "mint_address": "XsXb7oGeK1N5Jk9mm9VD4ZQrXsu9NULWP3C3n7hhDWp",
+    "symbol": "MTDx",
+    "underlying_symbol": "MTD",
+    "price_usd": 1293.52,
+    "prev_close_usd": 1290.36,
+    "updated_at": "2026-09-14T11:46:36.114+00:00"
+  },
+  {
+    "mint_address": "Xse5GAs99zAj5bzMAbwjooLn4AHn1Ny6nUcN6vt5vrR",
+    "symbol": "ULTAx",
+    "underlying_symbol": "ULTA",
+    "price_usd": 546.78,
+    "prev_close_usd": 541.86,
+    "updated_at": "2026-09-14T11:46:37.147+00:00"
+  },
+  {
+    "mint_address": "Xs9uh84WXf2F4P4UVRLvNGwv753ArA69kUk6r4GKVoA",
+    "symbol": "VTRSx",
+    "underlying_symbol": "VTRS",
+    "price_usd": 16.51,
+    "prev_close_usd": 16.5,
+    "updated_at": "2026-09-14T11:46:38.003+00:00"
+  },
+  {
+    "mint_address": "XsDBYWqoxayY5cqFWs6jNJn4wv5vbP3RkTNqceEQRGW",
+    "symbol": "CASYx",
+    "underlying_symbol": "CASY",
+    "price_usd": 615.47,
+    "prev_close_usd": 629.03,
+    "updated_at": "2026-09-14T11:46:38.921+00:00"
+  },
+  {
+    "mint_address": "Xsx9i1A6e4xc9r5Gxxy4uZV4YSmwAXBJScvGLRv4nH2",
+    "symbol": "CNPx",
+    "underlying_symbol": "CNP",
+    "price_usd": 39.11,
+    "prev_close_usd": 39.77,
+    "updated_at": "2026-09-14T11:46:39.769+00:00"
+  },
+  {
+    "mint_address": "Xsm4TwT5UtCCjkcrj2eMZDPNCTdBeJacMmRCrxoXpZ8",
+    "symbol": "EIXx",
+    "underlying_symbol": "EIX",
+    "price_usd": 56,
+    "prev_close_usd": 57.44,
+    "updated_at": "2026-09-14T11:46:39.801+00:00"
+  },
+  {
+    "mint_address": "XsfdW27Z6gk5otDjYw5R2ad7PP1dKoR1Qx2ayurRBGc",
+    "symbol": "FERGx",
+    "underlying_symbol": "FERG",
+    "price_usd": 222.54,
+    "prev_close_usd": 223.22,
+    "updated_at": "2026-09-14T11:46:40.628+00:00"
+  },
+  {
+    "mint_address": "XsvS1ZY358vAjNJ7s3fz13s64ZqYF36rgUDR8yVJkuA",
+    "symbol": "EQTx",
+    "underlying_symbol": "EQT",
+    "price_usd": 54.07,
+    "prev_close_usd": 54.63,
+    "updated_at": "2026-09-14T11:46:40.63+00:00"
+  },
+  {
+    "mint_address": "Xstzb2X8HbtJVUephHsF7XknnwiBRYMxWoLyfUBWaoC",
+    "symbol": "IQVx",
+    "underlying_symbol": "IQV",
+    "price_usd": 261.77,
+    "prev_close_usd": 256.98,
+    "updated_at": "2026-09-14T11:46:41.347+00:00"
+  },
+  {
+    "mint_address": "XsCz2AUyFUuadE9zxfs7ywkbMvaQNeVTeNBK15L43Qc",
+    "symbol": "HUBBx",
+    "underlying_symbol": "HUBB",
+    "price_usd": 460.4,
+    "prev_close_usd": 454.97,
+    "updated_at": "2026-09-14T11:46:41.536+00:00"
+  },
+  {
+    "mint_address": "XsZ9qtReiaokaUfW3bEUx2AU4Zmcjk9Y95nEtFMqEXn",
+    "symbol": "NRGx",
+    "underlying_symbol": "NRG",
+    "price_usd": 113.46,
+    "prev_close_usd": 115.37,
+    "updated_at": "2026-09-14T11:46:43.25+00:00"
+  },
+  {
+    "mint_address": "XsCRJ3YusYCZ8ihZbmdao46y3ddSibxPK29UsitD9J9",
+    "symbol": "RVMDx",
+    "underlying_symbol": "RVMD",
+    "price_usd": 203.77,
+    "prev_close_usd": 207.68,
+    "updated_at": "2026-09-14T11:46:43.973+00:00"
+  },
+  {
+    "mint_address": "XsQ2JJPzG5EMvkRPSshA1mmpVvGPKBNYQmvuEnzpJhZ",
+    "symbol": "AFLx",
+    "underlying_symbol": "AFL",
+    "price_usd": 115.28,
+    "prev_close_usd": 114.74,
+    "updated_at": "2026-09-14T11:46:45.027+00:00"
+  },
+  {
+    "mint_address": "Xs3yrczxLidKAArdTKepU5NV8KUmwFM11NMyYbGqWDZ",
+    "symbol": "BDXx",
+    "underlying_symbol": "BDX",
+    "price_usd": 177.85,
+    "prev_close_usd": 179.8,
+    "updated_at": "2026-09-14T11:46:46.255+00:00"
+  },
+  {
+    "mint_address": "XsR1ktNCRYDoDNxhaSxF6NX2HyT4ACSQBgPRLpXTWmm",
+    "symbol": "CMGx",
+    "underlying_symbol": "CMG",
+    "price_usd": 36.2,
+    "prev_close_usd": 36.03,
+    "updated_at": "2026-09-14T11:46:47.11+00:00"
+  },
+  {
+    "mint_address": "XsWCYadcnfTLH3W8sBbJZepwotUkfV1qg7QQmzVo8M8",
+    "symbol": "CWx",
+    "underlying_symbol": "CW",
+    "price_usd": 558.9,
+    "prev_close_usd": 565.34,
+    "updated_at": "2026-09-14T11:46:47.12+00:00"
+  },
+  {
+    "mint_address": "XsESyqE7kRmE1RVQDmo4aiMGMXogeY1Sdo8FQKwAmco",
+    "symbol": "EDx",
+    "underlying_symbol": "ED",
+    "price_usd": 106.46,
+    "prev_close_usd": 107.49,
+    "updated_at": "2026-09-14T11:46:48.348+00:00"
+  },
+  {
+    "mint_address": "XsLw8Pw975zbR4QPQkAorVYM6qQq21jSztyDoskVz5x",
+    "symbol": "HIGx",
+    "underlying_symbol": "HIG",
+    "price_usd": 136.36,
+    "prev_close_usd": 136.56,
+    "updated_at": "2026-09-14T11:46:49.2+00:00"
+  },
+  {
+    "mint_address": "XsHyXCSuYHca6SxpSLb2taKiWkoJA48pVcnqyFguHf5",
+    "symbol": "KRx",
+    "underlying_symbol": "KR",
+    "price_usd": 58.49,
+    "prev_close_usd": 56.44,
+    "updated_at": "2026-09-14T11:46:50.04+00:00"
+  },
+  {
+    "mint_address": "XsWx5RzivC8d5XwnLiMcgQqqhXiDnrTDwFCDap1o6NW",
+    "symbol": "IRx",
+    "underlying_symbol": "IR",
+    "price_usd": 72.93,
+    "prev_close_usd": 73.58,
+    "updated_at": "2026-09-14T11:46:50.062+00:00"
+  },
+  {
+    "mint_address": "XsCbNmXqgaDVDTpXaATSrki9ATKwu1wzfhcYwPriMns",
+    "symbol": "ROPx",
+    "underlying_symbol": "ROP",
+    "price_usd": 388.52,
+    "prev_close_usd": 390.35,
+    "updated_at": "2026-09-14T11:46:51.848+00:00"
+  },
+  {
+    "mint_address": "XsiYzgRPqPjAaJjpDMo2CaQ7c9khuCwD7Hj1po2dxSj",
+    "symbol": "Dx",
+    "underlying_symbol": "D",
+    "price_usd": 64.36,
+    "prev_close_usd": 65.1,
+    "updated_at": "2026-09-14T11:46:53.447+00:00"
+  },
+  {
+    "mint_address": "XsVNxwvuQghf6TYBmCck75ddYD3KiWozujR8C67bPXC",
+    "symbol": "AMEx",
+    "underlying_symbol": "AME",
+    "price_usd": 241.87,
+    "prev_close_usd": 236.27,
+    "updated_at": "2026-09-14T11:46:53.594+00:00"
+  },
+  {
+    "mint_address": "XsdeDQyocwoXYq4rvm3eAxN4uDUqww78i9nKLABhp6h",
+    "symbol": "APDx",
+    "underlying_symbol": "APD",
+    "price_usd": 291.43,
+    "prev_close_usd": 295.24,
+    "updated_at": "2026-09-14T11:46:53.596+00:00"
+  },
+  {
+    "mint_address": "XsSfT8eYeR2NqYFwCNLRNfDARHUTXvLeSnGbw2UKqrA",
+    "symbol": "EWx",
+    "underlying_symbol": "EW",
+    "price_usd": 84.37,
+    "prev_close_usd": 86.18,
+    "updated_at": "2026-09-14T11:46:54.453+00:00"
+  },
+  {
+    "mint_address": "Xs8WNVWbYNsHsqEu9WTb9AazMfG7wFxFat11V6mVK1x",
+    "symbol": "DVNx",
+    "underlying_symbol": "DVN",
+    "price_usd": 50.23,
+    "prev_close_usd": 48.98,
+    "updated_at": "2026-09-14T11:46:54.455+00:00"
+  },
+  {
+    "mint_address": "XsYtTeabUTJnkxWrHZUChwcKpNq6BbqPbWs9ZgLk4Xa",
+    "symbol": "BXx",
+    "underlying_symbol": "BX",
+    "price_usd": 128.51,
+    "prev_close_usd": 129.07,
+    "updated_at": "2026-09-14T11:46:58.831+00:00"
+  },
+  {
+    "mint_address": "XskJzVZDKvqm999PGat2ifznPVmmDXn4Zi1LZ7Y5CVr",
+    "symbol": "CSXx",
+    "underlying_symbol": "CSX",
+    "price_usd": 48.95,
+    "prev_close_usd": 48.37,
+    "updated_at": "2026-09-14T11:46:59.684+00:00"
+  },
+  {
+    "mint_address": "Xstp4CYu1181rhhi7w32Lj6wQZ2VDjFhQNKZwZARk5G",
+    "symbol": "DLRx",
+    "underlying_symbol": "DLR",
+    "price_usd": 188.58,
+    "prev_close_usd": 189.08,
+    "updated_at": "2026-09-14T11:47:00.478+00:00"
+  },
+  {
+    "mint_address": "Xszp97B7zgeyNUFkymHdxXp3Y5KTZ1rzd2bAL9TW34t",
+    "symbol": "HPEx",
+    "underlying_symbol": "HPE",
+    "price_usd": 62.09,
+    "prev_close_usd": 58.9,
+    "updated_at": "2026-09-14T11:47:01.457+00:00"
+  },
+  {
+    "mint_address": "XsXzXSMoSdF3gczdPhECXHN3TwfkUpNkthUvpEJVbDn",
+    "symbol": "KEYSx",
+    "underlying_symbol": "KEYS",
+    "price_usd": 338.64,
+    "prev_close_usd": 331.01,
+    "updated_at": "2026-09-14T11:47:02.309+00:00"
+  },
+  {
+    "mint_address": "Xs7NEcjqek7SN135xwSafr721njNVyenBdd7NDG2cYo",
+    "symbol": "ITWx",
+    "underlying_symbol": "ITW",
+    "price_usd": 268.16,
+    "prev_close_usd": 263.99,
+    "updated_at": "2026-09-14T11:47:02.312+00:00"
+  },
+  {
+    "mint_address": "XsPYJyoTnjc471VCHEERVBVrJ7xuQhDYWddPw6koNVV",
+    "symbol": "ROSTx",
+    "underlying_symbol": "ROST",
+    "price_usd": 230.74,
+    "prev_close_usd": 225.27,
+    "updated_at": "2026-09-14T11:47:04.079+00:00"
+  },
+  {
+    "mint_address": "XsmMjZH2ex52ecoCqBN1sMADoWQziXpe9j6z6QVmafF",
+    "symbol": "VLOx",
+    "underlying_symbol": "VLO",
+    "price_usd": 390.42,
+    "prev_close_usd": 388.95,
+    "updated_at": "2026-09-14T11:47:04.933+00:00"
+  },
+  {
+    "mint_address": "XspgPjzWCN6w4b8xHyfN8NRXrgdNMYx5nsWgiGGeK4R",
+    "symbol": "TFCx",
+    "underlying_symbol": "TFC",
+    "price_usd": 50.4,
+    "prev_close_usd": 50.15,
+    "updated_at": "2026-09-14T11:47:04.949+00:00"
+  },
+  {
+    "mint_address": "XsrB8RyBpbMWm8zCQutdT2n95BgNj4rJFfxuhHFjk2v",
+    "symbol": "CDNSx",
+    "underlying_symbol": "CDNS",
+    "price_usd": 289.37,
+    "prev_close_usd": 284.6,
+    "updated_at": "2026-09-14T11:47:05.651+00:00"
+  },
+  {
+    "mint_address": "XsBcnKnZMsPaerLiUQ4eMFy4Fjysot4RugYXYDjiqCP",
+    "symbol": "BAx",
+    "underlying_symbol": "BA",
+    "price_usd": 210.45,
+    "prev_close_usd": 206.42,
+    "updated_at": "2026-09-14T11:47:05.72+00:00"
+  },
+  {
+    "mint_address": "Xsh3Lt6pLpH65udstiFuZThJ6gyQTL6ryVXtNwEy5zd",
+    "symbol": "DEx",
+    "underlying_symbol": "DE",
+    "price_usd": 675.74,
+    "prev_close_usd": 677.21,
+    "updated_at": "2026-09-14T11:47:06.694+00:00"
+  },
+  {
+    "mint_address": "Xstd4ems8vhfGwTngpXCzgnSvJ4oD7E5gExUue2KEZX",
+    "symbol": "COFx",
+    "underlying_symbol": "COF",
+    "price_usd": 208.3,
+    "prev_close_usd": 210.86,
+    "updated_at": "2026-09-14T11:47:06.693+00:00"
+  },
+  {
+    "mint_address": "XsBo6pg8N9kk7YnL69NnBBSZBWDkF1gHWjTAXpYuAVo",
+    "symbol": "EQIXx",
+    "underlying_symbol": "EQIX",
+    "price_usd": 1037.72,
+    "prev_close_usd": 1043.06,
+    "updated_at": "2026-09-14T11:47:07.544+00:00"
+  },
+  {
+    "mint_address": "XsgBcHP3frsQGHr5EoDdoPZMANk52Y4JPg5BYx98NwL",
+    "symbol": "ISRGx",
+    "underlying_symbol": "ISRG",
+    "price_usd": 369.15,
+    "prev_close_usd": 353.24,
+    "updated_at": "2026-09-14T11:47:08.288+00:00"
+  },
+  {
+    "mint_address": "XsnoiYFyBemVokJpx3ddt6mPB3v2HepSevRLXSfj3Y5",
+    "symbol": "MCKx",
+    "underlying_symbol": "MCK",
+    "price_usd": 881.51,
+    "prev_close_usd": 891.68,
+    "updated_at": "2026-09-14T11:47:08.297+00:00"
+  },
+  {
+    "mint_address": "Xsehrw5hHiQ16Vfxxctj8ewUhtRCzbCrBYS278ctAAy",
+    "symbol": "UNPx",
+    "underlying_symbol": "UNP",
+    "price_usd": 284.4,
+    "prev_close_usd": 284.74,
+    "updated_at": "2026-09-14T11:47:10.963+00:00"
+  },
+  {
+    "mint_address": "Xs5nNLYnMuwBTMQ7KnfCgfsDBa9WehDa1EZqzicarZm",
+    "symbol": "SOx",
+    "underlying_symbol": "SO",
+    "price_usd": 87.17,
+    "prev_close_usd": 88.34,
+    "updated_at": "2026-09-14T11:47:11.025+00:00"
+  },
+  {
+    "mint_address": "Xs4VKGG8TTan8UN3mC1ufsDMamBtBLE4Ahfkyv2tfuy",
+    "symbol": "VZx",
+    "underlying_symbol": "VZ",
+    "price_usd": 50.61,
+    "prev_close_usd": 49.74,
+    "updated_at": "2026-09-14T11:47:11.746+00:00"
+  },
+  {
+    "mint_address": "XsRvd1meWQ9kW1SrZPa1jokQqmBoPWWjd6wGTgdp5E6",
+    "symbol": "CATx",
+    "underlying_symbol": "CAT",
+    "price_usd": 818.57,
+    "prev_close_usd": 815.56,
+    "updated_at": "2026-09-14T11:47:11.778+00:00"
+  },
+  {
+    "mint_address": "Xs8rb8QG9mEuQ41g2cUzuJLZt3xEPQFhvgb9s4obXSn",
+    "symbol": "FAAAx",
+    "underlying_symbol": "FAAA",
+    "price_usd": 50.36,
+    "prev_close_usd": 50.3,
+    "updated_at": "2026-09-14T11:47:12.499+00:00"
+  },
+  {
+    "mint_address": "XsxaiepK535fVqavwRvJVTC64KaCLTtCgQT5jpR3rJt",
+    "symbol": "MDLNx",
+    "underlying_symbol": "MDLN",
+    "price_usd": 32.53,
+    "prev_close_usd": 34.05,
+    "updated_at": "2026-09-14T11:47:15.417+00:00"
+  },
+  {
+    "mint_address": "XsTSfxoQry8okZoGMN5t6mExibDq3gA2NDLJeLztX7E",
+    "symbol": "NLRx",
+    "underlying_symbol": "NLR",
+    "price_usd": 113.22,
+    "prev_close_usd": 122.95,
+    "updated_at": "2026-09-14T11:47:15.447+00:00"
+  },
+  {
+    "mint_address": "XsU4fHhJEFcrwNh4RYuHmWdaoCfsrWKEm4UEs3zTJwH",
+    "symbol": "TXNx",
+    "underlying_symbol": "TXN",
+    "price_usd": 268.7,
+    "prev_close_usd": 261.59,
+    "updated_at": "2026-09-14T11:47:17.007+00:00"
+  },
+  {
+    "mint_address": "XsTg4SHooxeYYvQK5Q2wdKBKY46UdtZkF2LfNwbHEtu",
+    "symbol": "AIGx",
+    "underlying_symbol": "AIG",
+    "price_usd": 75.33,
+    "prev_close_usd": 75.03,
+    "updated_at": "2026-09-14T11:47:41.404+00:00"
+  },
+  {
+    "mint_address": "XsKfQxVh7wasRmzPQEs4qvnmayt5KTX1CqvQdJ8XcSJ",
+    "symbol": "GISx",
+    "underlying_symbol": "GIS",
+    "price_usd": 35.85,
+    "prev_close_usd": 37.09,
+    "updated_at": "2026-09-14T11:45:21.268+00:00"
+  },
+  {
+    "mint_address": "Xsx234fZF5KMZ5catYi7m9P682Pk9TWWHF5jAfYGZJk",
+    "symbol": "CMEx",
+    "underlying_symbol": "CME",
+    "price_usd": 275.54,
+    "prev_close_usd": 274.7,
+    "updated_at": "2026-09-14T11:45:30.444+00:00"
+  },
+  {
+    "mint_address": "XsGea4488p7ydWQTQMYxtvCXDJiAJwgt4HsoKiKrGa3",
+    "symbol": "ALBx",
+    "underlying_symbol": "ALB",
+    "price_usd": 117.52,
+    "prev_close_usd": 125.91,
+    "updated_at": "2026-09-14T11:45:32.133+00:00"
+  },
+  {
+    "mint_address": "XsChiU9gDeWj7HYrqioNUn8C81jaHZwegfGQdQXHnhd",
+    "symbol": "PFGx",
+    "underlying_symbol": "PFG",
+    "price_usd": 116.165,
+    "prev_close_usd": 114.02,
+    "updated_at": "2026-09-14T11:45:33.844+00:00"
+  },
+  {
+    "mint_address": "XsYMTZRVKs9he9redAPMhaBbCbmZvUxMTApsfCZsKzt",
+    "symbol": "TSCOx",
+    "underlying_symbol": "TSCO",
+    "price_usd": 33.01,
+    "prev_close_usd": 34,
+    "updated_at": "2026-09-14T11:45:34.761+00:00"
+  },
+  {
+    "mint_address": "Xszn8sMqeBqfLDXAsDa9uEYo6WT3LYSD4jje2pGK6k5",
+    "symbol": "BURLx",
+    "underlying_symbol": "BURL",
+    "price_usd": 239.04,
+    "prev_close_usd": 239.18,
+    "updated_at": "2026-09-14T11:45:35.485+00:00"
+  },
+  {
+    "mint_address": "Xsuex5gGigmPKMs6hsYpHbcg8HwBbBdWkGKub9MQbea",
+    "symbol": "DGx",
+    "underlying_symbol": "DG",
+    "price_usd": 124.58,
+    "prev_close_usd": 124.57,
+    "updated_at": "2026-09-14T11:45:36.344+00:00"
+  },
+  {
+    "mint_address": "XsitAUXgChdnHHVx2qa1Fhw6xe5ZPog1XrEGg4Pp5XW",
+    "symbol": "EWBCx",
+    "underlying_symbol": "EWBC",
+    "price_usd": 129.17,
+    "prev_close_usd": 128.28,
+    "updated_at": "2026-09-14T11:45:36.356+00:00"
+  },
+  {
+    "mint_address": "XswxMcsrN9WpDhX7wDf53ZFGWNhcWYKSa6UY26AgpET",
+    "symbol": "EVRGx",
+    "underlying_symbol": "EVRG",
+    "price_usd": 81.62,
+    "prev_close_usd": 81.22,
+    "updated_at": "2026-09-14T11:45:36.372+00:00"
+  },
+  {
+    "mint_address": "XsahzH43C2rZpZmYX6eCm2avkeYCzntC168xPdqrDzi",
+    "symbol": "ILMNx",
+    "underlying_symbol": "ILMN",
+    "price_usd": 206.45,
+    "prev_close_usd": 205,
+    "updated_at": "2026-09-14T11:45:38.046+00:00"
+  },
+  {
+    "mint_address": "XscmXyJYjYbGNhxQsPjjRYsEwscg6uPFJzR6Af7Qi18",
+    "symbol": "OMCx",
+    "underlying_symbol": "OMC",
+    "price_usd": 79.01,
+    "prev_close_usd": 78.3,
+    "updated_at": "2026-09-14T11:45:38.957+00:00"
+  },
+  {
+    "mint_address": "Xsh64eWgeLab2YtKPRy15Zj7tXrUncjVwszGW9F5tWG",
+    "symbol": "SNXx",
+    "underlying_symbol": "SNX",
+    "price_usd": 269.21,
+    "prev_close_usd": 258.23,
+    "updated_at": "2026-09-14T11:45:39.773+00:00"
+  },
+  {
+    "mint_address": "XsgQwodongKCYRux621fuQzxQRv3fyXQKyPzc2CJ7Ys",
+    "symbol": "RJFx",
+    "underlying_symbol": "RJF",
+    "price_usd": 173.46,
+    "prev_close_usd": 175.47,
+    "updated_at": "2026-09-14T11:46:04.966+00:00"
+  },
+  {
+    "mint_address": "XsGFoZFgiRxDk49QCAQUArX84V88t7Bz3fsExp7HLuX",
+    "symbol": "WABx",
+    "underlying_symbol": "WAB",
+    "price_usd": 283.22,
+    "prev_close_usd": 280.47,
+    "updated_at": "2026-09-14T11:46:06.547+00:00"
+  },
+  {
+    "mint_address": "XsfgitU15HiJX9UJN2fhcpbfRr5P8XJXvC1nuJs3jAr",
+    "symbol": "SHWx",
+    "underlying_symbol": "SHW",
+    "price_usd": 323.31,
+    "prev_close_usd": 320.64,
+    "updated_at": "2026-09-14T11:46:07.294+00:00"
+  },
+  {
+    "mint_address": "Xs9YEeNWvRwWK4wPHPaitx9mFyfU6hbUY539BLJSHCN",
+    "symbol": "MPWRx",
+    "underlying_symbol": "MPWR",
+    "price_usd": 1234.46,
+    "prev_close_usd": 1203.75,
+    "updated_at": "2026-09-14T11:46:07.462+00:00"
+  },
+  {
+    "mint_address": "XsosRSUc3n5pod3YNNyQ7go6811xWYd3YME2uEQohEx",
+    "symbol": "APOx",
+    "underlying_symbol": "APO",
+    "price_usd": 128.98,
+    "prev_close_usd": 130.98,
+    "updated_at": "2026-09-14T11:46:08.313+00:00"
+  },
+  {
+    "mint_address": "XsGDHfnSNxofQ2qXzcty9r4HB5HFszUCrQhjN7mbEcw",
+    "symbol": "PGRx",
+    "underlying_symbol": "PGR",
+    "price_usd": 217.62,
+    "prev_close_usd": 215.5,
+    "updated_at": "2026-09-14T11:46:08.325+00:00"
+  },
+  {
+    "mint_address": "Xs7jmdBozN4RTu3YgSZeLcimiHJcsovXjvRtHhJbafT",
+    "symbol": "ATIx",
+    "underlying_symbol": "ATI",
+    "price_usd": 198.77,
+    "prev_close_usd": 206.54,
+    "updated_at": "2026-09-14T11:46:31.919+00:00"
+  },
+  {
+    "mint_address": "XsR6i1PnDGCbiV1KHsiMBdKz4MuDgpWHr3QSwC7zNMz",
+    "symbol": "INSMx",
+    "underlying_symbol": "INSM",
+    "price_usd": 129.41,
+    "prev_close_usd": 128.8,
+    "updated_at": "2026-09-14T11:46:34.527+00:00"
+  },
+  {
+    "mint_address": "XseRUafvQDXZSddDFpsXQPBNggurszyztkh4TEnvEuM",
+    "symbol": "LUVx",
+    "underlying_symbol": "LUV",
+    "price_usd": 39.24,
+    "prev_close_usd": 38.68,
+    "updated_at": "2026-09-14T11:46:35.314+00:00"
+  },
+  {
+    "mint_address": "XsC3CiuRAFKN99m2ye6q7xrYMx4NuBdr1JR2gVWgFLD",
+    "symbol": "NIx",
+    "underlying_symbol": "NI",
+    "price_usd": 41.41,
+    "prev_close_usd": 41.67,
+    "updated_at": "2026-09-14T11:46:36.108+00:00"
+  },
+  {
+    "mint_address": "XskVwPpXzyc9Fc4vqvHJ5v4ojMDWyjzcdPYTK8vFrUy",
+    "symbol": "RSx",
+    "underlying_symbol": "RS",
+    "price_usd": 394.21,
+    "prev_close_usd": 394.99,
+    "updated_at": "2026-09-14T11:46:36.158+00:00"
+  },
+  {
+    "mint_address": "XsxjGDiXTcvRjbHgAkngyJgix766hJHKB3XLzNiRSro",
+    "symbol": "WSMx",
+    "underlying_symbol": "WSM",
+    "price_usd": 226.23,
+    "prev_close_usd": 227.52,
+    "updated_at": "2026-09-14T11:46:38+00:00"
+  },
+  {
+    "mint_address": "XsqFzD9CqfpnmTiFH631bcvQcDReVTMFZMSjk5aXQZL",
+    "symbol": "XYLx",
+    "underlying_symbol": "XYL",
+    "price_usd": 106.96,
+    "prev_close_usd": 107.64,
+    "updated_at": "2026-09-14T11:46:38.925+00:00"
+  },
+  {
+    "mint_address": "XsYMHtwJcWon5GkPHzdDbCCztKtKzEurJnbydxgjsqS",
+    "symbol": "BSPx",
+    "underlying_symbol": "BSP",
+    "price_usd": 38.77,
+    "prev_close_usd": 37.75,
+    "updated_at": "2026-09-14T11:46:38.915+00:00"
+  },
+  {
+    "mint_address": "XsXG3ytqNM8wMwxbZnbZjY3wFua4nU58ZR6Lwr5wSDp",
+    "symbol": "DOVx",
+    "underlying_symbol": "DOV",
+    "price_usd": 189.05,
+    "prev_close_usd": 191.42,
+    "updated_at": "2026-09-14T11:46:39.765+00:00"
+  },
+  {
+    "mint_address": "Xs8FjYWcxTREaUj5hv77f4M2UCreGfP7HegLvqzX56X",
+    "symbol": "CRSx",
+    "underlying_symbol": "CRS",
+    "price_usd": 443.19,
+    "prev_close_usd": 458.45,
+    "updated_at": "2026-09-14T11:46:39.78+00:00"
+  },
+  {
+    "mint_address": "XscEuBenD5X7CMVdh6MKzTSBQLsKNqmsoLiXHrQMitH",
+    "symbol": "HSYx",
+    "underlying_symbol": "HSY",
+    "price_usd": 173.32,
+    "prev_close_usd": 172.19,
+    "updated_at": "2026-09-14T11:46:41.535+00:00"
+  },
+  {
+    "mint_address": "XsPq3VY73br4wpgi2a4b3jAdvuhstpknXVJ2fA4vNmk",
+    "symbol": "PCGx",
+    "underlying_symbol": "PCG",
+    "price_usd": 13.8,
+    "prev_close_usd": 14.19,
+    "updated_at": "2026-09-14T11:46:43.179+00:00"
+  },
+  {
+    "mint_address": "XsRx9hY5BQWniDRahLNtV4uyyvQcnaRgrqw5ops842R",
+    "symbol": "NTRSx",
+    "underlying_symbol": "NTRS",
+    "price_usd": 189.19,
+    "prev_close_usd": 184.69,
+    "updated_at": "2026-09-14T11:46:43.252+00:00"
+  },
+  {
+    "mint_address": "XsBKXQehs7BBCZ8YbJ8X5B37BE1ymf9KyMJwbj6Jpoy",
+    "symbol": "TDYx",
+    "underlying_symbol": "TDY",
+    "price_usd": 603.79,
+    "prev_close_usd": 595.23,
+    "updated_at": "2026-09-14T11:46:45.003+00:00"
+  },
+  {
+    "mint_address": "XsN9HmM3TqbY317obKz1fYbRvR81MT9qbL5eUSiGto3",
+    "symbol": "VICIx",
+    "underlying_symbol": "VICI",
+    "price_usd": 24.83,
+    "prev_close_usd": 25.21,
+    "updated_at": "2026-09-14T11:46:45.005+00:00"
+  },
+  {
+    "mint_address": "Xsv9aoiWTdvBzVpvetL7LBkuS9xvceDdbLkfqMbTVDx",
+    "symbol": "BIIBx",
+    "underlying_symbol": "BIIB",
+    "price_usd": 217.15,
+    "prev_close_usd": 210.73,
+    "updated_at": "2026-09-14T11:46:46.277+00:00"
+  },
+  {
+    "mint_address": "XsHsi7FvQo4T7AkmtyszYkhNdKDCVgrJFS7CWGeaeM8",
+    "symbol": "EMEx",
+    "underlying_symbol": "EME",
+    "price_usd": 780.66,
+    "prev_close_usd": 754.29,
+    "updated_at": "2026-09-14T11:46:48.164+00:00"
+  },
+  {
+    "mint_address": "XsVK4gk4X1ANBSKF9DGjy9WseKhBfMUuEmP8v7J8u2G",
+    "symbol": "DTEx",
+    "underlying_symbol": "DTE",
+    "price_usd": 132.58,
+    "prev_close_usd": 136.06,
+    "updated_at": "2026-09-14T11:46:48.17+00:00"
+  },
+  {
+    "mint_address": "XseFccApcVhrqASiXFM97ZkX7a2uDWbUWjC4T82LgAT",
+    "symbol": "EXRx",
+    "underlying_symbol": "EXR",
+    "price_usd": 137.64,
+    "prev_close_usd": 135.63,
+    "updated_at": "2026-09-14T11:46:48.182+00:00"
+  },
+  {
+    "mint_address": "XsqUtYxpP7o3b2yupu7WZ2bi9u68W7VHQTFNR36mz96",
+    "symbol": "Qx",
+    "underlying_symbol": "Q",
+    "price_usd": 126.4,
+    "prev_close_usd": 125.47,
+    "updated_at": "2026-09-14T11:46:50.777+00:00"
+  },
+  {
+    "mint_address": "XszobR4az4oYsssmwsFov326662q84g7UPXzRgrGvfS",
+    "symbol": "SYYx",
+    "underlying_symbol": "SYY",
+    "price_usd": 83.21,
+    "prev_close_usd": 81.57,
+    "updated_at": "2026-09-14T11:46:51.821+00:00"
+  },
+  {
+    "mint_address": "XssvmC28hqLgtT5kf8R8eAv3mejy4XftJ6MXB8QywTa",
+    "symbol": "TTWOx",
+    "underlying_symbol": "TTWO",
+    "price_usd": 215.47,
+    "prev_close_usd": 211.14,
+    "updated_at": "2026-09-14T11:46:51.824+00:00"
+  },
+  {
+    "mint_address": "XsE5qZhg6oL1ypWwtwXPQtW1EpFSvRmLXk9ceX9TtZx",
+    "symbol": "CIENx",
+    "underlying_symbol": "CIEN",
+    "price_usd": 349.54,
+    "prev_close_usd": 338,
+    "updated_at": "2026-09-14T11:46:52.569+00:00"
+  },
+  {
+    "mint_address": "XsvQh2FdVWMpbNsnYAbDNg38GtAWBEjcweJR42yRTgy",
+    "symbol": "CARRx",
+    "underlying_symbol": "CARR",
+    "price_usd": 57.46,
+    "prev_close_usd": 57.95,
+    "updated_at": "2026-09-14T11:46:52.611+00:00"
+  },
+  {
+    "mint_address": "XsfLtqmidw4ouMrdWvH5usSs3r77Usm6rXGygxhRTjz",
+    "symbol": "AZOx",
+    "underlying_symbol": "AZO",
+    "price_usd": 2876.75,
+    "prev_close_usd": 2910.97,
+    "updated_at": "2026-09-14T11:46:53.592+00:00"
+  },
+  {
+    "mint_address": "XsVsC5yPcJKdeuZDejjymo2KJTuE3zdXZoSVuTXA7qv",
+    "symbol": "FITBx",
+    "underlying_symbol": "FITB",
+    "price_usd": 54.72,
+    "prev_close_usd": 54.19,
+    "updated_at": "2026-09-14T11:46:55.301+00:00"
+  },
+  {
+    "mint_address": "XsdvuTpWkg6TSzpGJrdEwUwtWT7UrUzMxYTLhUZs9s9",
+    "symbol": "KDPx",
+    "underlying_symbol": "KDP",
+    "price_usd": 31.39,
+    "prev_close_usd": 32.08,
+    "updated_at": "2026-09-14T11:46:56.017+00:00"
+  },
+  {
+    "mint_address": "XsyMphR2LaL2YBiorsZYFhdN96xKTSi64L3pmiAHLc3",
+    "symbol": "Ox",
+    "underlying_symbol": "O",
+    "price_usd": 59.5,
+    "prev_close_usd": 60.11,
+    "updated_at": "2026-09-14T11:46:57.1+00:00"
+  },
+  {
+    "mint_address": "Xs7vm4sZj1LiNLvnxUCyUTuxRMTt4WGJfdbCASTYhN9",
+    "symbol": "BSXx",
+    "underlying_symbol": "BSX",
+    "price_usd": 42.98,
+    "prev_close_usd": 44.96,
+    "updated_at": "2026-09-14T11:46:58.671+00:00"
+  },
+  {
+    "mint_address": "Xs1kbMkmahb44LPLLdjscSYZ4c2HUu4WNfgk8P7ndQf",
+    "symbol": "ALLx",
+    "underlying_symbol": "ALL",
+    "price_usd": 253.71,
+    "prev_close_usd": 253.58,
+    "updated_at": "2026-09-14T11:46:59.699+00:00"
+  },
+  {
+    "mint_address": "Xskqq9tKh2gc1PBJHf2q6jMgBpt3AojT3HVkWhjoY5h",
+    "symbol": "EMRx",
+    "underlying_symbol": "EMR",
+    "price_usd": 152.19,
+    "prev_close_usd": 150.34,
+    "updated_at": "2026-09-14T11:47:00.546+00:00"
+  },
+  {
+    "mint_address": "XsWrVR5F8eUgoienkVAQLwjvtzEAUoWWcwhcDzu3qRX",
+    "symbol": "FTNTx",
+    "underlying_symbol": "FTNT",
+    "price_usd": 156.07,
+    "prev_close_usd": 157.22,
+    "updated_at": "2026-09-14T11:47:01.264+00:00"
+  },
+  {
+    "mint_address": "Xs4UsCDQKKJqHjidgoZBHUW9emLD4njpLPsYesp4ZpZ",
+    "symbol": "NSCx",
+    "underlying_symbol": "NSC",
+    "price_usd": 320.27,
+    "prev_close_usd": 323.3,
+    "updated_at": "2026-09-14T11:47:03.163+00:00"
+  },
+  {
+    "mint_address": "XsvdeDvbEfZkvfEUixS9SydEfJopFFD6NJjXZN1haYr",
+    "symbol": "NUEx",
+    "underlying_symbol": "NUE",
+    "price_usd": 259.43,
+    "prev_close_usd": 257.91,
+    "updated_at": "2026-09-14T11:47:03.164+00:00"
+  },
+  {
+    "mint_address": "Xss1A59GFZcvyuTXLXMyYdJ7e9kpHq6AFKNjcVZ1rjA",
+    "symbol": "PNCx",
+    "underlying_symbol": "PNC",
+    "price_usd": 244.24,
+    "prev_close_usd": 240.69,
+    "updated_at": "2026-09-14T11:47:03.891+00:00"
+  },
+  {
+    "mint_address": "XsaY4eSxkNswy2kg8j7CWS7v154y5kkxYRiqX2ffpVZ",
+    "symbol": "TDGx",
+    "underlying_symbol": "TDG",
+    "price_usd": 1140.32,
+    "prev_close_usd": 1125.68,
+    "updated_at": "2026-09-14T11:47:04.926+00:00"
+  },
+  {
+    "mint_address": "XscZ13Vr2dH9GV8vxVAgFsXz2YMoDCAz3QanuCcwsr5",
+    "symbol": "WMx",
+    "underlying_symbol": "WM",
+    "price_usd": 213.46,
+    "prev_close_usd": 216.44,
+    "updated_at": "2026-09-14T11:47:05.679+00:00"
+  },
+  {
+    "mint_address": "Xsg93jDV656ULQ5u9yT2x5DS9b4xGD8aDCtfESSW6Bb",
+    "symbol": "DISx",
+    "underlying_symbol": "DIS",
+    "price_usd": 106.55,
+    "prev_close_usd": 104.18,
+    "updated_at": "2026-09-14T11:47:06.695+00:00"
+  },
+  {
+    "mint_address": "Xsgk6nv6V81zQms4mcvUiEtLDdVueXfWPRCaxayqkSN",
+    "symbol": "GDx",
+    "underlying_symbol": "GD",
+    "price_usd": 355.9,
+    "prev_close_usd": 352.67,
+    "updated_at": "2026-09-14T11:47:07.572+00:00"
+  },
+  {
+    "mint_address": "XswU7kXY6dGgMqpiWW2jKSYVZMsCWv5LKcLaFBgYzPv",
+    "symbol": "DUKx",
+    "underlying_symbol": "DUK",
+    "price_usd": 119.42,
+    "prev_close_usd": 120.43,
+    "updated_at": "2026-09-14T11:47:07.581+00:00"
+  },
+  {
+    "mint_address": "XsUucbjDLYbER4WNNffn1eQ9cDnAcFVfLgSZeLHPDZS",
+    "symbol": "MSx",
+    "underlying_symbol": "MS",
+    "price_usd": 214.38,
+    "prev_close_usd": 215.35,
+    "updated_at": "2026-09-14T11:47:09.319+00:00"
+  },
+  {
+    "mint_address": "XsBnEFd2EtpwBRNVfN8qLZcVUnuqXRaGCSEEFChLfxL",
+    "symbol": "NOWx",
+    "underlying_symbol": "NOW",
+    "price_usd": 132.53,
+    "prev_close_usd": 131.11,
+    "updated_at": "2026-09-14T11:47:09.318+00:00"
+  },
+  {
+    "mint_address": "XssuE11NLek5vAeHNS2Jm8PFvT4PE7dtnpZwasWTGDT",
+    "symbol": "NEMx",
+    "underlying_symbol": "NEM",
+    "price_usd": 126.81,
+    "prev_close_usd": 128.71,
+    "updated_at": "2026-09-14T11:47:09.32+00:00"
+  },
+  {
+    "mint_address": "Xs9gd8SGbYQn9kkUYQayn46BdqQbvvUshEF6ZpRAzM7",
+    "symbol": "SBUXx",
+    "underlying_symbol": "SBUX",
+    "price_usd": 98.74,
+    "prev_close_usd": 100.04,
+    "updated_at": "2026-09-14T11:47:10.166+00:00"
+  },
+  {
+    "mint_address": "XsK5U9qwT9ErPXnpgDzV9voTGASZbZnNTYTGVxCqPii",
+    "symbol": "SCHWx",
+    "underlying_symbol": "SCHW",
+    "price_usd": 107.25,
+    "prev_close_usd": 106.54,
+    "updated_at": "2026-09-14T11:47:10.189+00:00"
+  },
+  {
+    "mint_address": "XsPWZN3FYcrvpEnxrQqogbVZtxpRX9tFomymKw2dWJS",
+    "symbol": "TJXx",
+    "underlying_symbol": "TJX",
+    "price_usd": 126.02,
+    "prev_close_usd": 126.12,
+    "updated_at": "2026-09-14T11:47:11.027+00:00"
+  },
+  {
+    "mint_address": "XsKbKZ6e1BtERDn2cF11WkpVwvzSWCrf83AMafgnMQT",
+    "symbol": "DAXx",
+    "underlying_symbol": "DAX",
+    "price_usd": 45.874,
+    "prev_close_usd": 45.955,
+    "updated_at": "2026-09-14T11:47:12.502+00:00"
+  },
+  {
+    "mint_address": "XsM51PKxDNQBZR65VRxRjNqcMWUBoYwHeVn2FR6WXi9",
+    "symbol": "EWGx",
+    "underlying_symbol": "EWG",
+    "price_usd": 42.87,
+    "prev_close_usd": 43.04,
+    "updated_at": "2026-09-14T11:47:12.604+00:00"
+  },
+  {
+    "mint_address": "XsfsBjSZoXXKJsxoSt8TyLYsjhBAKFaDPZTCQbFRirP",
+    "symbol": "GEx",
+    "underlying_symbol": "GE",
+    "price_usd": 323.66,
+    "prev_close_usd": 325.42,
+    "updated_at": "2026-09-14T11:47:14.559+00:00"
+  },
+  {
+    "mint_address": "XsEsHeiNZf88sABxu74TPuXbQThdaQGdzPVZUBicjtQ",
+    "symbol": "SOXXx",
+    "underlying_symbol": "SOXX",
+    "price_usd": 527.07,
+    "prev_close_usd": 532,
+    "updated_at": "2026-09-14T11:47:16.28+00:00"
+  },
+  {
+    "mint_address": "XsAk6BoV4kBXUM6WXodKyM21CN92G9jArwAzFvbh3LX",
+    "symbol": "XOPx",
+    "underlying_symbol": "XOP",
+    "price_usd": 195.72,
+    "prev_close_usd": 195.01,
+    "updated_at": "2026-09-14T11:47:18.042+00:00"
+  },
+  {
+    "mint_address": "XsK6kBQe7QDQVmW1PupBZCc4oBpPbsRdPgvqCqvfCXX",
+    "symbol": "ADMx",
+    "underlying_symbol": "ADM",
+    "price_usd": 86.72,
+    "prev_close_usd": 86.55,
+    "updated_at": "2026-09-14T11:47:38.824+00:00"
+  },
+  {
+    "mint_address": "Xs3CytsvJshAYy1TQjq2o2yVWCyEGinNpvkB6f3Qs31",
+    "symbol": "ADIx",
+    "underlying_symbol": "ADI",
+    "price_usd": 378.78,
+    "prev_close_usd": 365.07,
+    "updated_at": "2026-09-14T11:47:39.534+00:00"
+  },
+  {
+    "mint_address": "XsXU2DbkVLWPRBG3QEpEXCTKS8Jv8VCxkB7e7ThdyLC",
+    "symbol": "FISVx",
+    "underlying_symbol": "FISV",
+    "price_usd": 51.58,
+    "prev_close_usd": 48.65,
+    "updated_at": "2026-09-14T11:45:31.23+00:00"
+  },
+  {
+    "mint_address": "XsoCb51izF2MpU5XghroQDRxtJ2vtcMY9v5Mk1pqaBr",
+    "symbol": "PPGx",
+    "underlying_symbol": "PPG",
+    "price_usd": 105.5,
+    "prev_close_usd": 107.16,
+    "updated_at": "2026-09-14T11:45:33.847+00:00"
+  },
+  {
+    "mint_address": "XsFyCPFNa7os3PvzuYQJcpws9WQS6bci2W8zqesHwPN",
+    "symbol": "DGXx",
+    "underlying_symbol": "DGX",
+    "price_usd": 235.02,
+    "prev_close_usd": 235.46,
+    "updated_at": "2026-09-14T11:45:35.589+00:00"
+  },
+  {
+    "mint_address": "XsodbeGRpfyAzq1MMqZu7u1vCYNKNDuYrCtofaT1PJK",
+    "symbol": "EXEx",
+    "underlying_symbol": "EXE",
+    "price_usd": 94.83,
+    "prev_close_usd": 96.62,
+    "updated_at": "2026-09-14T11:45:37.066+00:00"
+  },
+  {
+    "mint_address": "XsQFmCYjvPGgqYYAth5zNhW8NSCabdamgM1kXMorJs7",
+    "symbol": "INVHx",
+    "underlying_symbol": "INVH",
+    "price_usd": 27.54,
+    "prev_close_usd": 28.18,
+    "updated_at": "2026-09-14T11:45:37.925+00:00"
+  },
+  {
+    "mint_address": "Xstq2wirnUgqHdMvvWafGVbdtg9y845zxAy7iVixkRU",
+    "symbol": "PKGx",
+    "underlying_symbol": "PKG",
+    "price_usd": 234.4,
+    "prev_close_usd": 227.28,
+    "updated_at": "2026-09-14T11:45:38.971+00:00"
+  },
+  {
+    "mint_address": "XsrazTRfp2iGrUcZkkoB8PpM9qApe77RbohmknHh9XJ",
+    "symbol": "UTHRx",
+    "underlying_symbol": "UTHR",
+    "price_usd": 497.11,
+    "prev_close_usd": 506.82,
+    "updated_at": "2026-09-14T11:45:39.765+00:00"
+  },
+  {
+    "mint_address": "XsE48wmot6dKRcCGVQUXFSrpnRZ4U4yC762ZktjkoGW",
+    "symbol": "ZBHx",
+    "underlying_symbol": "ZBH",
+    "price_usd": 93.49,
+    "prev_close_usd": 94.61,
+    "updated_at": "2026-09-14T11:45:40.66+00:00"
+  },
+  {
+    "mint_address": "XsptQPquxvzKZ7pZTXNhvtXRxFP8vvC6BmS6QL1PALe",
+    "symbol": "WSTx",
+    "underlying_symbol": "WST",
+    "price_usd": 346.23,
+    "prev_close_usd": 336.94,
+    "updated_at": "2026-09-14T11:45:40.664+00:00"
+  },
+  {
+    "mint_address": "XsLpCFJxUb43H6da8YzrS4j79wuddw8Z4GETup7hKMc",
+    "symbol": "FEx",
+    "underlying_symbol": "FE",
+    "price_usd": 46.13,
+    "prev_close_usd": 46.21,
+    "updated_at": "2026-09-14T11:46:04.115+00:00"
+  },
+  {
+    "mint_address": "Xsk7doh3Qsz51GJdGFUdXcW4PFSKgfj1KGMy6jjbk6J",
+    "symbol": "LPLAx",
+    "underlying_symbol": "LPLA",
+    "price_usd": 353.78,
+    "prev_close_usd": 349.6,
+    "updated_at": "2026-09-14T11:46:04.945+00:00"
+  },
+  {
+    "mint_address": "Xs58AdBQTkqkejRvfMrGMQMML1m5xMQKVfKgPmqNhwg",
+    "symbol": "FASTx",
+    "underlying_symbol": "FAST",
+    "price_usd": 49.32,
+    "prev_close_usd": 48.79,
+    "updated_at": "2026-09-14T11:46:04.974+00:00"
+  },
+  {
+    "mint_address": "Xs9GioXYhWaR1Pt7HLiNRgkHynWdPPWcdZWdUCHkZNj",
+    "symbol": "MCHPx",
+    "underlying_symbol": "MCHP",
+    "price_usd": 74.2,
+    "prev_close_usd": 73.01,
+    "updated_at": "2026-09-14T11:46:06.544+00:00"
+  },
+  {
+    "mint_address": "XsyqGLaBLmGCZstuUrvo7iWhJkZgg4KEBtcxVFBsYSg",
+    "symbol": "MPCx",
+    "underlying_symbol": "MPC",
+    "price_usd": 395.93,
+    "prev_close_usd": 399.44,
+    "updated_at": "2026-09-14T11:46:07.292+00:00"
+  },
+  {
+    "mint_address": "XsGfYyioN9bfk6M6RGKvucDq8grQehqkBz8ziEtT124",
+    "symbol": "CIx",
+    "underlying_symbol": "CI",
+    "price_usd": 280.76,
+    "prev_close_usd": 278.17,
+    "updated_at": "2026-09-14T11:46:08.328+00:00"
+  },
+  {
+    "mint_address": "XsVRhRg9eRE9PrsoPsAt5Mifa8mfjm9R3vdw6orp54j",
+    "symbol": "GDXx",
+    "underlying_symbol": "GDX",
+    "price_usd": 97.1,
+    "prev_close_usd": 99.47,
+    "updated_at": "2026-09-14T11:46:09.1+00:00"
+  },
+  {
+    "mint_address": "Xs9nAeuqjogYHy2UfL6jYqGmM5MPrRjuz6UYk8H79mZ",
+    "symbol": "FSMLx",
+    "underlying_symbol": "FSML",
+    "price_usd": 29.7514,
+    "prev_close_usd": 29.872,
+    "updated_at": "2026-09-14T11:46:09.167+00:00"
+  },
+  {
+    "mint_address": "XsuKHFvcZLWvhk8XcprK4tiAZRefQ4nfTyNs6b9BArz",
+    "symbol": "WELLx",
+    "underlying_symbol": "WELL",
+    "price_usd": 235.62,
+    "prev_close_usd": 235.9,
+    "updated_at": "2026-09-14T11:46:09.169+00:00"
+  },
+  {
+    "mint_address": "XsVpsBVdjW8SWAu4jAjqJ9qnGYzBmUzNDRcG6uiZ9xo",
+    "symbol": "BWXTx",
+    "underlying_symbol": "BWXT",
+    "price_usd": 150.12,
+    "prev_close_usd": 156.71,
+    "updated_at": "2026-09-14T11:46:31.905+00:00"
+  },
+  {
+    "mint_address": "Xsm5zBfHeiGWjraGLwT8DwJhYGjUfhESs7QANcYVp8E",
+    "symbol": "CHRWx",
+    "underlying_symbol": "CHRW",
+    "price_usd": 152.78,
+    "prev_close_usd": 150.45,
+    "updated_at": "2026-09-14T11:46:32.763+00:00"
+  },
+  {
+    "mint_address": "XsYbh3CsZ4qCMcfPKEtHAYbePTywhwCkFvdN7Hx3bHA",
+    "symbol": "HSTx",
+    "underlying_symbol": "HST",
+    "price_usd": 22.24,
+    "prev_close_usd": 22.04,
+    "updated_at": "2026-09-14T11:46:34.562+00:00"
+  },
+  {
+    "mint_address": "Xs1WFZQyEwCZwEyZHRxTzd2KoEoa6MVfv2aZeAc2HXK",
+    "symbol": "LNTx",
+    "underlying_symbol": "LNT",
+    "price_usd": 67.26,
+    "prev_close_usd": 67.86,
+    "updated_at": "2026-09-14T11:46:35.378+00:00"
+  },
+  {
+    "mint_address": "XsgiYbKzzyYzuxRj1R4E6rvfVccASCGepmWEMpJdFG2",
+    "symbol": "RGLDx",
+    "underlying_symbol": "RGLD",
+    "price_usd": 252.28,
+    "prev_close_usd": 262.54,
+    "updated_at": "2026-09-14T11:46:36.289+00:00"
+  },
+  {
+    "mint_address": "Xspjr5y1bLtPTeSg13NBzxcE3JKZjYQrdpHKxAGsQYs",
+    "symbol": "USFDx",
+    "underlying_symbol": "USFD",
+    "price_usd": 95.34,
+    "prev_close_usd": 97.45,
+    "updated_at": "2026-09-14T11:46:37.144+00:00"
+  },
+  {
+    "mint_address": "XsBDavbmVc22RNAgsHwUDEeC8f8VVCKLCcxFbfFUEzW",
+    "symbol": "VRSKx",
+    "underlying_symbol": "VRSK",
+    "price_usd": 176.2,
+    "prev_close_usd": 177.99,
+    "updated_at": "2026-09-14T11:46:37.148+00:00"
+  },
+  {
+    "mint_address": "XsrTDXGz8cxi4s4vQrX63NhrtZZmPEFkgbsJQG7UERR",
+    "symbol": "WYx",
+    "underlying_symbol": "WY",
+    "price_usd": 22.06,
+    "prev_close_usd": 22.59,
+    "updated_at": "2026-09-14T11:46:38.03+00:00"
+  },
+  {
+    "mint_address": "Xs5drDwMFxkcChq5cU49EX2oTQUVWQ64qsSL5bVQoS3",
+    "symbol": "Ax",
+    "underlying_symbol": "A",
+    "price_usd": 146.93,
+    "prev_close_usd": 144.75,
+    "updated_at": "2026-09-14T11:46:38.918+00:00"
+  },
+  {
+    "mint_address": "XsdLjeamzdsWW5aBhsGVAaQFcZtCL6yF9nhtWfszGT3",
+    "symbol": "FANGx",
+    "underlying_symbol": "FANG",
+    "price_usd": 204.97,
+    "prev_close_usd": 202.63,
+    "updated_at": "2026-09-14T11:46:40.623+00:00"
+  },
+  {
+    "mint_address": "XsX857TxHhoS3CbRt58me2xx8zcAn6n5kMJScZKrHJa",
+    "symbol": "FTAIx",
+    "underlying_symbol": "FTAI",
+    "price_usd": 186.06,
+    "prev_close_usd": 185.25,
+    "updated_at": "2026-09-14T11:46:41.351+00:00"
+  },
+  {
+    "mint_address": "XsFU9pEZTmFTwGowKZkVtagbF5ivCJ4WTyPEZrzVFzY",
+    "symbol": "LYVx",
+    "underlying_symbol": "LYV",
+    "price_usd": 170.15,
+    "prev_close_usd": 169.99,
+    "updated_at": "2026-09-14T11:46:42.383+00:00"
+  },
+  {
+    "mint_address": "Xs4BPW5YU7RsXMmCt6CyDphWH3YLtyaXDXEzZDmj33G",
+    "symbol": "MSCIx",
+    "underlying_symbol": "MSCI",
+    "price_usd": 554.61,
+    "prev_close_usd": 554.54,
+    "updated_at": "2026-09-14T11:46:42.386+00:00"
+  },
+  {
+    "mint_address": "Xsw75QJKjhyvcSFDnqrtXn7amNhCVgeoaoo3rp3sDak",
+    "symbol": "NTRAx",
+    "underlying_symbol": "NTRA",
+    "price_usd": 328.93,
+    "prev_close_usd": 330.31,
+    "updated_at": "2026-09-14T11:46:43.245+00:00"
+  },
+  {
+    "mint_address": "Xsuo3Vd8T7MVAx3miKJ1beX4sGutzdL3GJsjk1yFbxA",
+    "symbol": "PAYXx",
+    "underlying_symbol": "PAYX",
+    "price_usd": 115.8,
+    "prev_close_usd": 114.75,
+    "updated_at": "2026-09-14T11:46:44.151+00:00"
+  },
+  {
+    "mint_address": "Xs1asXCeRWVFLE3mun2UZhaY9VEDYfyjUhp5mjkjX7b",
+    "symbol": "ALNYx",
+    "underlying_symbol": "ALNY",
+    "price_usd": 248.68,
+    "prev_close_usd": 258,
+    "updated_at": "2026-09-14T11:46:46.269+00:00"
+  },
+  {
+    "mint_address": "XsqWwT9y8ajA8LXQEy7msQmM6ExkP8Va3XYcr7oVhXg",
+    "symbol": "AMPx",
+    "underlying_symbol": "AMP",
+    "price_usd": 557.61,
+    "prev_close_usd": 551.88,
+    "updated_at": "2026-09-14T11:46:46.284+00:00"
+  },
+  {
+    "mint_address": "XsiNAvTHpvygKjMqb8Hz5Nqeo8NTAsWzT6DYLH287FA",
+    "symbol": "DHIx",
+    "underlying_symbol": "DHI",
+    "price_usd": 137.89,
+    "prev_close_usd": 138.93,
+    "updated_at": "2026-09-14T11:46:48.157+00:00"
+  },
+  {
+    "mint_address": "Xs2AVjDnFK6ShEvX6QfSFodHpy8znSBhimB4kvTFTa1",
+    "symbol": "IDXXx",
+    "underlying_symbol": "IDXX",
+    "price_usd": 504.7,
+    "prev_close_usd": 515.15,
+    "updated_at": "2026-09-14T11:46:49.075+00:00"
+  },
+  {
+    "mint_address": "XswJRi3vQhng81dGRXnaUjpyCzM89pwvYyHveT2xzEB",
+    "symbol": "EXCx",
+    "underlying_symbol": "EXC",
+    "price_usd": 43.16,
+    "prev_close_usd": 43.7,
+    "updated_at": "2026-09-14T11:46:49.207+00:00"
+  },
+  {
+    "mint_address": "XseFxRyaaJixiAzKBrSZAAKSLMQKVYceUGadwUAsQ7L",
+    "symbol": "HUMx",
+    "underlying_symbol": "HUM",
+    "price_usd": 409.8,
+    "prev_close_usd": 400.02,
+    "updated_at": "2026-09-14T11:46:49.213+00:00"
+  },
+  {
+    "mint_address": "XsPhDoJMMgARN4eB8apaPNFUjVBKqx3WtRS4ddBwKVw",
+    "symbol": "PRUx",
+    "underlying_symbol": "PRU",
+    "price_usd": 119.24,
+    "prev_close_usd": 117.59,
+    "updated_at": "2026-09-14T11:46:50.967+00:00"
+  },
+  {
+    "mint_address": "XsjsQvjH8BEXCjrgNiVhmhFiYPcNRXGj262fDupfV1A",
+    "symbol": "RMDx",
+    "underlying_symbol": "RMD",
+    "price_usd": 218.27,
+    "prev_close_usd": 219.95,
+    "updated_at": "2026-09-14T11:46:51.826+00:00"
+  },
+  {
+    "mint_address": "XsrstNGy7STAR22txNru2ahbEwdBadFJwYRCBNEQYBS",
+    "symbol": "CAHx",
+    "underlying_symbol": "CAH",
+    "price_usd": 234.57,
+    "prev_close_usd": 240,
+    "updated_at": "2026-09-14T11:46:52.645+00:00"
+  },
+  {
+    "mint_address": "XsQVuhV5fBEb3b8TauFuRimcXSJdVrKqFgQTVqLZiq9",
+    "symbol": "DALx",
+    "underlying_symbol": "DAL",
+    "price_usd": 79.91,
+    "prev_close_usd": 78.75,
+    "updated_at": "2026-09-14T11:46:53.597+00:00"
+  },
+  {
+    "mint_address": "XsPTVwrSE3MMZF1bt15vxM7NuuRHdsBJ7mtGW4cttHX",
+    "symbol": "FIXx",
+    "underlying_symbol": "FIX",
+    "price_usd": 1690.82,
+    "prev_close_usd": 1615.14,
+    "updated_at": "2026-09-14T11:46:54.45+00:00"
+  },
+  {
+    "mint_address": "XsTd1xJRAwAddguKdxYPGoS3qhctGsJb1ue4Rm6URFa",
+    "symbol": "KKRx",
+    "underlying_symbol": "KKR",
+    "price_usd": 101.08,
+    "prev_close_usd": 104.09,
+    "updated_at": "2026-09-14T11:46:55.294+00:00"
+  },
+  {
+    "mint_address": "XsBNJXGu68cBH5hgFxdqZkeh8cMQv32jeEtZtYTYvfS",
+    "symbol": "Fx",
+    "underlying_symbol": "F",
+    "price_usd": 13.97,
+    "prev_close_usd": 13.45,
+    "updated_at": "2026-09-14T11:46:55.303+00:00"
+  },
+  {
+    "mint_address": "XseTVygt2sUPQsfYbYVMXzV1AeMRE6Usj9DEWwStMe3",
+    "symbol": "MCOx",
+    "underlying_symbol": "MCO",
+    "price_usd": 474.95,
+    "prev_close_usd": 474.57,
+    "updated_at": "2026-09-14T11:46:56.217+00:00"
+  },
+  {
+    "mint_address": "XsWkTtvUXJgrvxvgGuHRRqk6iwDuviEQZw4uJFUUGgX",
+    "symbol": "REGNx",
+    "underlying_symbol": "REGN",
+    "price_usd": 781.49,
+    "prev_close_usd": 807.65,
+    "updated_at": "2026-09-14T11:46:57.068+00:00"
+  },
+  {
+    "mint_address": "Xs6QWdM8Lgdf3gUfmhZfZDu8DKcoMyxjgyU46R28RUR",
+    "symbol": "STTx",
+    "underlying_symbol": "STT",
+    "price_usd": 193.4,
+    "prev_close_usd": 191.89,
+    "updated_at": "2026-09-14T11:46:57.92+00:00"
+  },
+  {
+    "mint_address": "XsWzjAeMsR9pMX1aKkq7uDKpr11daUHkmjXya15yCqd",
+    "symbol": "CLx",
+    "underlying_symbol": "CL",
+    "price_usd": 86.8,
+    "prev_close_usd": 88.03,
+    "updated_at": "2026-09-14T11:46:59.692+00:00"
+  },
+  {
+    "mint_address": "XsJbC4TFupSLpxNwsfq9o1BB5tdTT7eZ3YNerVvE49H",
+    "symbol": "ELVx",
+    "underlying_symbol": "ELV",
+    "price_usd": 418.72,
+    "prev_close_usd": 396.9,
+    "updated_at": "2026-09-14T11:47:00.544+00:00"
+  },
+  {
+    "mint_address": "Xs66hB4NftAJmu73aeBc6RXQC4DX4LwU4xvnfsz581r",
+    "symbol": "HLTx",
+    "underlying_symbol": "HLT",
+    "price_usd": 306.19,
+    "prev_close_usd": 306.99,
+    "updated_at": "2026-09-14T11:47:01.259+00:00"
+  },
+  {
+    "mint_address": "XsJ5MSaKx3Y6bKEfmrRmovGEdRM53KWqEEHuaNUsQpD",
+    "symbol": "HCAx",
+    "underlying_symbol": "HCA",
+    "price_usd": 426.94,
+    "prev_close_usd": 421.83,
+    "updated_at": "2026-09-14T11:47:01.454+00:00"
+  },
+  {
+    "mint_address": "XsfodJMz7SyMNsSgATVDcbuMiQDqQoAiRTL1xuyHNUn",
+    "symbol": "INTUx",
+    "underlying_symbol": "INTU",
+    "price_usd": 321.57,
+    "prev_close_usd": 313.94,
+    "updated_at": "2026-09-14T11:47:02.311+00:00"
+  },
+  {
+    "mint_address": "XsLR9avpksMgLqB5Mw3jBNjzdvSDUKGw4onApxDGE6x",
+    "symbol": "URIx",
+    "underlying_symbol": "URI",
+    "price_usd": 989.12,
+    "prev_close_usd": 1028.77,
+    "updated_at": "2026-09-14T11:47:04.928+00:00"
+  },
+  {
+    "mint_address": "XsfGN1hFHbigfAzUY1nLRjrECm3ohGzVcim5pMqgp9d",
+    "symbol": "SNPSx",
+    "underlying_symbol": "SNPS",
+    "price_usd": 397.38,
+    "prev_close_usd": 393.22,
+    "updated_at": "2026-09-14T11:47:04.952+00:00"
+  },
+  {
+    "mint_address": "XsM1FstDXh1pA4uNXzvJdAop9SRJnnRdWt2o8A2mLpN",
+    "symbol": "Cx",
+    "underlying_symbol": "C",
+    "price_usd": 138.82,
+    "prev_close_usd": 137.8,
+    "updated_at": "2026-09-14T11:47:06.694+00:00"
+  },
+  {
+    "mint_address": "Xs58CxmUcgT17reeVV64se747XuRfjsJQnpb8DX9TDq",
+    "symbol": "COPx",
+    "underlying_symbol": "COP",
+    "price_usd": 137.35,
+    "prev_close_usd": 136.53,
+    "updated_at": "2026-09-14T11:47:06.695+00:00"
+  },
+  {
+    "mint_address": "XsT9Z9BYM5Bp2JAuKVgw1XLdENGyvQwC5C2gAuzeKyY",
+    "symbol": "FCXx",
+    "underlying_symbol": "FCX",
+    "price_usd": 71.07,
+    "prev_close_usd": 76.23,
+    "updated_at": "2026-09-14T11:47:07.56+00:00"
+  },
+  {
+    "mint_address": "XsztStxbbGZE63p8DyD8YCpzyWFJwwy2PNcyaf3cZz8",
+    "symbol": "MOx",
+    "underlying_symbol": "MO",
+    "price_usd": 68.98,
+    "prev_close_usd": 67.89,
+    "updated_at": "2026-09-14T11:47:08.43+00:00"
+  },
+  {
+    "mint_address": "XsUUG8bjFN2KvzLTpzavvEKdAjMAeLTZiTeAQJ9uhvB",
+    "symbol": "QCOMx",
+    "underlying_symbol": "QCOM",
+    "price_usd": 181.97,
+    "prev_close_usd": 176.4,
+    "updated_at": "2026-09-14T11:47:10.179+00:00"
+  },
+  {
+    "mint_address": "XsN53tgjZA4QU8iuedPNHxxCbDqKcJqbrT1f8jBXzdC",
+    "symbol": "RTXx",
+    "underlying_symbol": "RTX",
+    "price_usd": 197.68,
+    "prev_close_usd": 197.55,
+    "updated_at": "2026-09-14T11:47:10.207+00:00"
+  },
+  {
+    "mint_address": "Xsieiissncd7uzAW2kwNJPDKBfWcyvdibgxSMQindKF",
+    "symbol": "USBx",
+    "underlying_symbol": "USB",
+    "price_usd": 62.84,
+    "prev_close_usd": 62.11,
+    "updated_at": "2026-09-14T11:47:11.03+00:00"
+  },
+  {
+    "mint_address": "Xso4umc25VxszLT64SYNT7TMeZudAC75xwNo7qFjJFu",
+    "symbol": "WMBx",
+    "underlying_symbol": "WMB",
+    "price_usd": 72.85,
+    "prev_close_usd": 75.15,
+    "updated_at": "2026-09-14T11:47:11.75+00:00"
+  },
+  {
+    "mint_address": "XsgCWpLUC3pv6JmNAFtkYmuwSaikShy8QZRuripgBzn",
+    "symbol": "VRTXx",
+    "underlying_symbol": "VRTX",
+    "price_usd": 515.44,
+    "prev_close_usd": 521.12,
+    "updated_at": "2026-09-14T11:47:11.783+00:00"
+  },
+  {
+    "mint_address": "XsbWCMXPzLdZMLpPtiiWE7M99fySmsnK5eFCWGWfDQ8",
+    "symbol": "EWUx",
+    "underlying_symbol": "EWU",
+    "price_usd": 47.94,
+    "prev_close_usd": 47.83,
+    "updated_at": "2026-09-14T11:47:12.608+00:00"
+  },
+  {
+    "mint_address": "XsprHSJzwz3qmHcEf7j7WcUk6hMUL4sPLuAdWaSY1oh",
+    "symbol": "HIMSx",
+    "underlying_symbol": "HIMS",
+    "price_usd": 27.51,
+    "prev_close_usd": 27.9,
+    "updated_at": "2026-09-14T11:47:14.368+00:00"
+  },
+  {
+    "mint_address": "XsAxB3xLnt7xto5ChiSbVNHBoXcXzKuzS7FieiNYwtY",
+    "symbol": "SATAx",
+    "underlying_symbol": "SATA",
+    "price_usd": 99.75,
+    "prev_close_usd": 100.01,
+    "updated_at": "2026-09-14T11:47:16.271+00:00"
+  },
+  {
+    "mint_address": "Xsd7TduTbjuYCFL7Uoujb8SbkZLmUsuYNLn7KdvX21x",
+    "symbol": "VOOx",
+    "underlying_symbol": "VOO",
+    "price_usd": 702.56,
+    "prev_close_usd": 700.87,
+    "updated_at": "2026-09-14T11:47:16.984+00:00"
+  },
+  {
+    "mint_address": "XsmopJuh6C6uNFJa3KaVoYqEtrf3Y7M5LYwRLKLER3h",
+    "symbol": "WDCx",
+    "underlying_symbol": "WDC",
+    "price_usd": 447.18,
+    "prev_close_usd": 482.28,
+    "updated_at": "2026-09-14T11:47:18.038+00:00"
+  },
+  {
+    "mint_address": "XssLKajmwH79hK14cqp65fFg2Eyteh23nmSaJpKRmzx",
+    "symbol": "AEEx",
+    "underlying_symbol": "AEE",
+    "price_usd": 104.9,
+    "prev_close_usd": 106.25,
+    "updated_at": "2026-09-14T11:47:39.616+00:00"
+  },
+  {
+    "mint_address": "XsQoxoLVogLGYRRRcFwjdcFQVLxFpCuYfDtvh3vJ2Ft",
+    "symbol": "GEHCx",
+    "underlying_symbol": "GEHC",
+    "price_usd": 63.93,
+    "prev_close_usd": 65.17,
+    "updated_at": "2026-09-14T11:45:31.105+00:00"
+  },
+  {
+    "mint_address": "XsYoSPpGDGNwgn5HDxgwFxbcrsf8Xjr4Lc62j33JjfK",
+    "symbol": "IEXx",
+    "underlying_symbol": "IEX",
+    "price_usd": 224.21,
+    "prev_close_usd": 225.1,
+    "updated_at": "2026-09-14T11:45:37.174+00:00"
+  },
+  {
+    "mint_address": "Xs23PmjqLoJvcLJ2LyMzi17HmkFua1yZsmcxWd4q8Zz",
+    "symbol": "HPQx",
+    "underlying_symbol": "HPQ",
+    "price_usd": 35.48,
+    "prev_close_usd": 32.39,
+    "updated_at": "2026-09-14T11:45:37.217+00:00"
+  },
+  {
+    "mint_address": "Xs5CSFf663gjowEA7ANX8ZhPe4AkLWMqLbriVu1JmUV",
+    "symbol": "JBHTx",
+    "underlying_symbol": "JBHT",
+    "price_usd": 270.45,
+    "prev_close_usd": 267.8,
+    "updated_at": "2026-09-14T11:45:38.064+00:00"
+  },
+  {
+    "mint_address": "Xspj4rFiCCXJyymfNgkwBG9AXZbyp69HGyHwfz6WHTE",
+    "symbol": "WCCx",
+    "underlying_symbol": "WCC",
+    "price_usd": 356.32,
+    "prev_close_usd": 355.51,
+    "updated_at": "2026-09-14T11:45:39.7+00:00"
+  },
+  {
+    "mint_address": "Xs8urJdzBSFLaKqxZiMackbXDkyZbwPeAwz7PepQ1eD",
+    "symbol": "TROWx",
+    "underlying_symbol": "TROW",
+    "price_usd": 106.29,
+    "prev_close_usd": 107.74,
+    "updated_at": "2026-09-14T11:45:39.785+00:00"
+  },
+  {
+    "mint_address": "Xsk2PGWHCQweEwYWNqA72KbuUdNz518MBzHSaBDLowq",
+    "symbol": "RFx",
+    "underlying_symbol": "RF",
+    "price_usd": 30.13,
+    "prev_close_usd": 29.89,
+    "updated_at": "2026-09-14T11:45:39.809+00:00"
+  },
+  {
+    "mint_address": "XsgDPEr2Zk1YkWnw1Mm77APoZpeTj8BQZeGSMVtBZGd",
+    "symbol": "ZMx",
+    "underlying_symbol": "ZM",
+    "price_usd": 95.57,
+    "prev_close_usd": 96.18,
+    "updated_at": "2026-09-14T11:45:40.556+00:00"
+  },
+  {
+    "mint_address": "XsnZQ49Abxr3RJgRSxYd4azhUg4MQVT3amiyaq84oA1",
+    "symbol": "JBLx",
+    "underlying_symbol": "JBL",
+    "price_usd": 318.08,
+    "prev_close_usd": 311.37,
+    "updated_at": "2026-09-14T11:46:04.889+00:00"
+  },
+  {
+    "mint_address": "XssE4tb3kc3f5V5cRL6dsuffP9wDm915W4bAsyNf62A",
+    "symbol": "LHXx",
+    "underlying_symbol": "LHX",
+    "price_usd": 245.54,
+    "prev_close_usd": 250.41,
+    "updated_at": "2026-09-14T11:46:07.289+00:00"
+  },
+  {
+    "mint_address": "XsixDLxXcKZBcRBddYiPZjB9FJcKMTLd4B7VBeKo3pB",
+    "symbol": "LOWx",
+    "underlying_symbol": "LOW",
+    "price_usd": 196.82,
+    "prev_close_usd": 198.6,
+    "updated_at": "2026-09-14T11:46:08.329+00:00"
+  },
+  {
+    "mint_address": "XsEYQJtVa51Ww3y28jV1FwheMgmDj8BpxYiCPThcLWW",
+    "symbol": "JAAAx",
+    "underlying_symbol": "JAAA",
+    "price_usd": 50.62,
+    "prev_close_usd": 50.59,
+    "updated_at": "2026-09-14T11:46:09.058+00:00"
+  },
+  {
+    "mint_address": "XsCZJYnCmjs5cYZDMLVxVzvMy5AK2oqsWpobS6SYno8",
+    "symbol": "FLBLx",
+    "underlying_symbol": "FLBL",
+    "price_usd": 22.96,
+    "prev_close_usd": 23.09,
+    "updated_at": "2026-09-14T11:46:09.087+00:00"
+  },
+  {
+    "mint_address": "XsKWMeTN8wmhrkoWKy6tXAj6476Guj8zonzQu7jivqP",
+    "symbol": "DOWx",
+    "underlying_symbol": "DOW",
+    "price_usd": 29.03,
+    "prev_close_usd": 29.4,
+    "updated_at": "2026-09-14T11:46:33.68+00:00"
+  },
+  {
+    "mint_address": "XsJB61YjcXkEf114fDGMMnWhhFf8a1x12Z6hARUUeAM",
+    "symbol": "EXPDx",
+    "underlying_symbol": "EXPD",
+    "price_usd": 192.6,
+    "prev_close_usd": 188.31,
+    "updated_at": "2026-09-14T11:46:34.533+00:00"
+  },
+  {
+    "mint_address": "XsXhUW1Mcpff3vCZWb7v3USU5Zpg1nvFPyfzF3XD6NP",
+    "symbol": "IFFx",
+    "underlying_symbol": "IFF",
+    "price_usd": 83.61,
+    "prev_close_usd": 84.31,
+    "updated_at": "2026-09-14T11:46:34.555+00:00"
+  },
+  {
+    "mint_address": "XsE44zHnRJVdk5vRpy2YvUPbbg4caoxihL8EKDatiCn",
+    "symbol": "MKLx",
+    "underlying_symbol": "MKL",
+    "price_usd": 1784.18,
+    "prev_close_usd": 1785.74,
+    "updated_at": "2026-09-14T11:46:35.244+00:00"
+  },
+  {
+    "mint_address": "XseurSPz9hnmd6k1eQT52a8QC53QcoCoD4qVbPmWzCC",
+    "symbol": "KIMx",
+    "underlying_symbol": "KIM",
+    "price_usd": 23.19,
+    "prev_close_usd": 23.57,
+    "updated_at": "2026-09-14T11:46:35.31+00:00"
+  },
+  {
+    "mint_address": "XsVDmkYEQ3wwLkXKdkRmic3HroSbReejAcnY9eNmrRW",
+    "symbol": "MKSIx",
+    "underlying_symbol": "MKSI",
+    "price_usd": 267.31,
+    "prev_close_usd": 268.05,
+    "updated_at": "2026-09-14T11:46:35.376+00:00"
+  },
+  {
+    "mint_address": "XsvBVwk5d7eU6prsSxHJPu2adEm5q6wx55mbhov2UnF",
+    "symbol": "MTZx",
+    "underlying_symbol": "MTZ",
+    "price_usd": 240.41,
+    "prev_close_usd": 240.68,
+    "updated_at": "2026-09-14T11:46:36.291+00:00"
+  },
+  {
+    "mint_address": "XsNpiekiQLb87S2VqmaYjez6sNSrjoK78nCPAF8uaCF",
+    "symbol": "TPLx",
+    "underlying_symbol": "TPL",
+    "price_usd": 369.1,
+    "prev_close_usd": 374.06,
+    "updated_at": "2026-09-14T11:46:37.15+00:00"
+  },
+  {
+    "mint_address": "XsJF1CN5uFwF5eD7b8htZDeYzY9o4kdepkvBdsa32ZT",
+    "symbol": "XPOx",
+    "underlying_symbol": "XPO",
+    "price_usd": 182.18,
+    "prev_close_usd": 184.25,
+    "updated_at": "2026-09-14T11:46:37.888+00:00"
+  },
+  {
+    "mint_address": "XsiZh3X1uThVm4bNh8PzyXVNe3v11oS6v2DCGdkboUL",
+    "symbol": "FICOx",
+    "underlying_symbol": "FICO",
+    "price_usd": 985.39,
+    "prev_close_usd": 983.19,
+    "updated_at": "2026-09-14T11:46:40.625+00:00"
+  },
+  {
+    "mint_address": "XsDDkXqF1sr1ixW4Y93Geqfd2LbrWxokCjQf9poGN3c",
+    "symbol": "KVUEx",
+    "underlying_symbol": "KVUE",
+    "price_usd": 17.78,
+    "prev_close_usd": 17.75,
+    "updated_at": "2026-09-14T11:46:41.532+00:00"
+  },
+  {
+    "mint_address": "Xsvi61uutcLdAsa5NxJ2c9geLgzUFM3tMtpJ44eoegt",
+    "symbol": "MLMx",
+    "underlying_symbol": "MLM",
+    "price_usd": 509.96,
+    "prev_close_usd": 502.99,
+    "updated_at": "2026-09-14T11:46:42.398+00:00"
+  },
+  {
+    "mint_address": "XszGT2Jo6bZz2SZBmhPstvo2xSs37q67nUJS7gtAfvx",
+    "symbol": "OTISx",
+    "underlying_symbol": "OTIS",
+    "price_usd": 69.1,
+    "prev_close_usd": 69.3,
+    "updated_at": "2026-09-14T11:46:43.109+00:00"
+  },
+  {
+    "mint_address": "Xsw7mKDicsyZ7dgSMfFxhX5nbgat3uG9V1nCxDy6Gvp",
+    "symbol": "STLDx",
+    "underlying_symbol": "STLD",
+    "price_usd": 239.79,
+    "prev_close_usd": 240.69,
+    "updated_at": "2026-09-14T11:46:44.156+00:00"
+  },
+  {
+    "mint_address": "Xs12SMK4MA7sLVS8eTged2pXns736u3qe2a1a9io6he",
+    "symbol": "PPLx",
+    "underlying_symbol": "PPL",
+    "price_usd": 34.08,
+    "prev_close_usd": 34.55,
+    "updated_at": "2026-09-14T11:46:44.158+00:00"
+  },
+  {
+    "mint_address": "Xsxq7WqXpiNFrdWSd6CA27LXmCsCrGyC9C3uaebmaqU",
+    "symbol": "WECx",
+    "underlying_symbol": "WEC",
+    "price_usd": 105.33,
+    "prev_close_usd": 106.15,
+    "updated_at": "2026-09-14T11:46:45.015+00:00"
+  },
+  {
+    "mint_address": "Xshh7vNfHqyqbnfuvhn8o53wXcuUbBYKASPq8DEHPbx",
+    "symbol": "AXONx",
+    "underlying_symbol": "AXON",
+    "price_usd": 479.34,
+    "prev_close_usd": 490,
+    "updated_at": "2026-09-14T11:46:46.265+00:00"
+  },
+  {
+    "mint_address": "XsegJtRFtvC3qqhNYdN2QXxumd2fjvWQmithQZ33ehS",
+    "symbol": "CNCx",
+    "underlying_symbol": "CNC",
+    "price_usd": 66.42,
+    "prev_close_usd": 64.06,
+    "updated_at": "2026-09-14T11:46:47.108+00:00"
+  },
+  {
+    "mint_address": "XsbPN4VFi14geuC8D2Tb2u37kQM83VSkfMUyvXsWWoC",
+    "symbol": "CCIx",
+    "underlying_symbol": "CCI",
+    "price_usd": 75.62,
+    "prev_close_usd": 75.18,
+    "updated_at": "2026-09-14T11:46:47.115+00:00"
+  },
+  {
+    "mint_address": "XsMXtu6uQkfvxCYURytUcQvhFCoqvphtoezVBh42CfZ",
+    "symbol": "MTBx",
+    "underlying_symbol": "MTB",
+    "price_usd": 239.83,
+    "prev_close_usd": 238,
+    "updated_at": "2026-09-14T11:46:49.993+00:00"
+  },
+  {
+    "mint_address": "XssP4Vb5pahDsdKUXy74gD34DzotHCYKGXegd1KHdiA",
+    "symbol": "IRMx",
+    "underlying_symbol": "IRM",
+    "price_usd": 115.18,
+    "prev_close_usd": 115.22,
+    "updated_at": "2026-09-14T11:46:50.065+00:00"
+  },
+  {
+    "mint_address": "XsNnfg6KXzaRsH8PE9T9YEahq3MQpSZ3dQAa4hcL1SN",
+    "symbol": "KMBx",
+    "underlying_symbol": "KMB",
+    "price_usd": 98.15,
+    "prev_close_usd": 98.7,
+    "updated_at": "2026-09-14T11:46:50.068+00:00"
+  },
+  {
+    "mint_address": "XsjLc87ewHkMhsxhNRLy4TZFG64ycoZb23hLc2WW7iZ",
+    "symbol": "NTAPx",
+    "underlying_symbol": "NTAP",
+    "price_usd": 199.28,
+    "prev_close_usd": 184.74,
+    "updated_at": "2026-09-14T11:46:50.775+00:00"
+  },
+  {
+    "mint_address": "XsBLm8wotoJMHjonHcr1btz9RwLa3EWjhtbs3DbQphg",
+    "symbol": "PSAx",
+    "underlying_symbol": "PSA",
+    "price_usd": 296.5,
+    "prev_close_usd": 294.6,
+    "updated_at": "2026-09-14T11:46:50.97+00:00"
+  },
+  {
+    "mint_address": "XsuJLDjTibUFnh1gNgnXeDSjQTVffnaWFKzUht5rVvc",
+    "symbol": "ALABx",
+    "underlying_symbol": "ALAB",
+    "price_usd": 291.22,
+    "prev_close_usd": 300.54,
+    "updated_at": "2026-09-14T11:46:52.698+00:00"
+  },
+  {
+    "mint_address": "Xs1eyZcwrzzYW3hDjfpm7PiJrC9RyFszsHpqfTeUTCE",
+    "symbol": "NOCx",
+    "underlying_symbol": "NOC",
+    "price_usd": 518.97,
+    "prev_close_usd": 515.57,
+    "updated_at": "2026-09-14T11:46:56.02+00:00"
+  },
+  {
+    "mint_address": "XsGhGG2TNXuJLFL5q7pAomKtMVc2YvVqs4G1hyBZLfw",
+    "symbol": "METx",
+    "underlying_symbol": "MET",
+    "price_usd": 97.14,
+    "prev_close_usd": 95.69,
+    "updated_at": "2026-09-14T11:46:56.221+00:00"
+  },
+  {
+    "mint_address": "XsnR8Rtrd8yFDGP3g2HwLdGiw58UcXjggXzgkL3pNYz",
+    "symbol": "ROKx",
+    "underlying_symbol": "ROK",
+    "price_usd": 428.39,
+    "prev_close_usd": 426.08,
+    "updated_at": "2026-09-14T11:46:57.062+00:00"
+  },
+  {
+    "mint_address": "XsUkTUDE9hCG9GLEpw3STiGuf58hYmpymiF3z1nPh3A",
+    "symbol": "RSGx",
+    "underlying_symbol": "RSG",
+    "price_usd": 222.74,
+    "prev_close_usd": 222.47,
+    "updated_at": "2026-09-14T11:46:57.067+00:00"
+  },
+  {
+    "mint_address": "XsmhtZrbnheSvztwRW82ZqZqMjaRnAQqyWERFh1A4Kr",
+    "symbol": "TRGPx",
+    "underlying_symbol": "TRGP",
+    "price_usd": 290.25,
+    "prev_close_usd": 291.38,
+    "updated_at": "2026-09-14T11:46:57.919+00:00"
+  },
+  {
+    "mint_address": "XsipFyePxrgwZJrX4s26RJ25cqwpkfn6ec8JLy26w5b",
+    "symbol": "COHRx",
+    "underlying_symbol": "COHR",
+    "price_usd": 305.37,
+    "prev_close_usd": 303.48,
+    "updated_at": "2026-09-14T11:46:59.696+00:00"
+  },
+  {
+    "mint_address": "XsvYPZkrDDg7259oDv5E76HSmeLWgHPgNEQ44KVbJJU",
+    "symbol": "AMTx",
+    "underlying_symbol": "AMT",
+    "price_usd": 177.85,
+    "prev_close_usd": 175.43,
+    "updated_at": "2026-09-14T11:46:59.7+00:00"
+  },
+  {
+    "mint_address": "XszBTLtg8oMmEWsZHbJJwViiB6unNh2ei1e6miArqps",
+    "symbol": "CTASx",
+    "underlying_symbol": "CTAS",
+    "price_usd": 201.5,
+    "prev_close_usd": 200.04,
+    "updated_at": "2026-09-14T11:47:00.494+00:00"
+  },
+  {
+    "mint_address": "XsTEo8W2L8JprN57bmJgatDT84z57ReJYizr5f32BfP",
+    "symbol": "MMMx",
+    "underlying_symbol": "MMM",
+    "price_usd": 164.97,
+    "prev_close_usd": 164.4,
+    "updated_at": "2026-09-14T11:47:02.308+00:00"
+  },
+  {
+    "mint_address": "Xso2JLSTXQjpDXw1r7ZxbC2JCbB6iLGw65kUzQvgTwH",
+    "symbol": "MRSHx",
+    "underlying_symbol": "MRSH",
+    "price_usd": 176.91,
+    "prev_close_usd": 176.84,
+    "updated_at": "2026-09-14T11:47:03.1+00:00"
+  },
+  {
+    "mint_address": "Xsa1gZ38panjmJwh6cr9QQ1YpRBEzVfxrykWSsiWvJe",
+    "symbol": "MSIx",
+    "underlying_symbol": "MSI",
+    "price_usd": 466.16,
+    "prev_close_usd": 459.89,
+    "updated_at": "2026-09-14T11:47:03.18+00:00"
+  },
+  {
+    "mint_address": "Xs1rnpzumX77Zz3nVrRGbDYzTM4PM7vgvS4BLTG6ckQ",
+    "symbol": "PCARx",
+    "underlying_symbol": "PCAR",
+    "price_usd": 122.73,
+    "prev_close_usd": 121.88,
+    "updated_at": "2026-09-14T11:47:03.886+00:00"
+  },
+  {
+    "mint_address": "Xs3QCTNpPWTFYRQ9yPv9gsvWKNJGk45UQ1bb1w7xznc",
+    "symbol": "SNOWx",
+    "underlying_symbol": "SNOW",
+    "price_usd": 328.99,
+    "prev_close_usd": 331.48,
+    "updated_at": "2026-09-14T11:47:04.075+00:00"
+  },
+  {
+    "mint_address": "Xsa3dm4UT6TdzPJV75UiuGUeGywYUnfSNhsV5nHPZEu",
+    "symbol": "BMYx",
+    "underlying_symbol": "BMY",
+    "price_usd": 63.64,
+    "prev_close_usd": 64.41,
+    "updated_at": "2026-09-14T11:47:05.785+00:00"
+  },
+  {
+    "mint_address": "XsqZ16VmoeszDniTfGTnwPBMv7j7uSDArddziagHWit",
+    "symbol": "CMIx",
+    "underlying_symbol": "CMI",
+    "price_usd": 556.75,
+    "prev_close_usd": 554.76,
+    "updated_at": "2026-09-14T11:47:05.791+00:00"
+  },
+  {
+    "mint_address": "XsmAFboVqfDwGPgXfd7oCunvYAYSzzkuKE2BDRzwjGy",
+    "symbol": "GILDx",
+    "underlying_symbol": "GILD",
+    "price_usd": 143.72,
+    "prev_close_usd": 145.65,
+    "updated_at": "2026-09-14T11:47:07.547+00:00"
+  },
+  {
+    "mint_address": "XsCX8NnXq3qx6zUxXxWwjV2yQnGc9C5y6UyXvE6RG7r",
+    "symbol": "HWMx",
+    "underlying_symbol": "HWM",
+    "price_usd": 229.61,
+    "prev_close_usd": 232.62,
+    "updated_at": "2026-09-14T11:47:08.404+00:00"
+  },
+  {
+    "mint_address": "XssULacY8D3z3a8HoQuLid8wdJHcZLGpSST9MkNFzox",
+    "symbol": "LMTx",
+    "underlying_symbol": "LMT",
+    "price_usd": 524.19,
+    "prev_close_usd": 524.46,
+    "updated_at": "2026-09-14T11:47:08.433+00:00"
+  },
+  {
+    "mint_address": "Xs4f5EbxL1bB89N7ADF7smF8fXxifJa3t6SexZufBWA",
+    "symbol": "NEEx",
+    "underlying_symbol": "NEE",
+    "price_usd": 82.31,
+    "prev_close_usd": 82.65,
+    "updated_at": "2026-09-14T11:47:09.14+00:00"
+  },
+  {
+    "mint_address": "XskVc7XiWmSqvzbjhA2LqGHQhvBdBNfatfeTpNru6KP",
+    "symbol": "PHx",
+    "underlying_symbol": "PH",
+    "price_usd": 950.23,
+    "prev_close_usd": 949.47,
+    "updated_at": "2026-09-14T11:47:10.205+00:00"
+  },
+  {
+    "mint_address": "XshACd866qcdJYTotipkEHNKKnjDHJJkUciUxKVenE3",
+    "symbol": "SYKx",
+    "underlying_symbol": "SYK",
+    "price_usd": 275.56,
+    "prev_close_usd": 275.39,
+    "updated_at": "2026-09-14T11:47:11.04+00:00"
+  },
+  {
+    "mint_address": "XswenHXJtDWYMh89uRYx2tZcABxwXSn7j3jidDPS1Yo",
+    "symbol": "EWYx",
+    "underlying_symbol": "EWY",
+    "price_usd": 188.72,
+    "prev_close_usd": 190.78,
+    "updated_at": "2026-09-14T11:47:13.512+00:00"
+  },
+  {
+    "mint_address": "Xs1neEMHNaDDSHqE9nvDGkmuX73ZASKcLtQqwmVAQde",
+    "symbol": "EWQx",
+    "underlying_symbol": "EWQ",
+    "price_usd": 44.93,
+    "prev_close_usd": 44.89,
+    "updated_at": "2026-09-14T11:47:13.516+00:00"
+  },
+  {
+    "mint_address": "XsR3LAMkzuPP8DnfYaiB2grTWqkBVy286gjJVErK1bi",
+    "symbol": "NETx",
+    "underlying_symbol": "NET",
+    "price_usd": 306.53,
+    "prev_close_usd": 314.18,
+    "updated_at": "2026-09-14T11:47:15.441+00:00"
+  },
+  {
+    "mint_address": "Xs3oZwbHvqis4NYcf4YKWmEia2eC84wSiVrcYcTqpH8",
+    "symbol": "SPCXx",
+    "underlying_symbol": "SPCX",
+    "price_usd": 151.21,
+    "prev_close_usd": 147.55,
+    "updated_at": "2026-09-14T11:47:16.986+00:00"
+  },
+  {
+    "mint_address": "XspHXejQ3A4VeimAqR1mAkvgTWgpmmoNR5CUhwCqzqr",
+    "symbol": "WFCx",
+    "underlying_symbol": "WFC",
+    "price_usd": 90.29,
+    "prev_close_usd": 89.67,
+    "updated_at": "2026-09-14T11:47:18.23+00:00"
+  },
+  {
+    "mint_address": "XsCBDrb61PyQqTJp7uHhD4vj1MkD5UK6jpxUBbgG7i1",
+    "symbol": "ADPx",
+    "underlying_symbol": "ADP",
+    "price_usd": 268.26,
+    "prev_close_usd": 265.22,
+    "updated_at": "2026-09-14T11:47:39.545+00:00"
+  },
+  {
+    "mint_address": "XsP8GpS93XjmDg5oVVCVqZsffkWadVCqZYp4BFFJnJm",
+    "symbol": "AEPx",
+    "underlying_symbol": "AEP",
+    "price_usd": 123.33,
+    "prev_close_usd": 124.67,
+    "updated_at": "2026-09-14T11:47:40.61+00:00"
+  },
+  {
+    "mint_address": "Xs2jBYo5VxMmuNjpBnMShsLB26dtK75bt42ag93ZdHU",
+    "symbol": "ADSKx",
+    "underlying_symbol": "ADSK",
+    "price_usd": 212.4,
+    "prev_close_usd": 206.62,
+    "updated_at": "2026-09-14T11:47:40.621+00:00"
+  },
+  {
+    "mint_address": "XsYka4UhXnzoqmdPCfqX8EZBQcN2MkrG4gJt4SxGvsN",
+    "symbol": "AJGx",
+    "underlying_symbol": "AJG",
+    "price_usd": 240.32,
+    "prev_close_usd": 244.28,
+    "updated_at": "2026-09-14T11:47:41.344+00:00"
+  },
+  {
+    "mint_address": "XsJW9EhZBVQawVj1aGFweU2LwQjZCvyHVYb3vXq8s99",
+    "symbol": "AKAMx",
+    "underlying_symbol": "AKAM",
+    "price_usd": 106.79,
+    "prev_close_usd": 110.75,
+    "updated_at": "2026-09-14T11:47:41.436+00:00"
+  },
+  {
+    "mint_address": "XsgKwBMbv8LDzEYRgbKtyqsub6QB56PQVzgTGbiGaNe",
+    "symbol": "AMGNx",
+    "underlying_symbol": "AMGN",
+    "price_usd": 377.35,
+    "prev_close_usd": 391.27,
+    "updated_at": "2026-09-14T11:47:41.44+00:00"
+  },
+  {
+    "mint_address": "Xsw2uU1i8tHjbgstUbtt3m6kg7BS7AgG5aj8z7ddmmN",
+    "symbol": "KLACx",
+    "underlying_symbol": "KLAC",
+    "price_usd": 180.64,
+    "prev_close_usd": 182.91,
+    "updated_at": "2026-09-14T11:46:09.885+00:00"
+  },
+  {
+    "mint_address": "Xs31mE5EiqjSHEaiX9QDKCN6NvSGCqpJ6f1FNq2wri5",
+    "symbol": "RIOTx",
+    "underlying_symbol": "RIOT",
+    "price_usd": 21.47,
+    "prev_close_usd": 22.07,
+    "updated_at": "2026-09-14T11:46:09.927+00:00"
+  },
+  {
+    "mint_address": "XsmPveq9vFqqCBfhBfDyfACu1W7bLVABkqaL3u8uFyy",
+    "symbol": "WGSx",
+    "underlying_symbol": "WGS",
+    "price_usd": 85.265,
+    "prev_close_usd": 86.48,
+    "updated_at": "2026-09-14T11:46:10.807+00:00"
+  },
+  {
+    "mint_address": "XsDZMGEU8zadWFCkTtPBoPWYcUX3JHVmghnwf2Mve2q",
+    "symbol": "ADBEx",
+    "underlying_symbol": "ADBE",
+    "price_usd": 252.23,
+    "prev_close_usd": 254.86,
+    "updated_at": "2026-09-14T11:46:10.937+00:00"
+  },
+  {
+    "mint_address": "XsensupeZBdHxZtdnLptf1UfWpVyancWcit7qWFYZrJ",
+    "symbol": "XRXx",
+    "underlying_symbol": "XRX",
+    "price_usd": 3.43,
+    "prev_close_usd": 3.14,
+    "updated_at": "2026-09-14T11:46:11.816+00:00"
+  },
+  {
+    "mint_address": "XsGqU2JhofxjZBBhuXAroJGdiyZdvbx64tPx1Mu6DVK",
+    "symbol": "IQMx",
+    "underlying_symbol": "IQM",
+    "price_usd": 107.35,
+    "prev_close_usd": 107.914,
+    "updated_at": "2026-09-14T11:47:14.265+00:00"
+  },
+  {
+    "mint_address": "Xshh1dRsnxatP45yBfrzU9MrvrFCvxHQGTrWjgdA81E",
+    "symbol": "IRENx",
+    "underlying_symbol": "IREN",
+    "price_usd": 43.83,
+    "prev_close_usd": 45.37,
+    "updated_at": "2026-09-14T11:47:14.366+00:00"
+  },
+  {
+    "mint_address": "Xs4uZnG2mzZQKgnmuYboj1PRBtascAvWh5NdVMfz2aW",
+    "symbol": "YLDEx",
+    "underlying_symbol": "YLDE",
+    "price_usd": 56.201,
+    "prev_close_usd": 56.077,
+    "updated_at": "2026-09-14T11:47:18.035+00:00"
+  },
+  {
+    "mint_address": "XsosCAu1L8Ebpr4SdBDV1EboYDRTWCH8j79UnHYzvbN",
+    "symbol": "VGKx",
+    "underlying_symbol": "VGK",
+    "price_usd": 90.02,
+    "prev_close_usd": 90.21,
+    "updated_at": "2026-09-14T11:47:18.04+00:00"
+  },
+  {
+    "mint_address": "Xs2ZEuDVSQkNnXHqfqEYKVShLHpecyKfdfpEYwiHtQE",
+    "symbol": "APLDx",
+    "underlying_symbol": "APLD",
+    "price_usd": 26.42,
+    "prev_close_usd": 27.14,
+    "updated_at": "2026-09-14T11:47:19.084+00:00"
+  },
+  {
+    "mint_address": "XsrsM2RgtYxXqxmy4iWgxQJUkkHG1U5wzi74sVNUW8m",
+    "symbol": "ANETx",
+    "underlying_symbol": "ANET",
+    "price_usd": 199.59,
+    "prev_close_usd": 192.93,
+    "updated_at": "2026-09-14T11:47:19.094+00:00"
+  },
+  {
+    "mint_address": "Xsu7Tc5J2fVUE4H5vYAiSr34cvLJeCsYPMjAYnayQn6",
+    "symbol": "DELLx",
+    "underlying_symbol": "DELL",
+    "price_usd": 567.29,
+    "prev_close_usd": 535.25,
+    "updated_at": "2026-09-14T11:47:19.939+00:00"
+  },
+  {
+    "mint_address": "XstuBvLo7soZzj3beCCPonHpR3eUfPNSeQzw35Swons",
+    "symbol": "SMHx",
+    "underlying_symbol": "SMH",
+    "price_usd": 568.53,
+    "prev_close_usd": 574.29,
+    "updated_at": "2026-09-14T11:47:22.451+00:00"
+  },
+  {
+    "mint_address": "XsaQGz41BEQkS9xAB44uvUtuXcdLJAXEU1dogEzWMZ8",
+    "symbol": "STRKx",
+    "underlying_symbol": "STRK",
+    "price_usd": 76,
+    "prev_close_usd": 76.3,
+    "updated_at": "2026-09-14T11:47:22.496+00:00"
+  },
+  {
+    "mint_address": "Xsbe4fwmjVQEWEPkzfyxqNdPUUK7X9dKfTJrZdDbNgx",
+    "symbol": "TERx",
+    "underlying_symbol": "TER",
+    "price_usd": 379.72,
+    "prev_close_usd": 383.69,
+    "updated_at": "2026-09-14T11:47:23.276+00:00"
+  },
+  {
+    "mint_address": "Xsq9sEQjYiUTSZ55RrbHAzVfz8HotwFGrqgxkgiv4LB",
+    "symbol": "URAx",
+    "underlying_symbol": "URA",
+    "price_usd": 43.53,
+    "prev_close_usd": 46.86,
+    "updated_at": "2026-09-14T11:47:23.319+00:00"
+  },
+  {
+    "mint_address": "XswCi2U1G6Ppbw1QhG45yKb8UKuR1FKLJrquv2FZSD4",
+    "symbol": "TMUSx",
+    "underlying_symbol": "TMUS",
+    "price_usd": 182.33,
+    "prev_close_usd": 177.34,
+    "updated_at": "2026-09-14T11:47:23.317+00:00"
+  },
+  {
+    "mint_address": "Xs78JED6PFZxWc2wCEPspZW9kL3Se5J7L5TChKgsidH",
+    "symbol": "STRCx",
+    "underlying_symbol": "STRC",
+    "price_usd": 98.64,
+    "prev_close_usd": 97.85,
+    "updated_at": "2026-09-14T11:47:23.471+00:00"
+  },
+  {
+    "mint_address": "XsPdAVBi8Zc1xvv53k4JcMrQaEDTgkGqKYeh7AYgPHV",
+    "symbol": "APPx",
+    "underlying_symbol": "APP",
+    "price_usd": 323.96,
+    "prev_close_usd": 305.06,
+    "updated_at": "2026-09-14T11:47:25.183+00:00"
+  },
+  {
+    "mint_address": "Xs7xXqkcK7K8urEqGg52SECi79dRp2cEKKuYjUePYDw",
+    "symbol": "CRWDx",
+    "underlying_symbol": "CRWD",
+    "price_usd": 206.74,
+    "prev_close_usd": 207.8,
+    "updated_at": "2026-09-14T11:47:26.953+00:00"
+  },
+  {
+    "mint_address": "Xsv9hRk1z5ystj9MhnA7Lq4vjSsLwzL2nxrwmwtD3re",
+    "symbol": "GLDx",
+    "underlying_symbol": "GLD",
+    "price_usd": 398.77,
+    "prev_close_usd": 403.35,
+    "updated_at": "2026-09-14T11:47:27.005+00:00"
+  },
+  {
+    "mint_address": "XsQ6NfzzLH8nspjrB9X8R2K64Zz7Tnxqu12juDiMPMW",
+    "symbol": "PANWx",
+    "underlying_symbol": "PANW",
+    "price_usd": 330.65,
+    "prev_close_usd": 335.1,
+    "updated_at": "2026-09-14T11:47:28.856+00:00"
+  },
+  {
+    "mint_address": "XsMJtFbb8BwzQtck3oRXyAfs7SAPRuTXnSEDNd7BAVz",
+    "symbol": "PLx",
+    "underlying_symbol": "PL",
+    "price_usd": 16.45,
+    "prev_close_usd": 17.22,
+    "updated_at": "2026-09-14T11:47:29.609+00:00"
+  },
+  {
+    "mint_address": "Xs8S1uUs1zvS2p7iwtsG3b6fkhpvmwz4GYU3gWAmWHZ",
+    "symbol": "QQQx",
+    "underlying_symbol": "QQQ",
+    "price_usd": 714.88,
+    "prev_close_usd": 716.31,
+    "updated_at": "2026-09-14T11:47:29.785+00:00"
+  },
+  {
+    "mint_address": "XsjQP3iMAaQ3kQScQKthQpx9ALRbjKAjQtHg6TFomoc",
+    "symbol": "TQQQx",
+    "underlying_symbol": "TQQQ",
+    "price_usd": 70.98,
+    "prev_close_usd": 71.55,
+    "updated_at": "2026-09-14T11:47:30.63+00:00"
+  },
+  {
+    "mint_address": "XsafvsGtzFqqHgTnA3aPC83EAMkacU5mcGtcSayhpVV",
+    "symbol": "TSMx",
+    "underlying_symbol": "TSM",
+    "price_usd": 433.24,
+    "prev_close_usd": 435.36,
+    "updated_at": "2026-09-14T11:47:31.489+00:00"
+  },
+  {
+    "mint_address": "XswsQk4duEQmCbGzfqUUWYmi7pV7xpJ9eEmLHXCaEQP",
+    "symbol": "BACx",
+    "underlying_symbol": "BAC",
+    "price_usd": 62.69,
+    "prev_close_usd": 62.67,
+    "updated_at": "2026-09-14T11:47:32.393+00:00"
+  },
+  {
+    "mint_address": "Xsnuv4omNoHozR6EEW5mXkw8Nrny5rB3jVfLqi6gKMH",
+    "symbol": "LLYx",
+    "underlying_symbol": "LLY",
+    "price_usd": 1115.7,
+    "prev_close_usd": 1124.21,
+    "updated_at": "2026-09-14T11:47:35.075+00:00"
+  },
+  {
+    "mint_address": "XsDgw22qRLTv5Uwuzn6T63cW69exG41T6gwQhEK22u2",
+    "symbol": "MDTx",
+    "underlying_symbol": "MDT",
+    "price_usd": 90.96,
+    "prev_close_usd": 91.89,
+    "updated_at": "2026-09-14T11:47:36.099+00:00"
+  },
+  {
+    "mint_address": "XsnQnU7AdbRZYe2akqqpibDdXjkieGFfSkbkjX1Sd1X",
+    "symbol": "MRKx",
+    "underlying_symbol": "MRK",
+    "price_usd": 143.93,
+    "prev_close_usd": 147.53,
+    "updated_at": "2026-09-14T11:47:36.197+00:00"
+  },
+  {
+    "mint_address": "XsjFwUPiLofddX5cWFHW35GCbXcSu1BCUGfxoQAQjeL",
+    "symbol": "ORCLx",
+    "underlying_symbol": "ORCL",
+    "price_usd": 150.28,
+    "prev_close_usd": 161.63,
+    "updated_at": "2026-09-14T11:47:36.91+00:00"
+  },
+  {
+    "mint_address": "XswbinNKyPmzTa5CskMbCPvMW6G5CMnZXZEeQSSQoie",
+    "symbol": "ABBVx",
+    "underlying_symbol": "ABBV",
+    "price_usd": 257.12,
+    "prev_close_usd": 250.91,
+    "updated_at": "2026-09-14T11:47:38.817+00:00"
+  },
+  {
+    "mint_address": "Xsn3H7ACEpSF2ULxeiD6kW4jRZXpurh8ZPttyfoS56W",
+    "symbol": "CLSKx",
+    "underlying_symbol": "CLSK",
+    "price_usd": 13.67,
+    "prev_close_usd": 13.28,
+    "updated_at": "2026-09-14T11:46:09.922+00:00"
+  },
+  {
+    "mint_address": "XswXzAsMV9kebQjCVtr1btvrQgQ7C4C9kKgH4QYAVzw",
+    "symbol": "GEVx",
+    "underlying_symbol": "GEV",
+    "price_usd": 957.27,
+    "prev_close_usd": 951.04,
+    "updated_at": "2026-09-14T11:46:09.925+00:00"
+  },
+  {
+    "mint_address": "XsAsZLF4MmsvS1sDxRMrUz7REjHfwbC9UAMXSRBqgEB",
+    "symbol": "UBERx",
+    "underlying_symbol": "UBER",
+    "price_usd": 71.67,
+    "prev_close_usd": 71.08,
+    "updated_at": "2026-09-14T11:46:10.932+00:00"
+  },
+  {
+    "mint_address": "XsmjCXMpgsWWchGjczHfWz2aGKdYF7WiwPPurUd6c7W",
+    "symbol": "WRLDx",
+    "underlying_symbol": "WRLD",
+    "price_usd": 190.75,
+    "prev_close_usd": 189.43,
+    "updated_at": "2026-09-14T11:46:11.681+00:00"
+  },
+  {
+    "mint_address": "XsYLZdcMYST418xZhTV6KaHqr8BWqaKS3J45ywqigF9",
+    "symbol": "LNGx",
+    "underlying_symbol": "LNG",
+    "price_usd": 278.34,
+    "prev_close_usd": 275.93,
+    "updated_at": "2026-09-14T11:47:15.443+00:00"
+  },
+  {
+    "mint_address": "Xsgc9YTqdAH1GzDLBGQcScCMgkKsVBn4hBmqtNRospY",
+    "symbol": "ONDSx",
+    "underlying_symbol": "ONDS",
+    "price_usd": 7.23,
+    "prev_close_usd": 7.29,
+    "updated_at": "2026-09-14T11:47:16.15+00:00"
+  },
+  {
+    "mint_address": "XsFnZawJdLdXfBSEt5Vw29K5vdBiHotdPLjUPafpfHs",
+    "symbol": "IEMGx",
+    "underlying_symbol": "IEMG",
+    "price_usd": 82.57,
+    "prev_close_usd": 83.25,
+    "updated_at": "2026-09-14T11:47:19.846+00:00"
+  },
+  {
+    "mint_address": "XsbELVbLGBkn7xfMfyYuUipKGt1iRUc2B7pYRvFTFu3",
+    "symbol": "IWMx",
+    "underlying_symbol": "IWM",
+    "price_usd": 288.89,
+    "prev_close_usd": 290.64,
+    "updated_at": "2026-09-14T11:47:19.942+00:00"
+  },
+  {
+    "mint_address": "XsexQ9qqNbDkLE6XwCN9ceVhLo8Lxc7UheVR6eBkKyo",
+    "symbol": "LITEx",
+    "underlying_symbol": "LITE",
+    "price_usd": 927.03,
+    "prev_close_usd": 988.98,
+    "updated_at": "2026-09-14T11:47:20.862+00:00"
+  },
+  {
+    "mint_address": "XsSN912SN4Whn2xn59vWZHt1uLbw9WnoNGp5MigmHFf",
+    "symbol": "LRCXx",
+    "underlying_symbol": "LRCX",
+    "price_usd": 298.22,
+    "prev_close_usd": 315.84,
+    "updated_at": "2026-09-14T11:47:20.868+00:00"
+  },
+  {
+    "mint_address": "XsYD72ntjj7ZwoFDZCDmN2gamTcLpnywqvG7PQN5vCN",
+    "symbol": "SGOVx",
+    "underlying_symbol": "SGOV",
+    "price_usd": 100.52,
+    "prev_close_usd": 100.49,
+    "updated_at": "2026-09-14T11:47:21.724+00:00"
+  },
+  {
+    "mint_address": "XsxAd6okt8y1RRK6gNg7iJaqiWNiq5Md5EDf3ZrF2dm",
+    "symbol": "SLVx",
+    "underlying_symbol": "SLV",
+    "price_usd": 58.12,
+    "prev_close_usd": 60.72,
+    "updated_at": "2026-09-14T11:47:22.561+00:00"
+  },
+  {
+    "mint_address": "XsJJneENiaBPqqcdK1gMsfwi9cbw111azigzRYHoctX",
+    "symbol": "USARx",
+    "underlying_symbol": "USAR",
+    "price_usd": 15.56,
+    "prev_close_usd": 17.06,
+    "updated_at": "2026-09-14T11:47:23.3+00:00"
+  },
+  {
+    "mint_address": "XsNVBwVGqtDqmA2Waoiux5mfykH8nepLK74z3ZoQWK2",
+    "symbol": "VUGx",
+    "underlying_symbol": "VUG",
+    "price_usd": 88.02,
+    "prev_close_usd": 87.68,
+    "updated_at": "2026-09-14T11:47:24.331+00:00"
+  },
+  {
+    "mint_address": "XsEdDDTcVGJU6nvdRdVnj53eKTrsCkvtrVfXGmUK68V",
+    "symbol": "VTx",
+    "underlying_symbol": "VT",
+    "price_usd": 159.94,
+    "prev_close_usd": 159.89,
+    "updated_at": "2026-09-14T11:47:24.333+00:00"
+  },
+  {
+    "mint_address": "Xs54CrhmpVp6uxZXwgSTegrRH2kShh88XFPzgf4BExu",
+    "symbol": "XLEx",
+    "underlying_symbol": "XLE",
+    "price_usd": 65.14,
+    "prev_close_usd": 65.31,
+    "updated_at": "2026-09-14T11:47:25.187+00:00"
+  },
+  {
+    "mint_address": "XsPLBFy59Q3hY59KLAJur8QyvziMF4xUxGTxXqXE7cT",
+    "symbol": "BTBTx",
+    "underlying_symbol": "BTBT",
+    "price_usd": 1.59,
+    "prev_close_usd": 1.66,
+    "updated_at": "2026-09-14T11:47:26.098+00:00"
+  },
+  {
+    "mint_address": "XsgaUyp4jd1fNBCxgtTKkW64xnnhQcvgaxzsbAq5ZD1",
+    "symbol": "GSx",
+    "underlying_symbol": "GS",
+    "price_usd": 1029.18,
+    "prev_close_usd": 1028.78,
+    "updated_at": "2026-09-14T11:47:27.141+00:00"
+  },
+  {
+    "mint_address": "XsGtpmjhmC8kyjVSWL4VicGu36ceq9u55PTgF8bhGv6",
+    "symbol": "OPENx",
+    "underlying_symbol": "OPEN",
+    "price_usd": 2.79,
+    "prev_close_usd": 3,
+    "updated_at": "2026-09-14T11:47:28.742+00:00"
+  },
+  {
+    "mint_address": "Xss5RAku5EH6UViFdvW7ss9xQjwQLsrs2opPMhb3k43",
+    "symbol": "RBLXx",
+    "underlying_symbol": "RBLX",
+    "price_usd": 45.5,
+    "prev_close_usd": 44.52,
+    "updated_at": "2026-09-14T11:47:29.765+00:00"
+  },
+  {
+    "mint_address": "XsqBC5tcVQLYt8wqGCHRnAUUecbRYXoJCReD6w7QEKp",
+    "symbol": "TBLLx",
+    "underlying_symbol": "TBLL",
+    "price_usd": 105.72,
+    "prev_close_usd": 105.71,
+    "updated_at": "2026-09-14T11:47:30.631+00:00"
+  },
+  {
+    "mint_address": "XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W",
+    "symbol": "SPYx",
+    "underlying_symbol": "SPY",
+    "price_usd": 764.29,
+    "prev_close_usd": 762.4,
+    "updated_at": "2026-09-14T11:47:30.648+00:00"
+  },
+  {
+    "mint_address": "Xsr3pdLQyXvDJBFgpR5nexCEZwXvigb8wbPYp4YoNFf",
+    "symbol": "CSCOx",
+    "underlying_symbol": "CSCO",
+    "price_usd": 112.13,
+    "prev_close_usd": 109.43,
+    "updated_at": "2026-09-14T11:47:33.25+00:00"
+  },
+  {
+    "mint_address": "XsNNMt7WTNA2sV3jrb1NNfNgapxRF5i4i6GcnTRRHts",
+    "symbol": "CVXx",
+    "underlying_symbol": "CVX",
+    "price_usd": 214.06,
+    "prev_close_usd": 213.81,
+    "updated_at": "2026-09-14T11:47:33.433+00:00"
+  },
+  {
+    "mint_address": "XshPgPdXFRWB8tP1j82rebb2Q9rPgGX37RuqzohmArM",
+    "symbol": "INTCx",
+    "underlying_symbol": "INTC",
+    "price_usd": 102.94,
+    "prev_close_usd": 106.24,
+    "updated_at": "2026-09-14T11:47:34.29+00:00"
+  },
+  {
+    "mint_address": "XspwhyYPdWVM8XBHZnpS9hgyag9MKjLRyE3tVfmCbSr",
+    "symbol": "IBMx",
+    "underlying_symbol": "IBM",
+    "price_usd": 243.29,
+    "prev_close_usd": 239.94,
+    "updated_at": "2026-09-14T11:47:34.323+00:00"
+  },
+  {
+    "mint_address": "XsaBXg8dU5cPM6ehmVctMkVqoiRG2ZjMo1cyBJ3AykQ",
+    "symbol": "KOx",
+    "underlying_symbol": "KO",
+    "price_usd": 88.29,
+    "prev_close_usd": 87.55,
+    "updated_at": "2026-09-14T11:47:35.207+00:00"
+  },
+  {
+    "mint_address": "XsYdjDjNUygZ7yGKfQaB6TxLh2gC6RRjzLtLAGJrhzV",
+    "symbol": "PGx",
+    "underlying_symbol": "PG",
+    "price_usd": 145.27,
+    "prev_close_usd": 142.64,
+    "updated_at": "2026-09-14T11:47:37.115+00:00"
+  },
+  {
+    "mint_address": "Xsba6tUnSjDae2VcopDB6FGGDaxRrewFCDa5hKn5vT3",
+    "symbol": "PMx",
+    "underlying_symbol": "PM",
+    "price_usd": 191.06,
+    "prev_close_usd": 185.71,
+    "updated_at": "2026-09-14T11:47:37.961+00:00"
+  },
+  {
+    "mint_address": "Xs151QeqTCiuKtinzfRATnUESM2xTU6V9Wy8Vy538ci",
+    "symbol": "WMTx",
+    "underlying_symbol": "WMT",
+    "price_usd": 107.15,
+    "prev_close_usd": 105.83,
+    "updated_at": "2026-09-14T11:47:38.712+00:00"
+  },
+  {
+    "mint_address": "XsRJiWgqGJrDaidERfWfdZkaxdA4VPjVEqN6XFctpp3",
+    "symbol": "QUBTx",
+    "underlying_symbol": "QUBT",
+    "price_usd": 7.99,
+    "prev_close_usd": 8.04,
+    "updated_at": "2026-09-14T11:45:44.583+00:00"
+  },
+  {
+    "mint_address": "Xswbpc8UqU6e1j9QZEWCjBMjyvz4twqD7PCy6j2e7jj",
+    "symbol": "SNDKx",
+    "underlying_symbol": "SNDK",
+    "price_usd": 1633.35,
+    "prev_close_usd": 1764.17,
+    "updated_at": "2026-09-14T11:45:46.619+00:00"
+  },
+  {
+    "mint_address": "XsR4LAtaBgTKTRUhiijY1ba13nx4bepeEcag2Pr4dZ1",
+    "symbol": "ASTSx",
+    "underlying_symbol": "ASTS",
+    "price_usd": 59.86,
+    "prev_close_usd": 62.42,
+    "updated_at": "2026-09-14T11:46:10.939+00:00"
+  },
+  {
+    "mint_address": "Xs72K1Ta1D5ccNy3RzSyQWGgZywWvphX78pL8WBk1Bo",
+    "symbol": "MOOx",
+    "underlying_symbol": "MOO",
+    "price_usd": 86.48,
+    "prev_close_usd": 87.69,
+    "updated_at": "2026-09-14T11:47:15.413+00:00"
+  },
+  {
+    "mint_address": "Xs6yCfUGbkjcvivWr4crLR7pJGxEXspsuuUMhxNEEUw",
+    "symbol": "RCATx",
+    "underlying_symbol": "RCAT",
+    "price_usd": 7.96,
+    "prev_close_usd": 8.13,
+    "updated_at": "2026-09-14T11:47:16.277+00:00"
+  },
+  {
+    "mint_address": "Xs8S5L4HkJpeBWF1J4oyUX6rVwGHmG7GZ7PiChPt7nY",
+    "symbol": "ETNx",
+    "underlying_symbol": "ETN",
+    "price_usd": 425.37,
+    "prev_close_usd": 415.22,
+    "updated_at": "2026-09-14T11:47:19.889+00:00"
+  },
+  {
+    "mint_address": "XsyZcb97BzETAqi9BoP2C9D196MiMNBisGMVNje2Thz",
+    "symbol": "IJRx",
+    "underlying_symbol": "IJR",
+    "price_usd": 142.19,
+    "prev_close_usd": 142.7,
+    "updated_at": "2026-09-14T11:47:19.944+00:00"
+  },
+  {
+    "mint_address": "XsAiRejKuvLAdq9KtedrMSrabz7SWdzKoVK6Qgac1Ki",
+    "symbol": "KRAQx",
+    "underlying_symbol": "KRAQ",
+    "price_usd": 10.0391,
+    "prev_close_usd": 10.04,
+    "updated_at": "2026-09-14T11:47:20.857+00:00"
+  },
+  {
+    "mint_address": "XsTTtPA5V19YwHKDv4xeVXNM6kdsQNJvg3MyWkRUckt",
+    "symbol": "PALLx",
+    "underlying_symbol": "PALL",
+    "price_usd": 23.62,
+    "prev_close_usd": 24.57,
+    "updated_at": "2026-09-14T11:47:20.854+00:00"
+  },
+  {
+    "mint_address": "XsLR2VCGNzYVLfJGEwwNZsRYDZBGyBnoQH5rPGvwodA",
+    "symbol": "PWRx",
+    "underlying_symbol": "PWR",
+    "price_usd": 650.58,
+    "prev_close_usd": 626.98,
+    "updated_at": "2026-09-14T11:47:21.702+00:00"
+  },
+  {
+    "mint_address": "Xst6eFD4YT6sz9RLMysN9SyvaZWtraSdVJQGu5ZkAme",
+    "symbol": "PPLTx",
+    "underlying_symbol": "PPLT",
+    "price_usd": 16.26,
+    "prev_close_usd": 17.15,
+    "updated_at": "2026-09-14T11:47:21.705+00:00"
+  },
+  {
+    "mint_address": "XsWAnFM77x6YvpdaZoos79R12o4Yj4r7EVkaTWddzhU",
+    "symbol": "SCHFx",
+    "underlying_symbol": "SCHF",
+    "price_usd": 28.19,
+    "prev_close_usd": 28.2,
+    "updated_at": "2026-09-14T11:47:21.707+00:00"
+  },
+  {
+    "mint_address": "XsLT5v4DAd1kwViPQh3SZiT5kzJfNLxzJxJN1dySZTe",
+    "symbol": "VXUSx",
+    "underlying_symbol": "VXUS",
+    "price_usd": 87.14,
+    "prev_close_usd": 87.41,
+    "updated_at": "2026-09-14T11:47:24.329+00:00"
+  },
+  {
+    "mint_address": "XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1",
+    "symbol": "CRCLx",
+    "underlying_symbol": "CRCL",
+    "price_usd": 90.6,
+    "prev_close_usd": 92.99,
+    "updated_at": "2026-09-14T11:47:25.904+00:00"
+  },
+  {
+    "mint_address": "Xs7ZdzSHLU9ftNJsii5fCeJhoRWSC32SQGzGQtePxNu",
+    "symbol": "COINx",
+    "underlying_symbol": "COIN",
+    "price_usd": 175.26,
+    "prev_close_usd": 174.72,
+    "updated_at": "2026-09-14T11:47:26.093+00:00"
+  },
+  {
+    "mint_address": "Xsf9mBktVB9BSU5kf4nHxPq5hCBJ2j2ui3ecFGxPRGc",
+    "symbol": "GMEx",
+    "underlying_symbol": "GME",
+    "price_usd": 21.15,
+    "prev_close_usd": 19.89,
+    "updated_at": "2026-09-14T11:47:26.949+00:00"
+  },
+  {
+    "mint_address": "Xs2yquAgsHByNzx68WJC55WHjHBvG9JsMB7CWjTLyPy",
+    "symbol": "DFDVx",
+    "underlying_symbol": "DFDV",
+    "price_usd": 5.08,
+    "prev_close_usd": 5.44,
+    "updated_at": "2026-09-14T11:47:27.006+00:00"
+  },
+  {
+    "mint_address": "XsvNBAYkrDRNhA7wPHQfX3ZUXZyZLdnCQDfHZ56bzpg",
+    "symbol": "HOODx",
+    "underlying_symbol": "HOOD",
+    "price_usd": 112.57,
+    "prev_close_usd": 115.28,
+    "updated_at": "2026-09-14T11:47:27.995+00:00"
+  },
+  {
+    "mint_address": "XsG5QyZTQnVSpsXRpD92K5ZGoxXjsmfTyx7fW7r18DV",
+    "symbol": "HUTx",
+    "underlying_symbol": "HUT",
+    "price_usd": 98.6,
+    "prev_close_usd": 95.92,
+    "updated_at": "2026-09-14T11:47:28+00:00"
+  },
+  {
+    "mint_address": "XsQLZycSZ7QnBBdBXQaTbQdiUcbRqjNJgyBGAMzhHav",
+    "symbol": "MUx",
+    "underlying_symbol": "MU",
+    "price_usd": 975.26,
+    "prev_close_usd": 1027.77,
+    "updated_at": "2026-09-14T11:47:28.01+00:00"
+  },
+  {
+    "mint_address": "XsP7xzNPvEHS1m6qfanPUGjNmdnmsLKEoNAnHjdxxyZ",
+    "symbol": "MSTRx",
+    "underlying_symbol": "MSTR",
+    "price_usd": 130.97,
+    "prev_close_usd": 132.7,
+    "updated_at": "2026-09-14T11:47:28.852+00:00"
+  },
+  {
+    "mint_address": "Xsgrm4D6VBTfDx5bs7GNdjtmWDgZ8V79r3YpsYwf5py",
+    "symbol": "SPCEx",
+    "underlying_symbol": "SPCE",
+    "price_usd": 2.92,
+    "prev_close_usd": 2.96,
+    "updated_at": "2026-09-14T11:47:30.628+00:00"
+  },
+  {
+    "mint_address": "Xs3ZFkPYT2BN7qBMqf1j1bfTeTm1rFzEFSsQ1z3wAKU",
+    "symbol": "AZNx",
+    "underlying_symbol": "AZN",
+    "price_usd": 160.17,
+    "prev_close_usd": 156.94,
+    "updated_at": "2026-09-14T11:47:32.239+00:00"
+  },
+  {
+    "mint_address": "Xseo8tgCZfkHxWS9xbFYeKFyMSbWEvZGFV1Gh53GtCV",
+    "symbol": "DHRx",
+    "underlying_symbol": "DHR",
+    "price_usd": 200.14,
+    "prev_close_usd": 204.85,
+    "updated_at": "2026-09-14T11:47:33.267+00:00"
+  },
+  {
+    "mint_address": "XsSr8anD1hkvNMu8XQiVcmiaTP7XGvYu7Q58LdmtE8Z",
+    "symbol": "LINx",
+    "underlying_symbol": "LIN",
+    "price_usd": 466.22,
+    "prev_close_usd": 466.65,
+    "updated_at": "2026-09-14T11:47:35.146+00:00"
+  },
+  {
+    "mint_address": "XsEH7wWfJJu2ZT3UCFeVfALnVA6CP5ur7Ee11KmzVpL",
+    "symbol": "NFLXx",
+    "underlying_symbol": "NFLX",
+    "price_usd": 77.4,
+    "prev_close_usd": 76.03,
+    "updated_at": "2026-09-14T11:47:36.101+00:00"
+  },
+  {
+    "mint_address": "XsqgsbXwWogGJsNcVZ3TyVouy2MbTkfCFhCGGGcQZ2p",
+    "symbol": "Vx",
+    "underlying_symbol": "V",
+    "price_usd": 370.45,
+    "prev_close_usd": 367.39,
+    "updated_at": "2026-09-14T11:47:37.966+00:00"
+  },
+  {
+    "mint_address": "Xs8drBWy3Sd5QY3aifG9kt9KFs2K3PGZmx7jWrsrk57",
+    "symbol": "TMOx",
+    "underlying_symbol": "TMO",
+    "price_usd": 609.82,
+    "prev_close_usd": 605.69,
+    "updated_at": "2026-09-14T11:47:37.973+00:00"
+  },
+  {
+    "mint_address": "Xs5UJzmCRQ8DWZjskExdSQDnbE6iLkRu2jjrRAB1JSU",
+    "symbol": "ACNx",
+    "underlying_symbol": "ACN",
+    "price_usd": 183.9,
+    "prev_close_usd": 175.8,
+    "updated_at": "2026-09-14T11:47:39.744+00:00"
+  },
+  {
+    "mint_address": "Xs3c2aZenyRQwXjki5MDxJEJ2km27ef2rWQMFWx7QKJ",
+    "symbol": "GLXYx",
+    "underlying_symbol": "GLXY",
+    "price_usd": 24.4,
+    "prev_close_usd": 25.15,
+    "updated_at": "2026-09-14T11:45:31.236+00:00"
+  },
+  {
+    "mint_address": "XsGVi5eo1Dh2zUpic4qACcjuWGjNv8GCt3dm5XcX6Dn",
+    "symbol": "JNJx",
+    "underlying_symbol": "JNJ",
+    "price_usd": 265.58,
+    "prev_close_usd": 267.08,
+    "updated_at": "2026-09-14T11:45:37.993+00:00"
+  },
+  {
+    "mint_address": "XsMJnAApxALiWrwPBkAqm2FebHRmMLQVyjv9xVckzyk",
+    "symbol": "BSYx",
+    "underlying_symbol": "BSY",
+    "price_usd": 30.97,
+    "prev_close_usd": 32.01,
+    "updated_at": "2026-09-14T11:45:40.528+00:00"
+  },
+  {
+    "mint_address": "Xsv3MnH24RsSJwcBvkPUMsDAZqszgmxnbWcUDbfzaYW",
+    "symbol": "BETRx",
+    "underlying_symbol": "BETR",
+    "price_usd": 12.95,
+    "prev_close_usd": 13.46,
+    "updated_at": "2026-09-14T11:45:41.427+00:00"
+  },
+  {
+    "mint_address": "XsZLnz25FKoaHSjhGDYtv2E7sgKwP3g5XeC7eSWLVnm",
+    "symbol": "ALSNx",
+    "underlying_symbol": "ALSN",
+    "price_usd": 126.94,
+    "prev_close_usd": 128.14,
+    "updated_at": "2026-09-14T11:45:41.429+00:00"
+  },
+  {
+    "mint_address": "XsLLmMhRTib24GrQd3wfrgh3rBWF6NHeVx6hox2eZXH",
+    "symbol": "AMx",
+    "underlying_symbol": "AM",
+    "price_usd": 22.06,
+    "prev_close_usd": 22.84,
+    "updated_at": "2026-09-14T11:45:41.433+00:00"
+  },
+  {
+    "mint_address": "XsHsqDrvsU85aJXNNmPBkxU4STbELJUeTV7zT4cJQD5",
+    "symbol": "DYx",
+    "underlying_symbol": "DY",
+    "price_usd": 307.47,
+    "prev_close_usd": 290.49,
+    "updated_at": "2026-09-14T11:45:42.104+00:00"
+  },
+  {
+    "mint_address": "Xs6z8AmfhiHTGmfdcX6hG7hho5P7xnbE21ChtJ94oVj",
+    "symbol": "DPZx",
+    "underlying_symbol": "DPZ",
+    "price_usd": 311.6,
+    "prev_close_usd": 321.46,
+    "updated_at": "2026-09-14T11:45:42.108+00:00"
+  },
+  {
+    "mint_address": "Xsc3DUGC7diNKyYkKTagzj4R42EuM8KHBgFnLmXA12y",
+    "symbol": "BXPx",
+    "underlying_symbol": "BXP",
+    "price_usd": 64.7,
+    "prev_close_usd": 64.29,
+    "updated_at": "2026-09-14T11:45:42.233+00:00"
+  },
+  {
+    "mint_address": "XsS3GWSysqkDJZYFSuMDFZ2ELSjQAWwMH28vxLThnb4",
+    "symbol": "DVAx",
+    "underlying_symbol": "DVA",
+    "price_usd": 181.55,
+    "prev_close_usd": 183.01,
+    "updated_at": "2026-09-14T11:45:42.23+00:00"
+  },
+  {
+    "mint_address": "XsCKGVtLBwZ4Z264jSPgPxzm3w6Sm3UkKv5WgHd3ike",
+    "symbol": "FRHCx",
+    "underlying_symbol": "FRHC",
+    "price_usd": 165.5,
+    "prev_close_usd": 162.43,
+    "updated_at": "2026-09-14T11:45:42.91+00:00"
+  },
+  {
+    "mint_address": "Xsc5BxL1ucvrQNXZqW3CT8M9gWTko1LPSLLkSVzGe9h",
+    "symbol": "FLNCx",
+    "underlying_symbol": "FLNC",
+    "price_usd": 9.93,
+    "prev_close_usd": 10.12,
+    "updated_at": "2026-09-14T11:45:42.917+00:00"
+  },
+  {
+    "mint_address": "XsMQfkLnhK1ERGibdgGDHFaSHB8ETDtMiC5TtVZKMAv",
+    "symbol": "FDSx",
+    "underlying_symbol": "FDS",
+    "price_usd": 259.71,
+    "prev_close_usd": 279.17,
+    "updated_at": "2026-09-14T11:45:43.004+00:00"
+  },
+  {
+    "mint_address": "XsuAyd21vBFvAJfpzYQgmTi3A9Qwb6feHmNVsU6Z5vM",
+    "symbol": "EGPx",
+    "underlying_symbol": "EGP",
+    "price_usd": 198.12,
+    "prev_close_usd": 197.91,
+    "updated_at": "2026-09-14T11:45:43.044+00:00"
+  },
+  {
+    "mint_address": "XsZLNUcjAVzNSbU5Z198ngop2mmoinZnw5ijBeMgWhW",
+    "symbol": "GDDYx",
+    "underlying_symbol": "GDDY",
+    "price_usd": 98.07,
+    "prev_close_usd": 93.6,
+    "updated_at": "2026-09-14T11:45:43.806+00:00"
+  },
+  {
+    "mint_address": "XsqxvS2n4fRh41imCC68Z6NmDHk2SPXkGXrekg9o9kd",
+    "symbol": "HIIx",
+    "underlying_symbol": "HII",
+    "price_usd": 279.69,
+    "prev_close_usd": 280.85,
+    "updated_at": "2026-09-14T11:45:43.822+00:00"
+  },
+  {
+    "mint_address": "XsssrKt95uWKWRbDdbCeMubD7iiD74NqiXeNL1p3Gaj",
+    "symbol": "KTOSx",
+    "underlying_symbol": "KTOS",
+    "price_usd": 46.69,
+    "prev_close_usd": 46.74,
+    "updated_at": "2026-09-14T11:45:44.585+00:00"
+  },
+  {
+    "mint_address": "XsFARXCfXKCdu6BxV2WACBt3Dk88nxLujoqPzyyBib9",
+    "symbol": "MPx",
+    "underlying_symbol": "MP",
+    "price_usd": 50.51,
+    "prev_close_usd": 54.3,
+    "updated_at": "2026-09-14T11:45:44.588+00:00"
+  },
+  {
+    "mint_address": "Xs7waUdcn1ZQDsuFmHRerWEEazRHoWWzWSa6aB7QjHG",
+    "symbol": "PAGx",
+    "underlying_symbol": "PAG",
+    "price_usd": 215.91,
+    "prev_close_usd": 218.31,
+    "updated_at": "2026-09-14T11:45:44.613+00:00"
+  },
+  {
+    "mint_address": "XscePZ4mjiXqyEVv9ZZPGbT6L86LqnYPEBE4ViKSt3T",
+    "symbol": "SAILx",
+    "underlying_symbol": "SAIL",
+    "price_usd": 17.24,
+    "prev_close_usd": 17.58,
+    "updated_at": "2026-09-14T11:45:45.769+00:00"
+  },
+  {
+    "mint_address": "XsHfvLEUbto797whYCNiqoEGWSpWaRYoZWXJEBGgmsm",
+    "symbol": "SFx",
+    "underlying_symbol": "SF",
+    "price_usd": 79.76,
+    "prev_close_usd": 80.65,
+    "updated_at": "2026-09-14T11:45:45.793+00:00"
+  },
+  {
+    "mint_address": "Xs9bdUnLdSWjQWeEsy8cde6t2L7d3adDRKcH8H51Uwr",
+    "symbol": "SMTCx",
+    "underlying_symbol": "SMTC",
+    "price_usd": 167.24,
+    "prev_close_usd": 163.94,
+    "updated_at": "2026-09-14T11:45:46.685+00:00"
+  },
+  {
+    "mint_address": "Xs6debZjNw2y4JX8ryFWUhZgXCSjfbWdWe9r72jNjU1",
+    "symbol": "WMSx",
+    "underlying_symbol": "WMS",
+    "price_usd": 127.88,
+    "prev_close_usd": 131.78,
+    "updated_at": "2026-09-14T11:45:46.693+00:00"
+  },
+  {
+    "mint_address": "Xs1PSc6DL1cdDPTbyJevgYYU7uA1wiJQESzrpWM7JRv",
+    "symbol": "TTMIx",
+    "underlying_symbol": "TTMI",
+    "price_usd": 126.44,
+    "prev_close_usd": 124.25,
+    "updated_at": "2026-09-14T11:45:46.68+00:00"
+  },
+  {
+    "mint_address": "XsLkMYrJVUPJv23tH3PB167BV6kpdubPe5F3KfVvSFN",
+    "symbol": "WYFIx",
+    "underlying_symbol": "WYFI",
+    "price_usd": 19.14,
+    "prev_close_usd": 19.31,
+    "updated_at": "2026-09-14T11:45:47.572+00:00"
+  },
+  {
+    "mint_address": "XsYHvpLWfTfqdLkPbCc4eUT21eH521BRTXBypgzpEDH",
+    "symbol": "UUUUx",
+    "underlying_symbol": "UUUU",
+    "price_usd": 12.95,
+    "prev_close_usd": 14.55,
+    "updated_at": "2026-09-14T11:46:10.087+00:00"
+  },
+  {
+    "mint_address": "XsuwUbQSzCJN2wZabD1Gxf1MER2Ypa7hMzVMYB2WawJ",
+    "symbol": "WULFx",
+    "underlying_symbol": "WULF",
+    "price_usd": 16.74,
+    "prev_close_usd": 17.13,
+    "updated_at": "2026-09-14T11:46:10.832+00:00"
+  },
+  {
+    "mint_address": "XsHYm9cRdEJoogpxDSZVDa4g19fKqUFXWxKisLpEuVm",
+    "symbol": "INDIx",
+    "underlying_symbol": "INDI",
+    "price_usd": 3.35,
+    "prev_close_usd": 3.28,
+    "updated_at": "2026-09-14T11:46:12.705+00:00"
+  },
+  {
+    "mint_address": "Xs7QhN79WzM4hjfHbu2W46ZRkdyumim3ooJHhPxenoU",
+    "symbol": "AIx",
+    "underlying_symbol": "AI",
+    "price_usd": 10.54,
+    "prev_close_usd": 10.38,
+    "updated_at": "2026-09-14T11:46:12.709+00:00"
+  },
+  {
+    "mint_address": "Xs2UKGPTD9S19rXkSqwJ6ufxAtuCU9Ww3wQumk9MvCn",
+    "symbol": "METCx",
+    "underlying_symbol": "METC",
+    "price_usd": 11.19,
+    "prev_close_usd": 12.28,
+    "updated_at": "2026-09-14T11:46:12.712+00:00"
+  },
+  {
+    "mint_address": "Xsf3NfLggzL9WXy4yaxJB3866ehq7y7sQxohwAkNiEu",
+    "symbol": "DRSx",
+    "underlying_symbol": "DRS",
+    "price_usd": 36.07,
+    "prev_close_usd": 36.06,
+    "updated_at": "2026-09-14T11:46:14.814+00:00"
+  },
+  {
+    "mint_address": "Xs1n717k7fpA1edvo1xndLzPGYnkF81MPFsW3CC8jiZ",
+    "symbol": "DCIx",
+    "underlying_symbol": "DCI",
+    "price_usd": 89.25,
+    "prev_close_usd": 89.81,
+    "updated_at": "2026-09-14T11:46:14.933+00:00"
+  },
+  {
+    "mint_address": "XsNB1EjXVMUXGEC5X55DBG1ekMajZZvt9yAKzNmFhk4",
+    "symbol": "GSATx",
+    "underlying_symbol": "GSAT",
+    "price_usd": 82.48,
+    "prev_close_usd": 81.68,
+    "updated_at": "2026-09-14T11:46:16.177+00:00"
+  },
+  {
+    "mint_address": "XsyQipBmDKeSy78zCSMp4BY91Cd46Dx3q4eBoSqbBDX",
+    "symbol": "PCTx",
+    "underlying_symbol": "PCT",
+    "price_usd": 6.02,
+    "prev_close_usd": 6.27,
+    "updated_at": "2026-09-14T11:46:16.2+00:00"
+  },
+  {
+    "mint_address": "XspurdrAqbRJMQfAUEfh88QxE3XbSWxQGu3GneJR6e3",
+    "symbol": "FGDLx",
+    "underlying_symbol": "FGDL",
+    "price_usd": 57.8731,
+    "prev_close_usd": 58.569,
+    "updated_at": "2026-09-14T11:47:13.351+00:00"
+  },
+  {
+    "mint_address": "XsfCC9VL4DamVGNgdJpfLXB3sBVa158Gbx8sh7NzmTk",
+    "symbol": "VIDAx",
+    "underlying_symbol": "VIDA",
+    "price_usd": 2.13,
+    "prev_close_usd": 2.26,
+    "updated_at": "2026-09-14T11:47:17.18+00:00"
+  },
+  {
+    "mint_address": "XsvHMmbDcd14DHHW16PkxPGW7ks77ehxUv1E9Zmxgj4",
+    "symbol": "BTGOx",
+    "underlying_symbol": "BTGO",
+    "price_usd": 7.65,
+    "prev_close_usd": 7.51,
+    "updated_at": "2026-09-14T11:47:18.976+00:00"
+  },
+  {
+    "mint_address": "XsybfiKkD4UmjkAGT2uR8X2sq9AWFtvGJM2KTffoALZ",
+    "symbol": "COPXx",
+    "underlying_symbol": "COPX",
+    "price_usd": 88.53,
+    "prev_close_usd": 95.27,
+    "updated_at": "2026-09-14T11:47:19.099+00:00"
+  },
+  {
+    "mint_address": "XsXoAR52Q2NYFkYiNqhCq4FauvyA1tdRsrmEYNf9fuh",
+    "symbol": "ITAx",
+    "underlying_symbol": "ITA",
+    "price_usd": 219.01,
+    "prev_close_usd": 219.45,
+    "updated_at": "2026-09-14T11:47:20.871+00:00"
+  },
+  {
+    "mint_address": "XsPHkGBbztHCCe1RMhiAs7CxVqoghmyd6zDUfrbfVWG",
+    "symbol": "SLMTx",
+    "underlying_symbol": "SLMT",
+    "price_usd": 3.55,
+    "prev_close_usd": 3.7,
+    "updated_at": "2026-09-14T11:47:21.712+00:00"
+  },
+  {
+    "mint_address": "XsrwdnwLHjVnyy7fgE2Pdwjp3czEm73jPjkSC5xzUBw",
+    "symbol": "SMRx",
+    "underlying_symbol": "SMR",
+    "price_usd": 8.61,
+    "prev_close_usd": 10.81,
+    "updated_at": "2026-09-14T11:47:22.495+00:00"
+  },
+  {
+    "mint_address": "XsMxAoJP47FQGLsVUvSS2QfBaHdNsd7DRU6nWRL8RSa",
+    "symbol": "SMCIx",
+    "underlying_symbol": "SMCI",
+    "price_usd": 40.1,
+    "prev_close_usd": 38.93,
+    "updated_at": "2026-09-14T11:47:22.562+00:00"
+  },
+  {
+    "mint_address": "Xs7UsqobM3EJgMeHwdAbmDBCZH1G5WTCjatpeYcCr8x",
+    "symbol": "VCXx",
+    "underlying_symbol": "VCX",
+    "price_usd": 33.5,
+    "prev_close_usd": 37.59,
+    "updated_at": "2026-09-14T11:47:24.327+00:00"
+  },
+  {
+    "mint_address": "XsaQTCgebC2KPbf27KUhdv5JFvHhQ4GDAPURwrEhAzb",
+    "symbol": "AMBRx",
+    "underlying_symbol": "AMBR",
+    "price_usd": 1.08,
+    "prev_close_usd": 0.989,
+    "updated_at": "2026-09-14T11:47:25.109+00:00"
+  },
+  {
+    "mint_address": "XsXcJ6GZ9kVnjqGsjBnktRcuwMBmvKWh8S93RefZ1rF",
+    "symbol": "AMDx",
+    "underlying_symbol": "AMD",
+    "price_usd": 516.13,
+    "prev_close_usd": 521.1,
+    "updated_at": "2026-09-14T11:47:25.13+00:00"
+  },
+  {
+    "mint_address": "XsBGEXxbBcuu8Nrokj14G8v4ezT3JYWWLneTzXK8t6Z",
+    "symbol": "CORZx",
+    "underlying_symbol": "CORZ",
+    "price_usd": 17.94,
+    "prev_close_usd": 18.09,
+    "updated_at": "2026-09-14T11:47:25.906+00:00"
+  },
+  {
+    "mint_address": "XshuHQ6o6SVpUNawvnnTMxsZ4tacZsNgVCLorv7TkFq",
+    "symbol": "ASMLx",
+    "underlying_symbol": "ASML",
+    "price_usd": 1698.3,
+    "prev_close_usd": 1729.52,
+    "updated_at": "2026-09-14T11:47:26.1+00:00"
+  },
+  {
+    "mint_address": "XsuxRGDzbLjnJ72v74b7p9VY6N66uYgTCyfwwRjVCJA",
+    "symbol": "MRVLx",
+    "underlying_symbol": "MRVL",
+    "price_usd": 236.1,
+    "prev_close_usd": 235.01,
+    "updated_at": "2026-09-14T11:47:28.009+00:00"
+  },
+  {
+    "mint_address": "XsoBhf2ufR8fTyNSjqfU71DYGaE6Z3SUGAidpzriAA4",
+    "symbol": "PLTRx",
+    "underlying_symbol": "PLTR",
+    "price_usd": 167.23,
+    "prev_close_usd": 169.53,
+    "updated_at": "2026-09-14T11:47:28.855+00:00"
+  },
+  {
+    "mint_address": "XsKSh3QDynp6oms9yHjZXbZo3pKzUBoqUFKPHS2g9Bh",
+    "symbol": "RKLBx",
+    "underlying_symbol": "RKLB",
+    "price_usd": 62.95,
+    "prev_close_usd": 63.07,
+    "updated_at": "2026-09-14T11:47:29.774+00:00"
+  },
+  {
+    "mint_address": "XsssYEQjzxBCFgvYFFNuhJFBeHNdLWYeUSP8F45cDr9",
+    "symbol": "VTIx",
+    "underlying_symbol": "VTI",
+    "price_usd": 376.31,
+    "prev_close_usd": 375.56,
+    "updated_at": "2026-09-14T11:47:31.405+00:00"
+  },
+  {
+    "mint_address": "XsZUSqxAXKJkEimvD4CoVvEb4WUC92TFgj5zRtBxFeL",
+    "symbol": "WBDx",
+    "underlying_symbol": "WBD",
+    "price_usd": 28.04,
+    "prev_close_usd": 27.91,
+    "updated_at": "2026-09-14T11:47:31.479+00:00"
+  },
+  {
+    "mint_address": "Xs3eBt7uRfJX8QUs4suhyU8p2M6DoUDrJyWBa8LLZsg",
+    "symbol": "AMZNx",
+    "underlying_symbol": "AMZN",
+    "price_usd": 256.78,
+    "prev_close_usd": 252.4,
+    "updated_at": "2026-09-14T11:47:32.385+00:00"
+  },
+  {
+    "mint_address": "XszjVtyhowGjSC5odCqBpW1CtXXwXjYokymrk7fGKD3",
+    "symbol": "HDx",
+    "underlying_symbol": "HD",
+    "price_usd": 308.74,
+    "prev_close_usd": 310.45,
+    "updated_at": "2026-09-14T11:47:34.287+00:00"
+  },
+  {
+    "mint_address": "XsRbLZthfABAPAfumWNEJhPyiKDW6TvDVeAeW7oKqA2",
+    "symbol": "HONx",
+    "underlying_symbol": "HON",
+    "price_usd": 202.36,
+    "prev_close_usd": 204.93,
+    "updated_at": "2026-09-14T11:47:34.293+00:00"
+  },
+  {
+    "mint_address": "XsqE9cRRpzxcGKDXj1BJ7Xmg4GRhZoyY1KpmGSxAWT2",
+    "symbol": "MCDx",
+    "underlying_symbol": "MCD",
+    "price_usd": 252.53,
+    "prev_close_usd": 253.48,
+    "updated_at": "2026-09-14T11:47:35.078+00:00"
+  },
+  {
+    "mint_address": "XsApJFV9MAktqnAc6jqzsHVujxkGm9xcSUffaBoYLKC",
+    "symbol": "MAx",
+    "underlying_symbol": "MA",
+    "price_usd": 569.19,
+    "prev_close_usd": 567.5,
+    "updated_at": "2026-09-14T11:47:35.142+00:00"
+  },
+  {
+    "mint_address": "Xsa62P5mvPszXL1krVUnU5ar38bBSVcWAB6fmPCo5Zu",
+    "symbol": "METAx",
+    "underlying_symbol": "META",
+    "price_usd": 648.03,
+    "prev_close_usd": 653.69,
+    "updated_at": "2026-09-14T11:47:36.081+00:00"
+  },
+  {
+    "mint_address": "Xsv99frTRUeornyvCfvhnDesQDWuvns1M852Pez91vF",
+    "symbol": "PEPx",
+    "underlying_symbol": "PEP",
+    "price_usd": 136.32,
+    "prev_close_usd": 136.69,
+    "updated_at": "2026-09-14T11:47:37.107+00:00"
+  },
+  {
+    "mint_address": "XsAtbqkAP1HJxy7hFDeq7ok6yM43DQ9mQ1Rh861X8rw",
+    "symbol": "PFEx",
+    "underlying_symbol": "PFE",
+    "price_usd": 27.72,
+    "prev_close_usd": 27.78,
+    "updated_at": "2026-09-14T11:47:37.112+00:00"
+  },
+  {
+    "mint_address": "XszvaiXGPwvk2nwb3o9C1CX4K6zH8sez11E6uyup6fe",
+    "symbol": "UNHx",
+    "underlying_symbol": "UNH",
+    "price_usd": 379.09,
+    "prev_close_usd": 393.06,
+    "updated_at": "2026-09-14T11:47:37.959+00:00"
+  },
+  {
+    "mint_address": "XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB",
+    "symbol": "TSLAx",
+    "underlying_symbol": "TSLA",
+    "price_usd": 365.44,
+    "prev_close_usd": 367.81,
+    "updated_at": "2026-09-14T11:47:37.963+00:00"
+  },
+  {
+    "mint_address": "XsbEhLAtcf6HdfpFZ5xEMdqW8nfAvcsP5bdudRLJzJp",
+    "symbol": "AAPLx",
+    "underlying_symbol": "AAPL",
+    "price_usd": 332.27,
+    "prev_close_usd": 315.34,
+    "updated_at": "2026-09-14T11:47:38.748+00:00"
+  },
+  {
+    "mint_address": "XsaHND8sHyfMfsWPj6kSdd5VwvCayZvjYgKmmcNL5qh",
+    "symbol": "XOMx",
+    "underlying_symbol": "XOM",
+    "price_usd": 165.99,
+    "prev_close_usd": 164.23,
+    "updated_at": "2026-09-14T11:47:38.827+00:00"
+  },
+  {
+    "mint_address": "XsEv23PPmUAxWJ8VMyN84tyJzEnUg4Yg3636Mvyw4Pk",
+    "symbol": "AFGx",
+    "underlying_symbol": "AFG",
+    "price_usd": 141.96,
+    "prev_close_usd": 140.48,
+    "updated_at": "2026-09-14T11:47:40.579+00:00"
+  },
+  {
+    "mint_address": "XsiXtK4niZXG2MFkDmgRcZskNYoetURTV9XhgRf1ESL",
+    "symbol": "AEISx",
+    "underlying_symbol": "AEIS",
+    "price_usd": 287.25,
+    "prev_close_usd": 285.52,
+    "updated_at": "2026-09-14T11:47:41.438+00:00"
+  },
+  {
+    "mint_address": "Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh",
+    "symbol": "NVDAx",
+    "underlying_symbol": "NVDA",
+    "price_usd": 218.29,
+    "prev_close_usd": 223.67,
+    "updated_at": "2026-09-14T11:47:42.352+00:00"
+  },
+  {
+    "mint_address": "XsmTgboNTsssYV1VZrS4u1YMkcNWTKVMzUjghkXa3RF",
+    "symbol": "EVRx",
+    "underlying_symbol": "EVR",
+    "price_usd": 281.21,
+    "prev_close_usd": 287.92,
+    "updated_at": "2026-09-14T11:45:20.336+00:00"
+  },
+  {
+    "mint_address": "Xs9aEtZqQDzTtb1PLVJ2W2d6NGJSSaJepTsQ2CZAjhn",
+    "symbol": "DKSx",
+    "underlying_symbol": "DKS",
+    "price_usd": 135.03,
+    "prev_close_usd": 133.36,
+    "updated_at": "2026-09-14T11:45:20.474+00:00"
+  },
+  {
+    "mint_address": "XsVhUJLbtEhVSPHFcyjZYYXJqmK8j8kfD553wZ8of6W",
+    "symbol": "ARMKx",
+    "underlying_symbol": "ARMK",
+    "price_usd": 58.55,
+    "prev_close_usd": 56.91,
+    "updated_at": "2026-09-14T11:45:21.266+00:00"
+  },
+  {
+    "mint_address": "XsQxeWjN2M3Spr5YHRQiM1oQ8fgpJWtdBdg1E2ZrjFg",
+    "symbol": "KMIx",
+    "underlying_symbol": "KMI",
+    "price_usd": 30.86,
+    "prev_close_usd": 31.41,
+    "updated_at": "2026-09-14T11:45:21.929+00:00"
+  },
+  {
+    "mint_address": "XsjZ8V6qPBNbhXeFawPssBPUW8f7Sv39uxEnzxCboTq",
+    "symbol": "HEIx",
+    "underlying_symbol": "HEI",
+    "price_usd": 316,
+    "prev_close_usd": 312.32,
+    "updated_at": "2026-09-14T11:45:21.948+00:00"
+  },
+  {
+    "mint_address": "XsJzAzVt6H498zDafSaWj3htVDYQPmh23jUAM2Rt2qn",
+    "symbol": "REGx",
+    "underlying_symbol": "REG",
+    "price_usd": 74.62,
+    "prev_close_usd": 75.34,
+    "updated_at": "2026-09-14T11:45:23.013+00:00"
+  },
+  {
+    "mint_address": "XsU3RZd5ufTcCJneLjDhTrU47ma9ypnhXyvJACRZrTv",
+    "symbol": "SGIx",
+    "underlying_symbol": "SGI",
+    "price_usd": 66.76,
+    "prev_close_usd": 68.23,
+    "updated_at": "2026-09-14T11:45:23.883+00:00"
+  },
+  {
+    "mint_address": "XsnbxjqAYHWuP4Fro7GnJ3kkUh6g9B2xWUMwaVeVgyL",
+    "symbol": "TOLx",
+    "underlying_symbol": "TOL",
+    "price_usd": 134.92,
+    "prev_close_usd": 135.05,
+    "updated_at": "2026-09-14T11:45:24.513+00:00"
+  },
+  {
+    "mint_address": "Xs3jL3WdD8YSqLeiy7Tt7dGEeBZziFMYboyUMSr38AE",
+    "symbol": "WPCx",
+    "underlying_symbol": "WPC",
+    "price_usd": 69.12,
+    "prev_close_usd": 69.95,
+    "updated_at": "2026-09-14T11:45:29.583+00:00"
+  },
+  {
+    "mint_address": "Xs2yt21rb2HpuMxE2EBHpcfd8mGdDPDysgWjVaDDR5w",
+    "symbol": "GLx",
+    "underlying_symbol": "GL",
+    "price_usd": 171.17,
+    "prev_close_usd": 169.82,
+    "updated_at": "2026-09-14T11:45:31.269+00:00"
+  },
+  {
+    "mint_address": "XsS6AVyq5YpDA5yCUYuwxvkk5hvKvFxAt5tUJik9Y5H",
+    "symbol": "IPx",
+    "underlying_symbol": "IP",
+    "price_usd": 34.36,
+    "prev_close_usd": 34.64,
+    "updated_at": "2026-09-14T11:45:38.089+00:00"
+  },
+  {
+    "mint_address": "Xs75Z8HFGHFnTubABp1CZSLvzCPepWsYhtHYLAFYEa7",
+    "symbol": "BPOPx",
+    "underlying_symbol": "BPOP",
+    "price_usd": 163.71,
+    "prev_close_usd": 164.85,
+    "updated_at": "2026-09-14T11:45:40.533+00:00"
+  },
+  {
+    "mint_address": "Xscms1jQDud7fsxLTKibMVxSTSQz3JFeJ1HDshRkPwc",
+    "symbol": "ARx",
+    "underlying_symbol": "AR",
+    "price_usd": 38.43,
+    "prev_close_usd": 39.12,
+    "updated_at": "2026-09-14T11:45:41.422+00:00"
+  },
+  {
+    "mint_address": "Xsqbg1tmAvNT5332hhX4hMSznqf2NJ1tz2cNWmAkRD3",
+    "symbol": "AMKRx",
+    "underlying_symbol": "AMKR",
+    "price_usd": 51.73,
+    "prev_close_usd": 51.35,
+    "updated_at": "2026-09-14T11:45:47.631+00:00"
+  },
+  {
+    "mint_address": "XsF6swLUV7mDXkG39Ywmgouktp1PXaJ3oyGnCDvYs9G",
+    "symbol": "BMRNx",
+    "underlying_symbol": "BMRN",
+    "price_usd": 65.68,
+    "prev_close_usd": 64.41,
+    "updated_at": "2026-09-14T11:45:47.634+00:00"
+  },
+  {
+    "mint_address": "XsKJGRCayh5LQ6bsET8ZVip8BaRZbWmj9fjSnCcy9P6",
+    "symbol": "DOCNx",
+    "underlying_symbol": "DOCN",
+    "price_usd": 122.95,
+    "prev_close_usd": 132.67,
+    "updated_at": "2026-09-14T11:45:49.293+00:00"
+  },
+  {
+    "mint_address": "Xs7zvvE6QUtYmpMBrz4oWJexS7WSJPwJs7vQsvMCpaG",
+    "symbol": "FIVEx",
+    "underlying_symbol": "FIVE",
+    "price_usd": 244.6,
+    "prev_close_usd": 247.12,
+    "updated_at": "2026-09-14T11:45:50.109+00:00"
+  },
+  {
+    "mint_address": "XsM5qDSyGiTVyHoi2VixmaEacByd3UCUoWtNhEqsyoH",
+    "symbol": "IVZx",
+    "underlying_symbol": "IVZ",
+    "price_usd": 32.28,
+    "prev_close_usd": 32.09,
+    "updated_at": "2026-09-14T11:45:50.894+00:00"
+  },
+  {
+    "mint_address": "Xs6hbDwJ8wr1zoxLusdhY2Vxjfz5C2doLVgZdZGRqvz",
+    "symbol": "MDGLx",
+    "underlying_symbol": "MDGL",
+    "price_usd": 534.49,
+    "prev_close_usd": 546.66,
+    "updated_at": "2026-09-14T11:45:51.576+00:00"
+  },
+  {
+    "mint_address": "XsPdH3m4B33ZaRS5saL1XGQnUVYsx1yyEyAxmNfcpCb",
+    "symbol": "MEDPx",
+    "underlying_symbol": "MEDP",
+    "price_usd": 587.52,
+    "prev_close_usd": 586.3,
+    "updated_at": "2026-09-14T11:45:51.676+00:00"
+  },
+  {
+    "mint_address": "XsbsXGj6Y3jVNh4MYH7khsonL14iYBUHukSReovZoQP",
+    "symbol": "NWSx",
+    "underlying_symbol": "NWS",
+    "price_usd": 32.71,
+    "prev_close_usd": 33.08,
+    "updated_at": "2026-09-14T11:45:52.448+00:00"
+  },
+  {
+    "mint_address": "XsAdZrnayY88RC9cMEEaYnnKyBCALCwz6a4mmPTGUMT",
+    "symbol": "Wx",
+    "underlying_symbol": "W",
+    "price_usd": 98.57,
+    "prev_close_usd": 100.12,
+    "updated_at": "2026-09-14T11:45:53.309+00:00"
+  },
+  {
+    "mint_address": "XsMcyEj7KpLQyVXQ4GpSVERstPHrHzVqDG36myTJzjQ",
+    "symbol": "WTSx",
+    "underlying_symbol": "WTS",
+    "price_usd": 356.02,
+    "prev_close_usd": 356.29,
+    "updated_at": "2026-09-14T11:45:53.346+00:00"
+  },
+  {
+    "mint_address": "XswiwGt897dzZU8eHoojgUu2ka34brmPGvWeVHcHho9",
+    "symbol": "AXTIx",
+    "underlying_symbol": "AXTI",
+    "price_usd": 64.77,
+    "prev_close_usd": 68.91,
+    "updated_at": "2026-09-14T11:45:54.163+00:00"
+  },
+  {
+    "mint_address": "XsrTYnfAtuMDpQQgZtpQZreJWtjaRnRCTBeekcQi8AS",
+    "symbol": "GFSx",
+    "underlying_symbol": "GFS",
+    "price_usd": 46.95,
+    "prev_close_usd": 45.95,
+    "updated_at": "2026-09-14T11:45:54.96+00:00"
+  },
+  {
+    "mint_address": "XsriZ58QT8GfKLep8Vof8oMGq3P9qPhowG8NfyLrLzQ",
+    "symbol": "IOTx",
+    "underlying_symbol": "IOT",
+    "price_usd": 38.38,
+    "prev_close_usd": 38.65,
+    "updated_at": "2026-09-14T11:45:55.878+00:00"
+  },
+  {
+    "mint_address": "Xsp5pDV28HxQDLcoC24G6G2yCNBvVpPJ3DZCjhs7YNR",
+    "symbol": "HLx",
+    "underlying_symbol": "HL",
+    "price_usd": 19.78,
+    "prev_close_usd": 20.85,
+    "updated_at": "2026-09-14T11:45:55.884+00:00"
+  },
+  {
+    "mint_address": "Xsnb4PjGtFsvTyp7HJNWfJLEbK6MoSZV8o7xMo3PuBn",
+    "symbol": "OWLx",
+    "underlying_symbol": "OWL",
+    "price_usd": 10.56,
+    "prev_close_usd": 10.86,
+    "updated_at": "2026-09-14T11:45:57.447+00:00"
+  },
+  {
+    "mint_address": "Xs3EFHHyP27EsAw3ftS8UFsN8kwkhFvbppji6bbkkPn",
+    "symbol": "SNXXx",
+    "underlying_symbol": "SNXX",
+    "price_usd": 15.27,
+    "prev_close_usd": 17.85,
+    "updated_at": "2026-09-14T11:45:58.198+00:00"
+  },
+  {
+    "mint_address": "Xs2hXX5B6aYUn1Nf8RkspKQbBTjbsa1Co9SjpwgZbNr",
+    "symbol": "BNYx",
+    "underlying_symbol": "BNY",
+    "price_usd": 162.66,
+    "prev_close_usd": 162.51,
+    "updated_at": "2026-09-14T11:46:18.292+00:00"
+  },
+  {
+    "mint_address": "XsmGSEqT6VXpVis3aVBDxaNwPgHNXbkjkVUCncsLkNB",
+    "symbol": "BEx",
+    "underlying_symbol": "BE",
+    "price_usd": 275.75,
+    "prev_close_usd": 269.28,
+    "updated_at": "2026-09-14T11:46:19.531+00:00"
+  },
+  {
+    "mint_address": "XsRifLZvp2XvCpPFQNK6XGTjHSL7sTZmmGyEs4NLAV2",
+    "symbol": "ALLYx",
+    "underlying_symbol": "ALLY",
+    "price_usd": 42.07,
+    "prev_close_usd": 41.83,
+    "updated_at": "2026-09-14T11:46:19.662+00:00"
+  },
+  {
+    "mint_address": "Xs5b8FFins32GgTH2FURV3Y873yA85jc4kZ6r8H9YyR",
+    "symbol": "APAx",
+    "underlying_symbol": "APA",
+    "price_usd": 44.73,
+    "prev_close_usd": 44.84,
+    "updated_at": "2026-09-14T11:46:19.672+00:00"
+  },
+  {
+    "mint_address": "XsKLqYX4dXLxZhM7bXyNsQdf5P1wFAuwLYaSPqt3j1q",
+    "symbol": "ELANx",
+    "underlying_symbol": "ELAN",
+    "price_usd": 23.17,
+    "prev_close_usd": 23.55,
+    "updated_at": "2026-09-14T11:46:21.307+00:00"
+  },
+  {
+    "mint_address": "XsVT5d6jAm7dTcwz9o5jCUVrpdd1t86WLf4U7wb9mxs",
+    "symbol": "FDXFx",
+    "underlying_symbol": "FDXF",
+    "price_usd": 128.31,
+    "prev_close_usd": 124.79,
+    "updated_at": "2026-09-14T11:46:21.423+00:00"
+  },
+  {
+    "mint_address": "XsUyRqfxY2XtFvP99Lkn2DDWtxNNAY6w5CVDu1F68G1",
+    "symbol": "KNXx",
+    "underlying_symbol": "KNX",
+    "price_usd": 67.97,
+    "prev_close_usd": 68.79,
+    "updated_at": "2026-09-14T11:46:22.248+00:00"
+  },
+  {
+    "mint_address": "XsBeB5z2oA2fvaVim3rRbqHV4Cxxz9nNCjqoUtFooXY",
+    "symbol": "JMKEx",
+    "underlying_symbol": "JMKE",
+    "price_usd": 21.71,
+    "prev_close_usd": 22.37,
+    "updated_at": "2026-09-14T11:46:22.273+00:00"
+  },
+  {
+    "mint_address": "XsD9pjJdLHkbvk3hGF13Mq9nY5ELLeGbQAoeDLZcRY8",
+    "symbol": "FHNx",
+    "underlying_symbol": "FHN",
+    "price_usd": 24.47,
+    "prev_close_usd": 24.58,
+    "updated_at": "2026-09-14T11:46:22.276+00:00"
+  },
+  {
+    "mint_address": "Xsbd5DQzyAjsjzZiLP3NYztwkapYQpPLBvYsnzyHscq",
+    "symbol": "PENx",
+    "underlying_symbol": "PEN",
+    "price_usd": 317.73,
+    "prev_close_usd": 319.57,
+    "updated_at": "2026-09-14T11:46:23.186+00:00"
+  },
+  {
+    "mint_address": "XscRMWo5xvLxenVLxmodRqZC3UJwACXoxAEEGQzrzKd",
+    "symbol": "MKCx",
+    "underlying_symbol": "MKC",
+    "price_usd": 51.32,
+    "prev_close_usd": 51.48,
+    "updated_at": "2026-09-14T11:46:23.192+00:00"
+  },
+  {
+    "mint_address": "XsnhgGRQwhExfS2bmWzR6EYddKGPRGDEjeJsatkmKqU",
+    "symbol": "SKHYx",
+    "underlying_symbol": "SKHY",
+    "price_usd": 190.07,
+    "prev_close_usd": 198.63,
+    "updated_at": "2026-09-14T11:46:24.043+00:00"
+  },
+  {
+    "mint_address": "XsqtzaHCKV2zsgRYitGJtcecfmBkdJsdrpSXZgQryHE",
+    "symbol": "SJMx",
+    "underlying_symbol": "SJM",
+    "price_usd": 121.14,
+    "prev_close_usd": 123.31,
+    "updated_at": "2026-09-14T11:46:24.052+00:00"
+  },
+  {
+    "mint_address": "Xs5m7mD1sRUu3ryXiYNDqCTd67hQVZRSro2zxxWqTtn",
+    "symbol": "RNRx",
+    "underlying_symbol": "RNR",
+    "price_usd": 324.99,
+    "prev_close_usd": 322.53,
+    "updated_at": "2026-09-14T11:46:24.05+00:00"
+  },
+  {
+    "mint_address": "XscZvQvu7gYS4yuF3NcCeDbQjQynZ823xGCk9uUVePN",
+    "symbol": "ARWx",
+    "underlying_symbol": "ARW",
+    "price_usd": 228.2,
+    "prev_close_usd": 214.73,
+    "updated_at": "2026-09-14T11:46:26.66+00:00"
+  },
+  {
+    "mint_address": "XsJH1qPyJgbJiYo2KZXNirCQxC3QqQgYE1iNHY3Ecm2",
+    "symbol": "CSGPx",
+    "underlying_symbol": "CSGP",
+    "price_usd": 30.46,
+    "prev_close_usd": 29.58,
+    "updated_at": "2026-09-14T11:46:26.665+00:00"
+  },
+  {
+    "mint_address": "XsAeqdosiRKYKtYRLoao2TQDB16yLRP82MCwd7ibVuH",
+    "symbol": "OHIx",
+    "underlying_symbol": "OHI",
+    "price_usd": 46.99,
+    "prev_close_usd": 47.19,
+    "updated_at": "2026-09-14T11:46:28.232+00:00"
+  },
+  {
+    "mint_address": "Xs8YQm9hLMTcTVSdPwBDLTFLpbcyxYBG4SGPXRp5s2y",
+    "symbol": "JLLx",
+    "underlying_symbol": "JLL",
+    "price_usd": 346.97,
+    "prev_close_usd": 346.2,
+    "updated_at": "2026-09-14T11:46:28.243+00:00"
+  },
+  {
+    "mint_address": "XswgfhwvyLQ6ZdNsrwBGkBVpqXzQPpDykCDBmiti1o5",
+    "symbol": "PINSx",
+    "underlying_symbol": "PINS",
+    "price_usd": 19.05,
+    "prev_close_usd": 18.28,
+    "updated_at": "2026-09-14T11:46:29.289+00:00"
+  },
+  {
+    "mint_address": "XszuTk3Rr5HXpV7Nrfpg7KAZJfDccPAYLKBsRbLYRx4",
+    "symbol": "SOLSx",
+    "underlying_symbol": "SOLS",
+    "price_usd": 61.53,
+    "prev_close_usd": 63.26,
+    "updated_at": "2026-09-14T11:46:30.174+00:00"
+  },
+  {
+    "mint_address": "XsnARtma2bEi2x1JuKuznZa1QzQkLaedxHW6KeUCz8J",
+    "symbol": "WRBx",
+    "underlying_symbol": "WRB",
+    "price_usd": 69.9,
+    "prev_close_usd": 69.91,
+    "updated_at": "2026-09-14T11:46:31.054+00:00"
+  },
+  {
+    "mint_address": "XsGkSoEbLmqH2GCixj1MdGYHDbRaJdgnnDPrYhMuLxA",
+    "symbol": "MTSIx",
+    "underlying_symbol": "MTSI",
+    "price_usd": 274.9,
+    "prev_close_usd": 286.12,
+    "updated_at": "2026-09-14T11:46:42.285+00:00"
+  },
+  {
+    "mint_address": "Xsp9avBowUQeip8NfLXcwfw5VT74kc72BafgYPXN74a",
+    "symbol": "CFGx",
+    "underlying_symbol": "CFG",
+    "price_usd": 70.48,
+    "prev_close_usd": 69.37,
+    "updated_at": "2026-09-14T11:46:45.007+00:00"
+  },
+  {
+    "mint_address": "XsLEJJP8FpnaSP17ETzVfkTQFHBP4i4hRvmz3RKX7B8",
+    "symbol": "AHRx",
+    "underlying_symbol": "AHR",
+    "price_usd": 53.58,
+    "prev_close_usd": 53.77,
+    "updated_at": "2026-09-14T11:47:40.618+00:00"
+  },
+  {
+    "mint_address": "Xso2H7vbDS6HVokLUecSG5GvWAZXjH7PEHAH9rAYXUP",
+    "symbol": "GENx",
+    "underlying_symbol": "GEN",
+    "price_usd": 30.26,
+    "prev_close_usd": 29.76,
+    "updated_at": "2026-09-14T11:45:20.334+00:00"
+  },
+  {
+    "mint_address": "XscCMVe1Qu2rk1YoCDJGwMLZkfVnd69xcPER4DJ8tpB",
+    "symbol": "DKNGx",
+    "underlying_symbol": "DKNG",
+    "price_usd": 24.74,
+    "prev_close_usd": 23.66,
+    "updated_at": "2026-09-14T11:45:20.462+00:00"
+  },
+  {
+    "mint_address": "XsqZyeL1GGWZzMQ5hh3KckQnXNt3Yt96QHBUdiJSoFS",
+    "symbol": "LAMRx",
+    "underlying_symbol": "LAMR",
+    "price_usd": 149.08,
+    "prev_close_usd": 148.83,
+    "updated_at": "2026-09-14T11:45:22.118+00:00"
+  },
+  {
+    "mint_address": "Xs9pFT45PF5PH1hgwQ5fknXYWVZassVSq4spNswnVtR",
+    "symbol": "PNFPx",
+    "underlying_symbol": "PNFP",
+    "price_usd": 99.27,
+    "prev_close_usd": 99.13,
+    "updated_at": "2026-09-14T11:45:23.009+00:00"
+  },
+  {
+    "mint_address": "XszxuQCqE72vU4ABTFDFwhs28AeSUHqzbWWVWDkhfYZ",
+    "symbol": "RRXx",
+    "underlying_symbol": "RRX",
+    "price_usd": 162.29,
+    "prev_close_usd": 159.61,
+    "updated_at": "2026-09-14T11:45:23.885+00:00"
+  },
+  {
+    "mint_address": "XsDP3d7dBNMVVZT6W5abD9jxZPGbrenPaj322sWn9Ct",
+    "symbol": "XYZx",
+    "underlying_symbol": "XYZ",
+    "price_usd": 79.21,
+    "prev_close_usd": 79.4,
+    "updated_at": "2026-09-14T11:45:24.643+00:00"
+  },
+  {
+    "mint_address": "XsH9yfX7GuRbCDnNvD4A7x8gvMc8sc8Htz1fQd7VYWw",
+    "symbol": "CFx",
+    "underlying_symbol": "CF",
+    "price_usd": 133.07,
+    "prev_close_usd": 138.11,
+    "updated_at": "2026-09-14T11:45:24.667+00:00"
+  },
+  {
+    "mint_address": "XscR1RVZydyrL6Wn7WqbW2k6EmkLuS8SqDzuyptwxoj",
+    "symbol": "DJTx",
+    "underlying_symbol": "DJT",
+    "price_usd": 8.66,
+    "prev_close_usd": 8.71,
+    "updated_at": "2026-09-14T11:45:25.457+00:00"
+  },
+  {
+    "mint_address": "XsAiJ9xc1eBoVEz4npaJqySHLrpCoyo1oFfJJpYSXPW",
+    "symbol": "GNRCx",
+    "underlying_symbol": "GNRC",
+    "price_usd": 186.99,
+    "prev_close_usd": 186.48,
+    "updated_at": "2026-09-14T11:45:27.046+00:00"
+  },
+  {
+    "mint_address": "XsWV8voFNehNEbuBW8cEAMWwjicXCYskUT4616PFZ6a",
+    "symbol": "TSNx",
+    "underlying_symbol": "TSN",
+    "price_usd": 52.98,
+    "prev_close_usd": 51.74,
+    "updated_at": "2026-09-14T11:45:29.529+00:00"
+  },
+  {
+    "mint_address": "XsjaZAWtPNA1ZWqbPZxaDWtx1h9L23ucmRquwuSHQuf",
+    "symbol": "LSCCx",
+    "underlying_symbol": "LSCC",
+    "price_usd": 119.76,
+    "prev_close_usd": 115.45,
+    "updated_at": "2026-09-14T11:45:37.053+00:00"
+  },
+  {
+    "mint_address": "XsM3qqkARr8UMejnZUU3gBs7hz2fUdxDP35Dhxx9z94",
+    "symbol": "EHCx",
+    "underlying_symbol": "EHC",
+    "price_usd": 121.71,
+    "prev_close_usd": 121.52,
+    "updated_at": "2026-09-14T11:45:42.978+00:00"
+  },
+  {
+    "mint_address": "Xs2hW1n8cBJAKUtDxZjJtFZBaxqTwczJY6n6XY8eV4o",
+    "symbol": "MGMx",
+    "underlying_symbol": "MGM",
+    "price_usd": 39.89,
+    "prev_close_usd": 40.66,
+    "updated_at": "2026-09-14T11:45:44.526+00:00"
+  },
+  {
+    "mint_address": "XsbJzb2V963yBoCKjRJqSLbNUeBsqy6uV4dVnCnNp4q",
+    "symbol": "BBIOx",
+    "underlying_symbol": "BBIO",
+    "price_usd": 72.44,
+    "prev_close_usd": 76.08,
+    "updated_at": "2026-09-14T11:45:48.401+00:00"
+  },
+  {
+    "mint_address": "XsJ6W21MaWMQCqhRLbLTD82427vcMVzxULkomGRg4gJ",
+    "symbol": "FNx",
+    "underlying_symbol": "FN",
+    "price_usd": 414.58,
+    "prev_close_usd": 418.27,
+    "updated_at": "2026-09-14T11:45:50.03+00:00"
+  },
+  {
+    "mint_address": "XsMkiaVUP5GkFCSJJGcun75edh1FSsLkCtDC3piGK2j",
+    "symbol": "GMEDx",
+    "underlying_symbol": "GMED",
+    "price_usd": 74.19,
+    "prev_close_usd": 74.52,
+    "updated_at": "2026-09-14T11:45:50.031+00:00"
+  },
+  {
+    "mint_address": "Xs8sK7KXi6tWULhBq4a8197Ydz4zDdLxtKjK6gBF59x",
+    "symbol": "HUBSx",
+    "underlying_symbol": "HUBS",
+    "price_usd": 225.33,
+    "prev_close_usd": 230.19,
+    "updated_at": "2026-09-14T11:45:50.108+00:00"
+  },
+  {
+    "mint_address": "Xs6w8aJhwu1d5jKbmScXoitaDEE7HWhyujhkELeh4B5",
+    "symbol": "GWREx",
+    "underlying_symbol": "GWRE",
+    "price_usd": 140.92,
+    "prev_close_usd": 142.24,
+    "updated_at": "2026-09-14T11:45:50.115+00:00"
+  },
+  {
+    "mint_address": "XsWiS1zCUByB7TkvLQcxbHW4wLQ45vm1Uqg9tkk81ur",
+    "symbol": "JEFx",
+    "underlying_symbol": "JEF",
+    "price_usd": 51.96,
+    "prev_close_usd": 55.25,
+    "updated_at": "2026-09-14T11:45:50.9+00:00"
+  },
+  {
+    "mint_address": "XsvSL6VixgcGgaPDBuHEyTfmR798Q4tdg2sCtwvev4M",
+    "symbol": "MANHx",
+    "underlying_symbol": "MANH",
+    "price_usd": 201.82,
+    "prev_close_usd": 206.1,
+    "updated_at": "2026-09-14T11:45:51.689+00:00"
+  },
+  {
+    "mint_address": "XsHLmetWDLLqs613YVRnkUsEZP4V1FSA3gTt33Dc66Y",
+    "symbol": "STRLx",
+    "underlying_symbol": "STRL",
+    "price_usd": 511.04,
+    "prev_close_usd": 495.15,
+    "updated_at": "2026-09-14T11:45:52.451+00:00"
+  },
+  {
+    "mint_address": "XseGSSi5kLz8eR539iXZ6tLz6r75UaHTQ6CHYkPjs9F",
+    "symbol": "OCx",
+    "underlying_symbol": "OC",
+    "price_usd": 131.9,
+    "prev_close_usd": 128.67,
+    "updated_at": "2026-09-14T11:45:52.46+00:00"
+  },
+  {
+    "mint_address": "XsW8ts3iGPo8pxif5eFMv1Rnx6xE5Yw57Zhz2xYdhYL",
+    "symbol": "VNOMx",
+    "underlying_symbol": "VNOM",
+    "price_usd": 44.71,
+    "prev_close_usd": 45.27,
+    "updated_at": "2026-09-14T11:45:53.333+00:00"
+  },
+  {
+    "mint_address": "Xst5zttaWoyT8Td5jNhxwVQ1ku4bSRv8EVJe3SHoGdc",
+    "symbol": "CDEx",
+    "underlying_symbol": "CDE",
+    "price_usd": 20.58,
+    "prev_close_usd": 21,
+    "updated_at": "2026-09-14T11:45:53.439+00:00"
+  },
+  {
+    "mint_address": "XsHXhZf6yLqBvcbuswpbio7m6yNTMrMiQWWN7csQMAr",
+    "symbol": "BENx",
+    "underlying_symbol": "BEN",
+    "price_usd": 33.65,
+    "prev_close_usd": 34.12,
+    "updated_at": "2026-09-14T11:45:54.29+00:00"
+  },
+  {
+    "mint_address": "XsVEdRV17tPdXHamAi6TVFjyeSRHnCjdY5GXqAaevuk",
+    "symbol": "MVLLx",
+    "underlying_symbol": "MVLL",
+    "price_usd": 29.32,
+    "prev_close_usd": 29.16,
+    "updated_at": "2026-09-14T11:45:57.327+00:00"
+  },
+  {
+    "mint_address": "Xso5KNztULjrQZQGzJQEwGcwBLSneMDpunzSu243URw",
+    "symbol": "NVRx",
+    "underlying_symbol": "NVR",
+    "price_usd": 6160.76,
+    "prev_close_usd": 6187.3,
+    "updated_at": "2026-09-14T11:45:57.324+00:00"
+  },
+  {
+    "mint_address": "XsCucuUESBi3ZjRxmjwUzGYuf6ZrtZDUvK6XhRA4RR3",
+    "symbol": "SOXSx",
+    "underlying_symbol": "SOXS",
+    "price_usd": 44.14,
+    "prev_close_usd": 43.24,
+    "updated_at": "2026-09-14T11:45:58.125+00:00"
+  },
+  {
+    "mint_address": "XsLzbFA47Tm3Bs7MnSJrGbi6RnfbtCGA6pD3NHSzp6P",
+    "symbol": "UIx",
+    "underlying_symbol": "UI",
+    "price_usd": 564.15,
+    "prev_close_usd": 520.58,
+    "updated_at": "2026-09-14T11:45:59.013+00:00"
+  },
+  {
+    "mint_address": "Xs3trfdPXSZuxBJsgau6HRfu8SdrCirkwHpPNgSpJz9",
+    "symbol": "CRWVx",
+    "underlying_symbol": "CRWV",
+    "price_usd": 88.99,
+    "prev_close_usd": 94.94,
+    "updated_at": "2026-09-14T11:46:14.811+00:00"
+  },
+  {
+    "mint_address": "XsuE5LvQcc9P67iWVqsysQ84DBDRWssbiKnwY8JtwpL",
+    "symbol": "QUREx",
+    "underlying_symbol": "QURE",
+    "price_usd": 44.51,
+    "prev_close_usd": 46,
+    "updated_at": "2026-09-14T11:46:18.294+00:00"
+  },
+  {
+    "mint_address": "XswUFSYE5CWsZM3X3yo6e2pZvxcAzx912DonGvgUFka",
+    "symbol": "ARMx",
+    "underlying_symbol": "ARM",
+    "price_usd": 264.79,
+    "prev_close_usd": 264.23,
+    "updated_at": "2026-09-14T11:46:18.297+00:00"
+  },
+  {
+    "mint_address": "XsAGAMqiAySqkUDf5ZXCTR4v6hSgcBj7mQQy7w3Nja7",
+    "symbol": "BJx",
+    "underlying_symbol": "BJ",
+    "price_usd": 91.49,
+    "prev_close_usd": 88.51,
+    "updated_at": "2026-09-14T11:46:20.562+00:00"
+  },
+  {
+    "mint_address": "Xs8Jb7S3qqWbgkRGvwKmT62MD7gt1qYU7oUaR9oDC11",
+    "symbol": "DTx",
+    "underlying_symbol": "DT",
+    "price_usd": 51.07,
+    "prev_close_usd": 50.6,
+    "updated_at": "2026-09-14T11:46:21.305+00:00"
+  },
+  {
+    "mint_address": "XsvYonMjAxFXYW6PKBz9jFEuvX6xAhm9BifzxgLzurb",
+    "symbol": "EGx",
+    "underlying_symbol": "EG",
+    "price_usd": 371.71,
+    "prev_close_usd": 367.87,
+    "updated_at": "2026-09-14T11:46:21.418+00:00"
+  },
+  {
+    "mint_address": "XsG3eLvLbHwYQP3r7tSznE6bEvcA2Ko1TpYwbyD6RQk",
+    "symbol": "QSRx",
+    "underlying_symbol": "QSR",
+    "price_usd": 76.96,
+    "prev_close_usd": 77.01,
+    "updated_at": "2026-09-14T11:46:23.188+00:00"
+  },
+  {
+    "mint_address": "XsJ8MXED4y4NCxfX6ZE9XJiXLXLgBNzEYDtmnx2hbZ1",
+    "symbol": "TRMBx",
+    "underlying_symbol": "TRMB",
+    "price_usd": 57.66,
+    "prev_close_usd": 57.4,
+    "updated_at": "2026-09-14T11:46:24.766+00:00"
+  },
+  {
+    "mint_address": "Xs6mp36rvKSo7vTM588J1HUZF1sbNjK3KSz12fNM7P5",
+    "symbol": "VLTOx",
+    "underlying_symbol": "VLTO",
+    "price_usd": 94.1,
+    "prev_close_usd": 94.72,
+    "updated_at": "2026-09-14T11:46:24.828+00:00"
+  },
+  {
+    "mint_address": "XsEWryPA68Tddfrw31uSv18aysuZ6gb4vszk856hqQ6",
+    "symbol": "VIKx",
+    "underlying_symbol": "VIK",
+    "price_usd": 85.01,
+    "prev_close_usd": 85.07,
+    "updated_at": "2026-09-14T11:46:25.652+00:00"
+  },
+  {
+    "mint_address": "XsvEMALzsRVnPED4KEAd7pivT5ho9vgqzqZxQxNBkWW",
+    "symbol": "BRx",
+    "underlying_symbol": "BR",
+    "price_usd": 167.74,
+    "prev_close_usd": 168.1,
+    "updated_at": "2026-09-14T11:46:25.807+00:00"
+  },
+  {
+    "mint_address": "XsaLeEQ2RtXLwLYBtJv1wT7CXk4paWCvKxNWMNk4mbZ",
+    "symbol": "CGx",
+    "underlying_symbol": "CG",
+    "price_usd": 42.34,
+    "prev_close_usd": 44.11,
+    "updated_at": "2026-09-14T11:46:25.81+00:00"
+  },
+  {
+    "mint_address": "XsWetupD7QGe8e5fXsJAPHYFXFTUdYVjT44hJMsVDtY",
+    "symbol": "COOx",
+    "underlying_symbol": "COO",
+    "price_usd": 53.91,
+    "prev_close_usd": 63.48,
+    "updated_at": "2026-09-14T11:46:26.687+00:00"
+  },
+  {
+    "mint_address": "XsAPSDzHwPr2UX83cY4KCHSdyvfighyeTPLaPXq1m3o",
+    "symbol": "EXELx",
+    "underlying_symbol": "EXEL",
+    "price_usd": 56.12,
+    "prev_close_usd": 58.33,
+    "updated_at": "2026-09-14T11:46:27.454+00:00"
+  },
+  {
+    "mint_address": "XsbohnBoBBbXg2scrDy9yzBqeXhNN53F5dcjwFF8XFR",
+    "symbol": "GLPIx",
+    "underlying_symbol": "GLPI",
+    "price_usd": 40.24,
+    "prev_close_usd": 41.5,
+    "updated_at": "2026-09-14T11:46:27.475+00:00"
+  },
+  {
+    "mint_address": "XsPH7DxK5rGBdoFSSCpU6HgJZp1mKpRTVnsKQUN1j8B",
+    "symbol": "FNFx",
+    "underlying_symbol": "FNF",
+    "price_usd": 44.13,
+    "prev_close_usd": 44.48,
+    "updated_at": "2026-09-14T11:46:27.515+00:00"
+  },
+  {
+    "mint_address": "Xs7wdJdbcu1oR36AvumDgFLPiHmhpF9GEHQT6h16zAf",
+    "symbol": "LECOx",
+    "underlying_symbol": "LECO",
+    "price_usd": 253.06,
+    "prev_close_usd": 271.52,
+    "updated_at": "2026-09-14T11:46:28.429+00:00"
+  },
+  {
+    "mint_address": "Xs25CGQuYuoXrMMWUSxo9WmvnQZyFzBChaHbUPXzm6b",
+    "symbol": "PTCx",
+    "underlying_symbol": "PTC",
+    "price_usd": 130.78,
+    "prev_close_usd": 128.89,
+    "updated_at": "2026-09-14T11:46:29.291+00:00"
+  },
+  {
+    "mint_address": "XsdzBn1wxCibSdDZgaaWqGtdvo2JSFueo2CwHnA69Lf",
+    "symbol": "SAIAx",
+    "underlying_symbol": "SAIA",
+    "price_usd": 351.05,
+    "prev_close_usd": 346.55,
+    "updated_at": "2026-09-14T11:46:30.14+00:00"
+  },
+  {
+    "mint_address": "XsNotS1p6BsTADzMaZVu14SJbuH9V4CYYyRZ8mn6WAQ",
+    "symbol": "SWKx",
+    "underlying_symbol": "SWK",
+    "price_usd": 89.24,
+    "prev_close_usd": 91.68,
+    "updated_at": "2026-09-14T11:46:30.18+00:00"
+  },
+  {
+    "mint_address": "XsyvvjANUH1LpSQkRr3xgCyfxJLcNtpEVyFFNpJcDsb",
+    "symbol": "TRUx",
+    "underlying_symbol": "TRU",
+    "price_usd": 77.7,
+    "prev_close_usd": 77.05,
+    "updated_at": "2026-09-14T11:46:31.05+00:00"
+  },
+  {
+    "mint_address": "XsAhRsoTzG6cpxTxvH9qSze3Kwg2gmYbABi5xqrGm7G",
+    "symbol": "UNMx",
+    "underlying_symbol": "UNM",
+    "price_usd": 94.42,
+    "prev_close_usd": 93.07,
+    "updated_at": "2026-09-14T11:46:31.062+00:00"
+  },
+  {
+    "mint_address": "XsgPX8MYf23yPRv9DrT5ofHn4mThBZgkhboLHz5uSx7",
+    "symbol": "ESx",
+    "underlying_symbol": "ES",
+    "price_usd": 68.52,
+    "prev_close_usd": 70.44,
+    "updated_at": "2026-09-14T11:46:33.677+00:00"
+  },
+  {
+    "mint_address": "XsKxGKYM3RsRvdgzAZXAh7HZiReynB5pxvoTLRMJiF9",
+    "symbol": "SNAx",
+    "underlying_symbol": "SNA",
+    "price_usd": 375.44,
+    "prev_close_usd": 377.42,
+    "updated_at": "2026-09-14T11:46:44.153+00:00"
+  },
+  {
+    "mint_address": "Xs34rXKEs63rPs3qWZeAubRmSVJNG5hSy6Ubt7Qag2F",
+    "symbol": "BWAx",
+    "underlying_symbol": "BWA",
+    "price_usd": 66.65,
+    "prev_close_usd": 65.26,
+    "updated_at": "2026-09-14T11:45:19.197+00:00"
+  },
+  {
+    "mint_address": "XsTJV8FFx22kv41kMcuHawx8eoDybUnLxiiEscw317x",
+    "symbol": "CBREx",
+    "underlying_symbol": "CBRE",
+    "price_usd": 140.51,
+    "prev_close_usd": 139.68,
+    "updated_at": "2026-09-14T11:45:19.201+00:00"
+  },
+  {
+    "mint_address": "Xsy9RdWC26fp8c84BB2SD4eE74vG1478YKjxAwjRRQY",
+    "symbol": "BALLx",
+    "underlying_symbol": "BALL",
+    "price_usd": 59.9,
+    "prev_close_usd": 60.29,
+    "updated_at": "2026-09-14T11:45:21.269+00:00"
+  },
+  {
+    "mint_address": "Xs2ry2jjmvy67pYFweVbdeoPPRdUjnbBEubtXguWbXK",
+    "symbol": "Jx",
+    "underlying_symbol": "J",
+    "price_usd": 141.85,
+    "prev_close_usd": 141.75,
+    "updated_at": "2026-09-14T11:45:21.935+00:00"
+  },
+  {
+    "mint_address": "XsTnXvRqrDisLoYpLDUowPx2HLhd6p44ZAbEKyGsL3g",
+    "symbol": "PFGCx",
+    "underlying_symbol": "PFGC",
+    "price_usd": 93.94,
+    "prev_close_usd": 95.63,
+    "updated_at": "2026-09-14T11:45:22.868+00:00"
+  },
+  {
+    "mint_address": "Xs8YT2AdFmjuG2HFjcvVTpXPwneiKNHMrR49muHY7z9",
+    "symbol": "CVNAx",
+    "underlying_symbol": "CVNA",
+    "price_usd": 69.16,
+    "prev_close_usd": 73.41,
+    "updated_at": "2026-09-14T11:45:25.321+00:00"
+  },
+  {
+    "mint_address": "XsTisPuTVM8VVHagEyeGR7CBt6TUD93AEhptETHWMsd",
+    "symbol": "ELx",
+    "underlying_symbol": "EL",
+    "price_usd": 97.12,
+    "prev_close_usd": 98.77,
+    "updated_at": "2026-09-14T11:45:25.463+00:00"
+  },
+  {
+    "mint_address": "Xsm7SVTuyeaeD5fwaWD1RFKX7Rr8WmNGz5j35r5npth",
+    "symbol": "ARESx",
+    "underlying_symbol": "ARES",
+    "price_usd": 131.64,
+    "prev_close_usd": 134.37,
+    "updated_at": "2026-09-14T11:45:26.219+00:00"
+  },
+  {
+    "mint_address": "XsFzP3jXofHQ3GKPYoGfFNQQKyWrNcPR5Xgg8gbk9op",
+    "symbol": "NLYx",
+    "underlying_symbol": "NLY",
+    "price_usd": 21.9,
+    "prev_close_usd": 22.61,
+    "updated_at": "2026-09-14T11:45:28.082+00:00"
+  },
+  {
+    "mint_address": "Xs1b4xMzH16fHZuFUoXxni8THVafJ9t5dFL6kPUyG4k",
+    "symbol": "OVVx",
+    "underlying_symbol": "OVV",
+    "price_usd": 63.69,
+    "prev_close_usd": 64.37,
+    "updated_at": "2026-09-14T11:45:28.864+00:00"
+  },
+  {
+    "mint_address": "XsWMBE3QzwuS7pJET8GUyaGzjNJG49RToPBYWdGHUTG",
+    "symbol": "SYFx",
+    "underlying_symbol": "SYF",
+    "price_usd": 75.99,
+    "prev_close_usd": 77.35,
+    "updated_at": "2026-09-14T11:45:33.842+00:00"
+  },
+  {
+    "mint_address": "XszH3SckdYS1Kbyj9wcmjttt9Lp8jMgU39rGL8b9Wcp",
+    "symbol": "DOCUx",
+    "underlying_symbol": "DOCU",
+    "price_usd": 65.65,
+    "prev_close_usd": 64.45,
+    "updated_at": "2026-09-14T11:45:42.231+00:00"
+  },
+  {
+    "mint_address": "XsQMbNzqcJURkmjzmh7DMfhjPf7Effu5QS3fpBLtazr",
+    "symbol": "HRLx",
+    "underlying_symbol": "HRL",
+    "price_usd": 20.57,
+    "prev_close_usd": 20.97,
+    "updated_at": "2026-09-14T11:45:43.785+00:00"
+  },
+  {
+    "mint_address": "Xs7wD8JEF2KoED55Re7W6GDoHwA5QPGJvLwQYHYw5wr",
+    "symbol": "CACIx",
+    "underlying_symbol": "CACI",
+    "price_usd": 621.17,
+    "prev_close_usd": 606.85,
+    "updated_at": "2026-09-14T11:45:47.608+00:00"
+  },
+  {
+    "mint_address": "Xszh2XpEww4ndD8CyFzD5DcmqXpw7HMkEdSU1Ngunbe",
+    "symbol": "ARWRx",
+    "underlying_symbol": "ARWR",
+    "price_usd": 82.85,
+    "prev_close_usd": 82.63,
+    "updated_at": "2026-09-14T11:45:48.386+00:00"
+  },
+  {
+    "mint_address": "Xs7x2HYEazWDXpYQYPBiRYh6o2AbkYrdrFwaBfBxyaU",
+    "symbol": "AURx",
+    "underlying_symbol": "AUR",
+    "price_usd": 6.43,
+    "prev_close_usd": 6.5,
+    "updated_at": "2026-09-14T11:45:48.389+00:00"
+  },
+  {
+    "mint_address": "XsHjSQhp7Eac5azSKy7cZbZGCrpEUAA3RseKh2X7c8C",
+    "symbol": "CCKx",
+    "underlying_symbol": "CCK",
+    "price_usd": 112.64,
+    "prev_close_usd": 111.79,
+    "updated_at": "2026-09-14T11:45:48.517+00:00"
+  },
+  {
+    "mint_address": "XsKfL6LbQaqnUfz3QZrBVwS3RqP34NKR3cmvbRu3doJ",
+    "symbol": "CNAx",
+    "underlying_symbol": "CNA",
+    "price_usd": 47.67,
+    "prev_close_usd": 47.39,
+    "updated_at": "2026-09-14T11:45:49.217+00:00"
+  },
+  {
+    "mint_address": "XsepazYXhizTmBmiZWfGwFnyUUSepwzQkLRgQyBp2Zg",
+    "symbol": "IESCx",
+    "underlying_symbol": "IESC",
+    "price_usd": 345.71,
+    "prev_close_usd": 324.66,
+    "updated_at": "2026-09-14T11:45:50.856+00:00"
+  },
+  {
+    "mint_address": "Xs5d6SH8HCeyBRkXNfoLWVnqgBT6tz8HnBoyJES3Fi4",
+    "symbol": "Hx",
+    "underlying_symbol": "H",
+    "price_usd": 163.07,
+    "prev_close_usd": 158.24,
+    "updated_at": "2026-09-14T11:45:50.882+00:00"
+  },
+  {
+    "mint_address": "XsQpEG5WPyZ5Pkno8mHrDXNfYNdeCUkgUEQcaHAQQ9g",
+    "symbol": "JKHYx",
+    "underlying_symbol": "JKHY",
+    "price_usd": 161.12,
+    "prev_close_usd": 158.48,
+    "updated_at": "2026-09-14T11:45:51.631+00:00"
+  },
+  {
+    "mint_address": "XssRPrQZPGjgViEH2wVDAvDnFkiL9aFEE3dZ6Egbry6",
+    "symbol": "UHALx",
+    "underlying_symbol": "UHAL",
+    "price_usd": 64.05,
+    "prev_close_usd": 63.59,
+    "updated_at": "2026-09-14T11:45:53.321+00:00"
+  },
+  {
+    "mint_address": "XsESMQjWyDczCfiJ3QDjZEiaKwp1uXYp3TMZ6viuLcm",
+    "symbol": "DRAMx",
+    "underlying_symbol": "DRAM",
+    "price_usd": 59.1,
+    "prev_close_usd": 61.58,
+    "updated_at": "2026-09-14T11:45:55.045+00:00"
+  },
+  {
+    "mint_address": "XsqFgFeprZEpayi92MTQGheZiNFmTi2TRJRmrHjCzMx",
+    "symbol": "IONQx",
+    "underlying_symbol": "IONQ",
+    "price_usd": 36.75,
+    "prev_close_usd": 38.14,
+    "updated_at": "2026-09-14T11:45:55.737+00:00"
+  },
+  {
+    "mint_address": "Xs7zs57saNfGWUn3h5d2rFxxs43uVqzAY7iQVPHFbwE",
+    "symbol": "INTWx",
+    "underlying_symbol": "INTW",
+    "price_usd": 23.85,
+    "prev_close_usd": 25.55,
+    "updated_at": "2026-09-14T11:45:55.873+00:00"
+  },
+  {
+    "mint_address": "XsVXnJqySwKVHq3stnK9EKc7criyv5oTtrid7UJQot7",
+    "symbol": "NWGx",
+    "underlying_symbol": "NWGL",
+    "price_usd": 1.25,
+    "prev_close_usd": 1.08,
+    "updated_at": "2026-09-14T11:45:57.444+00:00"
+  },
+  {
+    "mint_address": "XsXWXoWAzEo22ggADuXQeauMWxwgMS3em44tRBX2Vsx",
+    "symbol": "TOSTx",
+    "underlying_symbol": "TOST",
+    "price_usd": 32.12,
+    "prev_close_usd": 32.45,
+    "updated_at": "2026-09-14T11:45:58.881+00:00"
+  },
+  {
+    "mint_address": "Xspg7dCVnegasgemg56htgBWpemdffjvY9joWyNvJww",
+    "symbol": "ULSx",
+    "underlying_symbol": "ULS",
+    "price_usd": 71.25,
+    "prev_close_usd": 72.89,
+    "updated_at": "2026-09-14T11:45:59.012+00:00"
+  },
+  {
+    "mint_address": "XsZygGhZ5GWq1TMrbBAibrH5Par33cKxrtZAuTQ9r9o",
+    "symbol": "Ux",
+    "underlying_symbol": "U",
+    "price_usd": 43.96,
+    "prev_close_usd": 42.54,
+    "updated_at": "2026-09-14T11:45:59.011+00:00"
+  },
+  {
+    "mint_address": "XshjhoEnkjn6T6f2oyzVrAnMFgixpvFoBp7KepdByJ7",
+    "symbol": "SHAZx",
+    "underlying_symbol": "SHAZ",
+    "price_usd": 59.41,
+    "prev_close_usd": 56.75,
+    "updated_at": "2026-09-14T11:46:16.196+00:00"
+  },
+  {
+    "mint_address": "XsMAsw5BADYr3m19HhYeXrG1qAieeP75DT8tKn42DFA",
+    "symbol": "TWSTx",
+    "underlying_symbol": "TWST",
+    "price_usd": 127.22,
+    "prev_close_usd": 125.52,
+    "updated_at": "2026-09-14T11:46:17.439+00:00"
+  },
+  {
+    "mint_address": "XsGHwSbPaUJu6r5dtJLHXkXenPgCQf4Sx2hb4e2sbCZ",
+    "symbol": "AAOIx",
+    "underlying_symbol": "AAOI",
+    "price_usd": 105.36,
+    "prev_close_usd": 107.93,
+    "updated_at": "2026-09-14T11:46:18.176+00:00"
+  },
+  {
+    "mint_address": "XshmkFbMrRMtVb2HoJw1nc9jGMKNjTWcutT86YpMbKi",
+    "symbol": "CLXx",
+    "underlying_symbol": "CLX",
+    "price_usd": 87.76,
+    "prev_close_usd": 89.62,
+    "updated_at": "2026-09-14T11:46:20.57+00:00"
+  },
+  {
+    "mint_address": "XsMPKfVuLeJ4mSahPcSgVGHEVGt41QU41CfgfvRzvBG",
+    "symbol": "ELSx",
+    "underlying_symbol": "ELS",
+    "price_usd": 60.08,
+    "prev_close_usd": 61.07,
+    "updated_at": "2026-09-14T11:46:21.416+00:00"
+  },
+  {
+    "mint_address": "Xsfyi9JrpUDKaBZxgAAFS7wWV5xeTUkYoQLs3SUiYdg",
+    "symbol": "NYTx",
+    "underlying_symbol": "NYT",
+    "price_usd": 66.88,
+    "prev_close_usd": 66.6,
+    "updated_at": "2026-09-14T11:46:22.992+00:00"
+  },
+  {
+    "mint_address": "XsaZESJuX1EC73t54PmbirdQ5JHPHQsPnMB54bgZLp4",
+    "symbol": "PNWx",
+    "underlying_symbol": "PNW",
+    "price_usd": 96.1,
+    "prev_close_usd": 97.18,
+    "updated_at": "2026-09-14T11:46:23.043+00:00"
+  },
+  {
+    "mint_address": "XsiSQ5MUFoAwjrGB1x3FsXTthfwJnJgHVXj9tDKuvr8",
+    "symbol": "TYLx",
+    "underlying_symbol": "TYL",
+    "price_usd": 336.67,
+    "prev_close_usd": 342.68,
+    "updated_at": "2026-09-14T11:46:24.784+00:00"
+  },
+  {
+    "mint_address": "Xs8yLZVjsYmQ5Tu4e5JDVQeo4cbRRDCVERgtSGJFn3q",
+    "symbol": "TLNx",
+    "underlying_symbol": "TLN",
+    "price_usd": 312.74,
+    "prev_close_usd": 319.67,
+    "updated_at": "2026-09-14T11:46:24.897+00:00"
+  },
+  {
+    "mint_address": "Xs1vPiv1k4jph8JkwRfnCjog6pXKuYzVVpdRVSt3hWA",
+    "symbol": "TWx",
+    "underlying_symbol": "TW",
+    "price_usd": 101.44,
+    "prev_close_usd": 102.94,
+    "updated_at": "2026-09-14T11:46:24.9+00:00"
+  },
+  {
+    "mint_address": "XsmMYEkQRXZ9CodFfqGEwNvtqVZdsDLHoYqPVm2EpHX",
+    "symbol": "ALGNx",
+    "underlying_symbol": "ALGN",
+    "price_usd": 150.82,
+    "prev_close_usd": 152.92,
+    "updated_at": "2026-09-14T11:46:25.618+00:00"
+  },
+  {
+    "mint_address": "Xs7U7QD6amUpjuEZ1VM3rx5TSrKtJ3r7xU1aRcTHhw8",
+    "symbol": "AIZx",
+    "underlying_symbol": "AIZ",
+    "price_usd": 282.46,
+    "prev_close_usd": 280.44,
+    "updated_at": "2026-09-14T11:46:25.614+00:00"
+  },
+  {
+    "mint_address": "XsbahiFKw3f3pgsAwREvQZAdERbV1NGUjWnkzUaBz91",
+    "symbol": "DECKx",
+    "underlying_symbol": "DECK",
+    "price_usd": 81.27,
+    "prev_close_usd": 80.23,
+    "updated_at": "2026-09-14T11:46:26.663+00:00"
+  },
+  {
+    "mint_address": "XsAfpyk9U7qUZKq9STpXyzDaoQjGRe6Yqo7TYebpxkx",
+    "symbol": "AVYx",
+    "underlying_symbol": "AVY",
+    "price_usd": 169.38,
+    "prev_close_usd": 169.79,
+    "updated_at": "2026-09-14T11:46:26.683+00:00"
+  },
+  {
+    "mint_address": "Xsf8f6sqb9p6JK9oR8UHXk7CmFDvofc1nxeink7AoGA",
+    "symbol": "EQHx",
+    "underlying_symbol": "EQH",
+    "price_usd": 53.34,
+    "prev_close_usd": 52.09,
+    "updated_at": "2026-09-14T11:46:27.517+00:00"
+  },
+  {
+    "mint_address": "XsoxDMY8s3ZV7zD4Yd87wAvURyxA8VXkd7w6HNuQkzj",
+    "symbol": "RIVNx",
+    "underlying_symbol": "RIVN",
+    "price_usd": 16.03,
+    "prev_close_usd": 16.005,
+    "updated_at": "2026-09-14T11:46:29.17+00:00"
+  },
+  {
+    "mint_address": "XsBYWM8wgvSJfvNybgc6qxGxkD584FSycCWRiCvwZHk",
+    "symbol": "THCx",
+    "underlying_symbol": "THC",
+    "price_usd": 263.69,
+    "prev_close_usd": 269.08,
+    "updated_at": "2026-09-14T11:46:31.053+00:00"
+  },
+  {
+    "mint_address": "Xsgefxs1R4c5pYqhijeA3QLT42i38J7QpBtnt4GGk1f",
+    "symbol": "WSOx",
+    "underlying_symbol": "WSO",
+    "price_usd": 314.22,
+    "prev_close_usd": 309.75,
+    "updated_at": "2026-09-14T11:46:31.9+00:00"
+  },
+  {
+    "mint_address": "Xsxe5ypvCfynj9q9bJgB2Y88sZNCnxtEb9icgdbsPFT",
+    "symbol": "ZBRAx",
+    "underlying_symbol": "ZBRA",
+    "price_usd": 350.37,
+    "prev_close_usd": 344.83,
+    "updated_at": "2026-09-14T11:46:31.903+00:00"
+  },
+  {
+    "mint_address": "Xsb1a2VbaT6rLLq48qcgMQ1iPbs5fW2JZZURBxKfhY6",
+    "symbol": "ZSx",
+    "underlying_symbol": "ZS",
+    "price_usd": 164.54,
+    "prev_close_usd": 166.1,
+    "updated_at": "2026-09-14T11:46:31.907+00:00"
+  },
+  {
+    "mint_address": "XsD6kFBZCYumf4awQ9tgFFh8m2HGJBtTFdLYt7HcwRr",
+    "symbol": "ENTGx",
+    "underlying_symbol": "ENTG",
+    "price_usd": 140.37,
+    "prev_close_usd": 143.03,
+    "updated_at": "2026-09-14T11:46:40.626+00:00"
+  },
+  {
+    "mint_address": "Xs4MEQwg4mtEjAbtBzKsmrDccxX64Y4emF2yJptPJ3q",
+    "symbol": "LIIx",
+    "underlying_symbol": "LII",
+    "price_usd": 366.04,
+    "prev_close_usd": 375.78,
+    "updated_at": "2026-09-14T11:46:42.391+00:00"
+  },
+  {
+    "mint_address": "XsycyYwi9Kekp26jyGg3x5Fo1JDRr3XnTJmVaf5CRUb",
+    "symbol": "AGNCx",
+    "underlying_symbol": "AGNC",
+    "price_usd": 10.15,
+    "prev_close_usd": 10.51,
+    "updated_at": "2026-09-14T11:47:40.584+00:00"
+  },
+  {
+    "mint_address": "XsRwkmMcYT1jEJ9cnUsnWkUitWJRufu2qCmd6fbRRYj",
+    "symbol": "CLHx",
+    "underlying_symbol": "CLH",
+    "price_usd": 322.82,
+    "prev_close_usd": 315.7,
+    "updated_at": "2026-09-14T11:45:19.067+00:00"
+  },
+  {
+    "mint_address": "XsraCsjDB8cYn672MZSxCzZBhrodEPXD7pWd5EiRUhm",
+    "symbol": "BITXx",
+    "underlying_symbol": "BITX",
+    "price_usd": 17.03,
+    "prev_close_usd": 17.48,
+    "updated_at": "2026-09-14T11:45:19.193+00:00"
+  },
+  {
+    "mint_address": "Xsg3UgvjxpUgV3WZx9Wt9deLx7qvKYp6ZLY6xMY2Dfq",
+    "symbol": "GLWx",
+    "underlying_symbol": "GLW",
+    "price_usd": 166.4,
+    "prev_close_usd": 168.46,
+    "updated_at": "2026-09-14T11:45:20.364+00:00"
+  },
+  {
+    "mint_address": "XsAB7oiJL94kURXya1i35Rv9ZoY9EoJSWM3dQ9mZp7t",
+    "symbol": "GPCx",
+    "underlying_symbol": "GPC",
+    "price_usd": 133.68,
+    "prev_close_usd": 135.24,
+    "updated_at": "2026-09-14T11:45:21.271+00:00"
+  },
+  {
+    "mint_address": "Xs2XDRGh6AhivmYgaVa8woDGKGccR1WnnGnw9vqSWD9",
+    "symbol": "AAx",
+    "underlying_symbol": "AA",
+    "price_usd": 48.26,
+    "prev_close_usd": 50.73,
+    "updated_at": "2026-09-14T11:45:21.29+00:00"
+  },
+  {
+    "mint_address": "Xs5VFGqt7aQ3Dykyk7A4NFL9K2z3x2BAnEDzvokY9Us",
+    "symbol": "LDOSx",
+    "underlying_symbol": "LDOS",
+    "price_usd": 128.86,
+    "prev_close_usd": 128.14,
+    "updated_at": "2026-09-14T11:45:21.932+00:00"
+  },
+  {
+    "mint_address": "XsCNTvYMAHYPuHc5r9WWhnYfvAZMLLsguv2NBLs8wrx",
+    "symbol": "NBIXx",
+    "underlying_symbol": "NBIX",
+    "price_usd": 156.22,
+    "prev_close_usd": 155.14,
+    "updated_at": "2026-09-14T11:45:22.855+00:00"
+  },
+  {
+    "mint_address": "XsXEEJX7WoXfre8ZqYx1M1yXnEwd1Ww3YhvfESA2DzE",
+    "symbol": "RDDTx",
+    "underlying_symbol": "RDDT",
+    "price_usd": 157.77,
+    "prev_close_usd": 146.44,
+    "updated_at": "2026-09-14T11:45:22.986+00:00"
+  },
+  {
+    "mint_address": "Xss4k5HDz8CwyNnbZixMs3XgaXvnMoWtpxeqzFK6wvA",
+    "symbol": "ROKUx",
+    "underlying_symbol": "ROKU",
+    "price_usd": 154.93,
+    "prev_close_usd": 152.9,
+    "updated_at": "2026-09-14T11:45:23.624+00:00"
+  },
+  {
+    "mint_address": "XstJ1deKwoZVAzj1oF14s7g8ZPLumJKyiQXysym5duM",
+    "symbol": "RLx",
+    "underlying_symbol": "RL",
+    "price_usd": 339.09,
+    "prev_close_usd": 335.61,
+    "updated_at": "2026-09-14T11:45:23.653+00:00"
+  },
+  {
+    "mint_address": "XsBGGtLnNqa87iTENkgtBV4itt6LNxz7osKS1nmnqTD",
+    "symbol": "RPMx",
+    "underlying_symbol": "RPM",
+    "price_usd": 100.21,
+    "prev_close_usd": 99.71,
+    "updated_at": "2026-09-14T11:45:23.878+00:00"
+  },
+  {
+    "mint_address": "Xsq4wQVyggsJXzrjQK51M8bxK3duFaRegcX5Vxdbfcx",
+    "symbol": "SSNCx",
+    "underlying_symbol": "SSNC",
+    "price_usd": 80.27,
+    "prev_close_usd": 79.34,
+    "updated_at": "2026-09-14T11:45:24.662+00:00"
+  },
+  {
+    "mint_address": "XsSbcq8MZso4DLAMgtRKjzCvgozdh4sje8PLj45kxJZ",
+    "symbol": "FSLRx",
+    "underlying_symbol": "FSLR",
+    "price_usd": 209.03,
+    "prev_close_usd": 203.1,
+    "updated_at": "2026-09-14T11:45:26.122+00:00"
+  },
+  {
+    "mint_address": "XsCPL9dNWBMvFtTmwcCA5v3xWPSMEBCszbQdiLLq6aN",
+    "symbol": "GOOGLx",
+    "underlying_symbol": "GOOGL",
+    "price_usd": 338.5,
+    "prev_close_usd": 330.65,
+    "updated_at": "2026-09-14T11:45:26.129+00:00"
+  },
+  {
+    "mint_address": "Xsac5qkc4B254kpnb2qneeu6qsNX1fPtACeuNEiXWMR",
+    "symbol": "BBYx",
+    "underlying_symbol": "BBY",
+    "price_usd": 90.8,
+    "prev_close_usd": 88.03,
+    "updated_at": "2026-09-14T11:45:27.206+00:00"
+  },
+  {
+    "mint_address": "XsTS8D9tBV6oQRqkixzNCThctMwFzxScetp4BA9ByTK",
+    "symbol": "IBKRx",
+    "underlying_symbol": "IBKR",
+    "price_usd": 91.37,
+    "prev_close_usd": 90.28,
+    "updated_at": "2026-09-14T11:45:27.21+00:00"
+  },
+  {
+    "mint_address": "Xs9bwo2tkrKRJxr9787rKj2bKcQUMFNtbzruYTrxdst",
+    "symbol": "LVSx",
+    "underlying_symbol": "LVS",
+    "price_usd": 42.83,
+    "prev_close_usd": 43.33,
+    "updated_at": "2026-09-14T11:45:27.217+00:00"
+  },
+  {
+    "mint_address": "XsLSwcujLXXgCPZWPZKRsksbZrWupPMNKmg6A71g2Ba",
+    "symbol": "NDAQx",
+    "underlying_symbol": "NDAQ",
+    "price_usd": 91.19,
+    "prev_close_usd": 94.22,
+    "updated_at": "2026-09-14T11:45:27.833+00:00"
+  },
+  {
+    "mint_address": "XsikuTgNGjzibezDk9u22QGW8zQaGWyK61vN4gQE4Dc",
+    "symbol": "MLIx",
+    "underlying_symbol": "MLI",
+    "price_usd": 60.48,
+    "prev_close_usd": 63.71,
+    "updated_at": "2026-09-14T11:45:28.076+00:00"
+  },
+  {
+    "mint_address": "Xsgfrh1tHEuCADVTuQDZiG5LRcVYeEU1wKT3YKuucbA",
+    "symbol": "NDSNx",
+    "underlying_symbol": "NDSN",
+    "price_usd": 314.47,
+    "prev_close_usd": 313.94,
+    "updated_at": "2026-09-14T11:45:28.079+00:00"
+  },
+  {
+    "mint_address": "XsNZFvmZv6zEeAxgF5L72Nt6A2K8Uo6u7aRDLm7Smvc",
+    "symbol": "MASx",
+    "underlying_symbol": "MAS",
+    "price_usd": 68.52,
+    "prev_close_usd": 69.38,
+    "updated_at": "2026-09-14T11:45:28.083+00:00"
+  },
+  {
+    "mint_address": "XsqSsaDYsEAFwRwcwchPc9J1zX21VtHiXGJjFt5Ph5t",
+    "symbol": "Px",
+    "underlying_symbol": "P",
+    "price_usd": 98.18,
+    "prev_close_usd": 97.06,
+    "updated_at": "2026-09-14T11:45:28.805+00:00"
+  },
+  {
+    "mint_address": "XsTdkPyDNVtJYUjV7VhyZwtqQmA2Lg4DdTkRjYPD2gQ",
+    "symbol": "FISx",
+    "underlying_symbol": "FIS",
+    "price_usd": 38.14,
+    "prev_close_usd": 38.07,
+    "updated_at": "2026-09-14T11:45:30.432+00:00"
+  },
+  {
+    "mint_address": "XsLaYaQLQfc9Z2Qis9gh6zebLbEoG1MLCrxD2wAmBBY",
+    "symbol": "HALOx",
+    "underlying_symbol": "HALO",
+    "price_usd": 107.2,
+    "prev_close_usd": 107.39,
+    "updated_at": "2026-09-14T11:45:43.81+00:00"
+  },
+  {
+    "mint_address": "Xs7pKrTAgPBaXjiZbGm8QQK36GRRX1Vsh7pTndjhxng",
+    "symbol": "GFLx",
+    "underlying_symbol": "GFL",
+    "price_usd": 42.85,
+    "prev_close_usd": 42,
+    "updated_at": "2026-09-14T11:45:43.815+00:00"
+  },
+  {
+    "mint_address": "XsR9n59W439iWymAe3x5qnjdnaRXQmbvPE2uC9efzjE",
+    "symbol": "WTRGx",
+    "underlying_symbol": "WTRG",
+    "price_usd": 41.07,
+    "prev_close_usd": 42,
+    "updated_at": "2026-09-14T11:45:46.811+00:00"
+  },
+  {
+    "mint_address": "XsFUCDYcyPbbYKFXaNUU661ZGip7mwjUEEk3W1YPCrK",
+    "symbol": "AMHx",
+    "underlying_symbol": "AMH",
+    "price_usd": 31.48,
+    "prev_close_usd": 32.24,
+    "updated_at": "2026-09-14T11:45:47.642+00:00"
+  },
+  {
+    "mint_address": "XsFo6dYyRQwVtxbfdGs3zwyyQ1QBkh8D4ANjWXN3zTo",
+    "symbol": "BAXx",
+    "underlying_symbol": "BAX",
+    "price_usd": 23.8,
+    "prev_close_usd": 24.39,
+    "updated_at": "2026-09-14T11:45:48.523+00:00"
+  },
+  {
+    "mint_address": "XskkJXTNFU8cFstbYCAtxTa18tLkuRFe1AWHQhiBLy7",
+    "symbol": "CRx",
+    "underlying_symbol": "CR",
+    "price_usd": 201.82,
+    "prev_close_usd": 201.52,
+    "updated_at": "2026-09-14T11:45:49.221+00:00"
+  },
+  {
+    "mint_address": "XsVuEGU83SBvgQiuynK2qtinyPVyKukoTCACdJg2767",
+    "symbol": "DINOx",
+    "underlying_symbol": "DINO",
+    "price_usd": 107.84,
+    "prev_close_usd": 108.14,
+    "updated_at": "2026-09-14T11:45:49.267+00:00"
+  },
+  {
+    "mint_address": "Xs7YhGRdqb6nzTTPqViWue7TT3EXbmWwmD4XdrnW3Ux",
+    "symbol": "CORTx",
+    "underlying_symbol": "CORT",
+    "price_usd": 112.79,
+    "prev_close_usd": 115.7,
+    "updated_at": "2026-09-14T11:45:49.284+00:00"
+  },
+  {
+    "mint_address": "XsfNvqLMCuDnxbtV3BhTm7ckCra1NpCVmokKHpvF9j3",
+    "symbol": "ITx",
+    "underlying_symbol": "IT",
+    "price_usd": 179.59,
+    "prev_close_usd": 169.69,
+    "updated_at": "2026-09-14T11:45:50.786+00:00"
+  },
+  {
+    "mint_address": "XsGXehA4smaWwx8yKTgdY1PQvaUxNQyT9gEt1Ly2B5f",
+    "symbol": "NWSAx",
+    "underlying_symbol": "NWSA",
+    "price_usd": 29.44,
+    "prev_close_usd": 29.61,
+    "updated_at": "2026-09-14T11:45:51.683+00:00"
+  },
+  {
+    "mint_address": "XsVbwfq869bWTKpW95shx8woTpzVSmsbCEE7xsMqWQ6",
+    "symbol": "RVTYx",
+    "underlying_symbol": "RVTY",
+    "price_usd": 124.31,
+    "prev_close_usd": 123.85,
+    "updated_at": "2026-09-14T11:45:52.422+00:00"
+  },
+  {
+    "mint_address": "XsWFY8Ems96uFPnZJ1NwXsqeH6bczLQDDvvvab14crQ",
+    "symbol": "TXRHx",
+    "underlying_symbol": "TXRH",
+    "price_usd": 181.22,
+    "prev_close_usd": 179.27,
+    "updated_at": "2026-09-14T11:45:52.584+00:00"
+  },
+  {
+    "mint_address": "XsoxUeZzk47VGpqwE9wLi3DM9xuHSSmnsfXmvZH2bxw",
+    "symbol": "ASx",
+    "underlying_symbol": "AS",
+    "price_usd": 28.07,
+    "prev_close_usd": 27.77,
+    "updated_at": "2026-09-14T11:45:54.161+00:00"
+  },
+  {
+    "mint_address": "XswAx2kd4aKQtTszJ4zuA4nAY49hHzT82Vn8DqNcktY",
+    "symbol": "CRBGx",
+    "underlying_symbol": "CRBG",
+    "price_usd": 34.67,
+    "prev_close_usd": 33.82,
+    "updated_at": "2026-09-14T11:45:54.288+00:00"
+  },
+  {
+    "mint_address": "XsJwJiZkwUTaZE1q2J1hX6YTGv3xRdZGtqan9a2VsYW",
+    "symbol": "GHx",
+    "underlying_symbol": "GH",
+    "price_usd": 157.38,
+    "prev_close_usd": 162.78,
+    "updated_at": "2026-09-14T11:45:55.048+00:00"
+  },
+  {
+    "mint_address": "XsjZG9MgLMECjzSSxq3G7rabDceoaDqhN4C4zwce4i8",
+    "symbol": "MUUx",
+    "underlying_symbol": "MUU",
+    "price_usd": 31.43,
+    "prev_close_usd": 35.05,
+    "updated_at": "2026-09-14T11:45:56.569+00:00"
+  },
+  {
+    "mint_address": "Xs2LakxmT2YycpcxRDCJ7crPbFf91JKdAAWnfzANFmt",
+    "symbol": "KORUx",
+    "underlying_symbol": "KORU",
+    "price_usd": 23.07,
+    "prev_close_usd": 24.2,
+    "updated_at": "2026-09-14T11:45:56.649+00:00"
+  },
+  {
+    "mint_address": "XsJRuk3Mn8wSkc3aTkG2oqxFJiZqC3YU3gmNZSFbLvb",
+    "symbol": "RBRKx",
+    "underlying_symbol": "RBRK",
+    "price_usd": 86.65,
+    "prev_close_usd": 88.82,
+    "updated_at": "2026-09-14T11:45:57.318+00:00"
+  },
+  {
+    "mint_address": "Xstq9oUsBPd8LSyivHhnt8P8t9xK5RYoM9P6izLczvm",
+    "symbol": "CBRSx",
+    "underlying_symbol": "CBRS",
+    "price_usd": 191.93,
+    "prev_close_usd": 196.2,
+    "updated_at": "2026-09-14T11:46:13.971+00:00"
+  },
+  {
+    "mint_address": "XsEn37JjZxj3m9YayAyCCJFaQKBPZc6aUEiLEus5igu",
+    "symbol": "TEx",
+    "underlying_symbol": "TE",
+    "price_usd": 4.61,
+    "prev_close_usd": 4.91,
+    "updated_at": "2026-09-14T11:46:16.065+00:00"
+  },
+  {
+    "mint_address": "Xsii5eERa2sKFyTHQqdYxpxL5xoUSLVurzHeqBEMBho",
+    "symbol": "NBISx",
+    "underlying_symbol": "NBIS",
+    "price_usd": 224.55,
+    "prev_close_usd": 240.35,
+    "updated_at": "2026-09-14T11:46:17.325+00:00"
+  },
+  {
+    "mint_address": "XsBE7iAzaJEBpSwG5JZ7zQTWNgTaerweBy7nJCachaJ",
+    "symbol": "BKRx",
+    "underlying_symbol": "BKR",
+    "price_usd": 59.06,
+    "prev_close_usd": 63.64,
+    "updated_at": "2026-09-14T11:46:18.296+00:00"
+  },
+  {
+    "mint_address": "XsNKyNtZCbtcCFtJHSeKTGqNQ9gCEaAaKrZBzPH5LLS",
+    "symbol": "APGx",
+    "underlying_symbol": "APG",
+    "price_usd": 37.86,
+    "prev_close_usd": 38.01,
+    "updated_at": "2026-09-14T11:46:19.666+00:00"
+  },
+  {
+    "mint_address": "XsvJzDTuRrc3cWVwPXVcaXaFJFVtGcpDsfCA56z868Q",
+    "symbol": "AITx",
+    "underlying_symbol": "AIT",
+    "price_usd": 323.78,
+    "prev_close_usd": 324.85,
+    "updated_at": "2026-09-14T11:46:19.669+00:00"
+  },
+  {
+    "mint_address": "XstvDoqmcKjMHZP8FoWy3Ee2EkCf4KZgqNtg21WFW3X",
+    "symbol": "CHTRx",
+    "underlying_symbol": "CHTR",
+    "price_usd": 145.77,
+    "prev_close_usd": 133.89,
+    "updated_at": "2026-09-14T11:46:20.373+00:00"
+  },
+  {
+    "mint_address": "XsMmhKdFMiFdNFBcznYHx2zAU1SLtMnUL2G6bRzPpaY",
+    "symbol": "CDWx",
+    "underlying_symbol": "CDW",
+    "price_usd": 153.79,
+    "prev_close_usd": 142.37,
+    "updated_at": "2026-09-14T11:46:20.375+00:00"
+  },
+  {
+    "mint_address": "XsvoRXtZZfwvkLhp4qKPR9B9mcbuWakDUWnPszYw2BT",
+    "symbol": "CPTx",
+    "underlying_symbol": "CPT",
+    "price_usd": 103.01,
+    "prev_close_usd": 104.11,
+    "updated_at": "2026-09-14T11:46:20.565+00:00"
+  },
+  {
+    "mint_address": "XseQK4PEeLfxY7HgvuSiawFUL5gfveK2maPMV9Ma8qv",
+    "symbol": "GGGx",
+    "underlying_symbol": "GGG",
+    "price_usd": 76.7,
+    "prev_close_usd": 76.41,
+    "updated_at": "2026-09-14T11:46:22.275+00:00"
+  },
+  {
+    "mint_address": "XsRgwrznvMYsZ1i7ckfxjk6RWR4npsmZT3kqHuRfrva",
+    "symbol": "HASx",
+    "underlying_symbol": "HAS",
+    "price_usd": 91.54,
+    "prev_close_usd": 88.97,
+    "updated_at": "2026-09-14T11:46:22.278+00:00"
+  },
+  {
+    "mint_address": "XsR5eHL5sXTwUckUcenkZyBdAkShFBcNDiYeecBMaCu",
+    "symbol": "ROIVx",
+    "underlying_symbol": "ROIV",
+    "price_usd": 40.82,
+    "prev_close_usd": 41.81,
+    "updated_at": "2026-09-14T11:46:24.041+00:00"
+  },
+  {
+    "mint_address": "XsTCwtofQgx1SLYkouHvVg22beYhn1dmj1vtC3TUp6M",
+    "symbol": "RBAx",
+    "underlying_symbol": "RBA",
+    "price_usd": 83.6,
+    "prev_close_usd": 81.33,
+    "updated_at": "2026-09-14T11:46:24.047+00:00"
+  },
+  {
+    "mint_address": "XsgtMhyQgTevrWQNyLpHxwQeRAeaxQEtoiV1pNyxmfy",
+    "symbol": "DOCx",
+    "underlying_symbol": "DOC",
+    "price_usd": 20.3,
+    "prev_close_usd": 20.39,
+    "updated_at": "2026-09-14T11:46:27.498+00:00"
+  },
+  {
+    "mint_address": "XsLsExw7d7cjbN65GwQzS7HaDxCtyE3rjywcNXqEtxL",
+    "symbol": "NTNXx",
+    "underlying_symbol": "NTNX",
+    "price_usd": 65.92,
+    "prev_close_usd": 66.94,
+    "updated_at": "2026-09-14T11:46:28.273+00:00"
+  },
+  {
+    "mint_address": "XsUGoD9Dik1iNBgsjSzdjt7psrGgWpQ29DQr825e8Le",
+    "symbol": "MAAx",
+    "underlying_symbol": "MAA",
+    "price_usd": 124.79,
+    "prev_close_usd": 127.48,
+    "updated_at": "2026-09-14T11:46:28.436+00:00"
+  },
+  {
+    "mint_address": "XsXh1W6QRHJBYdzVrngAxn4t4JQnJBYk7iM2S1hwqdT",
+    "symbol": "PRx",
+    "underlying_symbol": "PR",
+    "price_usd": 23.78,
+    "prev_close_usd": 23.62,
+    "updated_at": "2026-09-14T11:46:29.293+00:00"
+  },
+  {
+    "mint_address": "XsFvsyP8i3Qpat1BK78Yjq3PsTNhD3SV5FHryJrWbHs",
+    "symbol": "RGAx",
+    "underlying_symbol": "RGA",
+    "price_usd": 248.72,
+    "prev_close_usd": 245.03,
+    "updated_at": "2026-09-14T11:46:29.285+00:00"
+  },
+  {
+    "mint_address": "XsWaSDd1S6YhQfsnTquL5ht2TGHe3mabeZ2Kvfpjsnc",
+    "symbol": "SUIx",
+    "underlying_symbol": "SUI",
+    "price_usd": 114.48,
+    "prev_close_usd": 116.04,
+    "updated_at": "2026-09-14T11:46:30.159+00:00"
+  },
+  {
+    "mint_address": "XsY112rrZJhJE1J1Z8BTSk135spPGHuGRCfnvr5pSdQ",
+    "symbol": "ROLx",
+    "underlying_symbol": "ROL",
+    "price_usd": 34.73,
+    "prev_close_usd": 34.54,
+    "updated_at": "2026-09-14T11:46:30.171+00:00"
+  },
+  {
+    "mint_address": "XstJ29hJ96UCddwezTPe9mXLiamEApRt85ChkTSRh5f",
+    "symbol": "UDRx",
+    "underlying_symbol": "UDR",
+    "price_usd": 35.12,
+    "prev_close_usd": 35.4,
+    "updated_at": "2026-09-14T11:46:31.057+00:00"
+  },
+  {
+    "mint_address": "Xsy4NX4cCf4YjN6iwypnQ8crXtNkyA2K3jypAX5NfQ6",
+    "symbol": "VRSNx",
+    "underlying_symbol": "VRSN",
+    "price_usd": 292.71,
+    "prev_close_usd": 286.94,
+    "updated_at": "2026-09-14T11:46:38.002+00:00"
+  },
+  {
+    "mint_address": "Xsz1UqWKSjB4X7zcvXV6XVL5eBA2YaRqEjXZVP6GXwZ",
+    "symbol": "ATOx",
+    "underlying_symbol": "ATO",
+    "price_usd": 163.19,
+    "prev_close_usd": 166.59,
+    "updated_at": "2026-09-14T11:46:38.761+00:00"
+  },
+  {
+    "mint_address": "Xsspestq9YiZofYG2pvuHgYM1aKdRNocveBodzrGjbg",
+    "symbol": "DXCMx",
+    "underlying_symbol": "DXCM",
+    "price_usd": 83.03,
+    "prev_close_usd": 83.88,
+    "updated_at": "2026-09-14T11:46:39.763+00:00"
+  },
+  {
+    "mint_address": "XsKfV36es7HHpJFKrDqaaXSFC1dwsrwLit4N67JH5LV",
+    "symbol": "AFRMx",
+    "underlying_symbol": "AFRM",
+    "price_usd": 71.44,
+    "prev_close_usd": 68.15,
+    "updated_at": "2026-09-14T11:47:39.539+00:00"
+  },
+  {
+    "mint_address": "Xsu33VJj7s2tMUZfAQ8bbGgpDEnfXdCsKHSC4p6C5tS",
+    "symbol": "ONTOx",
+    "underlying_symbol": "ONTO",
+    "price_usd": 281.26,
+    "prev_close_usd": 278.4,
+    "updated_at": "2026-09-14T11:45:28.82+00:00"
+  },
+  {
+    "mint_address": "XsHXJXdfTGnrfygPVvnzb7xdsUiunEQZew7teAyvosL",
+    "symbol": "OKTAx",
+    "underlying_symbol": "OKTA",
+    "price_usd": 166.5,
+    "prev_close_usd": 172.74,
+    "updated_at": "2026-09-14T11:45:28.841+00:00"
+  },
+  {
+    "mint_address": "Xs6eATub8cqKdztx4asCRFMSzMwtNqAUWiDaUPXxUtD",
+    "symbol": "STZx",
+    "underlying_symbol": "STZ",
+    "price_usd": 122.45,
+    "prev_close_usd": 121.55,
+    "updated_at": "2026-09-14T11:45:29.653+00:00"
+  },
+  {
+    "mint_address": "XsQJQHNMLiZCBHgJfq2yK95BFraouUdSspv1aD8jCgQ",
+    "symbol": "DDOGx",
+    "underlying_symbol": "DDOG",
+    "price_usd": 221.21,
+    "prev_close_usd": 225.27,
+    "updated_at": "2026-09-14T11:45:30.417+00:00"
+  },
+  {
+    "mint_address": "XsMNmV7wVizphwXgMtXTVhLDpqmKPdfoYPK3JTXXnYW",
+    "symbol": "CTSHx",
+    "underlying_symbol": "CTSH",
+    "price_usd": 60,
+    "prev_close_usd": 58.2,
+    "updated_at": "2026-09-14T11:45:30.429+00:00"
+  },
+  {
+    "mint_address": "Xs712gQLCYkFSYJwdu3pE5itNfyKwsXQ1HEGZF8Esc5",
+    "symbol": "CHDx",
+    "underlying_symbol": "CHD",
+    "price_usd": 94.15,
+    "prev_close_usd": 95.19,
+    "updated_at": "2026-09-14T11:45:30.452+00:00"
+  },
+  {
+    "mint_address": "XsvL1QcWfqpUM7CQzcNsicatBTZK2dgJRTor3SHUXdD",
+    "symbol": "FTVx",
+    "underlying_symbol": "FTV",
+    "price_usd": 54.69,
+    "prev_close_usd": 55.81,
+    "updated_at": "2026-09-14T11:45:31.191+00:00"
+  },
+  {
+    "mint_address": "XspemH4yD2PcDuZP4g8whQEeve3jrGbX331ksyaR9G3",
+    "symbol": "INCYx",
+    "underlying_symbol": "INCY",
+    "price_usd": 121.47,
+    "prev_close_usd": 126.01,
+    "updated_at": "2026-09-14T11:45:32.134+00:00"
+  },
+  {
+    "mint_address": "XsvqNba1k4wF5ZEZ6Nrx8AXUDkKzAFuj4HaVDEemyYH",
+    "symbol": "APHx",
+    "underlying_symbol": "APH",
+    "price_usd": 83.92,
+    "prev_close_usd": 81.34,
+    "updated_at": "2026-09-14T11:45:32.136+00:00"
+  },
+  {
+    "mint_address": "Xs85zRMSv4KTRqSNjZSFWgEXEyb3esxUBzhTj377DH8",
+    "symbol": "MARx",
+    "underlying_symbol": "MAR",
+    "price_usd": 334.69,
+    "prev_close_usd": 331.52,
+    "updated_at": "2026-09-14T11:45:32.999+00:00"
+  },
+  {
+    "mint_address": "XsHjfVcciZyPmujpSYXKGyQZ3k4yyzxnUXE6CYdZ3AD",
+    "symbol": "LENx",
+    "underlying_symbol": "LEN",
+    "price_usd": 79.6,
+    "prev_close_usd": 80.76,
+    "updated_at": "2026-09-14T11:45:33.001+00:00"
+  },
+  {
+    "mint_address": "XsUn5iqqryPGjArLc1FWnzaquVsCjTPciXQGkRyWfho",
+    "symbol": "Lx",
+    "underlying_symbol": "L",
+    "price_usd": 108.79,
+    "prev_close_usd": 108.68,
+    "updated_at": "2026-09-14T11:45:38.974+00:00"
+  },
+  {
+    "mint_address": "XsYa1w57EZDEiryphKCD8AJf33f4ewr2BHUW4RcjSuE",
+    "symbol": "AXSMx",
+    "underlying_symbol": "AXSM",
+    "price_usd": 220.75,
+    "prev_close_usd": 210.63,
+    "updated_at": "2026-09-14T11:45:41.425+00:00"
+  },
+  {
+    "mint_address": "XsC3icNzi6x7cRA6hodAZQT5GAsxwGrTxWL5awu4gsn",
+    "symbol": "SCIx",
+    "underlying_symbol": "SCI",
+    "price_usd": 82.21,
+    "prev_close_usd": 79.69,
+    "updated_at": "2026-09-14T11:45:45.907+00:00"
+  },
+  {
+    "mint_address": "XsQD8itHh5CdrWMiH8cZPB55KSATjdXsxcSJJ14YCFD",
+    "symbol": "SCCOx",
+    "underlying_symbol": "SCCO",
+    "price_usd": 193.49,
+    "prev_close_usd": 209.26,
+    "updated_at": "2026-09-14T11:45:28.87+00:00"
+  },
+  {
+    "mint_address": "XsQVYwNXBY7UNaLonk5qTbr3RzFC87CECGXWWfJomt2",
+    "symbol": "TWLOx",
+    "underlying_symbol": "TWLO",
+    "price_usd": 227.35,
+    "prev_close_usd": 227.19,
+    "updated_at": "2026-09-14T11:45:29.551+00:00"
+  },
+  {
+    "mint_address": "XsLhefHBtc8r9nStXgXtu9tHeEWYRXxSXrpbnfwTJ7v",
+    "symbol": "TEAMx",
+    "underlying_symbol": "TEAM",
+    "price_usd": 179.7,
+    "prev_close_usd": 177.74,
+    "updated_at": "2026-09-14T11:45:29.655+00:00"
+  },
+  {
+    "mint_address": "Xs5GgkWgze4XgU7NC5iXJqvbGufxQBJKH5JRN2MSPWQ",
+    "symbol": "KEYx",
+    "underlying_symbol": "KEY",
+    "price_usd": 21.84,
+    "prev_close_usd": 21.73,
+    "updated_at": "2026-09-14T11:45:32.15+00:00"
+  },
+  {
+    "mint_address": "Xsgyj7QR8RoPrkCCS2ebXwiASE69q2EvK5B7ppeKgBt",
+    "symbol": "RYANx",
+    "underlying_symbol": "RYAN",
+    "price_usd": 38.12,
+    "prev_close_usd": 39.45,
+    "updated_at": "2026-09-14T11:45:45.797+00:00"
+  },
+  {
+    "mint_address": "XstGFYNtBmWaCk3MfbEeqMYYbUf2o3PTLJm7R7iYfGS",
+    "symbol": "SEICx",
+    "underlying_symbol": "SEIC",
+    "price_usd": 106.93,
+    "prev_close_usd": 107.17,
+    "updated_at": "2026-09-14T11:45:45.91+00:00"
+  },
+  {
+    "mint_address": "XsEvH8WR4t5FU5GT1cfsmPnvrmEknd4UXA68uJ1F25L",
+    "symbol": "VTRx",
+    "underlying_symbol": "VTR",
+    "price_usd": 89.99,
+    "prev_close_usd": 89.38,
+    "updated_at": "2026-09-14T11:46:06.546+00:00"
+  },
+  {
+    "mint_address": "XshHba6o5aAUPJFL19gmvSn4KRk6N44JVgiFt6UoRsB",
+    "symbol": "CPRTx",
+    "underlying_symbol": "CPRT",
+    "price_usd": 29.95,
+    "prev_close_usd": 32.03,
+    "updated_at": "2026-09-14T11:46:32.755+00:00"
+  },
+  {
+    "mint_address": "XsUQA7YBvJyBXDrQy23WNydKWdhVCPRVMxEF6MgXytd",
+    "symbol": "AWKx",
+    "underlying_symbol": "AWK",
+    "price_usd": 137.69,
+    "prev_close_usd": 140.33,
+    "updated_at": "2026-09-14T11:46:32.758+00:00"
+  },
+  {
+    "mint_address": "XsNufzbQz3zzhuGTSBi73Rds6wo1ghjn74ooK7ZbLVX",
+    "symbol": "CINFx",
+    "underlying_symbol": "CINF",
+    "price_usd": 169.8,
+    "prev_close_usd": 169.21,
+    "updated_at": "2026-09-14T11:46:32.765+00:00"
+  },
+  {
+    "mint_address": "Xsipo31rLh5EqPMR2cArn6kVPAD83C6rxbmCrT9Wu5u",
+    "symbol": "SOFIx",
+    "underlying_symbol": "SOFI",
+    "price_usd": 17.32,
+    "prev_close_usd": 17.33,
+    "updated_at": "2026-09-14T11:46:37.151+00:00"
+  },
+  {
+    "mint_address": "XsAtnoftgxL6kJErDeCL8m2e364mAYgEbSfSKxi4ctJ",
+    "symbol": "VMCx",
+    "underlying_symbol": "VMC",
+    "price_usd": 252.74,
+    "prev_close_usd": 249.89,
+    "updated_at": "2026-09-14T11:46:51.845+00:00"
+  },
+  {
+    "mint_address": "XsgSaSvNSqLTtFuyWPBhK9196Xb9Bbdyjj4fH3cPJGo",
+    "symbol": "AVGOx",
+    "underlying_symbol": "AVGO",
+    "price_usd": 361.99,
+    "prev_close_usd": 364.38,
+    "updated_at": "2026-09-14T11:47:32.391+00:00"
+  },
+  {
+    "mint_address": "XsczbcQ3zfcgAEt9qHQES8pxKAVG5rujPSHQEXi4kaN",
+    "symbol": "CRMx",
+    "underlying_symbol": "CRM",
+    "price_usd": 247.72,
+    "prev_close_usd": 244.16,
+    "updated_at": "2026-09-14T11:47:33.24+00:00"
+  },
+  {
+    "mint_address": "XsvKCaNsxg2GN8jjUmq71qukMJr7Q1c5R2Mk9P8kcS8",
+    "symbol": "CMCSAx",
+    "underlying_symbol": "CMCSA",
+    "price_usd": 25.2,
+    "prev_close_usd": 24.59,
+    "updated_at": "2026-09-14T11:47:33.269+00:00"
+  }
+]

@@ -1,8 +1,6 @@
-import { createClient } from "@supabase/supabase-js";
 import { notFound } from "next/navigation";
+import { getWallet } from "@/lib/data";
 import WalletDetail from "./WalletDetail";
-
-export const dynamic = "force-dynamic";
 
 interface RecentTrade {
   signature: string;
@@ -10,45 +8,13 @@ interface RecentTrade {
   err: boolean;
 }
 
-async function getWalletData(address: string) {
-  const supabase = createClient(
-    process.env.NEXT_PUBLIC_SUPABASE_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-  );
+async function fetchRecentTrades(address: string): Promise<RecentTrade[]> {
+  const apiKey = process.env.HELIUS_API_KEY;
+  if (!apiKey) return [];
 
-  const { data: wallet } = await supabase
-    .from("gh_wallets")
-    .select("*")
-    .eq("address", address)
-    .single();
-
-  if (!wallet) return null;
-
-  const { data: positions } = await supabase
-    .from("gh_positions")
-    .select("asset_symbol, mint_address, ui_amount, value_usd, pct")
-    .eq("wallet_address", address)
-    .gt("value_usd", 0)
-    .order("value_usd", { ascending: false });
-
-  const symbols = (positions ?? []).map((p) => p.asset_symbol);
-  const { data: assets } = await supabase
-    .from("gh_assets")
-    .select("symbol, logo_url, underlying_symbol")
-    .in("symbol", symbols);
-
-  const assetMap = new Map(
-    (assets ?? []).map((a) => [
-      a.symbol,
-      { logo: a.logo_url, underlying: a.underlying_symbol },
-    ])
-  );
-
-  // Fetch recent transactions
-  let recentTrades: RecentTrade[] = [];
   try {
     const res = await fetch(
-      `https://mainnet.helius-rpc.com/?api-key=${process.env.HELIUS_API_KEY}`,
+      `https://mainnet.helius-rpc.com/?api-key=${apiKey}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -58,10 +24,11 @@ async function getWalletData(address: string) {
           method: "getSignaturesForAddress",
           params: [address, { limit: 10 }],
         }),
+        next: { revalidate: 300 },
       }
     );
     const json = await res.json();
-    recentTrades = (json.result ?? []).map(
+    return (json.result ?? []).map(
       (s: { signature: string; blockTime: number; err: unknown }) => ({
         signature: s.signature,
         blockTime: s.blockTime,
@@ -69,19 +36,8 @@ async function getWalletData(address: string) {
       })
     );
   } catch {
-    // non-critical
+    return [];
   }
-
-  return {
-    wallet,
-    positions: (positions ?? []).map((p) => ({
-      ...p,
-      logo_url: assetMap.get(p.asset_symbol)?.logo ?? null,
-      underlying_symbol:
-        assetMap.get(p.asset_symbol)?.underlying ?? p.asset_symbol,
-    })),
-    recentTrades,
-  };
 }
 
 export default async function WalletPage({
@@ -90,14 +46,22 @@ export default async function WalletPage({
   params: Promise<{ address: string }>;
 }) {
   const { address } = await params;
-  const data = await getWalletData(address);
-  if (!data) notFound();
+  const wallet = getWallet(address);
+  if (!wallet) notFound();
+
+  const recentTrades = await fetchRecentTrades(address);
 
   return (
     <WalletDetail
-      wallet={data.wallet}
-      positions={data.positions}
-      recentTrades={data.recentTrades}
+      wallet={{
+        address: wallet.address,
+        total_value_usd: wallet.total_value_usd,
+        change_24h_pct: wallet.change_24h_pct,
+        position_count: wallet.position_count,
+        wallet_type: wallet.wallet_type,
+      }}
+      positions={wallet.positions}
+      recentTrades={recentTrades}
     />
   );
 }
