@@ -29,12 +29,41 @@ html {
 
 body {
   min-height: 100dvh;
-  padding-bottom: 72px; /* tab bar */
+  padding-bottom: 72px;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+/* Input focus */
+input:focus {
+  border-color: var(--green) !important;
+  box-shadow: 0 0 0 1px rgba(20, 241, 149, 0.2);
+}
+
+/* Number input: hide spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 /* List item stagger animation */

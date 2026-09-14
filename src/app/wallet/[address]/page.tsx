@@ -4,6 +4,12 @@ import WalletDetail from "./WalletDetail";
 
 export const dynamic = "force-dynamic";
 
+interface RecentTrade {
+  signature: string;
+  blockTime: number;
+  err: boolean;
+}
+
 async function getWalletData(address: string) {
   const supabase = createClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
@@ -25,7 +31,6 @@ async function getWalletData(address: string) {
     .gt("value_usd", 0)
     .order("value_usd", { ascending: false });
 
-  // Get logos for positions
   const symbols = (positions ?? []).map((p) => p.asset_symbol);
   const { data: assets } = await supabase
     .from("gh_assets")
@@ -39,6 +44,34 @@ async function getWalletData(address: string) {
     ])
   );
 
+  // Fetch recent transactions
+  let recentTrades: RecentTrade[] = [];
+  try {
+    const res = await fetch(
+      `https://mainnet.helius-rpc.com/?api-key=${process.env.HELIUS_API_KEY}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          jsonrpc: "2.0",
+          id: 1,
+          method: "getSignaturesForAddress",
+          params: [address, { limit: 10 }],
+        }),
+      }
+    );
+    const json = await res.json();
+    recentTrades = (json.result ?? []).map(
+      (s: { signature: string; blockTime: number; err: unknown }) => ({
+        signature: s.signature,
+        blockTime: s.blockTime,
+        err: !!s.err,
+      })
+    );
+  } catch {
+    // non-critical
+  }
+
   return {
     wallet,
     positions: (positions ?? []).map((p) => ({
@@ -47,6 +80,7 @@ async function getWalletData(address: string) {
       underlying_symbol:
         assetMap.get(p.asset_symbol)?.underlying ?? p.asset_symbol,
     })),
+    recentTrades,
   };
 }
 
@@ -59,5 +93,11 @@ export default async function WalletPage({
   const data = await getWalletData(address);
   if (!data) notFound();
 
-  return <WalletDetail wallet={data.wallet} positions={data.positions} />;
+  return (
+    <WalletDetail
+      wallet={data.wallet}
+      positions={data.positions}
+      recentTrades={data.recentTrades}
+    />
+  );
 }
