@@ -9,16 +9,17 @@
     "sync": "tsx scripts/sync.ts"
   },
   "dependencies": {
+    "@solana/web3.js": "^1.98.0",
+    "lucide-react": "^1.46.0",
     "next": "^15.3.0",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "@solana/web3.js": "^1.98.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.7.0",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
-    "tsx": "^4.19.0"
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
   }
 }

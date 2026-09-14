@@ -6,13 +6,21 @@ import FilterChips from "./FilterChips";
 import WalletRow from "./WalletRow";
 import type { WalletType } from "@/types";
 
+interface Position {
+  asset_symbol: string;
+  pct: number;
+  logo_url?: string | null;
+  underlying_symbol?: string;
+  value_usd?: number;
+}
+
 interface WalletData {
   address: string;
   total_value_usd: number;
   change_24h_pct: number;
   position_count: number;
   wallet_type: WalletType;
-  positions: { asset_symbol: string; pct: number }[];
+  positions: Position[];
 }
 
 interface LeaderboardProps {
@@ -39,18 +47,37 @@ export default function Leaderboard({
   };
 
   const typeFilter = typeMap[filter] ?? null;
-
   const filtered = typeFilter
     ? wallets.filter((w) => w.wallet_type === typeFilter)
     : wallets;
-
   const sorted = [...filtered].sort(
     (a, b) => b.total_value_usd - a.total_value_usd
   );
 
+  // Find largest single position across all wallets
+  let largestPosition: { symbol: string; value: number } | null = null;
+  for (const w of wallets) {
+    for (const p of w.positions) {
+      if (
+        p.value_usd &&
+        (!largestPosition || p.value_usd > largestPosition.value)
+      ) {
+        largestPosition = {
+          symbol: p.underlying_symbol ?? p.asset_symbol,
+          value: p.value_usd,
+        };
+      }
+    }
+  }
+
   return (
     <div style={{ padding: "16px 16px 0" }}>
-      <HeroCard totalValue={totalValue} change24h={totalChange24h} />
+      <HeroCard
+        totalValue={totalValue}
+        change24h={totalChange24h}
+        walletCount={wallets.length}
+        largestPosition={largestPosition}
+      />
       <FilterChips options={FILTERS} active={filter} onChange={setFilter} />
 
       {/* Desktop table header */}
@@ -100,15 +127,15 @@ export default function Leaderboard({
         @media (min-width: 1024px) {
           .table-header {
             display: grid;
-            grid-template-columns: 40px 160px 100px 1fr 64px 120px 80px;
+            grid-template-columns: 36px 180px 100px 1fr 56px 120px 72px;
             gap: 16px;
-            padding: 8px 0;
+            padding: 6px 0;
             border-bottom: 1px solid var(--border);
-            font-size: 12px;
-            font-weight: 600;
+            font-size: 11px;
+            font-weight: 500;
             color: var(--text-secondary);
             text-transform: uppercase;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.05em;
           }
         }
       `}</style>

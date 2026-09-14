@@ -24,6 +24,9 @@ export default function HomePage() {
         positions: w.positions.map((p) => ({
           asset_symbol: p.asset_symbol,
           pct: p.pct,
+          logo_url: p.logo_url,
+          underlying_symbol: p.underlying_symbol,
+          value_usd: p.value_usd,
         })),
       }))}
       totalValue={totalValue}

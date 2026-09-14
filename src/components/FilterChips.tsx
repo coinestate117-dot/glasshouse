@@ -27,12 +27,12 @@ export default function FilterChips({
             key={opt}
             onClick={() => onChange(opt)}
             style={{
-              padding: "6px 14px",
+              padding: "5px 12px",
               borderRadius: 999,
               border: `1px solid ${isActive ? "var(--green)" : "var(--border)"}`,
-              background: isActive ? "rgba(20,241,149,0.1)" : "transparent",
+              background: isActive ? "rgba(20,241,149,0.08)" : "transparent",
               color: isActive ? "var(--green)" : "var(--text-secondary)",
-              fontSize: 13,
+              fontSize: 12,
               fontWeight: 500,
               cursor: "pointer",
               whiteSpace: "nowrap",

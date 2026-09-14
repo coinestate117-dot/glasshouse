@@ -3,10 +3,10 @@
 import type { WalletType } from "@/types";
 
 const BADGE_STYLES: Record<WalletType, { bg: string; color: string }> = {
-  Investor: { bg: "rgba(20,241,149,0.12)", color: "var(--green)" },
-  "Market Maker": { bg: "rgba(153,69,255,0.12)", color: "#9945FF" },
-  Whale: { bg: "rgba(0,194,255,0.12)", color: "#00C2FF" },
-  Holder: { bg: "rgba(138,138,147,0.12)", color: "var(--text-secondary)" },
+  Investor: { bg: "rgba(20,241,149,0.08)", color: "#10c980" },
+  "Market Maker": { bg: "rgba(153,69,255,0.08)", color: "#8838e0" },
+  Whale: { bg: "rgba(0,194,255,0.08)", color: "#0099cc" },
+  Holder: { bg: "rgba(138,138,147,0.06)", color: "#6a6a72" },
 };
 
 export default function WalletTypeBadge({ type }: { type: WalletType }) {
@@ -15,9 +15,9 @@ export default function WalletTypeBadge({ type }: { type: WalletType }) {
     <span
       style={{
         display: "inline-block",
-        padding: "2px 8px",
+        padding: "2px 7px",
         borderRadius: 4,
-        fontSize: 11,
+        fontSize: 10,
         fontWeight: 600,
         lineHeight: "16px",
         backgroundColor: style.bg,

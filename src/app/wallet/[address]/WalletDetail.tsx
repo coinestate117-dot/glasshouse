@@ -3,8 +3,10 @@
 import CountUp from "@/components/CountUp";
 import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
+import TokenLogo from "@/components/TokenLogo";
 import MirrorDialog from "@/components/MirrorDialog";
 import { formatUsdFull, formatUsd, formatPct } from "@/lib/format";
+import { ExternalLink } from "lucide-react";
 import type { WalletType } from "@/types";
 
 interface Position {
@@ -61,16 +63,18 @@ export default function WalletDetail({
         style={{
           background: "linear-gradient(135deg, #9945FF 0%, #14F195 100%)",
           borderRadius: 8,
-          padding: "28px 20px",
-          marginBottom: 16,
+          padding: "36px 20px 32px",
+          marginBottom: 12,
         }}
       >
         <div
           style={{
-            fontSize: 13,
+            fontSize: 12,
             fontWeight: 500,
-            color: "rgba(255,255,255,0.7)",
-            marginBottom: 6,
+            color: "rgba(255,255,255,0.6)",
+            marginBottom: 8,
+            letterSpacing: "0.06em",
+            textTransform: "uppercase",
           }}
         >
           Portfolio Value
@@ -79,35 +83,46 @@ export default function WalletDetail({
           end={wallet.total_value_usd}
           formatter={formatUsdFull}
           style={{
-            fontSize: 36,
+            fontSize: 44,
             fontWeight: 700,
-            lineHeight: 1.1,
+            lineHeight: 1,
             display: "block",
+            letterSpacing: "-0.02em",
           }}
         />
         <div
           style={{
-            fontSize: 14,
-            fontWeight: 500,
-            marginTop: 6,
-            color: "rgba(255,255,255,0.85)",
+            fontSize: 15,
+            fontWeight: 600,
+            marginTop: 8,
+            color: "rgba(255,255,255,0.9)",
           }}
         >
           <CountUp
             end={wallet.change_24h_pct}
             duration={400}
-            formatter={(v) => formatPct(v) + " (24h)"}
+            formatter={(v) => formatPct(v)}
           />
+          <span
+            style={{
+              fontSize: 13,
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.5)",
+              marginLeft: 6,
+            }}
+          >
+            24h
+          </span>
         </div>
       </div>
 
-      {/* Wallet address + type badge */}
+      {/* Badge + address */}
       <div
         style={{
           display: "flex",
           alignItems: "center",
           gap: 10,
-          marginBottom: 8,
+          marginBottom: 6,
         }}
       >
         <WalletTypeBadge type={wallet.wallet_type} />
@@ -117,7 +132,9 @@ export default function WalletDetail({
         target="_blank"
         rel="noopener noreferrer"
         style={{
-          display: "block",
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
           fontSize: 13,
           color: "var(--text-secondary)",
           marginBottom: 16,
@@ -125,7 +142,8 @@ export default function WalletDetail({
           lineHeight: 1.4,
         }}
       >
-        {wallet.address} ↗
+        {wallet.address}
+        <ExternalLink size={12} style={{ flexShrink: 0 }} />
       </a>
 
       {/* Allocation bar */}
@@ -135,46 +153,49 @@ export default function WalletDetail({
           style={{
             display: "flex",
             flexWrap: "wrap",
-            gap: "6px 16px",
+            gap: "6px 14px",
             marginTop: 10,
           }}
         >
-          {segments.map((s) => (
+          {positions.slice(0, 8).map((p) => (
             <div
-              key={s.symbol}
+              key={p.asset_symbol}
               style={{
                 display: "flex",
                 alignItems: "center",
-                gap: 6,
+                gap: 5,
                 fontSize: 12,
                 color: "var(--text-secondary)",
               }}
             >
-              <div
-                style={{
-                  width: 8,
-                  height: 8,
-                  borderRadius: 2,
-                  backgroundColor: s.color,
-                  flexShrink: 0,
-                }}
+              <TokenLogo
+                symbol={p.asset_symbol}
+                logoUrl={p.logo_url}
+                size={16}
               />
-              {s.symbol}
-              <span style={{ color: "var(--text)" }}>
-                {s.pct.toFixed(1)}%
+              <span>{p.underlying_symbol}</span>
+              <span style={{ color: "var(--text)", fontWeight: 500 }}>
+                {p.pct.toFixed(1)}%
               </span>
             </div>
           ))}
+          {positions.length > 8 && (
+            <span style={{ fontSize: 12, color: "var(--text-secondary)" }}>
+              +{positions.length - 8} more
+            </span>
+          )}
         </div>
       </div>
 
-      {/* Positions list */}
+      {/* Positions */}
       <div
         style={{
-          fontSize: 13,
-          fontWeight: 600,
+          fontSize: 12,
+          fontWeight: 500,
           marginBottom: 8,
           color: "var(--text-secondary)",
+          textTransform: "uppercase",
+          letterSpacing: "0.04em",
         }}
       >
         Positions ({positions.length})
@@ -184,18 +205,22 @@ export default function WalletDetail({
           <div
             key={p.asset_symbol}
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr auto auto",
+              display: "flex",
+              alignItems: "center",
               gap: 12,
               padding: "12px 0",
               borderBottom: "1px solid var(--border)",
-              alignItems: "center",
               opacity: 0,
               animation: `fadeSlideIn 0.3s ease-out ${Math.min(i, 12) * 30}ms forwards`,
             }}
           >
-            <div>
-              <div style={{ fontSize: 14, fontWeight: 600 }}>
+            <TokenLogo
+              symbol={p.asset_symbol}
+              logoUrl={p.logo_url}
+              size={36}
+            />
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: 15, fontWeight: 600 }}>
                 {p.underlying_symbol}
               </div>
               <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
@@ -206,20 +231,18 @@ export default function WalletDetail({
               </div>
             </div>
             <div style={{ textAlign: "right" }}>
-              <div style={{ fontSize: 14, fontWeight: 600 }}>
+              <div style={{ fontSize: 15, fontWeight: 700 }}>
                 {formatUsd(p.value_usd)}
               </div>
-            </div>
-            <div
-              style={{
-                fontSize: 13,
-                fontWeight: 500,
-                color: "var(--text-secondary)",
-                textAlign: "right",
-                minWidth: 44,
-              }}
-            >
-              {p.pct.toFixed(1)}%
+              <div
+                style={{
+                  fontSize: 12,
+                  color: "var(--text-secondary)",
+                  marginTop: 1,
+                }}
+              >
+                {p.pct.toFixed(1)}%
+              </div>
             </div>
           </div>
         ))}
@@ -230,10 +253,12 @@ export default function WalletDetail({
         <div style={{ marginTop: 24 }}>
           <div
             style={{
-              fontSize: 13,
-              fontWeight: 600,
+              fontSize: 12,
+              fontWeight: 500,
               marginBottom: 8,
               color: "var(--text-secondary)",
+              textTransform: "uppercase",
+              letterSpacing: "0.04em",
             }}
           >
             Recent Activity
@@ -254,36 +279,39 @@ export default function WalletDetail({
                 animation: `fadeSlideIn 0.3s ease-out ${Math.min(i, 12) * 30}ms forwards`,
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                <span
-                  style={{
-                    fontSize: 13,
-                    fontFamily: "monospace",
-                    color: "var(--text)",
-                  }}
-                >
-                  {tx.signature.slice(0, 8)}…{tx.signature.slice(-4)}
-                </span>
+              <span
+                style={{
+                  fontSize: 13,
+                  fontFamily: "monospace",
+                  color: "var(--text)",
+                }}
+              >
+                {tx.signature.slice(0, 8)}…{tx.signature.slice(-4)}
                 {tx.err && (
                   <span
                     style={{
                       fontSize: 11,
                       color: "var(--red)",
                       fontWeight: 600,
+                      marginLeft: 6,
                     }}
                   >
                     Failed
                   </span>
                 )}
-              </div>
+              </span>
               <span
                 style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: 4,
                   fontSize: 12,
                   color: "var(--text-secondary)",
                   whiteSpace: "nowrap",
                 }}
               >
-                {timeAgo(tx.blockTime)} ↗
+                {timeAgo(tx.blockTime)}
+                <ExternalLink size={11} />
               </span>
             </a>
           ))}
