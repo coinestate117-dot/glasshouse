@@ -1,6 +1,45 @@
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { getWallet } from "@/lib/data";
+import { formatUsd, shortenAddress } from "@/lib/format";
 import WalletDetail from "./WalletDetail";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ address: string }>;
+}): Promise<Metadata> {
+  const { address } = await params;
+  const wallet = getWallet(address);
+  if (!wallet) return {};
+
+  const short = shortenAddress(address);
+  const value = formatUsd(wallet.total_value_usd);
+  const title = `${short} — ${value} Portfolio`;
+  const description = `${wallet.wallet_type} wallet holding ${wallet.position_count} tokenized stocks worth ${value} on Solana.`;
+
+  return {
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      images: [
+        {
+          url: `/api/og?address=${address}`,
+          width: 1200,
+          height: 630,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [`/api/og?address=${address}`],
+    },
+  };
+}
 
 interface RecentTrade {
   signature: string;

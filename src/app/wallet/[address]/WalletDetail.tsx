@@ -6,7 +6,8 @@ import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
 import TokenLogo from "@/components/TokenLogo";
 import MirrorPanel from "@/components/MirrorPanel";
-import { formatUsdFull, formatUsd, formatPct } from "@/lib/format";
+import ShareBar from "@/components/ShareBar";
+import { formatUsdFull, formatUsd, formatPct, shortenAddress } from "@/lib/format";
 import { ExternalLink } from "lucide-react";
 import type { WalletType } from "@/types";
 
@@ -151,6 +152,13 @@ export default function WalletDetail({
           {wallet.address}
           <ExternalLink size={12} style={{ flexShrink: 0 }} />
         </a>
+
+        {/* Share */}
+        <ShareBar
+          ogUrl={`/api/og?address=${wallet.address}`}
+          pageUrl={typeof window !== "undefined" ? window.location.href : `/wallet/${wallet.address}`}
+          tweetText={`${shortenAddress(wallet.address)} holds ${formatUsd(wallet.total_value_usd)} in tokenized stocks on Solana`}
+        />
 
         {/* Allocation bar */}
         <div style={{ marginBottom: 20 }}>
