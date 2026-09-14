@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef } from "react";
 import Link from "next/link";
 import TokenLogo from "@/components/TokenLogo";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
@@ -23,6 +24,7 @@ interface Holder {
 interface StockDetailProps {
   ticker: string;
   assetSymbol: string;
+  mintAddress: string;
   priceUsd: number;
   change24hPct: number;
   totalHeldUsd: number;
@@ -31,11 +33,13 @@ interface StockDetailProps {
   largestHolder: { address: string; value_usd: number } | null;
   holders: Holder[];
   logoUrl: string | null;
+  dexPairAddress: string | null;
 }
 
 export default function StockDetail({
   ticker,
   assetSymbol,
+  mintAddress,
   priceUsd,
   change24hPct,
   totalHeldUsd,
@@ -43,6 +47,7 @@ export default function StockDetail({
   largestHolder,
   holders,
   logoUrl,
+  dexPairAddress,
 }: StockDetailProps) {
   const isPositive = change24hPct >= 0;
 
@@ -80,12 +85,7 @@ export default function StockDetail({
             >
               {formatPct(change24hPct)}
             </span>
-            <span
-              style={{
-                fontSize: 12,
-                color: "var(--text-secondary)",
-              }}
-            >
+            <span style={{ fontSize: 12, color: "var(--text-secondary)" }}>
               today
             </span>
           </div>
@@ -105,11 +105,77 @@ export default function StockDetail({
         <StatCard label="Holders" value={String(holderCount)} />
         <StatCard
           label="Largest holder"
-          value={
-            largestHolder ? formatUsd(largestHolder.value_usd) : "—"
-          }
+          value={largestHolder ? formatUsd(largestHolder.value_usd) : "—"}
           sub={largestHolder ? shortenAddress(largestHolder.address) : undefined}
         />
+      </div>
+
+      {/* Charts */}
+      <div
+        style={{
+          display: "grid",
+          gap: 16,
+          marginBottom: 24,
+        }}
+        className="charts-grid"
+      >
+        {/* TradingView — Nasdaq */}
+        <div>
+          <div style={chartLabel}>{ticker} on Nasdaq</div>
+          <TradingViewChart ticker={ticker} />
+        </div>
+
+        {/* DexScreener — Solana */}
+        <div>
+          <div style={chartLabel}>{assetSymbol} on Solana</div>
+          {dexPairAddress ? (
+            <div
+              style={{
+                borderRadius: 8,
+                overflow: "hidden",
+                border: "1px solid var(--border)",
+                height: 360,
+              }}
+            >
+              <iframe
+                src={`https://dexscreener.com/solana/${dexPairAddress}?embed=1&theme=dark&info=0&trades=0`}
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  border: "none",
+                }}
+                title={`${assetSymbol} on Solana`}
+              />
+            </div>
+          ) : (
+            <div
+              style={{
+                height: 360,
+                borderRadius: 8,
+                border: "1px solid var(--border)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                color: "var(--text-secondary)",
+                fontSize: 13,
+              }}
+            >
+              No chart data available
+            </div>
+          )}
+        </div>
+      </div>
+
+      <div
+        style={{
+          fontSize: 12,
+          color: "var(--text-secondary)",
+          lineHeight: 1.5,
+          marginBottom: 24,
+        }}
+      >
+        Prices can differ between Nasdaq and Solana, especially outside
+        US trading hours. This is normal for tokenized assets.
       </div>
 
       {/* Holders list */}
@@ -180,21 +246,92 @@ export default function StockDetail({
                 shares · {h.position.pct.toFixed(1)}% of portfolio
               </div>
             </div>
-            <div
-              style={{
-                fontSize: 15,
-                fontWeight: 700,
-                flexShrink: 0,
-              }}
-            >
+            <div style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}>
               {formatUsd(h.position.value_usd)}
             </div>
           </Link>
         ))}
       </div>
+
+      <style jsx>{`
+        .charts-grid {
+          grid-template-columns: 1fr;
+        }
+        @media (min-width: 1024px) {
+          .charts-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+      `}</style>
     </div>
   );
 }
+
+/* ─── TradingView embed ─── */
+
+function TradingViewChart({ ticker }: { ticker: string }) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const container = containerRef.current;
+    container.innerHTML = "";
+
+    const script = document.createElement("script");
+    script.src =
+      "https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js";
+    script.async = true;
+    script.innerHTML = JSON.stringify({
+      autosize: true,
+      symbol: `NASDAQ:${ticker}`,
+      interval: "D",
+      timezone: "Etc/UTC",
+      theme: "dark",
+      style: "1",
+      locale: "en",
+      backgroundColor: "rgba(0, 0, 0, 0)",
+      gridColor: "rgba(28, 28, 33, 0.5)",
+      hide_top_toolbar: false,
+      hide_legend: true,
+      allow_symbol_change: false,
+      save_image: false,
+      calendar: false,
+      support_host: "https://www.tradingview.com",
+    });
+
+    const wrapper = document.createElement("div");
+    wrapper.className = "tradingview-widget-container__widget";
+    wrapper.style.height = "100%";
+    wrapper.style.width = "100%";
+
+    container.appendChild(wrapper);
+    container.appendChild(script);
+  }, [ticker]);
+
+  return (
+    <div
+      ref={containerRef}
+      className="tradingview-widget-container"
+      style={{
+        height: 360,
+        borderRadius: 8,
+        overflow: "hidden",
+        border: "1px solid var(--border)",
+      }}
+    />
+  );
+}
+
+/* ─── Stat card ─── */
+
+const chartLabel: React.CSSProperties = {
+  fontSize: 12,
+  fontWeight: 500,
+  color: "var(--text-secondary)",
+  textTransform: "uppercase",
+  letterSpacing: "0.04em",
+  marginBottom: 8,
+};
 
 function StatCard({
   label,
@@ -228,11 +365,7 @@ function StatCard({
       <div style={{ fontSize: 16, fontWeight: 700 }}>{value}</div>
       {sub && (
         <div
-          style={{
-            fontSize: 11,
-            color: "var(--text-secondary)",
-            marginTop: 2,
-          }}
+          style={{ fontSize: 11, color: "var(--text-secondary)", marginTop: 2 }}
         >
           {sub}
         </div>

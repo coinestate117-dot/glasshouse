@@ -2,6 +2,31 @@ import { notFound } from "next/navigation";
 import { getWallets, getPrices } from "@/lib/data";
 import StockDetail from "./StockDetail";
 
+async function fetchDexPair(mintAddress: string): Promise<string | null> {
+  try {
+    const res = await fetch(
+      `https://api.dexscreener.com/latest/dex/tokens/${mintAddress}`,
+      { next: { revalidate: 3600 } }
+    );
+    if (!res.ok) return null;
+    const data = await res.json();
+    const pairs = data.pairs ?? [];
+    // Pick the USDC pair with highest volume
+    const usdcPair = pairs
+      .filter(
+        (p: { quoteToken: { symbol: string } }) =>
+          p.quoteToken.symbol === "USDC"
+      )
+      .sort(
+        (a: { volume: { h24: number } }, b: { volume: { h24: number } }) =>
+          (b.volume?.h24 ?? 0) - (a.volume?.h24 ?? 0)
+      )[0];
+    return usdcPair?.pairAddress ?? pairs[0]?.pairAddress ?? null;
+  } catch {
+    return null;
+  }
+}
+
 export default async function StockPage({
   params,
 }: {
@@ -16,7 +41,6 @@ export default async function StockPage({
 
   const wallets = getWallets();
 
-  // Find all wallets holding this stock
   const holders: {
     address: string;
     wallet_type: string;
@@ -56,13 +80,17 @@ export default async function StockPage({
   const totalShares = holders.reduce((s, h) => s + h.position.ui_amount, 0);
   const change24hPct =
     price.prev_close_usd && price.prev_close_usd > 0
-      ? ((price.price_usd - price.prev_close_usd) / price.prev_close_usd) * 100
+      ? ((price.price_usd - price.prev_close_usd) / price.prev_close_usd) *
+        100
       : 0;
+
+  const dexPairAddress = await fetchDexPair(price.mint_address);
 
   return (
     <StockDetail
       ticker={upper}
       assetSymbol={price.symbol}
+      mintAddress={price.mint_address}
       priceUsd={price.price_usd}
       change24hPct={change24hPct}
       totalHeldUsd={totalHeld}
@@ -70,11 +98,15 @@ export default async function StockPage({
       holderCount={holders.length}
       largestHolder={
         holders[0]
-          ? { address: holders[0].address, value_usd: holders[0].position.value_usd }
+          ? {
+              address: holders[0].address,
+              value_usd: holders[0].position.value_usd,
+            }
           : null
       }
       holders={holders}
       logoUrl={holders[0]?.position.logo_url ?? null}
+      dexPairAddress={dexPairAddress}
     />
   );
 }
