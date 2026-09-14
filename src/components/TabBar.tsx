@@ -50,6 +50,7 @@ export default function TabBar() {
 
   return (
     <nav
+      className="mobile-tab-bar"
       style={{
         position: "fixed",
         bottom: 0,

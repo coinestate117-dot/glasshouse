@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import TabBar from "@/components/TabBar";
+import DesktopNav from "@/components/DesktopNav";
 
 export const metadata: Metadata = {
   title: "Glasshouse",
@@ -22,7 +23,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <DesktopNav />
+        <main
+          style={{
+            maxWidth: "var(--max-width)",
+            margin: "0 auto",
+          }}
+        >
+          {children}
+        </main>
         <TabBar />
       </body>
     </html>

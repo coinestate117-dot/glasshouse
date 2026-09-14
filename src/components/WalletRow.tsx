@@ -18,6 +18,7 @@ interface WalletRowProps {
   change24h: number;
   walletType: WalletType;
   positions: Position[];
+  positionCount: number;
   index: number;
 }
 
@@ -28,6 +29,7 @@ export default function WalletRow({
   change24h,
   walletType,
   positions,
+  positionCount,
   index,
 }: WalletRowProps) {
   const segments = positions
@@ -42,8 +44,10 @@ export default function WalletRow({
   const isPositive = change24h >= 0;
 
   return (
-    <Link href={`/wallet/${address}`} style={{ textDecoration: "none" }}>
+    <Link href={`/wallet/${address}`}>
+      {/* Mobile layout */}
       <div
+        className="wallet-row-mobile"
         style={{
           display: "grid",
           gridTemplateColumns: "32px 1fr auto",
@@ -55,7 +59,6 @@ export default function WalletRow({
           animation: `fadeSlideIn 0.3s ease-out ${delay}ms forwards`,
         }}
       >
-        {/* Rank */}
         <span
           style={{
             fontSize: 14,
@@ -66,8 +69,6 @@ export default function WalletRow({
         >
           {rank}
         </span>
-
-        {/* Address + badge + bar */}
         <div style={{ minWidth: 0 }}>
           <div
             style={{
@@ -77,15 +78,15 @@ export default function WalletRow({
               marginBottom: 6,
             }}
           >
-            <span style={{ fontSize: 14, fontWeight: 500, color: "var(--text)" }}>
+            <span
+              style={{ fontSize: 14, fontWeight: 500, color: "var(--text)" }}
+            >
               {shortenAddress(address)}
             </span>
             <WalletTypeBadge type={walletType} />
           </div>
           <AllocationBar segments={segments} height={4} />
         </div>
-
-        {/* Value + change */}
         <div style={{ textAlign: "right" }}>
           <div style={{ fontSize: 15, fontWeight: 600 }}>
             {formatUsd(totalValue)}
@@ -102,6 +103,72 @@ export default function WalletRow({
           </div>
         </div>
       </div>
+
+      {/* Desktop layout */}
+      <div
+        className="wallet-row-desktop"
+        style={{
+          display: "none",
+          gridTemplateColumns: "40px 160px 100px 1fr 64px 120px 80px",
+          alignItems: "center",
+          gap: 16,
+          padding: "12px 0",
+          borderBottom: "1px solid var(--border)",
+          opacity: 0,
+          animation: `fadeSlideIn 0.3s ease-out ${delay}ms forwards`,
+        }}
+      >
+        <span
+          style={{
+            fontSize: 14,
+            fontWeight: 600,
+            color: "var(--text-secondary)",
+            textAlign: "center",
+          }}
+        >
+          {rank}
+        </span>
+        <span style={{ fontSize: 14, fontWeight: 500, fontFamily: "monospace" }}>
+          {address.slice(0, 6)}…{address.slice(-4)}
+        </span>
+        <WalletTypeBadge type={walletType} />
+        <div style={{ minWidth: 0, padding: "0 8px" }}>
+          <AllocationBar segments={segments} height={6} />
+        </div>
+        <span
+          style={{
+            fontSize: 13,
+            color: "var(--text-secondary)",
+            textAlign: "center",
+          }}
+        >
+          {positionCount}
+        </span>
+        <span style={{ fontSize: 15, fontWeight: 600, textAlign: "right" }}>
+          {formatUsd(totalValue)}
+        </span>
+        <span
+          style={{
+            fontSize: 13,
+            fontWeight: 500,
+            color: isPositive ? "var(--green)" : "var(--red)",
+            textAlign: "right",
+          }}
+        >
+          {formatPct(change24h)}
+        </span>
+      </div>
+
+      <style jsx>{`
+        @media (min-width: 1024px) {
+          .wallet-row-mobile {
+            display: none !important;
+          }
+          .wallet-row-desktop {
+            display: grid !important;
+          }
+        }
+      `}</style>
     </Link>
   );
 }

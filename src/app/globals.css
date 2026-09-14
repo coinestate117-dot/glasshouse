@@ -16,6 +16,7 @@
   --text-secondary: #8A8A93;
   --radius: 6px;
   --gradient: linear-gradient(135deg, #9945FF 0%, #14F195 100%);
+  --max-width: 600px;
 }
 
 html {
@@ -75,6 +76,19 @@ input[type="number"] {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Desktop: wider container, hide mobile tab bar */
+@media (min-width: 1024px) {
+  :root {
+    --max-width: 960px;
+  }
+  body {
+    padding-bottom: 0;
+  }
+  .mobile-tab-bar {
+    display: none !important;
   }
 }
 
