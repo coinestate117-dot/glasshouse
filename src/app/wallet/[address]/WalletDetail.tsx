@@ -5,11 +5,9 @@ import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
 import TokenLogo from "@/components/TokenLogo";
 import MirrorPanel from "@/components/MirrorPanel";
-import ActivityFeed from "@/components/ActivityFeed";
 import { formatUsdFull, formatUsd, formatPct } from "@/lib/format";
 import { ExternalLink } from "lucide-react";
 import type { WalletType } from "@/types";
-import type { ActivityItem } from "@/lib/activity";
 
 interface Position {
   asset_symbol: string;
@@ -21,6 +19,12 @@ interface Position {
   underlying_symbol: string;
 }
 
+interface RecentTrade {
+  signature: string;
+  blockTime: number;
+  err: boolean;
+}
+
 interface WalletDetailProps {
   wallet: {
     address: string;
@@ -30,13 +34,21 @@ interface WalletDetailProps {
     wallet_type: WalletType;
   };
   positions: Position[];
-  activity: ActivityItem[];
+  recentTrades: RecentTrade[];
+}
+
+function timeAgo(ts: number): string {
+  const diff = Math.floor(Date.now() / 1000) - ts;
+  if (diff < 60) return `${diff}s ago`;
+  if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+  if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+  return `${Math.floor(diff / 86400)}d ago`;
 }
 
 export default function WalletDetail({
   wallet,
   positions,
-  activity,
+  recentTrades,
 }: WalletDetailProps) {
   const topN = positions.slice(0, 6);
   const otherPct = positions.slice(6).reduce((s, p) => s + p.pct, 0);
@@ -205,22 +217,77 @@ export default function WalletDetail({
           ))}
         </div>
 
-        {/* Recent Activity with filter chips */}
-        <div style={{ marginTop: 24 }}>
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              marginBottom: 8,
-              color: "var(--text-secondary)",
-              textTransform: "uppercase",
-              letterSpacing: "0.04em",
-            }}
-          >
-            Recent Activity
+        {/* Recent Activity */}
+        {recentTrades.length > 0 && (
+          <div style={{ marginTop: 24 }}>
+            <div
+              style={{
+                fontSize: 12,
+                fontWeight: 500,
+                marginBottom: 8,
+                color: "var(--text-secondary)",
+                textTransform: "uppercase",
+                letterSpacing: "0.04em",
+              }}
+            >
+              Recent Activity
+            </div>
+            <div className="scrollable-list scrollable-list-short">
+              {recentTrades.map((tx, i) => (
+                <a
+                  key={tx.signature}
+                  href={`https://solscan.io/tx/${tx.signature}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    padding: "10px 0",
+                    borderBottom: "1px solid var(--border)",
+                    opacity: 0,
+                    animation: `fadeSlideIn 0.3s ease-out ${Math.min(i, 12) * 30}ms forwards`,
+                  }}
+                >
+                  <span
+                    style={{
+                      fontSize: 13,
+                      fontFamily: "monospace",
+                      color: "var(--text)",
+                    }}
+                  >
+                    {tx.signature.slice(0, 8)}…{tx.signature.slice(-4)}
+                    {tx.err && (
+                      <span
+                        style={{
+                          fontSize: 11,
+                          color: "var(--red)",
+                          fontWeight: 600,
+                          marginLeft: 6,
+                        }}
+                      >
+                        Failed
+                      </span>
+                    )}
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: 4,
+                      fontSize: 12,
+                      color: "var(--text-secondary)",
+                      whiteSpace: "nowrap",
+                    }}
+                  >
+                    {timeAgo(tx.blockTime)}
+                    <ExternalLink size={11} />
+                  </span>
+                </a>
+              ))}
+            </div>
           </div>
-          <ActivityFeed items={activity} showWallet={false} />
-        </div>
+        )}
 
         {/* Mirror panel — mobile only */}
         <div className="mirror-mobile" style={{ marginTop: 24 }}>
@@ -256,6 +323,9 @@ export default function WalletDetail({
           overflow-y: auto;
           scrollbar-width: thin;
           scrollbar-color: var(--border) transparent;
+        }
+        .scrollable-list-short {
+          max-height: 360px;
         }
         @media (min-width: 1024px) {
           .wallet-detail-layout {

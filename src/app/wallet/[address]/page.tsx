@@ -1,7 +1,44 @@
 import { notFound } from "next/navigation";
 import { getWallet } from "@/lib/data";
-import { getWalletActivity } from "@/lib/activity";
 import WalletDetail from "./WalletDetail";
+
+interface RecentTrade {
+  signature: string;
+  blockTime: number;
+  err: boolean;
+}
+
+async function fetchRecentTrades(address: string): Promise<RecentTrade[]> {
+  const apiKey = process.env.HELIUS_API_KEY;
+  if (!apiKey) return [];
+
+  try {
+    const res = await fetch(
+      `https://mainnet.helius-rpc.com/?api-key=${apiKey}`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          jsonrpc: "2.0",
+          id: 1,
+          method: "getSignaturesForAddress",
+          params: [address, { limit: 10 }],
+        }),
+        next: { revalidate: 300 },
+      }
+    );
+    const json = await res.json();
+    return (json.result ?? []).map(
+      (s: { signature: string; blockTime: number; err: unknown }) => ({
+        signature: s.signature,
+        blockTime: s.blockTime,
+        err: !!s.err,
+      })
+    );
+  } catch {
+    return [];
+  }
+}
 
 export default async function WalletPage({
   params,
@@ -12,7 +49,7 @@ export default async function WalletPage({
   const wallet = getWallet(address);
   if (!wallet) notFound();
 
-  const activity = await getWalletActivity(address, 15);
+  const recentTrades = await fetchRecentTrades(address);
 
   return (
     <WalletDetail
@@ -24,7 +61,7 @@ export default async function WalletPage({
         wallet_type: wallet.wallet_type,
       }}
       positions={wallet.positions}
-      activity={activity}
+      recentTrades={recentTrades}
     />
   );
 }

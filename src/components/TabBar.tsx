@@ -2,11 +2,10 @@
 
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Trophy, Search, Activity } from "lucide-react";
+import { Trophy, Search } from "lucide-react";
 
 const tabs = [
   { label: "Leaderboard", path: "/", Icon: Trophy },
-  { label: "Activity", path: "/activity", Icon: Activity },
   { label: "Search", path: "/search", Icon: Search },
 ] as const;
 
