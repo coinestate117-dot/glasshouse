@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Download, Copy, Link2, Twitter, Send, X } from "lucide-react";
+import { Download, Copy, Link2, Send, X, ExternalLink } from "lucide-react";
 
 interface ShareOverlayProps {
   ogUrl: string;
@@ -90,7 +90,7 @@ export default function ShareOverlay({
       icon: <Link2 size={18} />,
       action: handleCopyLink,
     },
-    { label: "X", icon: <Twitter size={18} />, action: handleTweet },
+    { label: "X", icon: <ExternalLink size={18} />, action: handleTweet },
     { label: "Telegram", icon: <Send size={18} />, action: handleTelegram },
   ];
 

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Download, Copy, Link2, Twitter } from "lucide-react";
+import { Download, Copy, Link2, X as XIcon } from "lucide-react";
 
 interface ShareBarProps {
   ogUrl: string;
@@ -80,7 +80,7 @@ export default function ShareBar({ ogUrl, pageUrl, tweetText }: ShareBarProps) {
         icon={<Link2 size={14} />}
         label={copied === "link" ? "Copied!" : "Copy link"}
       />
-      <ShareButton onClick={handleTweet} icon={<Twitter size={14} />} label="X" />
+      <ShareButton onClick={handleTweet} icon={<XIcon size={14} />} label="X" />
     </div>
   );
 }
