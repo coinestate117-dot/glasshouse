@@ -173,12 +173,25 @@ export default function StockDetail({
         style={{
           fontSize: 12,
           color: "var(--text-secondary)",
-          lineHeight: 1.5,
+          lineHeight: 1.6,
           marginBottom: 24,
+          display: "flex",
+          flexDirection: "column",
+          gap: 8,
         }}
       >
-        Prices can differ between Nasdaq and Solana, especially outside
-        US trading hours. This is normal for tokenized assets.
+        <p style={{ margin: 0 }}>
+          Prices can differ between Nasdaq and Solana, especially outside
+          US trading hours. This is normal for tokenized assets.
+        </p>
+        <p style={{ margin: 0 }}>
+          Tokenized stocks on Solana do not carry voting rights or
+          dividends. They track the price of the underlying asset only.
+        </p>
+        <p style={{ margin: 0 }}>
+          You can use {assetSymbol} as collateral or in liquidity pools
+          on Kamino and other Solana DeFi protocols.
+        </p>
       </div>
 
       {/* Holders list */}
