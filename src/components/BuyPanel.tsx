@@ -24,39 +24,39 @@ export default function BuyPanel({
   logoUrl,
 }: BuyPanelProps) {
   const { wallets, select, connected, connecting } = useWallet();
-  const [amount, setAmount] = useState("");
+  const [customAmount, setCustomAmount] = useState("");
+  const [activeAmount, setActiveAmount] = useState(0);
   const [showReview, setShowReview] = useState(false);
   const [noWallet, setNoWallet] = useState(false);
-  const [pendingReview, setPendingReview] = useState(false);
-  const parsed = parseFloat(amount) || 0;
-
-  const estimatedShares = priceUsd > 0 ? parsed / priceUsd : 0;
+  const [pendingAmount, setPendingAmount] = useState(0);
 
   useEffect(() => {
-    if (pendingReview && connected) {
-      setPendingReview(false);
+    if (pendingAmount > 0 && connected) {
+      setActiveAmount(pendingAmount);
+      setPendingAmount(0);
       setShowReview(true);
     }
-  }, [pendingReview, connected]);
+  }, [pendingAmount, connected]);
 
-  const breakdown: BreakdownItem[] =
-    parsed > 0
+  const buildBreakdown = (amt: number): BreakdownItem[] =>
+    amt > 0
       ? [
           {
             symbol: ticker,
             asset_symbol: assetSymbol,
             logo_url: logoUrl,
             mint_address: mintAddress,
-            value: parsed,
+            value: amt,
             pct: 100,
           },
         ]
       : [];
 
-  const handleBuy = async () => {
-    if (parsed <= 0) return;
+  const startBuy = async (amt: number) => {
+    if (amt <= 0) return;
 
     if (connected) {
+      setActiveAmount(amt);
       setShowReview(true);
       return;
     }
@@ -72,16 +72,18 @@ export default function BuyPanel({
       return;
     }
 
+    setPendingAmount(amt);
     const adapter = installed[0].adapter;
     select(adapter.name);
-    setPendingReview(true);
-
     try {
       await adapter.connect();
     } catch {
-      setPendingReview(false);
+      setPendingAmount(0);
     }
   };
+
+  const customParsed = parseFloat(customAmount) || 0;
+  const estimatedShares = priceUsd > 0 ? (activeAmount || customParsed) / priceUsd : 0;
 
   return (
     <>
@@ -97,104 +99,31 @@ export default function BuyPanel({
           Buy {ticker}
         </div>
 
-        {/* Amount — mobile: big centered, desktop: input */}
-        <div className="buy-amount-mobile">
-          <div
-            style={{
-              fontSize: 40,
-              fontWeight: 700,
-              textAlign: "center",
-              padding: "8px 0",
-              letterSpacing: "-0.02em",
-              color: parsed > 0 ? "var(--text)" : "var(--text-secondary)",
-            }}
-          >
-            ${parsed > 0 ? parsed.toLocaleString("en-US") : "0"}
-          </div>
-          <div
-            style={{
-              fontSize: 13,
-              color: "var(--text-secondary)",
-              textAlign: "center",
-              marginBottom: 12,
-            }}
-          >
-            USDC
-          </div>
-        </div>
-
-        <div className="buy-amount-desktop">
-          <div
-            style={{
-              display: "flex",
-              gap: 8,
-              alignItems: "center",
-              marginBottom: 12,
-            }}
-          >
-            <span
-              style={{
-                fontSize: 20,
-                fontWeight: 700,
-                color: "var(--text-secondary)",
-              }}
-            >
-              $
-            </span>
-            <input
-              type="number"
-              placeholder="0.00"
-              value={amount}
-              onChange={(e) => setAmount(e.target.value)}
-              style={{
-                flex: 1,
-                background: "var(--bg)",
-                border: "1px solid var(--border)",
-                borderRadius: "var(--radius)",
-                padding: "12px 14px",
-                color: "var(--text)",
-                fontSize: 20,
-                fontWeight: 700,
-                fontFamily: "inherit",
-                fontVariantNumeric: "tabular-nums",
-                outline: "none",
-              }}
-            />
-          </div>
-          <div
-            style={{
-              fontSize: 12,
-              color: "var(--text-secondary)",
-              marginBottom: 12,
-            }}
-          >
-            You pay in USDC
-          </div>
-        </div>
-
-        {/* Quick chips */}
-        <div style={{ display: "flex", gap: 8, marginBottom: 16 }}>
+        {/* Chips = buy buttons, 2×2 grid */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: 8,
+            marginBottom: 12,
+          }}
+        >
           {QUICK_AMOUNTS.map((v) => (
             <button
               key={v}
-              onClick={() => setAmount(String(v))}
+              onClick={() => startBuy(v)}
+              disabled={connecting}
               style={{
-                flex: 1,
-                padding: "8px 0",
+                padding: "14px 0",
                 borderRadius: "var(--radius)",
-                border: `1px solid ${
-                  parsed === v ? "var(--green)" : "var(--border)"
-                }`,
-                background:
-                  parsed === v ? "rgba(20,241,149,0.08)" : "var(--bg)",
-                color:
-                  parsed === v ? "var(--green)" : "var(--text-secondary)",
-                fontSize: 13,
-                fontWeight: 600,
+                border: "1px solid var(--green)",
+                background: "rgba(20,241,149,0.06)",
+                color: "var(--green)",
+                fontSize: 16,
+                fontWeight: 700,
                 fontFamily: "inherit",
                 cursor: "pointer",
-                transition:
-                  "border-color 0.15s ease, background 0.15s ease",
+                transition: "background 0.15s ease",
               }}
             >
               ${v}
@@ -202,31 +131,92 @@ export default function BuyPanel({
           ))}
         </div>
 
-        {/* Estimated output */}
-        {parsed > 0 && (
+        {/* Estimated output hint */}
+        {priceUsd > 0 && (
           <div
             style={{
               display: "flex",
               alignItems: "center",
-              gap: 10,
-              padding: "12px 14px",
-              background: "var(--bg)",
-              borderRadius: "var(--radius)",
-              marginBottom: 16,
+              gap: 8,
+              padding: "8px 0",
+              fontSize: 12,
+              color: "var(--text-secondary)",
+              marginBottom: 8,
             }}
           >
-            <TokenLogo symbol={assetSymbol} logoUrl={logoUrl} size={24} />
-            <div style={{ fontSize: 14, color: "var(--text-secondary)" }}>
-              You&rsquo;ll get ~
-              <span style={{ color: "var(--text)", fontWeight: 600 }}>
-                {estimatedShares.toLocaleString("en-US", {
-                  maximumFractionDigits: 4,
-                })}{" "}
-                {ticker}
-              </span>
-            </div>
+            <TokenLogo symbol={assetSymbol} logoUrl={logoUrl} size={16} />
+            $100 ≈{" "}
+            {(100 / priceUsd).toLocaleString("en-US", {
+              maximumFractionDigits: 4,
+            })}{" "}
+            {ticker}
           </div>
         )}
+
+        {/* Custom amount */}
+        <div style={{ display: "flex", gap: 8 }}>
+          <div
+            style={{
+              flex: 1,
+              display: "flex",
+              alignItems: "center",
+              gap: 6,
+              background: "var(--bg)",
+              border: "1px solid var(--border)",
+              borderRadius: "var(--radius)",
+              padding: "0 12px",
+            }}
+          >
+            <span
+              style={{
+                fontSize: 15,
+                fontWeight: 600,
+                color: "var(--text-secondary)",
+              }}
+            >
+              $
+            </span>
+            <input
+              type="number"
+              placeholder="Other"
+              value={customAmount}
+              onChange={(e) => setCustomAmount(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && customParsed > 0) startBuy(customParsed);
+              }}
+              style={{
+                flex: 1,
+                background: "none",
+                border: "none",
+                padding: "10px 0",
+                color: "var(--text)",
+                fontSize: 15,
+                fontWeight: 600,
+                fontFamily: "inherit",
+                outline: "none",
+              }}
+            />
+          </div>
+          <button
+            disabled={customParsed <= 0 || connecting}
+            onClick={() => startBuy(customParsed)}
+            style={{
+              padding: "10px 16px",
+              borderRadius: "var(--radius)",
+              border: "none",
+              background:
+                customParsed > 0 ? "var(--green)" : "var(--border)",
+              color: customParsed > 0 ? "#000" : "var(--text-secondary)",
+              fontSize: 14,
+              fontWeight: 700,
+              fontFamily: "inherit",
+              cursor: customParsed > 0 ? "pointer" : "not-allowed",
+              whiteSpace: "nowrap",
+            }}
+          >
+            Buy
+          </button>
+        </div>
 
         {noWallet && (
           <div
@@ -234,59 +224,24 @@ export default function BuyPanel({
               fontSize: 13,
               color: "var(--red)",
               textAlign: "center",
-              marginBottom: 12,
+              marginTop: 10,
             }}
           >
-            No wallet found. Install Phantom or Solflare.
+            Install Phantom or Solflare to buy.
           </div>
         )}
-
-        <button
-          disabled={parsed <= 0 || connecting}
-          onClick={handleBuy}
-          style={{
-            width: "100%",
-            padding: "14px 0",
-            borderRadius: "var(--radius)",
-            border: "none",
-            background: parsed > 0 ? "var(--green)" : "var(--border)",
-            color: parsed > 0 ? "#000" : "var(--text-secondary)",
-            fontSize: 16,
-            fontWeight: 700,
-            fontFamily: "inherit",
-            cursor: parsed > 0 ? "pointer" : "not-allowed",
-            transition: "opacity 0.15s ease",
-          }}
-        >
-          {connecting
-            ? "Connecting…"
-            : parsed > 0
-              ? `Buy ${ticker}`
-              : "Enter an amount"}
-        </button>
       </div>
 
-      {showReview && (
+      {showReview && activeAmount > 0 && (
         <ReviewSheet
-          amount={parsed}
-          breakdown={breakdown}
-          onClose={() => setShowReview(false)}
+          amount={activeAmount}
+          breakdown={buildBreakdown(activeAmount)}
+          onClose={() => {
+            setShowReview(false);
+            setActiveAmount(0);
+          }}
         />
       )}
-
-      <style jsx>{`
-        .buy-amount-desktop {
-          display: none;
-        }
-        @media (min-width: 1024px) {
-          .buy-amount-mobile {
-            display: none;
-          }
-          .buy-amount-desktop {
-            display: block;
-          }
-        }
-      `}</style>
     </>
   );
 }

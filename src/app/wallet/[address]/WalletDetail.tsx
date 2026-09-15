@@ -6,6 +6,7 @@ import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
 import TokenLogo from "@/components/TokenLogo";
 import MirrorPanel from "@/components/MirrorPanel";
+import StickyBuyBar from "@/components/StickyBuyBar";
 import ShareBar from "@/components/ShareBar";
 import { formatUsdFull, formatUsd, formatPct, shortenAddress } from "@/lib/format";
 import { ExternalLink } from "lucide-react";
@@ -312,13 +313,11 @@ export default function WalletDetail({
           </div>
         )}
 
-        {/* Mirror panel — mobile only */}
-        <div className="mirror-mobile" style={{ marginTop: 24 }}>
-          <MirrorPanel
-            walletAddress={wallet.address}
-            positions={mirrorPositions}
-          />
-        </div>
+        {/* Sticky buy bar — mobile only */}
+        <StickyBuyBar
+          walletAddress={wallet.address}
+          positions={mirrorPositions}
+        />
       </div>
 
       {/* Right column: sticky mirror panel — desktop only */}
@@ -338,9 +337,6 @@ export default function WalletDetail({
         .wallet-detail-sidebar {
           display: none;
         }
-        .mirror-mobile {
-          display: block;
-        }
         .scrollable-list {
           max-height: 600px;
           overflow-y: auto;
@@ -359,9 +355,6 @@ export default function WalletDetail({
           }
           .wallet-detail-sidebar {
             display: block;
-          }
-          .mirror-mobile {
-            display: none;
           }
         }
       `}</style>
