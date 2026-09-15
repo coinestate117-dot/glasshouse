@@ -13,8 +13,14 @@ const HELIUS_API_KEY = process.env.HELIUS_API_KEY!;
 const HELIUS = `https://mainnet.helius-rpc.com/?api-key=${HELIUS_API_KEY}`;
 const TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb";
 const SYSTEM_PROGRAM = "11111111111111111111111111111111";
-const BLOCKLIST = new Set(["S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS"]);
-const MIN_VALUE = 10_000;
+const BLOCKLIST = new Set([
+  "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
+  "9U76mo3WuP28s4kYJ9CMH1CiQh6Ph3r5Zg5awZM5vMQd",
+  "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
+  "41Mjig92SfveWPKkqis78hF3a75cpe96n1uuVuMAdkJF",
+  "9A9dUreQvTNoqNrqQC2DN1onfZWBtCBsTiuA6oGXZwc6",
+]);
+const MIN_VALUE = 1_000;
 const DATA_DIR = path.join(process.cwd(), "data");
 
 type WalletType = "Market Maker" | "Whale" | "Investor" | "Holder";

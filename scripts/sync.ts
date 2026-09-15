@@ -12,7 +12,13 @@ const XSTOCKS_API = "https://api.xstocks.fi/api/v2/public";
 const YAHOO_API = "https://query1.finance.yahoo.com/v8/finance/chart";
 const SYSTEM_PROGRAM = "11111111111111111111111111111111";
 const TOKEN_2022 = "TokenzQdBNbLqP5VEhdkAS6EPFLC1PHnBqCXEpPxuEb";
-const BLOCKLIST = new Set(["S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS"]);
+const BLOCKLIST = new Set([
+  "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
+  "9U76mo3WuP28s4kYJ9CMH1CiQh6Ph3r5Zg5awZM5vMQd",
+  "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
+  "41Mjig92SfveWPKkqis78hF3a75cpe96n1uuVuMAdkJF",
+  "9A9dUreQvTNoqNrqQC2DN1onfZWBtCBsTiuA6oGXZwc6",
+]);
 const MIN_VALUE = 100;
 const DATA_DIR = path.join(process.cwd(), "data");
 
