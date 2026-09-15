@@ -50,14 +50,14 @@ function sleep(ms: number) {
 
 // ── Phase 1: Deep scan top mints with getProgramAccounts ────
 async function deepScan(
-  mints: { mint: string; symbol: string; price: number; decimals: number }[]
+  mints: { mint: string; symbol: string; price: number; decimals: number; multiplier: number }[]
 ) {
   // wallet -> { mint -> uiAmount * price }
   const walletValues = new Map<string, Map<string, number>>();
   let totalAccounts = 0;
 
   for (let i = 0; i < mints.length; i++) {
-    const { mint, symbol, price, decimals } = mints[i];
+    const { mint, symbol, price, decimals, multiplier } = mints[i];
     console.log(
       `[Deep ${i + 1}/${mints.length}] ${symbol} (${mint.slice(0, 12)}...)`
     );
@@ -99,7 +99,7 @@ async function deepScan(
 
         if (BLOCKLIST.has(owner)) continue;
 
-        const uiAmount = rawAmount / 10 ** decimals;
+        const uiAmount = (rawAmount / 10 ** decimals) * multiplier;
         const value = uiAmount * price;
 
         if (!walletValues.has(owner)) walletValues.set(owner, new Map());
@@ -189,14 +189,17 @@ async function buildPortfolios(
   const knownMints = new Set(assets.map((a: any) => a.mint_address));
   const results: any[] = [];
 
-  for (let i = 0; i < walletAddresses.length; i += 5) {
-    const batch = walletAddresses.slice(i, i + 5);
+  let rpcFails = 0;
+
+  for (let i = 0; i < walletAddresses.length; i += 3) {
+    const batch = walletAddresses.slice(i, i + 3);
     await Promise.allSettled(
       batch.map(async (addr) => {
+        for (let attempt = 0; attempt < 2; attempt++) {
         try {
-          const info = await rpc("getAccountInfo", [addr, { encoding: "jsonParsed" }]);
+          const info = await rpc("getAccountInfo", [addr, { encoding: "jsonParsed" }], 30_000);
           // Verify it's a real wallet (owned by System Program)
-          if (info.value?.owner !== SYSTEM_PROGRAM) return;
+          if (!info?.value || info.value?.owner !== SYSTEM_PROGRAM) return;
           const solBalance = (info.value?.lamports || 0) / 1e9;
 
           const t22 = await rpc("getTokenAccountsByOwner", [
@@ -281,14 +284,23 @@ async function buildPortfolios(
               .filter((p: any) => p.value_usd > 0)
               .sort((a: any, b: any) => b.value_usd - a.value_usd),
           });
-        } catch {}
+          return; // success, exit retry loop
+        } catch (err: any) {
+          if (attempt === 0) {
+            await sleep(2000); // wait before retry
+          } else {
+            rpcFails++;
+          }
+        }
+        } // end retry loop
       })
     );
 
-    if ((i + 5) % 25 === 0) {
+    if ((i + 3) % 30 === 0) {
       console.log(
-        `[Build] ${Math.min(i + 5, walletAddresses.length)}/${walletAddresses.length} checked, ${results.length} qualified`
+        `[Build] ${Math.min(i + 3, walletAddresses.length)}/${walletAddresses.length} checked, ${results.length} qualified, ${rpcFails} rpc fails`
       );
+      await sleep(500); // pace the RPC calls
     }
   }
 
@@ -343,6 +355,12 @@ async function main() {
     }
   }
 
+  // Build multiplier lookup
+  const mintMultiplier = new Map<string, number>();
+  for (const a of assets) {
+    mintMultiplier.set(a.mint_address, a.current_multiplier ?? 1);
+  }
+
   const mintsByValue = assets
     .filter((a: any) => mintPrice.has(a.mint_address))
     .map((a: any) => ({
@@ -350,6 +368,7 @@ async function main() {
       symbol: a.underlying_symbol,
       price: mintPrice.get(a.mint_address) ?? 0,
       held: mintHeldValue.get(a.mint_address) ?? 0,
+      multiplier: a.current_multiplier ?? 1,
       decimals: 8,
     }))
     .sort((a, b) => b.held - a.held || b.price - a.price);
