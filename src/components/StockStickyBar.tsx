@@ -1,33 +1,30 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useEffect } from "react";
 import { useWallet } from "@solana/wallet-adapter-react";
 import AmountSheet from "./AmountSheet";
 import ReviewSheet from "./ReviewSheet";
 import type { BreakdownItem } from "./ReviewSheet";
 
-interface Position {
-  asset_symbol: string;
-  underlying_symbol: string;
-  mint_address: string;
-  pct: number;
-  logo_url: string | null;
+interface StockStickyBarProps {
+  ticker: string;
+  assetSymbol: string;
+  mintAddress: string;
+  logoUrl: string | null;
 }
 
-interface StickyBuyBarProps {
-  walletAddress: string;
-  positions: Position[];
-}
-
-export default function StickyBuyBar({
-  walletAddress,
-  positions,
-}: StickyBuyBarProps) {
+export default function StockStickyBar({
+  ticker,
+  assetSymbol,
+  mintAddress,
+  logoUrl,
+}: StockStickyBarProps) {
   const { wallets, select, connected } = useWallet();
   const [showAmount, setShowAmount] = useState(false);
   const [activeAmount, setActiveAmount] = useState(0);
   const [showReview, setShowReview] = useState(false);
   const [pendingAmount, setPendingAmount] = useState(0);
+  const [sellMsg, setSellMsg] = useState(false);
 
   useEffect(() => {
     if (pendingAmount > 0 && connected) {
@@ -37,22 +34,6 @@ export default function StickyBuyBar({
       setShowReview(true);
     }
   }, [pendingAmount, connected]);
-
-  const buildBreakdown = useCallback(
-    (amt: number): BreakdownItem[] =>
-      positions
-        .filter((p) => p.pct > 0)
-        .sort((a, b) => b.pct - a.pct)
-        .map((p) => ({
-          symbol: p.underlying_symbol,
-          asset_symbol: p.asset_symbol,
-          logo_url: p.logo_url,
-          mint_address: p.mint_address,
-          value: (amt * p.pct) / 100,
-          pct: p.pct,
-        })),
-    [positions]
-  );
 
   const handleAmount = async (amt: number) => {
     if (connected) {
@@ -80,9 +61,28 @@ export default function StickyBuyBar({
     }
   };
 
+  const handleSell = () => {
+    setSellMsg(true);
+    setTimeout(() => setSellMsg(false), 2000);
+  };
+
+  const breakdown: BreakdownItem[] =
+    activeAmount > 0
+      ? [
+          {
+            symbol: ticker,
+            asset_symbol: assetSymbol,
+            logo_url: logoUrl,
+            mint_address: mintAddress,
+            value: activeAmount,
+            pct: 100,
+          },
+        ]
+      : [];
+
   return (
     <>
-      <div className="sticky-buy-bar">
+      <div className="stock-sticky-bar">
         <button
           onClick={() => setShowAmount(true)}
           style={{
@@ -97,16 +97,40 @@ export default function StickyBuyBar({
             fontFamily: "inherit",
             cursor: "pointer",
             letterSpacing: "0.04em",
-            textTransform: "uppercase",
           }}
         >
-          COPY THIS PORTFOLIO
+          BUY
+        </button>
+        <button
+          onClick={handleSell}
+          style={{
+            flex: 1,
+            padding: "12px 0",
+            borderRadius: "var(--radius)",
+            border: "none",
+            background: "rgba(255,77,77,0.15)",
+            color: "var(--text-secondary)",
+            fontSize: 14,
+            fontWeight: 800,
+            fontFamily: "inherit",
+            cursor: "pointer",
+            letterSpacing: "0.04em",
+            opacity: 0.5,
+          }}
+        >
+          SELL
         </button>
       </div>
 
+      {sellMsg && (
+        <div className="sell-toast">
+          You don&rsquo;t hold {ticker}
+        </div>
+      )}
+
       {showAmount && (
         <AmountSheet
-          title="Copy this portfolio"
+          title={`Buy ${ticker}`}
           onSelect={handleAmount}
           onClose={() => setShowAmount(false)}
         />
@@ -115,7 +139,7 @@ export default function StickyBuyBar({
       {showReview && activeAmount > 0 && (
         <ReviewSheet
           amount={activeAmount}
-          breakdown={buildBreakdown(activeAmount)}
+          breakdown={breakdown}
           onClose={() => {
             setShowReview(false);
             setActiveAmount(0);
@@ -124,7 +148,7 @@ export default function StickyBuyBar({
       )}
 
       <style jsx>{`
-        .sticky-buy-bar {
+        .stock-sticky-bar {
           position: fixed;
           bottom: 64px;
           left: 0;
@@ -137,8 +161,26 @@ export default function StickyBuyBar({
           background: var(--card);
           border-top: 1px solid var(--border);
         }
+        .sell-toast {
+          position: fixed;
+          bottom: 130px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 95;
+          background: var(--card);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          padding: 10px 20px;
+          font-size: 13px;
+          font-weight: 600;
+          color: var(--red);
+          animation: fadeIn 0.15s ease-out;
+        }
         @media (min-width: 1024px) {
-          .sticky-buy-bar {
+          .stock-sticky-bar {
+            display: none;
+          }
+          .sell-toast {
             display: none;
           }
         }

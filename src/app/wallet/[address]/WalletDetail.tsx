@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import CountUp from "@/components/CountUp";
 import AllocationBar, { colorForSymbol } from "@/components/AllocationBar";
@@ -7,9 +8,9 @@ import WalletTypeBadge from "@/components/WalletTypeBadge";
 import TokenLogo from "@/components/TokenLogo";
 import MirrorPanel from "@/components/MirrorPanel";
 import StickyBuyBar from "@/components/StickyBuyBar";
-import ShareBar from "@/components/ShareBar";
+import ShareOverlay from "@/components/ShareOverlay";
 import { formatUsdFull, formatUsd, formatPct, shortenAddress } from "@/lib/format";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Share2 } from "lucide-react";
 import type { WalletType } from "@/types";
 
 interface Position {
@@ -53,6 +54,7 @@ export default function WalletDetail({
   positions,
   recentTrades,
 }: WalletDetailProps) {
+  const [showShare, setShowShare] = useState(false);
   const topN = positions.slice(0, 6);
   const otherPct = positions.slice(6).reduce((s, p) => s + p.pct, 0);
   const segments = [
@@ -167,12 +169,28 @@ export default function WalletDetail({
           <ExternalLink size={12} style={{ flexShrink: 0 }} />
         </a>
 
-        {/* Share */}
-        <ShareBar
-          ogUrl={`/api/og?address=${wallet.address}`}
-          pageUrl={typeof window !== "undefined" ? window.location.href : `/wallet/${wallet.address}`}
-          tweetText={`${shortenAddress(wallet.address)} holds ${formatUsd(wallet.total_value_usd)} in tokenized stocks on Solana`}
-        />
+        {/* Share button */}
+        <button
+          onClick={() => setShowShare(true)}
+          style={{
+            display: "flex",
+            alignItems: "center",
+            gap: 6,
+            padding: "8px 14px",
+            borderRadius: "var(--radius)",
+            border: "1px solid var(--border)",
+            background: "var(--card)",
+            color: "var(--text-secondary)",
+            fontSize: 13,
+            fontWeight: 500,
+            fontFamily: "inherit",
+            cursor: "pointer",
+            marginBottom: 16,
+          }}
+        >
+          <Share2 size={14} />
+          Share
+        </button>
 
         {/* Allocation bar */}
         <div style={{ marginBottom: 20 }}>
@@ -329,6 +347,15 @@ export default function WalletDetail({
           />
         </div>
       </div>
+
+      {showShare && (
+        <ShareOverlay
+          ogUrl={`/api/og?address=${wallet.address}`}
+          pageUrl={typeof window !== "undefined" ? window.location.href : `/wallet/${wallet.address}`}
+          tweetText={`${shortenAddress(wallet.address)} holds ${formatUsd(wallet.total_value_usd)} in tokenized stocks on Solana`}
+          onClose={() => setShowShare(false)}
+        />
+      )}
 
       <style jsx>{`
         .wallet-detail-layout {

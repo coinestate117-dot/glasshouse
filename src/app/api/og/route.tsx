@@ -25,16 +25,11 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const address = searchParams.get("address");
 
-  if (!address) {
-    return new Response("Missing address", { status: 400 });
-  }
+  if (!address) return new Response("Missing address", { status: 400 });
 
   const wallet = getWallet(address);
-  if (!wallet) {
-    return new Response("Wallet not found", { status: 404 });
-  }
+  if (!wallet) return new Response("Wallet not found", { status: 404 });
 
-  // Compute rank
   const allWallets = getWallets()
     .filter((w) => w.total_value_usd >= 10_000)
     .sort((a, b) => b.total_value_usd - a.total_value_usd);
@@ -65,219 +60,210 @@ export async function GET(request: Request) {
           background: "#000000",
           color: "#FFFFFF",
           fontFamily: "system-ui, sans-serif",
-          padding: "48px 56px",
+          padding: 0,
+          position: "relative",
         }}
       >
-        {/* Header: address + rank */}
+        {/* Green border glow */}
+        <div
+          style={{
+            position: "absolute",
+            inset: 0,
+            border: "2px solid #14F195",
+            borderRadius: 20,
+            boxShadow: "0 0 40px rgba(20,241,149,0.15), 0 0 80px rgba(20,241,149,0.05)",
+            display: "flex",
+          }}
+        />
+
+        {/* Content */}
         <div
           style={{
             display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-start",
-            marginBottom: 8,
+            flexDirection: "column",
+            padding: "44px 52px 0",
+            flex: 1,
           }}
         >
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div
-              style={{
-                fontSize: 28,
-                fontWeight: 700,
-                fontFamily: "monospace",
-                letterSpacing: "-0.01em",
-              }}
-            >
-              {shortenAddr(address)}
-            </div>
-            <div
-              style={{
-                fontSize: 16,
-                color: "#8A8A93",
-                marginTop: 4,
-                display: "flex",
-                alignItems: "center",
-                gap: 8,
-              }}
-            >
-              <span
+          {/* Head: address + badge + rank */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-start",
+              marginBottom: 24,
+            }}
+          >
+            <div style={{ display: "flex", flexDirection: "column" }}>
+              <div
                 style={{
-                  background: "#1C1C21",
-                  padding: "2px 10px",
-                  borderRadius: 4,
-                  fontSize: 13,
-                  fontWeight: 600,
-                  color: "#14F195",
+                  fontSize: 32,
+                  fontWeight: 700,
+                  fontFamily: "monospace",
                 }}
               >
-                {wallet.wallet_type}
-              </span>
+                {shortenAddr(address)}
+              </div>
+              <div style={{ display: "flex", marginTop: 8 }}>
+                <span
+                  style={{
+                    background: "#1C1C21",
+                    padding: "4px 12px",
+                    borderRadius: 6,
+                    fontSize: 14,
+                    fontWeight: 600,
+                    color: "#14F195",
+                  }}
+                >
+                  {wallet.wallet_type}
+                </span>
+              </div>
             </div>
+            {rank > 0 && (
+              <div style={{ display: "flex", alignItems: "baseline", gap: 2 }}>
+                <span style={{ fontSize: 20, color: "#8A8A93", fontWeight: 400 }}>#</span>
+                <span style={{ fontSize: 48, fontWeight: 700, color: "#FFFFFF" }}>{rank}</span>
+              </div>
+            )}
           </div>
-          {rank > 0 && (
+
+          {/* Value + 24h change side by side */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "flex-end",
+              marginBottom: 4,
+            }}
+          >
+            <div style={{ fontSize: 64, fontWeight: 700, letterSpacing: "-0.03em", lineHeight: 1 }}>
+              {totalFormatted}
+            </div>
             <div
               style={{
                 fontSize: 40,
                 fontWeight: 700,
-                color: "#8A8A93",
+                color: isPositive ? "#14F195" : "#FF4D4D",
+                lineHeight: 1,
               }}
             >
-              #{rank}
+              {formatPct(wallet.change_24h_pct)}
             </div>
-          )}
-        </div>
+          </div>
+          <div style={{ fontSize: 14, color: "#8A8A93", marginBottom: 24 }}>
+            Past 24h
+          </div>
 
-        {/* Portfolio value + change */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "baseline",
-            gap: 16,
-            marginTop: 24,
-            marginBottom: 8,
-          }}
-        >
+          {/* Allocation bar */}
           <div
             style={{
-              fontSize: 72,
-              fontWeight: 700,
-              letterSpacing: "-0.03em",
-              lineHeight: 1,
+              display: "flex",
+              width: "100%",
+              height: 10,
+              borderRadius: 5,
+              overflow: "hidden",
+              marginBottom: 16,
             }}
           >
-            {totalFormatted}
-          </div>
-        </div>
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 8,
-            marginBottom: 32,
-          }}
-        >
-          <span
-            style={{
-              fontSize: 22,
-              fontWeight: 600,
-              color: isPositive ? "#14F195" : "#FF4D4D",
-            }}
-          >
-            {formatPct(wallet.change_24h_pct)}
-          </span>
-          <span style={{ fontSize: 16, color: "#8A8A93" }}>Past 24h</span>
-        </div>
-
-        {/* Allocation bar */}
-        <div
-          style={{
-            display: "flex",
-            width: "100%",
-            height: 12,
-            borderRadius: 6,
-            overflow: "hidden",
-            marginBottom: 28,
-          }}
-        >
-          {top6.map((p, i) => (
-            <div
-              key={p.asset_symbol}
-              style={{
-                width: `${p.pct}%`,
-                height: "100%",
-                backgroundColor: PALETTE[i % PALETTE.length],
-              }}
-            />
-          ))}
-          {otherPct > 0 && (
-            <div
-              style={{
-                width: `${otherPct}%`,
-                height: "100%",
-                backgroundColor: "#1C1C21",
-              }}
-            />
-          )}
-        </div>
-
-        {/* Top 3 positions */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-          {top3.map((p, i) => (
-            <div
-              key={p.asset_symbol}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                gap: 14,
-                fontSize: 22,
-              }}
-            >
-              <span
+            {top6.map((p, i) => (
+              <div
+                key={p.asset_symbol}
                 style={{
-                  fontSize: 18,
-                  fontWeight: 700,
-                  color: "#8A8A93",
-                  width: 28,
+                  width: `${p.pct}%`,
+                  height: "100%",
+                  backgroundColor: PALETTE[i % PALETTE.length],
                 }}
-              >
-                {i + 1}
-              </span>
+              />
+            ))}
+            {otherPct > 0 && (
               <div
                 style={{
-                  width: 32,
-                  height: 32,
-                  borderRadius: 16,
-                  background: PALETTE[i % PALETTE.length],
+                  width: `${otherPct}%`,
+                  height: "100%",
+                  backgroundColor: "#1C1C21",
+                }}
+              />
+            )}
+          </div>
+
+          {/* Dashed separator */}
+          <div
+            style={{
+              borderTop: "1px dashed #2A2A33",
+              marginBottom: 20,
+              display: "flex",
+            }}
+          />
+
+          {/* Top 3 positions */}
+          <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
+            {top3.map((p, i) => (
+              <div
+                key={p.asset_symbol}
+                style={{
                   display: "flex",
                   alignItems: "center",
-                  justifyContent: "center",
-                  fontSize: 14,
-                  fontWeight: 700,
-                  color: "#000",
+                  gap: 14,
+                  fontSize: 22,
                 }}
               >
-                {p.underlying_symbol.slice(0, 3)}
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#8A8A93", width: 24 }}>
+                  {i + 1}.
+                </span>
+                <div
+                  style={{
+                    width: 34,
+                    height: 34,
+                    borderRadius: 17,
+                    background: PALETTE[i % PALETTE.length],
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 13,
+                    fontWeight: 700,
+                    color: "#000",
+                  }}
+                >
+                  {p.underlying_symbol.slice(0, 3)}
+                </div>
+                <span style={{ fontWeight: 600 }}>{p.underlying_symbol}</span>
+                <span style={{ color: "#8A8A93", marginLeft: "auto" }}>
+                  {formatUsd(p.value_usd)}
+                </span>
+                <span style={{ color: "#8A8A93", fontSize: 16 }}>
+                  ({p.pct.toFixed(1)}%)
+                </span>
               </div>
-              <span style={{ fontWeight: 600 }}>{p.underlying_symbol}</span>
-              <span style={{ color: "#8A8A93", marginLeft: "auto" }}>
-                {formatUsd(p.value_usd)}
-              </span>
-              <span style={{ color: "#8A8A93", fontSize: 16 }}>
-                {p.pct.toFixed(1)}%
-              </span>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        {/* Footer with gradient */}
+        {/* Footer with gradient bar */}
         <div
           style={{
             marginTop: "auto",
             display: "flex",
-            justifyContent: "space-between",
             alignItems: "center",
-            paddingTop: 20,
-            borderTop: "1px solid #1C1C21",
+            justifyContent: "space-between",
+            padding: "16px 52px",
+            background: "linear-gradient(135deg, #9945FF, #14F195)",
+            borderRadius: "0 0 18px 18px",
           }}
         >
-          <div
-            style={{
-              fontSize: 22,
-              fontWeight: 700,
-              background: "linear-gradient(135deg, #9945FF, #14F195)",
-              backgroundClip: "text",
-              color: "transparent",
-            }}
-          >
+          <div style={{ fontSize: 22, fontWeight: 700, color: "#FFFFFF" }}>
             glasshouse
           </div>
-          <div style={{ fontSize: 16, color: "#8A8A93" }}>
-            glasshouse.app
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end" }}>
+            <span style={{ fontSize: 11, color: "rgba(255,255,255,0.7)" }}>
+              see the whole market
+            </span>
+            <span style={{ fontSize: 16, fontWeight: 700, color: "#FFFFFF" }}>
+              glasshouse.app
+            </span>
           </div>
         </div>
       </div>
     ),
-    {
-      width: 1200,
-      height: 630,
-    }
+    { width: 1200, height: 630 }
   );
 }

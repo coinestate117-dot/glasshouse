@@ -5,6 +5,7 @@ import Link from "next/link";
 import TokenLogo from "@/components/TokenLogo";
 import WalletTypeBadge from "@/components/WalletTypeBadge";
 import BuyPanel from "@/components/BuyPanel";
+import StockStickyBar from "@/components/StockStickyBar";
 import { formatUsd, formatUsdFull, formatPct, shortenAddress } from "@/lib/format";
 import type { WalletType } from "@/types";
 
@@ -269,16 +270,13 @@ export default function StockDetail({
         ))}
       </div>
 
-        {/* BuyPanel — mobile only */}
-        <div className="buy-mobile" style={{ marginTop: 24 }}>
-          <BuyPanel
-            ticker={ticker}
-            assetSymbol={assetSymbol}
-            mintAddress={mintAddress}
-            priceUsd={priceUsd}
-            logoUrl={logoUrl}
-          />
-        </div>
+        {/* Sticky buy/sell bar — mobile only */}
+        <StockStickyBar
+          ticker={ticker}
+          assetSymbol={assetSymbol}
+          mintAddress={mintAddress}
+          logoUrl={logoUrl}
+        />
       </div>
 
       {/* Right column: sticky buy panel — desktop only */}
@@ -301,9 +299,6 @@ export default function StockDetail({
         .stock-sidebar {
           display: none;
         }
-        .buy-mobile {
-          display: block;
-        }
         .charts-grid {
           grid-template-columns: 1fr;
         }
@@ -316,9 +311,6 @@ export default function StockDetail({
           }
           .stock-sidebar {
             display: block;
-          }
-          .buy-mobile {
-            display: none;
           }
           .charts-grid {
             grid-template-columns: 1fr 1fr;
