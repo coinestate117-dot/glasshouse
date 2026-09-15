@@ -37,6 +37,7 @@ export default function Leaderboard({
   totalChange24h,
 }: LeaderboardProps) {
   const [filter, setFilter] = useState("All");
+  const [visibleCount, setVisibleCount] = useState(50);
 
   const typeMap: Record<string, WalletType | null> = {
     All: null,
@@ -78,7 +79,7 @@ export default function Leaderboard({
         walletCount={wallets.length}
         largestPosition={largestPosition}
       />
-      <FilterChips options={FILTERS} active={filter} onChange={setFilter} />
+      <FilterChips options={FILTERS} active={filter} onChange={(v) => { setFilter(v); setVisibleCount(50); }} />
 
       {/* Desktop table header */}
       <div className="table-header">
@@ -105,7 +106,7 @@ export default function Leaderboard({
         </div>
       ) : (
         <div>
-          {sorted.map((w, i) => (
+          {sorted.slice(0, visibleCount).map((w, i) => (
             <WalletRow
               key={w.address}
               rank={i + 1}
@@ -118,6 +119,26 @@ export default function Leaderboard({
               index={i}
             />
           ))}
+          {visibleCount < sorted.length && (
+            <button
+              onClick={() => setVisibleCount((c) => c + 50)}
+              style={{
+                width: "100%",
+                padding: "14px 0",
+                marginTop: 8,
+                borderRadius: "var(--radius)",
+                border: "1px solid var(--border)",
+                background: "var(--card)",
+                color: "var(--text-secondary)",
+                fontSize: 14,
+                fontWeight: 600,
+                fontFamily: "inherit",
+                cursor: "pointer",
+              }}
+            >
+              Show more ({sorted.length - visibleCount} remaining)
+            </button>
+          )}
         </div>
       )}
 

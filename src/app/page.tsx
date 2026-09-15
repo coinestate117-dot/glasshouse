@@ -22,7 +22,7 @@ export default function HomePage() {
         change_24h_pct: w.change_24h_pct,
         position_count: w.position_count,
         wallet_type: w.wallet_type,
-        positions: w.positions.map((p) => ({
+        positions: w.positions.slice(0, 6).map((p) => ({
           asset_symbol: p.asset_symbol,
           pct: p.pct,
           logo_url: p.logo_url,
