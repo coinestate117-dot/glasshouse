@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { getWallets, getPrices } from "@/lib/data";
+import { getHolderChanges } from "@/lib/snapshots";
 import StockDetail from "./StockDetail";
 
 async function fetchDexPair(mintAddress: string): Promise<string | null> {
@@ -85,6 +86,7 @@ export default async function StockPage({
       : 0;
 
   const dexPairAddress = await fetchDexPair(price.mint_address);
+  const holderChanges = getHolderChanges(upper);
 
   return (
     <StockDetail
@@ -107,6 +109,7 @@ export default async function StockPage({
       holders={holders}
       logoUrl={holders[0]?.position.logo_url ?? null}
       dexPairAddress={dexPairAddress}
+      holderChanges={holderChanges}
     />
   );
 }

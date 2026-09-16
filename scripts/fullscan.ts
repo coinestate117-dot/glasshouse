@@ -411,11 +411,31 @@ async function main() {
     priceMap
   );
 
-  // Write
+  // Write wallets
   fs.writeFileSync(
     path.join(DATA_DIR, "wallets.json"),
     JSON.stringify(wallets, null, 2)
   );
+
+  // Write dated snapshot for holder tracking
+  const snapshotDir = path.join(DATA_DIR, "snapshots");
+  fs.mkdirSync(snapshotDir, { recursive: true });
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  const snapshot: { address: string; positions: { ticker: string; amount: number }[] }[] = [];
+  for (const w of wallets) {
+    snapshot.push({
+      address: w.address,
+      positions: w.positions.map((p: any) => ({
+        ticker: p.underlying_symbol,
+        amount: p.ui_amount,
+      })),
+    });
+  }
+  fs.writeFileSync(
+    path.join(snapshotDir, `${today}.json`),
+    JSON.stringify(snapshot)
+  );
+  console.log(`Snapshot written: data/snapshots/${today}.json (${snapshot.length} wallets)`);
 
   const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);
   const types: Record<string, number> = {};

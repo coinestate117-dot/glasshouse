@@ -23,6 +23,18 @@ interface Holder {
   };
 }
 
+interface HolderChange {
+  ticker: string;
+  sinceDate: string;
+  latestDate: string;
+  holdersNow: number;
+  holdersBefore: number;
+  holderDiff: number;
+  newHolders: { address: string; amount: number }[];
+  soldOut: { address: string; prevAmount: number }[];
+  netShareChange: number;
+}
+
 interface StockDetailProps {
   ticker: string;
   assetSymbol: string;
@@ -36,6 +48,7 @@ interface StockDetailProps {
   holders: Holder[];
   logoUrl: string | null;
   dexPairAddress: string | null;
+  holderChanges: HolderChange | null;
 }
 
 export default function StockDetail({
@@ -50,6 +63,7 @@ export default function StockDetail({
   holders,
   logoUrl,
   dexPairAddress,
+  holderChanges,
 }: StockDetailProps) {
   const isPositive = change24hPct >= 0;
 
@@ -113,6 +127,14 @@ export default function StockDetail({
           sub={largestHolder ? shortenAddress(largestHolder.address) : undefined}
         />
       </div>
+
+      {/* Holder changes — only when snapshots exist */}
+      {holderChanges && (
+        <HolderChangesSection
+          changes={holderChanges}
+          priceUsd={priceUsd}
+        />
+      )}
 
       {/* Charts */}
       <div
@@ -380,6 +402,130 @@ function TradingViewChart({ ticker }: { ticker: string }) {
 
 const chartLabel: React.CSSProperties = {
   fontSize: 12,
+  fontWeight: 500,
+  color: "var(--text-secondary)",
+  textTransform: "uppercase",
+  letterSpacing: "0.04em",
+  marginBottom: 8,
+};
+
+/* ─── Holder changes ─── */
+
+function HolderChangesSection({
+  changes,
+  priceUsd,
+}: {
+  changes: HolderChange;
+  priceUsd: number;
+}) {
+  const netUsd = changes.netShareChange * priceUsd;
+  const isNetPositive = changes.netShareChange >= 0;
+
+  // Format the date label
+  const sinceLabel = (() => {
+    const d = new Date(changes.sinceDate + "T00:00:00");
+    return d.toLocaleDateString("en-US", { month: "short", day: "numeric" });
+  })();
+
+  return (
+    <div style={{ marginBottom: 24 }}>
+      {/* Stats row */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr 1fr 1fr",
+          gap: 8,
+          marginBottom: 16,
+        }}
+      >
+        <StatCard
+          label={`Holders since ${sinceLabel}`}
+          value={`${changes.holdersNow}`}
+          sub={`${changes.holderDiff >= 0 ? "+" : ""}${changes.holderDiff}`}
+        />
+        <StatCard label="New" value={`${changes.newHolders.length}+`} />
+        <StatCard label="Sold out" value={`${changes.soldOut.length}+`} />
+        <StatCard
+          label="Net change"
+          value={`${isNetPositive ? "+" : ""}${formatUsd(Math.abs(netUsd))}`}
+          sub={`${isNetPositive ? "+" : ""}${changes.netShareChange.toLocaleString("en-US", { maximumFractionDigits: 0 })} shares`}
+        />
+      </div>
+
+      {/* Two lists side by side */}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "1fr 1fr",
+          gap: 16,
+        }}
+      >
+        {/* New holders */}
+        {changes.newHolders.length > 0 && (
+          <div>
+            <div style={sectionLabel}>New holders</div>
+            {changes.newHolders.map((h, i) => (
+              <Link
+                key={h.address}
+                href={`/wallet/${h.address}`}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "8px 0",
+                  borderBottom: "1px solid var(--border)",
+                  fontSize: 13,
+                  opacity: 0,
+                  animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${i * 40}ms forwards`,
+                }}
+              >
+                <span style={{ color: "var(--green)", fontWeight: 500 }}>
+                  {shortenAddress(h.address)}
+                </span>
+                <span style={{ color: "var(--text-secondary)" }}>
+                  {h.amount.toLocaleString("en-US", { maximumFractionDigits: 1 })} shares
+                </span>
+              </Link>
+            ))}
+          </div>
+        )}
+
+        {/* Sold out */}
+        {changes.soldOut.length > 0 && (
+          <div>
+            <div style={sectionLabel}>Sold out</div>
+            {changes.soldOut.map((h, i) => (
+              <Link
+                key={h.address}
+                href={`/wallet/${h.address}`}
+                style={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                  padding: "8px 0",
+                  borderBottom: "1px solid var(--border)",
+                  fontSize: 13,
+                  opacity: 0,
+                  animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${i * 40}ms forwards`,
+                }}
+              >
+                <span style={{ color: "var(--red)", fontWeight: 500 }}>
+                  {shortenAddress(h.address)}
+                </span>
+                <span style={{ color: "var(--text-secondary)" }}>
+                  {h.prevAmount.toLocaleString("en-US", { maximumFractionDigits: 1 })} shares
+                </span>
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+const sectionLabel: React.CSSProperties = {
+  fontSize: 11,
   fontWeight: 500,
   color: "var(--text-secondary)",
   textTransform: "uppercase",

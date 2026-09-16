@@ -9,10 +9,12 @@
     "sync": "tsx scripts/sync.ts"
   },
   "dependencies": {
+    "@pythnetwork/hermes-client": "^3.1.0",
     "@solana/wallet-adapter-base": "^0.9.28",
     "@solana/wallet-adapter-react": "^0.15.40",
     "@solana/web3.js": "^1.98.0",
     "@vercel/og": "^1.0.2",
+    "axios": "^1.20.0",
     "lucide-react": "^1.46.0",
     "next": "^15.3.0",
     "react": "^19.0.0",
