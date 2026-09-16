@@ -6014,5 +6014,69 @@
     "price_usd": 25.2,
     "prev_close_usd": 24.59,
     "updated_at": "2026-09-14T11:47:33.269+00:00"
+  },
+  {
+    "mint_address": "PresTj4Yc2bAR197Er7wz4UUKSfqt6FryBEdAriBoQB",
+    "symbol": "ANDURIL",
+    "underlying_symbol": "ANDURIL",
+    "price_usd": 151.63460386142316,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "Pren1FvFX6J3E4kXhJuCiAD5aDmGEb7qJRncwA8Lkhw",
+    "symbol": "ANTHROPIC",
+    "underlying_symbol": "ANTHROPIC",
+    "price_usd": 964.8251756825994,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "PreZad18qfPtbxNpMtMuAuX2zVpvkEU8DnJx56faCWd",
+    "symbol": "FIGUREAI",
+    "underlying_symbol": "FIGUREAI",
+    "price_usd": 165.4808901017169,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "PreLWGkkeqG1s4HEfFZSy9moCrJ7btsHuUtfcCeoRua",
+    "symbol": "KALSHI",
+    "underlying_symbol": "KALSHI",
+    "price_usd": 839.4889384878826,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "PrekqLJvJ3qVdXmBGDiexvwUTF4rLFDa6HWS4HJbw9S",
+    "symbol": "NEURALINK",
+    "underlying_symbol": "NEURALINK",
+    "price_usd": 341.91338582175644,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF",
+    "symbol": "OPENAI",
+    "underlying_symbol": "OPENAI",
+    "price_usd": 973.1466219456959,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "Pre8AREmFPtoJFT8mQSXQLh56cwJmM7CFDRuoGBZiUP",
+    "symbol": "POLYMARKET",
+    "underlying_symbol": "POLYMARKET",
+    "price_usd": 143.9202302850699,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
+  },
+  {
+    "mint_address": "PreANxuXjsy2pvisWWMNB6YaJNzr7681wJJr2rHsfTh",
+    "symbol": "SPACEX",
+    "underlying_symbol": "SPACEX",
+    "price_usd": 111.75350649927597,
+    "prev_close_usd": null,
+    "is_pre_ipo": true
   }
 ]

@@ -49,6 +49,7 @@ interface StockDetailProps {
   logoUrl: string | null;
   dexPairAddress: string | null;
   holderChanges: HolderChange | null;
+  isPreIpo: boolean;
 }
 
 export default function StockDetail({
@@ -64,6 +65,7 @@ export default function StockDetail({
   logoUrl,
   dexPairAddress,
   holderChanges,
+  isPreIpo,
 }: StockDetailProps) {
   const isPositive = change24hPct >= 0;
 
@@ -82,7 +84,14 @@ export default function StockDetail({
       >
         <TokenLogo symbol={assetSymbol} logoUrl={logoUrl} size={48} />
         <div>
-          <div style={{ fontSize: 24, fontWeight: 700 }}>{ticker}</div>
+          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            <span style={{ fontSize: 24, fontWeight: 700 }}>{ticker}</span>
+            {isPreIpo && (
+              <span style={{ fontSize: 11, fontWeight: 600, color: "var(--red)", background: "rgba(255,77,77,0.1)", border: "1px solid rgba(255,77,77,0.2)", borderRadius: 4, padding: "2px 6px" }}>
+                PRE-IPO
+              </span>
+            )}
+          </div>
           <div
             style={{
               display: "flex",
@@ -215,6 +224,12 @@ export default function StockDetail({
           You can use {assetSymbol} as collateral or in liquidity pools
           on Kamino and other Solana DeFi protocols.
         </p>
+        {isPreIpo && (
+          <p style={{ margin: 0, color: "var(--red)", fontWeight: 500 }}>
+            Pre-IPO tokens represent indirect exposure through SPV structures.
+            Some issuers have publicly stated these transfers are not valid.
+          </p>
+        )}
       </div>
 
       {/* Holders list */}

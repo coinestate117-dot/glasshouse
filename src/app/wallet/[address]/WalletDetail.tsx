@@ -55,6 +55,8 @@ export default function WalletDetail({
   recentTrades,
 }: WalletDetailProps) {
   const [showShare, setShowShare] = useState(false);
+  const stockPositions = positions.filter((p) => !p.mint_address.startsWith("Pre"));
+  const preIpoPositions = positions.filter((p) => p.mint_address.startsWith("Pre"));
   const topN = positions.slice(0, 6);
   const otherPct = positions.slice(6).reduce((s, p) => s + p.pct, 0);
   const segments = [
@@ -208,10 +210,10 @@ export default function WalletDetail({
             letterSpacing: "0.04em",
           }}
         >
-          Holdings ({positions.length})
+          Holdings ({stockPositions.length})
         </div>
         <div className="scrollable-list">
-          {positions.map((p, i) => (
+          {stockPositions.map((p, i) => (
             <Link
               key={p.asset_symbol}
               href={`/stock/${p.underlying_symbol}`}
@@ -258,6 +260,31 @@ export default function WalletDetail({
             </Link>
           ))}
         </div>
+
+        {/* Pre-IPO holdings */}
+        {preIpoPositions.length > 0 && (
+          <div style={{ marginTop: 20 }}>
+            <div style={{ fontSize: 12, fontWeight: 500, marginBottom: 8, color: "var(--red)", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+              Pre-IPO ({preIpoPositions.length})
+            </div>
+            {preIpoPositions.map((p, i) => (
+              <Link key={p.asset_symbol} href={`/stock/${p.underlying_symbol}`}
+                style={{ display: "flex", alignItems: "center", gap: 12, padding: "12px 0", borderBottom: "1px solid var(--border)", opacity: 0, animation: `fadeSlideIn 0.3s ease-out ${i * 30}ms forwards` }}>
+                <TokenLogo symbol={p.asset_symbol} logoUrl={p.logo_url} size={36} />
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <div style={{ fontSize: 15, fontWeight: 600 }}>{p.underlying_symbol}</div>
+                  <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
+                    {p.ui_amount.toLocaleString("en-US", { maximumFractionDigits: 2 })} shares
+                  </div>
+                </div>
+                <div style={{ textAlign: "right" }}>
+                  <div style={{ fontSize: 15, fontWeight: 700 }}>{formatUsd(p.value_usd)}</div>
+                  <div style={{ fontSize: 12, color: "var(--text-secondary)", marginTop: 1 }}>{p.pct.toFixed(1)}%</div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
 
         {/* Recent Activity */}
         {recentTrades.length > 0 && (

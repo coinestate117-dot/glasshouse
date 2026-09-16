@@ -218,7 +218,7 @@ async function buildPortfolios(
             if (uiAmount <= 0) continue;
             totalT22++;
 
-            if (pi.mint.startsWith("Xs")) xstockCount++;
+            if (pi.mint.startsWith("Xs") || pi.mint.startsWith("Pre")) xstockCount++;
 
             if (knownMints.has(pi.mint)) {
               const asset = mintToAsset.get(pi.mint)!;
@@ -232,6 +232,7 @@ async function buildPortfolios(
                 pct: 0,
                 underlying_symbol: asset.underlying_symbol,
                 logo_url: asset.logo_url,
+                ...(asset.is_pre_ipo ? { is_pre_ipo: true } : {}),
               });
             }
           }
@@ -332,6 +333,37 @@ async function main() {
       prevClose: p.prev_close_usd,
     });
     mintPrice.set(p.mint_address, p.price_usd);
+  }
+
+  // Fetch PreStocks
+  try {
+    const psRes = await fetch("https://prestocks.com/api/prestocks");
+    const preStocks = await psRes.json();
+    for (const ps of preStocks) {
+      const mint = ps.contract_address;
+      if (!assets.some((a: any) => a.mint_address === mint)) {
+        assets.push({
+          symbol: ps.symbol, name: ps.name, underlying_symbol: ps.symbol,
+          mint_address: mint, logo_url: ps.image || null, current_multiplier: 1, is_pre_ipo: true,
+        });
+        priceRecords.push({
+          mint_address: mint, symbol: ps.symbol, underlying_symbol: ps.symbol,
+          price_usd: ps.tokenPrice || 0, prev_close_usd: null, is_pre_ipo: true,
+        });
+      }
+    }
+    // Rebuild price maps
+    for (const p of priceRecords) {
+      if (!priceMap.has(p.underlying_symbol))
+        priceMap.set(p.underlying_symbol, { price: p.price_usd, prevClose: p.prev_close_usd });
+      if (!mintPrice.has(p.mint_address))
+        mintPrice.set(p.mint_address, p.price_usd);
+    }
+    fs.writeFileSync(path.join(DATA_DIR, "assets.json"), JSON.stringify(assets, null, 2));
+    fs.writeFileSync(path.join(DATA_DIR, "prices.json"), JSON.stringify(priceRecords, null, 2));
+    console.log(`Fetched ${preStocks.length} PreStocks`);
+  } catch (err: any) {
+    console.log(`PreStocks fetch failed: ${err.message?.slice(0, 80)}`);
   }
 
   console.log(`Loaded ${assets.length} assets, ${priceRecords.length} prices`);

@@ -10,6 +10,7 @@ interface WalletPosition {
   pct: number;
   underlying_symbol: string;
   logo_url: string | null;
+  is_pre_ipo?: boolean;
 }
 
 export interface WalletData {
@@ -31,7 +32,20 @@ interface PriceData {
   underlying_symbol: string;
   price_usd: number;
   prev_close_usd: number | null;
+  is_pre_ipo?: boolean;
 }
+
+interface AssetData {
+  symbol: string;
+  name: string;
+  underlying_symbol: string;
+  mint_address: string;
+  logo_url: string | null;
+  current_multiplier: number;
+  is_pre_ipo?: boolean;
+}
+
+let assetsCache: AssetData[] | null = null;
 
 const dataDir = path.join(process.cwd(), "data");
 
@@ -60,4 +74,15 @@ export function getPrices(): PriceData[] {
     pricesCache = readJson<PriceData[]>("prices.json");
   }
   return pricesCache;
+}
+
+export function getAssets(): AssetData[] {
+  if (!assetsCache) {
+    assetsCache = readJson<AssetData[]>("assets.json");
+  }
+  return assetsCache;
+}
+
+export function getPreIpoAssets(): AssetData[] {
+  return getAssets().filter((a) => a.is_pre_ipo);
 }

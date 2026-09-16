@@ -9982,5 +9982,77 @@
     "new_multiplier": 0,
     "activation_timestamp": 0,
     "updated_at": "2026-09-14T11:33:14.187+00:00"
+  },
+  {
+    "symbol": "ANDURIL",
+    "name": "Anduril PreStocks",
+    "underlying_symbol": "ANDURIL",
+    "mint_address": "PresTj4Yc2bAR197Er7wz4UUKSfqt6FryBEdAriBoQB",
+    "logo_url": "https://www.prestocks.com/logos/anduril.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "ANTHROPIC",
+    "name": "Anthropic PreStocks",
+    "underlying_symbol": "ANTHROPIC",
+    "mint_address": "Pren1FvFX6J3E4kXhJuCiAD5aDmGEb7qJRncwA8Lkhw",
+    "logo_url": "https://www.prestocks.com/logos/anthropic.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "FIGUREAI",
+    "name": "Figure AI PreStocks",
+    "underlying_symbol": "FIGUREAI",
+    "mint_address": "PreZad18qfPtbxNpMtMuAuX2zVpvkEU8DnJx56faCWd",
+    "logo_url": "https://www.prestocks.com/logos/figureai.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "KALSHI",
+    "name": "Kalshi PreStocks",
+    "underlying_symbol": "KALSHI",
+    "mint_address": "PreLWGkkeqG1s4HEfFZSy9moCrJ7btsHuUtfcCeoRua",
+    "logo_url": "https://www.prestocks.com/logos/kalshi.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "NEURALINK",
+    "name": "Neuralink PreStocks",
+    "underlying_symbol": "NEURALINK",
+    "mint_address": "PrekqLJvJ3qVdXmBGDiexvwUTF4rLFDa6HWS4HJbw9S",
+    "logo_url": "https://www.prestocks.com/logos/neuralink.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "OPENAI",
+    "name": "OpenAI PreStocks",
+    "underlying_symbol": "OPENAI",
+    "mint_address": "PreweJYECqtQwBtpxHL171nL2K6umo692gTm7Q3rpgF",
+    "logo_url": "https://www.prestocks.com/logos/openai.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "POLYMARKET",
+    "name": "Polymarket PreStocks",
+    "underlying_symbol": "POLYMARKET",
+    "mint_address": "Pre8AREmFPtoJFT8mQSXQLh56cwJmM7CFDRuoGBZiUP",
+    "logo_url": "https://www.prestocks.com/logos/polymarket.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
+  },
+  {
+    "symbol": "SPACEX",
+    "name": "SpaceX PreStocks",
+    "underlying_symbol": "SPACEX",
+    "mint_address": "PreANxuXjsy2pvisWWMNB6YaJNzr7681wJJr2rHsfTh",
+    "logo_url": "https://www.prestocks.com/logos/spacex.png",
+    "current_multiplier": 1,
+    "is_pre_ipo": true
   }
 ]

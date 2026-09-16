@@ -6,6 +6,7 @@ import ConnectButton from "./ConnectButton";
 
 const links = [
   { label: "Leaderboard", path: "/" },
+  { label: "Pre-IPO", path: "/pre-ipo" },
   { label: "Search", path: "/search" },
 ];
 
