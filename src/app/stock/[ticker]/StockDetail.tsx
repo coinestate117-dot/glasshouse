@@ -160,8 +160,8 @@ export default function StockDetail({
           <TradingViewChart ticker={ticker} />
         </div>
 
-        {/* DexScreener — Solana */}
-        <div>
+        {/* DexScreener — Solana (hidden on very narrow screens) */}
+        <div className="dex-chart">
           <div style={chartLabel}>{assetSymbol} on Solana</div>
           {dexPairAddress ? (
             <div
@@ -170,6 +170,7 @@ export default function StockDetail({
                 overflow: "hidden",
                 border: "1px solid var(--border)",
                 height: 360,
+                minWidth: 400,
               }}
             >
               <iframe
@@ -180,6 +181,7 @@ export default function StockDetail({
                   border: "none",
                 }}
                 title={`${assetSymbol} on Solana`}
+                loading="lazy"
               />
             </div>
           ) : (
@@ -338,6 +340,14 @@ export default function StockDetail({
         }
         .charts-grid {
           grid-template-columns: 1fr;
+        }
+        .dex-chart {
+          display: none;
+        }
+        @media (min-width: 768px) {
+          .dex-chart {
+            display: block;
+          }
         }
         @media (min-width: 1024px) {
           .stock-layout {
