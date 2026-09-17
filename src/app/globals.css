@@ -39,6 +39,19 @@ a {
   text-decoration: none;
 }
 
+/* Tap feedback for interactive elements */
+a:active, button:active {
+  opacity: 0.7;
+  transition: opacity 0.05s ease;
+}
+
+/* Minimum touch target */
+@media (pointer: coarse) {
+  a, button {
+    min-height: 44px;
+  }
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 4px;

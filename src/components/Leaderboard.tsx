@@ -142,6 +142,14 @@ export default function Leaderboard({
         </div>
       )}
 
+      {/* Timestamp */}
+      <div style={{ fontSize: 11, color: "var(--text-secondary)", textAlign: "center", padding: "16px 0 8px" }}>
+        Data from {new Date().toLocaleDateString("en-US", { month: "short", day: "numeric" })}, 06:00 UTC · updated daily
+      </div>
+
+      {/* Treasury filter */}
+      <TreasuryNote />
+
       <style jsx>{`
         .table-header {
           display: none;
@@ -161,6 +169,60 @@ export default function Leaderboard({
           }
         }
       `}</style>
+    </div>
+  );
+}
+
+function TreasuryNote() {
+  const [open, setOpen] = useState(false);
+
+  const excluded = [
+    { addr: "S7vY…RaS", reason: "xStocks issuer treasury — top holder on nearly every token" },
+    { addr: "9U76…vMQd", reason: "925 positions, $1.37B, 0.3 SOL — holds every xStock (issuer)" },
+    { addr: "6LY1…zkzF", reason: "650 positions, $92M, 87K SOL — second treasury/custodian" },
+    { addr: "41Mj…dkJF", reason: "632 positions, $34M, 0.06 SOL — third treasury" },
+    { addr: "9A9d…Zwc6", reason: "525 positions, $14M, 50K SOL — liquidity/custodian account" },
+  ];
+
+  return (
+    <div style={{ textAlign: "center", paddingBottom: 16 }}>
+      <button
+        onClick={() => setOpen(!open)}
+        style={{
+          background: "none",
+          border: "none",
+          color: "var(--text-secondary)",
+          fontSize: 11,
+          cursor: "pointer",
+          fontFamily: "inherit",
+          textDecoration: "underline",
+          textUnderlineOffset: 2,
+        }}
+      >
+        5 issuer and custodian addresses excluded — {open ? "hide" : "see why"}
+      </button>
+      {open && (
+        <div style={{ marginTop: 10, textAlign: "left", maxWidth: 500, margin: "10px auto 0" }}>
+          {excluded.map((e) => (
+            <div
+              key={e.addr}
+              style={{
+                fontSize: 11,
+                color: "var(--text-secondary)",
+                padding: "6px 0",
+                borderBottom: "1px solid var(--border)",
+                lineHeight: 1.5,
+              }}
+            >
+              <span style={{ fontFamily: "monospace", color: "var(--text)", fontWeight: 500 }}>
+                {e.addr}
+              </span>
+              <br />
+              {e.reason}
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
