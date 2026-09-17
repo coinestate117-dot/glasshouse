@@ -50,6 +50,7 @@ interface StockDetailProps {
   dexPairAddress: string | null;
   holderChanges: HolderChange | null;
   isPreIpo: boolean;
+  tokenPriceUsd: number | null;
 }
 
 export default function StockDetail({
@@ -66,6 +67,7 @@ export default function StockDetail({
   dexPairAddress,
   holderChanges,
   isPreIpo,
+  tokenPriceUsd,
 }: StockDetailProps) {
   const isPositive = change24hPct >= 0;
 
@@ -143,6 +145,52 @@ export default function StockDetail({
           changes={holderChanges}
           priceUsd={priceUsd}
         />
+      )}
+
+      {/* Price comparison — mobile (replaces DexScreener chart) */}
+      {tokenPriceUsd && tokenPriceUsd > 0 && (
+        <div className="price-compare-mobile">
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              padding: "14px 16px",
+              background: "var(--card)",
+              border: "1px solid var(--border)",
+              borderRadius: "var(--radius)",
+              marginBottom: 16,
+            }}
+          >
+            <div>
+              <div style={{ fontSize: 11, color: "var(--text-secondary)", marginBottom: 4, textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                Nasdaq vs Solana
+              </div>
+              <div style={{ fontSize: 14, fontWeight: 600 }}>
+                {ticker}{" "}
+                <span style={{ color: "var(--text-secondary)", fontWeight: 400 }}>
+                  ${priceUsd.toFixed(2)}
+                </span>
+                {" · "}
+                {assetSymbol}{" "}
+                <span style={{ color: "var(--text-secondary)", fontWeight: 400 }}>
+                  ${tokenPriceUsd.toFixed(2)}
+                </span>
+              </div>
+            </div>
+            <div
+              style={{
+                fontSize: 15,
+                fontWeight: 700,
+                color:
+                  tokenPriceUsd >= priceUsd ? "var(--green)" : "var(--red)",
+              }}
+            >
+              {tokenPriceUsd >= priceUsd ? "+" : ""}
+              {(((tokenPriceUsd - priceUsd) / priceUsd) * 100).toFixed(2)}%
+            </div>
+          </div>
+        </div>
       )}
 
       {/* Charts */}
@@ -341,10 +389,16 @@ export default function StockDetail({
         .charts-grid {
           grid-template-columns: 1fr;
         }
+        .price-compare-mobile {
+          display: block;
+        }
         .dex-chart {
           display: none;
         }
         @media (min-width: 768px) {
+          .price-compare-mobile {
+            display: none;
+          }
           .dex-chart {
             display: block;
           }

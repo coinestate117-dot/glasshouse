@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getWallets, getPrices, getAssets, getDexPair } from "@/lib/data";
+import { getWallets, getPrices, getAssets, getDexPair, getDexTokenPrice } from "@/lib/data";
 import { getHolderChanges } from "@/lib/snapshots";
 import StockDetail from "./StockDetail";
 
@@ -63,6 +63,7 @@ export default async function StockPage({
       : 0;
 
   const dexPairAddress = getDexPair(upper);
+  const tokenPriceUsd = getDexTokenPrice(upper);
   const holderChanges = getHolderChanges(upper);
   const asset = getAssets().find((a) => a.underlying_symbol === upper);
   const isPreIpo = !!(asset?.is_pre_ipo);
@@ -90,6 +91,7 @@ export default async function StockPage({
       dexPairAddress={dexPairAddress}
       holderChanges={holderChanges}
       isPreIpo={isPreIpo}
+      tokenPriceUsd={tokenPriceUsd}
     />
   );
 }

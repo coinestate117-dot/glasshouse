@@ -1,17 +1,62 @@
 {
-  "NVDA": "49iMatQtoyabsYAQc8GafVq6aeBFVDxSRH44oiatyyw6",
-  "TSLA": "8aDaBQkTrS6HVMjyc6EZebgdiaXhLYGriDWKWWp1NpFF",
-  "AAPL": "ApniVWuZbZoruTAJdyJcLBA4AVw4DKGdV5fHxo6qrAZT",
-  "GOOGL": "B8YAwjGYk6qidWzGBXMAxP7nYfG8g74EZ3Y4gFSsobRw",
-  "META": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
-  "SPY": "4pCZCVEiYyT4efNdXUdL2tJF8VGMgiMXrZWq6FiNXhRw",
-  "QQQ": "GMjGLWzvK75LPetrgAmdeXnvxc4fUuQPwJxeQqTDU1aG",
-  "AMZN": "6m5aXAve4uh6Kt4ytKyCLWNMjd8PYP5vujwNCtycrUiD",
-  "MSFT": "D6bRhQUcR9B7bPbbqgxpE17MjyUjBtr8hHQCcJoHrrv1",
-  "COIN": "w7SGmPeXoMCsjvXqgsAmUn56uypyDsjAtsxeVkaiqxa",
-  "MSTR": "RyhF4cksVZY7vcqJpoytHcxcGNKRp27PEGhSnEPpbGv",
-  "AMD": "DsxZiQTsdJbGJojzbdAy9yK7absibgAgUnMLTdNaWr4c",
-  "NFLX": "7RQXW5KEBgHCcy1eSNs1Kh7BWaEL46q8jb9t18S151bL",
-  "GLD": "78ReVNMLGRWmjtf2HmBoHUe2pRcsctXTTbxJnbhchyze",
-  "HOOD": "DXWbip5LducMAbDSSpLYz9Xik3253EPeAYQufQtx7LXs"
+  "NVDA": {
+    "pairAddress": "49iMatQtoyabsYAQc8GafVq6aeBFVDxSRH44oiatyyw6",
+    "tokenPriceUsd": 217.38
+  },
+  "TSLA": {
+    "pairAddress": "8aDaBQkTrS6HVMjyc6EZebgdiaXhLYGriDWKWWp1NpFF",
+    "tokenPriceUsd": 362.86
+  },
+  "AAPL": {
+    "pairAddress": "ApniVWuZbZoruTAJdyJcLBA4AVw4DKGdV5fHxo6qrAZT",
+    "tokenPriceUsd": 334.66
+  },
+  "GOOGL": {
+    "pairAddress": "B8YAwjGYk6qidWzGBXMAxP7nYfG8g74EZ3Y4gFSsobRw",
+    "tokenPriceUsd": 347.56
+  },
+  "META": {
+    "pairAddress": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
+    "tokenPriceUsd": 681.72
+  },
+  "SPY": {
+    "pairAddress": "4pCZCVEiYyT4efNdXUdL2tJF8VGMgiMXrZWq6FiNXhRw",
+    "tokenPriceUsd": 764.68
+  },
+  "QQQ": {
+    "pairAddress": "GMjGLWzvK75LPetrgAmdeXnvxc4fUuQPwJxeQqTDU1aG",
+    "tokenPriceUsd": 714.073
+  },
+  "AMZN": {
+    "pairAddress": "6m5aXAve4uh6Kt4ytKyCLWNMjd8PYP5vujwNCtycrUiD",
+    "tokenPriceUsd": 248.64
+  },
+  "MSFT": {
+    "pairAddress": "D6bRhQUcR9B7bPbbqgxpE17MjyUjBtr8hHQCcJoHrrv1",
+    "tokenPriceUsd": 496.56
+  },
+  "COIN": {
+    "pairAddress": "w7SGmPeXoMCsjvXqgsAmUn56uypyDsjAtsxeVkaiqxa",
+    "tokenPriceUsd": 168.57
+  },
+  "MSTR": {
+    "pairAddress": "RyhF4cksVZY7vcqJpoytHcxcGNKRp27PEGhSnEPpbGv",
+    "tokenPriceUsd": 128.95
+  },
+  "AMD": {
+    "pairAddress": "DsxZiQTsdJbGJojzbdAy9yK7absibgAgUnMLTdNaWr4c",
+    "tokenPriceUsd": 521.66
+  },
+  "NFLX": {
+    "pairAddress": "7RQXW5KEBgHCcy1eSNs1Kh7BWaEL46q8jb9t18S151bL",
+    "tokenPriceUsd": 769.24
+  },
+  "GLD": {
+    "pairAddress": "78ReVNMLGRWmjtf2HmBoHUe2pRcsctXTTbxJnbhchyze",
+    "tokenPriceUsd": 394.49
+  },
+  "HOOD": {
+    "pairAddress": "DXWbip5LducMAbDSSpLYz9Xik3253EPeAYQufQtx7LXs",
+    "tokenPriceUsd": 106.45
+  }
 }

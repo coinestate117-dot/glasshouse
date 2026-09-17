@@ -87,15 +87,36 @@ export function getPreIpoAssets(): AssetData[] {
   return getAssets().filter((a) => a.is_pre_ipo);
 }
 
-let dexPairsCache: Record<string, string> | null = null;
+interface DexPairData {
+  pairAddress: string;
+  tokenPriceUsd: number;
+}
+
+let dexPairsCache: Record<string, DexPairData | string> | null = null;
 
 export function getDexPair(ticker: string): string | null {
   if (!dexPairsCache) {
     try {
-      dexPairsCache = readJson<Record<string, string>>("dex-pairs.json");
+      dexPairsCache = readJson<Record<string, DexPairData | string>>("dex-pairs.json");
     } catch {
       dexPairsCache = {};
     }
   }
-  return dexPairsCache[ticker] ?? null;
+  const entry = dexPairsCache[ticker];
+  if (!entry) return null;
+  if (typeof entry === "string") return entry;
+  return entry.pairAddress;
+}
+
+export function getDexTokenPrice(ticker: string): number | null {
+  if (!dexPairsCache) {
+    try {
+      dexPairsCache = readJson<Record<string, DexPairData | string>>("dex-pairs.json");
+    } catch {
+      dexPairsCache = {};
+    }
+  }
+  const entry = dexPairsCache[ticker];
+  if (!entry || typeof entry === "string") return null;
+  return entry.tokenPriceUsd || null;
 }
