@@ -85,6 +85,7 @@ export default async function WalletPage({
   params: Promise<{ address: string }>;
 }) {
   const { address } = await params;
+  if (!address || address.length < 32 || address.length > 44) notFound();
   const wallet = getWallet(address);
   if (!wallet) notFound();
 
