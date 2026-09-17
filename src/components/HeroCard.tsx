@@ -85,7 +85,8 @@ export default function HeroCard({
         }}
       >
         Every stock portfolio on Solana is public. These are the wallets
-        that hold them.
+        that hold them. Tap any wallet to see its holdings and copy the
+        portfolio.
       </div>
 
       {/* Stat cards */}
