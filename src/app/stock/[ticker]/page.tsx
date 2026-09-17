@@ -1,32 +1,7 @@
 import { notFound } from "next/navigation";
-import { getWallets, getPrices, getAssets } from "@/lib/data";
+import { getWallets, getPrices, getAssets, getDexPair } from "@/lib/data";
 import { getHolderChanges } from "@/lib/snapshots";
 import StockDetail from "./StockDetail";
-
-async function fetchDexPair(mintAddress: string): Promise<string | null> {
-  try {
-    const res = await fetch(
-      `https://api.dexscreener.com/latest/dex/tokens/${mintAddress}`,
-      { next: { revalidate: 3600 } }
-    );
-    if (!res.ok) return null;
-    const data = await res.json();
-    const pairs = data.pairs ?? [];
-    // Pick the USDC pair with highest volume
-    const usdcPair = pairs
-      .filter(
-        (p: { quoteToken: { symbol: string } }) =>
-          p.quoteToken.symbol === "USDC"
-      )
-      .sort(
-        (a: { volume: { h24: number } }, b: { volume: { h24: number } }) =>
-          (b.volume?.h24 ?? 0) - (a.volume?.h24 ?? 0)
-      )[0];
-    return usdcPair?.pairAddress ?? pairs[0]?.pairAddress ?? null;
-  } catch {
-    return null;
-  }
-}
 
 export default async function StockPage({
   params,
@@ -79,13 +54,15 @@ export default async function StockPage({
 
   const totalHeld = holders.reduce((s, h) => s + h.position.value_usd, 0);
   const totalShares = holders.reduce((s, h) => s + h.position.ui_amount, 0);
+  const holderCountFull = holders.length;
+  const holdersLimited = holders.slice(0, 50);
   const change24hPct =
     price.prev_close_usd && price.prev_close_usd > 0
       ? ((price.price_usd - price.prev_close_usd) / price.prev_close_usd) *
         100
       : 0;
 
-  const dexPairAddress = await fetchDexPair(price.mint_address);
+  const dexPairAddress = getDexPair(upper);
   const holderChanges = getHolderChanges(upper);
   const asset = getAssets().find((a) => a.underlying_symbol === upper);
   const isPreIpo = !!(asset?.is_pre_ipo);
@@ -99,7 +76,7 @@ export default async function StockPage({
       change24hPct={change24hPct}
       totalHeldUsd={totalHeld}
       totalShares={totalShares}
-      holderCount={holders.length}
+      holderCount={holderCountFull}
       largestHolder={
         holders[0]
           ? {
@@ -108,7 +85,7 @@ export default async function StockPage({
             }
           : null
       }
-      holders={holders}
+      holders={holdersLimited}
       logoUrl={holders[0]?.position.logo_url ?? null}
       dexPairAddress={dexPairAddress}
       holderChanges={holderChanges}

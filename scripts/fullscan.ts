@@ -469,6 +469,43 @@ async function main() {
   );
   console.log(`Snapshot written: data/snapshots/${today}.json (${snapshot.length} wallets)`);
 
+  // Fetch DexScreener pair addresses for all unique tickers
+  console.log(`\n=== Phase 4: Fetch DexScreener pairs ===`);
+  const tickerMints = new Map<string, string>();
+  for (const a of assets) {
+    if (mintPrice.has(a.mint_address)) {
+      tickerMints.set(a.underlying_symbol, a.mint_address);
+    }
+  }
+  const dexPairs: Record<string, string> = {};
+  const mintList = [...tickerMints.entries()];
+  for (let i = 0; i < mintList.length; i += 5) {
+    const batch = mintList.slice(i, i + 5);
+    await Promise.allSettled(
+      batch.map(async ([ticker, mint]) => {
+        try {
+          const res = await fetch(
+            `https://api.dexscreener.com/latest/dex/tokens/${mint}`
+          );
+          if (!res.ok) return;
+          const data = await res.json();
+          const pairs = data.pairs ?? [];
+          const usdcPair = pairs
+            .filter((p: any) => p.quoteToken?.symbol === "USDC")
+            .sort((a: any, b: any) => (b.volume?.h24 ?? 0) - (a.volume?.h24 ?? 0))[0];
+          const addr = usdcPair?.pairAddress ?? pairs[0]?.pairAddress;
+          if (addr) dexPairs[ticker] = addr;
+        } catch {}
+      })
+    );
+    if ((i + 5) % 50 === 0) {
+      console.log(`[DexPairs] ${Math.min(i + 5, mintList.length)}/${mintList.length}, ${Object.keys(dexPairs).length} found`);
+      await sleep(1000);
+    }
+  }
+  fs.writeFileSync(path.join(DATA_DIR, "dex-pairs.json"), JSON.stringify(dexPairs, null, 2));
+  console.log(`DexScreener pairs: ${Object.keys(dexPairs).length} tickers`);
+
   const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);
   const types: Record<string, number> = {};
   for (const w of wallets)

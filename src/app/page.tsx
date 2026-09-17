@@ -14,9 +14,13 @@ export default function HomePage() {
         )
       : 0;
 
+  // Sort and limit to top 200 for initial page load (~170KB vs 1.1MB)
+  const sorted = [...wallets].sort((a, b) => b.total_value_usd - a.total_value_usd);
+  const limited = sorted.slice(0, 200);
+
   return (
     <Leaderboard
-      wallets={wallets.map((w) => ({
+      wallets={limited.map((w) => ({
         address: w.address,
         total_value_usd: w.total_value_usd,
         change_24h_pct: w.change_24h_pct,
@@ -32,6 +36,7 @@ export default function HomePage() {
       }))}
       totalValue={totalValue}
       totalChange24h={totalChange24h}
+      totalWalletCount={wallets.length}
     />
   );
 }

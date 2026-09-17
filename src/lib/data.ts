@@ -86,3 +86,16 @@ export function getAssets(): AssetData[] {
 export function getPreIpoAssets(): AssetData[] {
   return getAssets().filter((a) => a.is_pre_ipo);
 }
+
+let dexPairsCache: Record<string, string> | null = null;
+
+export function getDexPair(ticker: string): string | null {
+  if (!dexPairsCache) {
+    try {
+      dexPairsCache = readJson<Record<string, string>>("dex-pairs.json");
+    } catch {
+      dexPairsCache = {};
+    }
+  }
+  return dexPairsCache[ticker] ?? null;
+}

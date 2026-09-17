@@ -27,6 +27,7 @@ interface LeaderboardProps {
   wallets: WalletData[];
   totalValue: number;
   totalChange24h: number;
+  totalWalletCount?: number;
 }
 
 const FILTERS = ["All", "Investors", "Market Makers", "Whales", "Holders"];
@@ -35,6 +36,7 @@ export default function Leaderboard({
   wallets,
   totalValue,
   totalChange24h,
+  totalWalletCount,
 }: LeaderboardProps) {
   const [filter, setFilter] = useState("All");
   const [visibleCount, setVisibleCount] = useState(50);
@@ -76,7 +78,7 @@ export default function Leaderboard({
       <HeroCard
         totalValue={totalValue}
         change24h={totalChange24h}
-        walletCount={wallets.length}
+        walletCount={totalWalletCount ?? wallets.length}
         largestPosition={largestPosition}
       />
       <FilterChips options={FILTERS} active={filter} onChange={(v) => { setFilter(v); setVisibleCount(50); }} />
