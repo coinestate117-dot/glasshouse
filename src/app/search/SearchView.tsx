@@ -8,19 +8,12 @@ import { formatUsd, shortenAddress } from "@/lib/format";
 import { Search } from "lucide-react";
 import type { WalletType } from "@/types";
 
-interface Position {
-  underlying_symbol: string;
-  asset_symbol: string;
-  value_usd: number;
-  logo_url: string | null;
-  pct: number;
-}
-
-interface WalletData {
+interface TopWallet {
   address: string;
   total_value_usd: number;
   wallet_type: WalletType;
-  positions: Position[];
+  topTicker: string;
+  positionCount: number;
 }
 
 interface StockInfo {
@@ -32,43 +25,28 @@ interface StockInfo {
 }
 
 interface SearchViewProps {
-  wallets: WalletData[];
+  topWallets: TopWallet[];
   topStocks: StockInfo[];
+  allTickers: string[];
 }
 
-export default function SearchView({ wallets, topStocks }: SearchViewProps) {
+export default function SearchView({
+  topWallets,
+  topStocks,
+  allTickers,
+}: SearchViewProps) {
   const [query, setQuery] = useState("");
   const trimmed = query.trim();
-
-  const allTickers = useMemo(() => {
-    const set = new Set<string>();
-    for (const w of wallets) {
-      for (const p of w.positions) set.add(p.underlying_symbol);
-    }
-    return set;
-  }, [wallets]);
 
   const isAddress = trimmed.length >= 32;
   const tickerMatch = useMemo(() => {
     if (!trimmed || isAddress) return null;
     const upper = trimmed.toUpperCase();
-    if (allTickers.has(upper)) return upper;
-    for (const t of allTickers) {
-      if (t.startsWith(upper)) return t;
-    }
-    return null;
+    if (allTickers.includes(upper)) return upper;
+    return allTickers.find((t) => t.startsWith(upper)) ?? null;
   }, [trimmed, isAddress, allTickers]);
 
   const showDefault = !trimmed;
-
-  // Top 5 wallets
-  const topWallets = useMemo(
-    () =>
-      [...wallets]
-        .sort((a, b) => b.total_value_usd - a.total_value_usd)
-        .slice(0, 5),
-    [wallets]
-  );
 
   return (
     <div style={{ padding: "24px 16px" }}>
@@ -97,7 +75,8 @@ export default function SearchView({ wallets, topStocks }: SearchViewProps) {
           onKeyDown={(e) => {
             if (e.key === "Enter") {
               if (isAddress) window.location.href = `/wallet/${trimmed}`;
-              else if (tickerMatch) window.location.href = `/stock/${tickerMatch}`;
+              else if (tickerMatch)
+                window.location.href = `/stock/${tickerMatch}`;
             }
           }}
           style={{
@@ -135,7 +114,7 @@ export default function SearchView({ wallets, topStocks }: SearchViewProps) {
         </Link>
       )}
 
-      {/* Ticker → stock page link */}
+      {/* Ticker → stock page */}
       {tickerMatch && (
         <Link
           href={`/stock/${tickerMatch}`}
@@ -153,8 +132,13 @@ export default function SearchView({ wallets, topStocks }: SearchViewProps) {
           }}
         >
           <TokenLogo
-            symbol={topStocks.find((s) => s.symbol === tickerMatch)?.asset_symbol ?? tickerMatch}
-            logoUrl={topStocks.find((s) => s.symbol === tickerMatch)?.logo_url ?? null}
+            symbol={
+              topStocks.find((s) => s.symbol === tickerMatch)?.asset_symbol ??
+              tickerMatch
+            }
+            logoUrl={
+              topStocks.find((s) => s.symbol === tickerMatch)?.logo_url ?? null
+            }
             size={28}
           />
           View {tickerMatch} holders →
@@ -175,94 +159,67 @@ export default function SearchView({ wallets, topStocks }: SearchViewProps) {
         </div>
       )}
 
-      {/* Default view: top wallets + top stocks */}
+      {/* Default view */}
       {showDefault && (
         <>
           {/* Top wallets */}
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              color: "var(--text-secondary)",
-              textTransform: "uppercase",
-              letterSpacing: "0.04em",
-              marginBottom: 10,
-            }}
-          >
-            Top wallets
-          </div>
-          {topWallets.map((w, i) => {
-            const top = [...w.positions].sort(
-              (a, b) => b.value_usd - a.value_usd
-            )[0];
-            return (
-              <Link
-                key={w.address}
-                href={`/wallet/${w.address}`}
+          <div style={sectionLabel}>Top wallets</div>
+          {topWallets.map((w, i) => (
+            <Link
+              key={w.address}
+              href={`/wallet/${w.address}`}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                gap: 12,
+                padding: "12px 0",
+                borderBottom: "1px solid var(--border)",
+                opacity: 0,
+                animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${i * 30}ms forwards`,
+              }}
+            >
+              <span
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: 12,
-                  padding: "12px 0",
-                  borderBottom: "1px solid var(--border)",
-                  opacity: 0,
-                  animation: `fadeSlideIn 0.25s cubic-bezier(0.23,1,0.32,1) ${i * 30}ms forwards`,
+                  fontSize: 13,
+                  fontWeight: 600,
+                  color: "var(--text-secondary)",
+                  width: 24,
+                  textAlign: "center",
+                  flexShrink: 0,
                 }}
               >
-                <span
+                {i + 1}
+              </span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div
                   style={{
-                    fontSize: 13,
-                    fontWeight: 600,
-                    color: "var(--text-secondary)",
-                    width: 24,
-                    textAlign: "center",
-                    flexShrink: 0,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 6,
+                    marginBottom: 2,
                   }}
                 >
-                  {i + 1}
-                </span>
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: 6,
-                      marginBottom: 2,
-                    }}
-                  >
-                    <span style={{ fontSize: 14, fontWeight: 600 }}>
-                      {shortenAddress(w.address)}
-                    </span>
-                    <WalletTypeBadge type={w.wallet_type} />
-                  </div>
-                  <div
-                    style={{ fontSize: 12, color: "var(--text-secondary)" }}
-                  >
-                    {w.positions.length} stocks · top:{" "}
-                    {top?.underlying_symbol}
-                  </div>
+                  <span style={{ fontSize: 14, fontWeight: 600 }}>
+                    {shortenAddress(w.address)}
+                  </span>
+                  <WalletTypeBadge type={w.wallet_type} />
                 </div>
-                <div style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}>
-                  {formatUsd(w.total_value_usd)}
+                <div
+                  style={{ fontSize: 12, color: "var(--text-secondary)" }}
+                >
+                  {w.positionCount} stocks · top: {w.topTicker}
                 </div>
-              </Link>
-            );
-          })}
+              </div>
+              <div
+                style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}
+              >
+                {formatUsd(w.total_value_usd)}
+              </div>
+            </Link>
+          ))}
 
           {/* Top stocks */}
-          <div
-            style={{
-              fontSize: 12,
-              fontWeight: 500,
-              color: "var(--text-secondary)",
-              textTransform: "uppercase",
-              letterSpacing: "0.04em",
-              marginTop: 24,
-              marginBottom: 10,
-            }}
-          >
-            Top stocks
-          </div>
+          <div style={{ ...sectionLabel, marginTop: 24 }}>Top stocks</div>
           {topStocks.map((s, i) => (
             <Link
               key={s.symbol}
@@ -286,11 +243,15 @@ export default function SearchView({ wallets, topStocks }: SearchViewProps) {
                 <div style={{ fontSize: 14, fontWeight: 600 }}>
                   {s.symbol}
                 </div>
-                <div style={{ fontSize: 12, color: "var(--text-secondary)" }}>
+                <div
+                  style={{ fontSize: 12, color: "var(--text-secondary)" }}
+                >
                   {s.holders} holder{s.holders !== 1 ? "s" : ""}
                 </div>
               </div>
-              <div style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}>
+              <div
+                style={{ fontSize: 15, fontWeight: 700, flexShrink: 0 }}
+              >
                 {formatUsd(s.totalValue)}
               </div>
             </Link>
@@ -300,3 +261,12 @@ export default function SearchView({ wallets, topStocks }: SearchViewProps) {
     </div>
   );
 }
+
+const sectionLabel: React.CSSProperties = {
+  fontSize: 12,
+  fontWeight: 500,
+  color: "var(--text-secondary)",
+  textTransform: "uppercase",
+  letterSpacing: "0.04em",
+  marginBottom: 10,
+};
