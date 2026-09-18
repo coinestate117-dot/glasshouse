@@ -1,62 +1,82 @@
 {
   "NVDA": {
     "pairAddress": "49iMatQtoyabsYAQc8GafVq6aeBFVDxSRH44oiatyyw6",
-    "tokenPriceUsd": 217.38
+    "tokenPriceUsd": 222.49
   },
   "TSLA": {
     "pairAddress": "8aDaBQkTrS6HVMjyc6EZebgdiaXhLYGriDWKWWp1NpFF",
-    "tokenPriceUsd": 362.86
+    "tokenPriceUsd": 363.99
   },
   "AAPL": {
     "pairAddress": "ApniVWuZbZoruTAJdyJcLBA4AVw4DKGdV5fHxo6qrAZT",
-    "tokenPriceUsd": 334.66
+    "tokenPriceUsd": 336.036
   },
   "GOOGL": {
     "pairAddress": "B8YAwjGYk6qidWzGBXMAxP7nYfG8g74EZ3Y4gFSsobRw",
-    "tokenPriceUsd": 347.56
+    "tokenPriceUsd": 350.31
   },
   "META": {
     "pairAddress": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
-    "tokenPriceUsd": 681.72
+    "tokenPriceUsd": 669.14
   },
   "SPY": {
     "pairAddress": "4pCZCVEiYyT4efNdXUdL2tJF8VGMgiMXrZWq6FiNXhRw",
-    "tokenPriceUsd": 764.68
+    "tokenPriceUsd": 766.33
   },
   "QQQ": {
     "pairAddress": "GMjGLWzvK75LPetrgAmdeXnvxc4fUuQPwJxeQqTDU1aG",
-    "tokenPriceUsd": 714.073
+    "tokenPriceUsd": 724.22
   },
   "AMZN": {
     "pairAddress": "6m5aXAve4uh6Kt4ytKyCLWNMjd8PYP5vujwNCtycrUiD",
-    "tokenPriceUsd": 248.64
+    "tokenPriceUsd": 254.13
   },
   "MSFT": {
     "pairAddress": "D6bRhQUcR9B7bPbbqgxpE17MjyUjBtr8hHQCcJoHrrv1",
-    "tokenPriceUsd": 496.56
+    "tokenPriceUsd": 498.13
   },
   "COIN": {
     "pairAddress": "w7SGmPeXoMCsjvXqgsAmUn56uypyDsjAtsxeVkaiqxa",
-    "tokenPriceUsd": 168.57
+    "tokenPriceUsd": 194.16
   },
   "MSTR": {
     "pairAddress": "RyhF4cksVZY7vcqJpoytHcxcGNKRp27PEGhSnEPpbGv",
-    "tokenPriceUsd": 128.95
+    "tokenPriceUsd": 153.38
   },
   "AMD": {
     "pairAddress": "DsxZiQTsdJbGJojzbdAy9yK7absibgAgUnMLTdNaWr4c",
-    "tokenPriceUsd": 521.66
+    "tokenPriceUsd": 553.64
   },
   "NFLX": {
     "pairAddress": "7RQXW5KEBgHCcy1eSNs1Kh7BWaEL46q8jb9t18S151bL",
-    "tokenPriceUsd": 769.24
+    "tokenPriceUsd": 727.49
   },
   "GLD": {
     "pairAddress": "78ReVNMLGRWmjtf2HmBoHUe2pRcsctXTTbxJnbhchyze",
-    "tokenPriceUsd": 394.49
+    "tokenPriceUsd": 402.19
   },
   "HOOD": {
     "pairAddress": "DXWbip5LducMAbDSSpLYz9Xik3253EPeAYQufQtx7LXs",
-    "tokenPriceUsd": 106.45
+    "tokenPriceUsd": 119.26
+  },
+  "CRCL": {
+    "pairAddress": "GYqHjuDzTiw7i52Xv1qohDE6eJr6eSZpsrBVikGZyaFV",
+    "tokenPriceUsd": 91.6
+  },
+  "SPCX": {
+    "pairAddress": "AHNN6JmvaGG6XUoSg7sEr38gRYDB2jTbUvqXVuqaRHpq",
+    "tokenPriceUsd": 152.78
+  },
+  "INTC": {
+    "pairAddress": "6KoZB86BFDk6TZbB4CTBoAA8PPbpmEwSWFjCyfkt1Uw4",
+    "tokenPriceUsd": 108.094
+  },
+  "MRVL": {
+    "pairAddress": "GuSRpw1ix66fPBnmBdhz1iEfbph1Wi8tmJc4jLx9vaFt",
+    "tokenPriceUsd": 244.88
+  },
+  "AVGO": {
+    "pairAddress": "EkpbWmPzrzFsv2xkJRdvWs61aRuDBVdrJK7WQmctBFnB",
+    "tokenPriceUsd": 360.25
   }
 }

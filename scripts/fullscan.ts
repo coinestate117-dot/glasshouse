@@ -477,34 +477,42 @@ async function main() {
       tickerMints.set(a.underlying_symbol, a.mint_address);
     }
   }
-  const dexPairs: Record<string, string> = {};
-  const mintList = [...tickerMints.entries()];
-  for (let i = 0; i < mintList.length; i += 5) {
-    const batch = mintList.slice(i, i + 5);
-    await Promise.allSettled(
-      batch.map(async ([ticker, mint]) => {
-        try {
-          const res = await fetch(
-            `https://api.dexscreener.com/latest/dex/tokens/${mint}`
-          );
-          if (!res.ok) return;
-          const data = await res.json();
-          const pairs = data.pairs ?? [];
-          const usdcPair = pairs
-            .filter((p: any) => p.quoteToken?.symbol === "USDC")
-            .sort((a: any, b: any) => (b.volume?.h24 ?? 0) - (a.volume?.h24 ?? 0))[0];
-          const addr = usdcPair?.pairAddress ?? pairs[0]?.pairAddress;
-          if (addr) dexPairs[ticker] = addr;
-        } catch {}
-      })
-    );
-    if ((i + 5) % 50 === 0) {
-      console.log(`[DexPairs] ${Math.min(i + 5, mintList.length)}/${mintList.length}, ${Object.keys(dexPairs).length} found`);
-      await sleep(1000);
-    }
+  const dexPairs: Record<string, { pairAddress: string; tokenPriceUsd: number }> = {};
+  // Only fetch pairs for tickers actually held in wallets (sorted by held value)
+  const heldTickers = mintsByValue
+    .filter((m) => m.held > 0)
+    .slice(0, 100)
+    .map((m) => [m.symbol, m.mint] as const);
+  for (const [ticker, mint] of heldTickers) {
+    try {
+      const res = await fetch(
+        `https://api.dexscreener.com/latest/dex/tokens/${mint}`
+      );
+      if (!res.ok) {
+        if (res.status === 429) await sleep(5000); // rate limited, back off
+        continue;
+      }
+      const data = await res.json();
+      const pairs = data.pairs ?? [];
+      const usdcPair = pairs
+        .filter((p: any) => p.quoteToken?.symbol === "USDC")
+        .sort((a: any, b: any) => (b.volume?.h24 ?? 0) - (a.volume?.h24 ?? 0))[0];
+      if (usdcPair?.pairAddress) {
+        dexPairs[ticker] = {
+          pairAddress: usdcPair.pairAddress,
+          tokenPriceUsd: parseFloat(usdcPair.priceUsd || "0"),
+        };
+      }
+      await sleep(500); // pace: DexScreener rate limits aggressive parallel calls
+    } catch {}
   }
-  fs.writeFileSync(path.join(DATA_DIR, "dex-pairs.json"), JSON.stringify(dexPairs, null, 2));
-  console.log(`DexScreener pairs: ${Object.keys(dexPairs).length} tickers`);
+  // Only overwrite if we got a reasonable number (protects against rate-limit wipeout)
+  if (Object.keys(dexPairs).length >= 5) {
+    fs.writeFileSync(path.join(DATA_DIR, "dex-pairs.json"), JSON.stringify(dexPairs, null, 2));
+    console.log(`DexScreener pairs: ${Object.keys(dexPairs).length} tickers`);
+  } else {
+    console.log(`DexScreener: only ${Object.keys(dexPairs).length} pairs found — keeping existing file`);
+  }
 
   const elapsed = ((Date.now() - start) / 1000 / 60).toFixed(1);
   const types: Record<string, number> = {};
