@@ -9,7 +9,7 @@ const csp = [
   // Token logos come from xstocks-metadata.backed.fi, prestocks.com, wallet icons are data: URIs
   "img-src 'self' data: blob: https:",
   // TradingView widget renders in an iframe; DexScreener chart embed
-  "frame-src https://*.tradingview.com https://www.tradingview-widget.com https://dexscreener.com",
+  "frame-src https://*.tradingview.com https://www.tradingview-widget.com https://www.geckoterminal.com",
   // RPC (Helius, public Solana), Jupiter swap API, TradingView data, OG image fetch
   "connect-src 'self' https://*.helius-rpc.com wss://*.helius-rpc.com https://api.mainnet-beta.solana.com https://api.jup.ag https://*.tradingview.com wss://*.tradingview.com",
   "frame-ancestors 'none'",

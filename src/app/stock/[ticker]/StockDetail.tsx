@@ -222,7 +222,7 @@ export default function StockDetail({
               }}
             >
               <iframe
-                src={`https://dexscreener.com/solana/${dexPairAddress}?embed=1&theme=dark&info=0&trades=0`}
+                src={`https://www.geckoterminal.com/solana/pools/${dexPairAddress}?embed=1&info=0&swaps=0`}
                 style={{
                   width: "100%",
                   height: "100%",
