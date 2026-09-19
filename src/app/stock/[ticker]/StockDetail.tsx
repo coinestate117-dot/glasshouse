@@ -427,8 +427,12 @@ export default function StockDetail({
 function TradingViewChart({ ticker }: { ticker: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Ticker comes from external API data (xstocks.fi underlyingSymbol).
+  // Strip anything that isn't a plain stock symbol before embedding.
+  const safeTicker = ticker.replace(/[^A-Z0-9.\-]/gi, "").slice(0, 12);
+
   useEffect(() => {
-    if (!containerRef.current) return;
+    if (!containerRef.current || !safeTicker) return;
     const container = containerRef.current;
     container.innerHTML = "";
 
@@ -438,7 +442,7 @@ function TradingViewChart({ ticker }: { ticker: string }) {
     script.async = true;
     script.innerHTML = JSON.stringify({
       autosize: true,
-      symbol: `NASDAQ:${ticker}`,
+      symbol: `NASDAQ:${safeTicker}`,
       interval: "D",
       timezone: "Etc/UTC",
       theme: "dark",
@@ -461,7 +465,7 @@ function TradingViewChart({ ticker }: { ticker: string }) {
 
     container.appendChild(wrapper);
     container.appendChild(script);
-  }, [ticker]);
+  }, [safeTicker]);
 
   return (
     <div

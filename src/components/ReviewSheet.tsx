@@ -176,7 +176,9 @@ export default function ReviewSheet({
         updateOrder(i, { status: "sending" });
         const signature = await connection.sendRawTransaction(
           signed.serialize(),
-          { skipPreflight: true, maxRetries: 2 }
+          // Preflight simulates before broadcast — catches insufficient
+          // balance and slippage errors without burning the fee
+          { skipPreflight: false, maxRetries: 2 }
         );
 
         // Step 5: Confirm

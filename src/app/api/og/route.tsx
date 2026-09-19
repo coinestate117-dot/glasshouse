@@ -21,11 +21,46 @@ function shortenAddr(a: string): string {
   return `${a.slice(0, 6)}…${a.slice(-4)}`;
 }
 
+/* Simple in-memory rate limit: 30 requests per IP per minute.
+   Per-instance in serverless — imperfect but blocks basic abuse
+   without external storage. */
+const rateBuckets = new Map<string, { count: number; resetAt: number }>();
+const RATE_LIMIT = 30;
+const RATE_WINDOW_MS = 60_000;
+
+function isRateLimited(ip: string): boolean {
+  const now = Date.now();
+  const bucket = rateBuckets.get(ip);
+  if (!bucket || now > bucket.resetAt) {
+    rateBuckets.set(ip, { count: 1, resetAt: now + RATE_WINDOW_MS });
+    // Prune old entries opportunistically
+    if (rateBuckets.size > 5000) {
+      for (const [k, v] of rateBuckets) {
+        if (now > v.resetAt) rateBuckets.delete(k);
+      }
+    }
+    return false;
+  }
+  bucket.count++;
+  return bucket.count > RATE_LIMIT;
+}
+
 export async function GET(request: Request) {
+  const ip =
+    request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (isRateLimited(ip)) {
+    return new Response("Too many requests", {
+      status: 429,
+      headers: { "Retry-After": "60" },
+    });
+  }
+
   const { searchParams } = new URL(request.url);
   const address = searchParams.get("address");
 
-  if (!address) return new Response("Missing address", { status: 400 });
+  if (!address || address.length < 32 || address.length > 44) {
+    return new Response("Missing or invalid address", { status: 400 });
+  }
 
   const wallet = getWallet(address);
   if (!wallet) return new Response("Wallet not found", { status: 404 });
@@ -264,6 +299,15 @@ export async function GET(request: Request) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    {
+      width: 1200,
+      height: 630,
+      headers: {
+        // s-maxage makes Vercel's CDN cache the response (max-age alone
+        // is only honored by browsers, hence the previous 100% MISS rate)
+        "Cache-Control":
+          "public, s-maxage=3600, max-age=3600, stale-while-revalidate=86400",
+      },
+    }
   );
 }
