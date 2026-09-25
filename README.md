@@ -2,6 +2,32 @@
 **Stocklana Hackathon Submission**
 - Live-Vergleich von On-Chain-Preis (Jupiter) gegen Pyth-Referenzmarkt
 
+## Fuer Teamkollegen: lokal starten
+
+```bash
+npm install
+cp .env.local.example .env.local   # kann leer bleiben
+npm run dev                        # laeuft auf http://localhost:3002
+```
+
+Die App laeuft **ohne jeden API-Schluessel**. Sie weicht dann auf den
+oeffentlichen Solana-Knoten aus; Kurse, Charts, Depotansicht und der
+Nachbauen-Ablauf funktionieren vollstaendig mit echten Mainnet-Daten.
+
+Nur die **Rangliste** braucht einen eigenen RPC-Zugang: Sie muss alle Halter
+eines Tokens auflisten (`getTokenLargestAccounts`), was der oeffentliche
+Knoten mit HTTP 429 sperrt. Ein kostenloses Kontingent auf helius.dev reicht;
+den Schluessel als `HELIUS_API_KEY` in `.env.local` eintragen.
+
+Ohne Schluessel laesst sich der komplette Ablauf ueber **Demo ansehen** auf
+`/login` vorfuehren. Dort sind Depots, Wallets und Ranglisten erfunden;
+Kurse und Maerkte bleiben echt, und es wird nie eine Transaktion gebaut,
+signiert oder gesendet.
+
+Der Port ist bewusst **3002** (siehe `.claude/launch.json`) — auf 3000 laeuft
+ein anderes Projekt.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 First, run the development server:
