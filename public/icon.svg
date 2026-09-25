@@ -1,0 +1,13 @@
+<svg width="512" height="512" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" fill="#000000" />
+  <defs>
+    <linearGradient id="glasshouse-grad" x1="16" y1="2" x2="30" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#14F195" />
+      <stop offset="100%" stop-color="#9945FF" />
+    </linearGradient>
+  </defs>
+  <rect x="2" y="2" width="28" height="28" rx="4" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+  <rect x="17" y="3" width="12" height="12" rx="2" fill="url(#glasshouse-grad)" />
+  <path d="M16 2V30" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" />
+  <path d="M2 16H30" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" />
+</svg>
